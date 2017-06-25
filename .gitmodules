@@ -1,0 +1,6 @@
+[submodule "public"]
+	path = public
+	url = git@github.com:budougumi0617/budougumi0617.github.io.git
+[submodule "themes/hugo-theme-geppaku"]
+	path = themes/hugo-theme-geppaku
+	url = git@github.com:masa0221/hugo-theme-geppaku.git
