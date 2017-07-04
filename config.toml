@@ -5,7 +5,7 @@ languageCode = "ja-JP"
 title = "My external storage"
 theme= "hugo-theme-geppaku"
 #googleAnalytics = ""
-#disqusShortname = ""
+disqusShortname = "http-budougumi0617-github-io"
 
 [author]
 # If you want to display author information set these
