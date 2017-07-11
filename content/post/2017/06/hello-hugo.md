@@ -3,8 +3,8 @@ title= "Hello Hugo"
 date= 2017-06-25T20:20:50+09:00
 draft = false
 slug = ""
-categories = [""]
-tags = [""]
+categories = []
+tags = []
 author = "budougumi0617"
 +++
 
