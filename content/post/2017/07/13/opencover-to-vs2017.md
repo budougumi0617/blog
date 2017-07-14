@@ -22,6 +22,8 @@ OpenCoverでVisual Studio2017でビルドした`.NET Core/Standard`のプロジ�
 </Project>
 ````
 
+# OpenCoverでカバレッジが計測できない。
+
 Visual Studio2017から.NET Core, .NET Standardのプロジェクトの構成ファイル(`.csproj`)の形式が変更になっています。
 
 [++C++; // 未確認飛行 C  - 新しい csproj 形式](http://ufcpp.net/blog/2017/5/newcsproj/)
@@ -40,9 +42,11 @@ Committing...
 
 ```
 
+# 解決方法
+
 これを解消するには、`.pdb`ファイルの情報を従来形式にしてビルドする必要があります。カバレッジを計測したいプロジェクトの`.csproj`ファイル内で該当属性を`full`にすることで`OpenCover`でもカバレッジを計測できるようになります。
 
-```
+```xml
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
