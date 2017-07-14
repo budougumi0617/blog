@@ -2,7 +2,7 @@ publishDir = "public"
 
 baseurl = "https://budougumi0617.github.io/"
 languageCode = "ja-JP"
-title = "My external storage"
+title = "My External Storage"
 theme= "hugo-theme-geppaku"
 #googleAnalytics = ""
 disqusShortname = "http-budougumi0617-github-io"
