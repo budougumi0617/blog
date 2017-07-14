@@ -4,7 +4,7 @@ baseurl = "https://budougumi0617.github.io/"
 languageCode = "ja-JP"
 title = "My External Storage"
 theme= "hugo-theme-geppaku"
-#googleAnalytics = ""
+googleAnalytics = "UA-43042615-4"
 disqusShortname = "http-budougumi0617-github-io"
 
 [author]
