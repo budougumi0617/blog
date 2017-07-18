@@ -1,5 +1,5 @@
 +++
-title= "VS for MacのテストエクスプローラーからXUnit(.NET Core1.1)が実行できない"
+title= "VS for MacのテストエクスプローラーからXUnit(.NET Core1.1)が実行できない"
 date= 2017-07-17T23:41:03+09:00
 draft = false
 slug = ""
