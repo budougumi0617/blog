@@ -9,7 +9,7 @@ author = "budougumi0617"
 +++
 
 # TL;DR
-OpenCoverでVisual Studio2017でビルドした`.NET Core/Standard`のプロジェクトのコードカバレッジを計測したいときは、`.csproj`ファイルに`DebugType`を`full`で追加すること。
+OpenCoverでVisual Studio2017でビルドした`.NET Core/Standard`のプロジェクトのコードカバレッジを計測したいときは、`.csproj`ファイルに`DebugType`を`full`で追加すること。
 
 ````xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -24,12 +24,12 @@ OpenCoverでVisual Studio2017でビルドした`.NET Core/Standard`のプロジ�
 
 # OpenCoverでカバレッジが計測できない。
 
-Visual Studio2017から.NET Core, .NET Standardのプロジェクトの構成ファイル(`.csproj`)の形式が変更になっています。
+Visual Studio2017から.NET Core, .NET Standardのプロジェクトの構成ファイル(`.csproj`)の形式が変更になっています。
 
 [++C++; // 未確認飛行 C  - 新しい csproj 形式](http://ufcpp.net/blog/2017/5/newcsproj/)
 
-これに合わせてか、ビルド時に生成されるPDBファイル(`.pdb`)の情報ファイルの内容も変更になっているようです。
-そのため、通常従来の形式を期待して`.pdb`ファイルを解析する`OpenCover`をそのまま使ってもカバレッジは計測できません。
+これに合わせてか、ビルド時に生成されるPDBファイル(`.pdb`)の情報ファイルの内容も変更になっているようです。
+そのため、通常従来の形式を期待して`.pdb`ファイルを解析する`OpenCover`をそのまま使ってもカバレッジは計測できません。
 
 ```
 ProcessModel: Default    DomainUsage: Single
@@ -44,7 +44,7 @@ Committing...
 
 # 解決方法
 
-これを解消するには、`.pdb`ファイルの情報を従来形式にしてビルドする必要があります。カバレッジを計測したいプロジェクトの`.csproj`ファイル内で該当属性を`full`にすることで`OpenCover`でもカバレッジを計測できるようになります。
+これを解消するには、`.pdb`ファイルの情報を従来形式にしてビルドする必要があります。カバレッジを計測したいプロジェクトの`.csproj`ファイル内で該当属性を`full`にすることで`OpenCover`でもカバレッジを計測できるようになります。
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -58,7 +58,7 @@ Committing...
 ```
 
 
-上記例は[前述の未確認飛行さんの記事](http://ufcpp.net/blog/2017/5/newcsproj/)を参考に、Debugビルド時のみに制限した設定にしています。
+上記例は[前述の未確認飛行さんの記事](http://ufcpp.net/blog/2017/5/newcsproj/)を参考に、Debugビルド時のみに制限した設定にしています。
 
 
 # 参考文献
