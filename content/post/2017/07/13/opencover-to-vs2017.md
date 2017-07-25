@@ -3,7 +3,7 @@ title= "OpenCoverでVS2017でビルドした.NETプロジェクトのカバレ�
 date= 2017-07-13T09:25:36+09:00
 draft = false
 slug = ""
-categories = ["C#", ".NET Standard"]
+categories = ["C#", "dot-net"]
 tags = ["OpenOver", "DevOps", "VS2017"]
 author = "budougumi0617"
 +++
