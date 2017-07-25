@@ -3,7 +3,7 @@ title= "VS for MacのテストエクスプローラーからXUnit(.NET Core1.1)�
 date= 2017-07-17T23:41:03+09:00
 draft = false
 slug = ""
-categories = ["C#", "dot-net"]
+categories = ["C-Sharp", "dot-net"]
 tags = ["VS4Mac", "XUnit"]
 author = "budougumi0617"
 +++
