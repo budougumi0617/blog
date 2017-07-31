@@ -42,7 +42,7 @@ author = "budougumi0617"
 |IDE|`Visual Studio2017`/`Visual Studio for Mac`|
 |テスト|`XUnit`/`OpenCover`|
 |構成管理|`GitHub`|
-|CI|`AppVeyor`/`Coveralls`|
+|CI|`AppVeyor`/`Codecov`|
 
 以降では、GitHubリポジトリに`.NET1.6`プロジェクトが入った状態のあとの説明です。
 
