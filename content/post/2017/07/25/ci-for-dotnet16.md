@@ -197,5 +197,5 @@ notifications:
 ## `MSTest` or `XUnit` or `NUnit`
 `MSTest`は`Visual Studio for Mac`では使えません。なので選べません。`NUnit`の場合、`.NET1.6`プロジェクトで利用するには`NUnit3`である必要があります。が、`OpenCover`が`NUnit3`をフルサポートしていないようなので`XUnit`にしました。
 
-## `Coveralls`or `Codedev`
+## `Coveralls` or `Codedev`
 Coverallsですと`C#`向けにプラグインがあるので連携が簡単です。ただ、`Codecov`でも流用できるのと、UIが好みなので`Codecov`使ってます。
