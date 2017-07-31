@@ -1,5 +1,5 @@
 +++
-title= ".NET Standard1.6プロジェクトのCI環境を構築する。"
+title= ".NET Standard1.6プロジェクトのCI環境を構築する。"
 date= 2017-07-25T20:46:26+09:00
 draft = false
 slug = ""
