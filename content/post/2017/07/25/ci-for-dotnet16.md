@@ -4,7 +4,7 @@ date= 2017-07-25T20:46:26+09:00
 draft = false
 slug = ""
 categories = ["dot-net", "c-sharp", "DevOps"]
-tags = ["AppVeyor", "Coveralls", "OpenCover", "XUnit"]
+tags = ["AppVeyor", "Codecov", "OpenCover", "XUnit"]
 author = "budougumi0617"
 +++
 
