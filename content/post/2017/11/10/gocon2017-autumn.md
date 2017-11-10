@@ -4,7 +4,7 @@ date= 2017-11-09T01:27:48+09:00
 draft = false
 slug = ""
 categories = ["Go"]
-tags = ["golang"]
+tags = ["golang", "gocon", "gRPC", "log"]
 author = "budougumi0617"
 +++
 
@@ -133,9 +133,9 @@ https://talks.godoc.org/github.com/tcnksm/talks/2017/11/gocon2017/gocon2017.slid
 - golangとgRPCの知識があればよい。フレームワークはつかってない。プロトコルバッファーの定義さえ書ければロジックに集中できる。RESTは構成などの設計が大変。
 - Protcoll Buffer Definiton Management。全ての定義はひとつのリポジトリに記載されている。そのリポジトリを見れば各サービスのAPIがわかる。PRがマージされれば各サービスにクライアントコードが配布される。
 - 動的なK8s環境上で`gRPC`を使ってロードバランシングするのは結構難しい。クライアント側でロードバランシングしないとk8のサーバがちゃんとラウンドロビンしてくれない。実例をあまり見ないで発表してほしい。
-- ロギング。HTTPの場合は`middleware`だが、`gRPC`の場合は[`Interceptors`](https://github.com/grpc-ecosystem/go-grpc-middleware)を使ってる。
-- [grpc-go](https://github.com/grpc/grpc-go)は`interceptor`をひとつしか使えないが、[`go-grpc-middleware`](https://github.com/grpc-ecosystem/go-grpc-middleware)を使えばチェーン関数を利用できる。
-- 複数のサービスをまたがるプロファイリングはGCP stackdriver tracingから[`grpc-go client`](https://github.com/GoogleCloudPlatform/google-cloud-go/tree/master/trace)が提供されている。
+- ロギング。HTTPの場合は`middleware`だが、`gRPC`の場合は[Interceptors](https://github.com/grpc-ecosystem/go-grpc-middleware)を使ってる。
+- [grpc-go](https://github.com/grpc/grpc-go)は`interceptor`をひとつしか使えないが、[go-grpc-middleware](https://github.com/grpc-ecosystem/go-grpc-middleware)を使えばチェーン関数を利用できる。
+- 複数のサービスをまたがるプロファイリングはGCP stackdriver tracingから[grpc-go client](https://github.com/GoogleCloudPlatform/google-cloud-go/tree/master/trace)が提供されている。
 
 ---
 
@@ -155,7 +155,7 @@ https://www.slideshare.net/dxhuy88/gocon-autumn-story-of-our-own-monitoring-agen
 - 既存使用言語が「ぼくの◯◯、あなたの◯◯」という状態だったので、「みんなのGo」が書けるGo言語を利用してスクラッチすることに。
 - 設計思想は`Input`, `Codic`, `Output`を自由に変更できるように。plugable
 - シングルプロセス。プラグインモデル。コレクションモデルはプッシュではなくプル形式。
-- 各エージェントの情報は[`Prometheus`](https://prometheus.io/) / [`Grafana`](https://grafana.com/)を利用してモニタリングしている。
+- 各エージェントの情報は[Prometheus](https://prometheus.io/) / [Grafana](https://grafana.com/)を利用してモニタリングしている。
 - Golangはプロトタイピングがすごいラク。
 
 ---
@@ -169,13 +169,13 @@ LINEという多様なサービスの集合体でのモニタリングをする�
 https://www.slideshare.net/ssuser88ff5b/gocon2017go
 
 
-- PrometheusはSRE本で紹介された最近Hotになったツール。異なるロギングライブラリを使用している。プラグイン製作者でも扱いやすそうな[`go-kit`](https://github.com/go-kit/kit)に一本化しよう。という話があった。
+- PrometheusはSRE本で紹介された最近Hotになったツール。異なるロギングライブラリを使用している。プラグイン製作者でも扱いやすそうな[go-kit](https://github.com/go-kit/kit)に一本化しよう。という話があった。
 - 標準Logパッケージで不便な点。型で定義されているので、別の実装を提供しにくい。グローバルなオブジェクトを呼び出す関数が存在するので、制御しにくい。やっぱりレベリングがほしい。
 - プロメテウスはgo-kit。key-value形式
 - terraformは内製の`loguitls`。標準パッケージをラップしているちょっとモダンなやつ。
-- K8sは[`glog`](https://github.com/google/glog)。googleが使っているC++と同じロギング実行。
-- Grafanaは[`log15`](https://github.com/inconshreveable/log15)
-- InfluxDBはuber-goの[`zap`](https://github.com/uber-go/zap)というlogging.
+- K8sは[glog](https://github.com/google/glog)。googleが使っているC++と同じロギング実行。
+- Grafanaは[log15](https://github.com/inconshreveable/log15)
+- InfluxDBはuber-goの[zap](https://github.com/uber-go/zap)というlogging.
 
 ---
 
@@ -203,7 +203,7 @@ https://speakerdeck.com/niconegoto/how-to-achieve-parallel-compilation-in-go-1-d
 - Go1.9から入った並列コンパイルで行われたことについて。
 - だいたいこの辺の話。https://golang.org/src/cmd/compile/internal/
 - 各コンパイル肯定への`mutex`の追加が変更のほとんど。
-- [`AST`](https://ja.wikipedia.org/wiki/%E6%8A%BD%E8%B1%A1%E6%A7%8B%E6%96%87%E6%9C%A8)から[`SSA`](http://www.is.titech.ac.jp/~sassa/coins-www-ssa/japanese/ssa-nyumon.html)への変換時のパッケージ検索に使用されるところ、とか。
+- [AST](https://ja.wikipedia.org/wiki/%E6%8A%BD%E8%B1%A1%E6%A7%8B%E6%96%87%E6%9C%A8)から[SSA](http://www.is.titech.ac.jp/~sassa/coins-www-ssa/japanese/ssa-nyumon.html)への変換時のパッケージ検索に使用されるところ、とか。
 - コンパイラシンボルからリンカシンボルへのマッピング格納部分とか。
 - `cmd/cimpile/internal`らへんのコードは結構雑な作りが残ってるのでパッチ送ろう。
 - `cmd`以下は汚いので、読むのは覚悟がいる。
@@ -221,8 +221,8 @@ https://speakerdeck.com/achiku/gocon-2018-good-enough-async-job
 
 
 - [バンドルカード](https://vandle.jp)というサービスのバックエンドは全てGoで書かれている。
-- Queue/Workerに[`que-go`](https://github.com/bgentry/que-go)を使っている。
-- `que-go`はrubyの[`Que`](https://github.com/chanks/que)のインポート
+- Queue/Workerに[que-go](https://github.com/bgentry/que-go)を使っている。
+- `que-go`はrubyの[Que](https://github.com/chanks/que)のインポート
 - データの変更とEnqueがトランザクションで守られている。
 - EnqueはAPI Serverから`que_jobs`テーブルにインサートするだけ。worker-serverのDequeは普通のDeque。ジョブのロックは`postgeSQL`の仕組みでロックしている。
 - `que_jobs`テーブルはジョブがどのジョブタイプか、どこでエンキューするのか、ジョブを実行するときのパラメータを保持している。
@@ -269,9 +269,9 @@ https://docs.google.com/presentation/d/e/2PACX-1vSSbSxPObBZcJHjvUpAt-HEJVLaux2FQ
 - 基本的なロジックは矩形から矩形への描画を行う。
 - GopherJSはGoで書かれている。なので、自身で自身をJSに変換することができる。
 
-- デスクトップはcgo使うことになるが[`GLFW`](http://www.glfw.org/)。
-- ブラウザーは[`GopherJS`](https://github.com/gopherjs/gopherjs)。GoのなかでJSのコードが呼べて、GoのコードをJSに変換することができる。。`GopherJS`はGoで書かれている。なので、自身で自身をJSに変換することができる。
-- モバイルは公式提供の[`gomobile`](https://godoc.org/golang.org/x/mobile)。
+- デスクトップはcgo使うことになるが[GLFW](http://www.glfw.org/)。
+- ブラウザーは[GopherJS](https://github.com/gopherjs/gopherjs)。GoのなかでJSのコードが呼べて、GoのコードをJSに変換することができる。。`GopherJS`はGoで書かれている。なので、自身で自身をJSに変換することができる。
+- モバイルは公式提供の[gomobile](https://godoc.org/golang.org/x/mobile)。
 - `gomobile build`は実行ファイルを吐く。`gomobile bind`すると動的ライブラリが作れる。
 - `build`は署名を入れるのがメンドくさい。`bind`は呼び出し元をネイティブ言語でつくればなんとかなる。広告などを出したかったら`bind`でやるしかなさそう。
 - `gomobile`はバグの切り分けが難しい。また、`Context losts`というようなモバイル特有の問題も対応する必要がある。
@@ -289,10 +289,10 @@ https://docs.google.com/presentation/d/1_BWQXamZvIhL3l9ziL9zb25yP9RjpgXoxkWX-48E
 
 - reviewdog。https://github.com/haya14busa/reviewdog
 - `linter`と`diff`の結果から、追加された部分のlint結果だけを出力する。CLIやPRコメントに結果を出力する。
-- [`Hound CI`](https://houndci.com/), [`Side CI`](https://sideci.com/ja)といったSaaSはユーザーがlinterを選択できない。
-- [`Pronto`](https://github.com/prontolabs/pronto)、`reviewdog`と似ているけど、Rubyで出来ているので、わざわざRubyの実行環境用意してrubyのプラグイン書かないといけないのもめんどくさい。
+- [Hound CI](https://houndci.com/), [Side CI](https://sideci.com/ja)といったSaaSはユーザーがlinterを選択できない。
+- [Pronto](https://github.com/prontolabs/pronto)、`reviewdog`と似ているけど、Rubyで出来ているので、わざわざRubyの実行環境用意してrubyのプラグイン書かないといけないのもめんどくさい。
 - このようなツールをつくると、`linter`のいろいろな出力フォーマットに対応しないといけない。
-- `Vim`の[`quickfix`](http://vimdoc.sourceforge.net/htmldoc/quickfix.html)機能が似たような機能を実現している。[`errorformat`](http://vimdoc.sourceforge.net/htmldoc/quickfix.html#errorformat)は出力のパースにポインターやスタックを用意していて、リッチなlinterの出力にも対応できている。
+- `Vim`の[quickfix](http://vimdoc.sourceforge.net/htmldoc/quickfix.html)機能が似たような機能を実現している。[errorformat](http://vimdoc.sourceforge.net/htmldoc/quickfix.html#errorformat)は出力のパースにポインターやスタックを用意していて、リッチなlinterの出力にも対応できている。
 - このエコシステムをGoに移植して、柔軟なエラーフォーマットに対応できるのがreviewdog。独自Linterをサポートすることもできる。
 
 ---
@@ -303,7 +303,7 @@ https://docs.google.com/presentation/d/1_BWQXamZvIhL3l9ziL9zb25yP9RjpgXoxkWX-48E
 
 # LT
 
-#パッケージ構成っていつでも悩ましい
+# パッケージ構成っていつでも悩ましい
 
 発表者：keigodasu
 https://www.slideshare.net/keigosuda/20171105-go-con2017lt-81642440
@@ -311,7 +311,7 @@ https://www.slideshare.net/keigosuda/20171105-go-con2017lt-81642440
 
 - Mercari Confの[Web アプリケーションにおける Go 言語のパッケージ構成 〜メルカリ カウル編〜](https://speakerdeck.com/mercari/ja-golang-package-composition-for-web-application-the-case-of-mercari-kauru)が読むのがよい。
 - シンプル/未経験者も多いときはRailsライク、経験者が多いときはDDDライクに近づけていく。
-- [`アンチパターン`](https://github.com/gophercon/2017-talks/blob/master/EdwardMuller-GoAntipatterns/GoAntipatterns.pdf)などを真に受けず、`utils`とか`api`という名前を使ってもよいのではないか（わかりやすいことが一番なのだから）
+- [アンチパターン](https://github.com/gophercon/2017-talks/blob/master/EdwardMuller-GoAntipatterns/GoAntipatterns.pdf)などを真に受けず、`utils`とか`api`という名前を使ってもよいのではないか（わかりやすいことが一番なのだから）
 - あまりパッケージ分けの事例がないので、もっと公開されていよいかも
 
 ---
@@ -324,7 +324,7 @@ https://www.slideshare.net/keigosuda/20171105-go-con2017lt-81642440
 
 https://speakerdeck.com/izumin5210/consider-better-error-handling-for-web-apps
 
-- 集約には[`Sentry`](https://sentry.io/welcome/)、[`HoneyBadger.io`](https://www.honeybadger.io/)などを使っている。
+- 集約には[Sentry](https://sentry.io/welcome/)、[HoneyBadger.io](https://www.honeybadger.io/)などを使っている。
 - レスポンス返す前に通知する場合、エラーが`Unexpected`かどう決めるか。レスポンスコードはどう決めるか。
 - エラーが出たところで通知する場合、ロギングライブラリと密結合したり、どこでもかしこも通知が埋め込まれることになる。
 - 基本的には`middleware`でエラー通知するのがベターなのかなと思っている。
@@ -343,12 +343,12 @@ https://speakerdeck.com/izumin5210/consider-better-error-handling-for-web-apps
 - 事例。負荷テストかけたらメモリーリークで死んだ。
 - ある1リクエストのメモリアロケートが他と比べ、20倍重かった。
 - `slice`をサイズ指定をせずに`make`したり、`Structure`をやたら多用して`json.Marshal`を多用していたのが原因だったっぽい。
-- Benchmarkと[`pprof`](https://golang.org/pkg/net/http/pprof/)で重い処理を確定した。
+- Benchmarkと[pprof](https://golang.org/pkg/net/http/pprof/)で重い処理を確定した。
 
 ---
 
-パフォーマンスチューニングはこの動画が最高らしい。
-Profiling and Optimizing Go
+パフォーマンスチューニングはこの動画が最高らしい。  
+Profiling and Optimizing Go  
 https://www.youtube.com/watch?v=N3PWzBeLX2M
 
 
