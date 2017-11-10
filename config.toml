@@ -1,41 +1,69 @@
-publishDir = "public"
-
 baseurl = "https://budougumi0617.github.io/"
-languageCode = "ja-JP"
+languageCode = "ja-jp"
+weight = 1
 title = "My External Storage"
-theme= "hugo-theme-geppaku"
-googleAnalytics = "UA-43042615-4"
+publishDir = "public"
+theme= "hugo-bootstrap-premium"
+hasCJKLanguage = true
+enableemoji = true
+paginate = 10
+paginatePath = "page"
 disqusShortname = "http-budougumi0617-github-io"
 
-[author]
-# If you want to display author information set these
-# This is Optional values
-name = "budougumi0617"
+[permalinks]
+    post = "/:year/:month/:day/:filename/"
+    code = "/:filename/"
 
-# Please set account ids
-# This is Optional values
-twitter  = "budougumi0617"
-linkedin = "yoichiro-shimizu-19579976"
-github   = "budougumi0617"
-#tumblr   = "your tumblr id"
+[taxonomies]
+    tag = "tags"
+    topic = "topics"
+
+[author]
+    name = "budougumi0617"
+    email = "budougumi[at]gmail.com"
+
+#
+# All parameters below here are optional and can be mixed and matched.
+#
+
+# bootswatch theme name, unmark and select one: cerulean, cosmo, cyborg, darkly,
+# default, flatly, journal,  lumen, paper, readable, sandstone, simplex,
+# slate, spacelab, superhero, united, yeti.
+
+[params.theme]
+    name = "flatly"
 
 [params]
-[params.sharebutton]
-# If you want to display share buttons set these
-# This is Optional values
-twitter  = true
-facebook = true
-tumblr   = false
-hatena   = true # hatena is Japanese social media
-google   = true
-pocket   = true
-# Please set id when you want to display facebook
-facebookAppId = "budougumi"
+    BrandImage = "/logo.png"
+    brand = "My External Storage"
+    topline = "budougumi0617 の技術ブログです。"
+    footline = "Copyright&copy; <a href='/2017/07/11/about-this-site/'>budougumi0617</a>"
+    showRightSidebar = true
+    googleAnalytics = "UA-43042615-4"
+    # sumomeid = ""
+    highlight = "default"
+    twitter  = "budougumi0617"
+    linkedin = "yoichiro-shimizu-19579976"
+    github   = "budougumi0617"
+    # customCSS = ["/css/.css"]
 
-[params.adsense]
-# If you want to display Google adsense set these
-# This is Optional values
-# 1. Create file written of the adsense tag into the directory "layouts/partials"
-# 2. Please set file path name omitted "layouts/partials"
-#sidebar = "adsense/sidebar.html"
-#content = "adsense/content.html"
+[[menu.main]]
+    name = "Home"
+    identifier = "home"
+    url = "/"
+    weight = -200
+    pre = "<i class='fa fa-home'></i>"
+
+[[menu.main]]
+    name = "Archives"
+    identifier = "archives"
+    url = "/post/"
+    weight = -180
+    pre = "<i class='fa fa-archive'></i>"
+
+[[menu.main]]
+    name = "About"
+    identifier = ""
+    url = "//2017/07/11/about-this-site/"
+    weight = -100
+    pre = "<i class='fa fa-info-circle'></i>"
