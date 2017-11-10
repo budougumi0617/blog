@@ -112,10 +112,10 @@ https://blog.digitalocean.com/cthulhu-organizing-go-code-in-a-scalable-repo/
 
 正直英語の発表は全然理解が追いつけないので、自分は半分も理解できていないと思う。
 その他スライド中に名前が出たOSSは以下。
-https://github.com/drone/drone
-http://concourse.ci/
-https://www.gocd.org/
-https://github.com/GitHubJanitor/GitHubJanitor
+https://github.com/drone/drone  
+http://concourse.ci/  
+https://www.gocd.org/  
+https://github.com/GitHubJanitor/GitHubJanitor  
 
 # スポンサーセッション：Go + microservices at Mercari
 
