@@ -17,6 +17,7 @@ disqusShortname = "http-budougumi0617-github-io"
 [taxonomies]
     tag = "tags"
     topic = "topics"
+    category = "categories"
 
 [author]
     name = "budougumi0617"

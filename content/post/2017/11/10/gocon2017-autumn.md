@@ -3,7 +3,7 @@ title= "Go Conference 2017 Autumn参加メモ #gocon"
 date= 2017-11-09T01:27:48+09:00
 draft = false
 slug = ""
-categories = ["Go"]
+categories = ["Go", "Report"]
 tags = ["golang", "gocon", "gRPC", "log"]
 author = "budougumi0617"
 +++
