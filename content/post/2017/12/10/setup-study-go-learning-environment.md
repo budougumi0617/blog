@@ -41,6 +41,9 @@ Go用の設定を選んで「Start Building」ボタンをクリックすると�
 # ビルド時にリポジトリに同梱されているテストプロジェクトが自動で実行される。
 次に自分のリポジトリに`.circleci/config.yml`を作る。内容は`CircleCI`の`Go`用のサンプル設定ファイルとほぼ同じ。
 
+ちゃんとしたCircleCi2.0のGoの設定をしたい場合は以下のQiita記事が参考になりそう。  
+[CircleCI2.0を使ってGoで開発したツールをLint,UT,ビルドしてGithubにリリースする](https://qiita.com/tomiyan/items/6142113011243c5b5cd1)
+
 
 ```yml
 # Golang CircleCI 2.0 configuration file
