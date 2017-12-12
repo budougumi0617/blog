@@ -13,6 +13,7 @@ author = "budougumi0617"
 |URL|https://golangtokyo.connpass.com/event/72986/|
 |会場|TECH PLAY SHIBUYA|
 |日時|2017/12/11(月) 19:00 〜 21:50|
+|Toggeter| https://togetter.com/li/1180514 |
 
 
 # 闇のBashをGoに置き換える技術(nashiox)
