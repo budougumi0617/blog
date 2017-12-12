@@ -17,6 +17,7 @@ author = "budougumi0617"
 
 
 # 闇のBashをGoに置き換える技術(nashiox)
+https://speakerdeck.com/nashiox/golang-dot-tokyo-number-11
 
 - 怖くて触れないけどなぜか動いているBashスクリプト(10ファイル2128行)をGoに置き換えた。
 - データ加工、ダンプ、インポートを行っていたスクリプト。GNU Parallelも使っていたりしたが、そのへんはgroutineで。
@@ -74,6 +75,10 @@ https://speakerdeck.com/morikuni/golang-dot-tokyo-number-11
 
 ファクトリメソッドパターンとか、ビルダーパターンの`Director`的なのを作るってことかな？  
 Plugin使えばGoでももっと動的なDIができるのだろうか(C#だとDLLの入れ替えとかでビルド後でもDIコンテナを変更できる）
+
+
+こんなのもあった。  
+[Go言語とDependency Injection](https://recruit-tech.co.jp/blog/2017/12/11/go_dependency_injection/)
 
 # Go開発を助けるGoツールGo選のGo紹介(haya14busa)
 https://docs.google.com/presentation/d/13DQUhFkmAf25ItA1Gpuw0LApEnqhQB-qKN1D-SX7RWk/edit
