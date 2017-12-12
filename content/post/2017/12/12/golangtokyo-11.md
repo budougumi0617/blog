@@ -69,6 +69,7 @@ https://speakerdeck.com/morikuni/golang-dot-tokyo-number-11
 - 3. DI用のInject関数を定義する。あるオブジェクトについて依存先が引数0個で取得できる関数。
 	- 依存先が増減してもInject関数内に影響が納まる。
 - 詳細は2017/12/12の[Go4のアドベントカレンダー](https://qiita.com/advent-calendar/2017/go4)で。
+	- [GoにおけるDI](http://inukirom.hatenablog.com/entry/di-in-go)
 
 ファクトリメソッドパターンとか、ビルダーパターンの`Director`的なのを作るってことかな？  
 Plugin使えばGoでももっと動的なDIができるのだろうか(C#だとDLLの入れ替えとかでビルド後でもDIコンテナを変更できる）
