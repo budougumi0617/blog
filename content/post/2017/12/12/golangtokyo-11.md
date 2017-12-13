@@ -122,6 +122,8 @@ https://speakerdeck.com/juntaki/gokarajavafalseraiburariwoshi-u-number-golangtok
 
 
 # Go1.10導入予定のキャッシュビルドについて(zchee)
+https://speakerdeck.com/zchee/golang-dot-tokyo-number-11
+
 - Go devel, Go1.10beta1でキャッシュビルドが使えるようになった。
 - `GOCACHE`環境変数が増えている。キャッシュの保存場所。
 - キャッシュはsha256でハッシュ化されて保存される。雰囲気は`ccache`に近い感じ。
