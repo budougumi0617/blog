@@ -111,6 +111,8 @@ https://speakerdeck.com/juntaki/gokarajavafalseraiburariwoshi-u-number-golangtok
 発想とそれを実現させてしまう :muscle: 腕力 :muscle: 見習いたい！
 
 # go tool traceを使ってみよう(nametake)
+https://speakerdeck.com/nametake/dollars-go-tool-tracewoshi-tutemiyou
+
 - `pprof`以外にも`go tool trace`も使ってみよう
 - ヒープ領域、goroutineの数とか、プロセスの状態とかのタイムラインをweb Viewで見れる。
 - System Callとかの呼び出しとか、GCの状況も確認できる。
