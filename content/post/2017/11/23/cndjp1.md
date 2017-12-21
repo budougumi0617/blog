@@ -4,7 +4,7 @@ date= 2017-11-23T16:31:12+09:00
 draft = false
 slug = ""
 categories = ["report", "kubernetes"]
-tags = ["kubernetes"]
+tags = ["kubernetes","k8s","cndjp"]
 author = "budougumi0617"
 +++
 
@@ -17,7 +17,7 @@ Cloud Native Developers JP(cndjp)のハンズオンに参加し、`Kubernetes`�
 |会場|日本オラクル青山センター|
 |日時|2017/11/22(水) 19:00 〜 22:00|
 |資料|https://www.slideshare.net/charlier-shoe/kubernetes-serverless-cndjp1/|
-|ハッシュタグ| #cndjp1 |
+|ハッシュタグ| [#cndjp1](https://twitter.com/search?q=%23cndjp1) |
 
 
 # TL;DR
