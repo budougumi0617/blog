@@ -50,7 +50,6 @@ https://www.slideshare.net/charlier-shoe/kubernetes-in-cndjp2
 
 # ロギングのアーキテクチャ
 
-**Logging Architecture**  
 https://kubernetes.io/docs/concepts/cluster-administration/logging/
 
 [Container Engine(Docker)のlogging driver](https://docs.docker.com/engine/admin/logging/overview/)がファイルとして出力している。[logrotate](https://linux.die.net/man/8/logrotate)でローテートされている。そのログをagentがbackendに転送する。GKEの場合はbackendにstackdriverが動いていて、よしなに出来る。
@@ -109,6 +108,8 @@ https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistent-volum
 k8s上の永続ストレージのオブジェクト。ストレージの種類、権限や容量などの情報を定義する。
 
 ## PersistentVolumeClaim
+https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims
+
 そのPodが求めるPersistentVolumeの要件を定義する。この要件を満たすPersistentVolumeが自動的に選択される。これでコンテナと永続化層が疎に定義できる。
 
 Podのvolumesに`hostpath`などのVolumeではなく、PersistentVolumeClaimを指定する。  
@@ -182,12 +183,24 @@ https://kubernetes.io/docs/admin/kubelet-authentication-authorization/
 https://qiita.com/tkusumi/items/c2a92cd52bfdb9edd613
 
 
-# ハンズオン2: PersistentVolumeを利用した`Node.js`/`MySQOL`アプリケーションを`Ingress`でクラスタ外部に公開する
+# ハンズオン2: PersistentVolumeを利用したNode.js/MySQOLアプリケーションをIngressでクラスタ外部に公開する
 
 https://github.com/oracle-japan/cndjp2/blob/master/handson2.md
 
+マニフェストファイルから以下のような構成を実際にローカルのクラスター上で動かしてみる。
 
-1. mySQLのデータ領域用に、hostPath(ノードのローカルボリューム)のPersistentVolumeを作成する
+```
+┣━データベースコンテナ
+┃  ┣━ MySQLのデータ領域のPersistentVolumeオブジェクト
+┃  ┗━ ユーザー情報保存場所のSecretオブジェクト
+┣━Node.jsで構成されたアプリケーションコンテナのDeploymentオブジェクト
+┣━Node.jsで構成されたアプリケーションコンテナを外部に公開するためのServiceオブジェクト
+┣━デフォルトバックエンドになるnginxの単一レプリカのReplicationControllerオブジェクト
+┣━Ingressの実体となるNginx Ingress ControllerのReplicationControllerオブジェクト
+┗━外部アクセスをロードバランスするIngressオブジェクト
+```
+
+1. MySQLのデータ領域用に、hostPath(ノードのローカルボリューム)のPersistentVolumeを作成する
 	2. [deployment/db-pv-hostpath.yaml](https://github.com/oracle-japan/cndjp2/blob/master/koa-sample/deployment/db-pv-hostpath.yaml)
 2. データベースのユーザー情報保存場所として、Secretを作成する
 	3. [deployment/db-secret.yaml](https://github.com/oracle-japan/cndjp2/blob/master/koa-sample/deployment/db-secret.yaml)
@@ -203,5 +216,85 @@ https://github.com/oracle-japan/cndjp2/blob/master/handson2.md
 	10. [deployment/web-ingress.yaml](https://github.com/oracle-japan/cndjp2/blob/master/koa-sample/deployment/web-ingress.yaml)
 
 
-ハンズオンのマニフェストファイルの中身はちゃんと読めていないので、まだ別に調べてまとめたい。
+Ingressや外部への公開部分がよくわかっていないのと、ハンズオンのマニフェストファイルの中身はちゃんと読めていないので、まだ別に調べてまとめたい。
 
+
+**Ingress**  
+https://kubernetes.io/docs/concepts/services-networking/ingress/
+
+
+**Ingress での HTTP 負荷分散の設定**  
+https://cloud.google.com/kubernetes-engine/docs/tutorials/http-balancer?hl=ja
+
+
+# 参考文献
+
+**ハンズオン資料**  
+https://github.com/oracle-japan/cndjp2
+
+**Logging Architecture**  
+https://kubernetes.io/docs/concepts/cluster-administration/logging/
+
+**Configure logging drivers**  
+https://docs.docker.com/engine/admin/logging/overview/
+
+**Logging Using Stackdriver**  
+https://kubernetes.io/docs/tasks/debug-application-cluster/logging-stackdriver/
+
+**Cluster-level logging architectures**  
+https://kubernetes.io/docs/concepts/cluster-administration/logging/#cluster-level-logging-architectures
+
+**Manifest File**  
+https://kubernetes.io/docs/concepts/configuration/overview/
+
+**sidecar**  
+https://docs.microsoft.com/ja-jp/azure/architecture/patterns/sidecar  
+
+**PersistentVolume/PersistentVolumeClaimを利用した永続化機能の使い方**  
+https://kubernetes.io/docs/concepts/storage/persistent-volumes/  
+
+**Volume**  
+https://kubernetes.io/docs/concepts/storage/volumes/
+
+**Persistent Volumes**  
+https://kubernetes.io/docs/concepts/storage/persistent-volumes/
+
+**kubernetes: pod(コンテナ)のディスク(volume)とパス(path)の指定方法**  
+https://qiita.com/suzukihi724/items/9003b453ddfb1acd202a
+
+**kubernetesでPersistent Volumesを使ってみる**  
+https://ishiis.net/2017/01/08/kubernetes-storage/
+
+**第6章 KUBERNETES におけるストレージのプロビジョニング**  
+https://access.redhat.com/documentation/ja-jp/red_hat_enterprise_linux_atomic_host/7/html/getting_started_with_containers/get_started_provisioning_storage_in_kubernetes
+
+**Performing a Rolling Update**  
+https://kubernetes.io/docs/tutorials/kubernetes-basics/update-intro/
+
+**Run a Stateless Application Using a Deployment**  
+https://kubernetes.io/docs/tasks/run-application/run-stateless-application-deployment/
+
+**Perform Rolling Update Using a Replication Controller**  
+https://kubernetes.io/docs/tasks/run-application/rolling-update-replication-controller/
+
+**Canary deployments**  
+https://kubernetes.io/docs/concepts/cluster-administration/manage-deployment/#canary-deployments
+
+**Canary Release with Kubernetes**  
+https://hackernoon.com/canary-release-with-kubernetes-1b732f2832ac
+
+**authorization**  
+https://kubernetes.io/docs/admin/authorization/
+
+**Kubelet authentication/authorization**  
+https://kubernetes.io/docs/admin/kubelet-authentication-authorization/
+
+**Kubernetes: 構成コンポーネント一覧**  
+https://qiita.com/tkusumi/items/c2a92cd52bfdb9edd613
+
+**Ingress**  
+https://kubernetes.io/docs/concepts/services-networking/ingress/
+
+
+**Ingress での HTTP 負荷分散の設定**  
+https://cloud.google.com/kubernetes-engine/docs/tutorials/http-balancer?hl=ja
