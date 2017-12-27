@@ -8,9 +8,11 @@ tags = ["Retrospective"]
 author = "budougumi0617"
 +++
 
-今年のGitHubの活動を振り返る。
+今年を振り返るにあたって、まずGitHubの活動を振り返ってみた。  
+個々のリポジトリへの記載を一年の活動の振り返りに含めるのも何か違和感があったので、まずまとめておく。
 
 # コントリビュート
+いくつかプルリクエストを作成してみた。
 改めて見るとタイポ警察しかしてないし、コードのPRはマージされていない。  
 ただ、自分としてはPRちゃんと出し始めたのは今年からなので、一歩一歩進んでいく。  
 `Go`に対してコミットできるくらいのスキルを身につけるのが来年の目標。
@@ -24,10 +26,11 @@ https://github.com/golang/dep/pull/1281
 
 ## bugsnag/bugsnag-dotnet
 https://github.com/bugsnag/bugsnag-dotnet/pull/66  
-公式の`BugSnag`のクライアントツールがXamarin.Macだと動かなかったので。未マージ。されないかなあ
+公式の`BugSnag`のクライアントツールがXamarin.Macだと動かなかったので。未マージ。されないかなあ。
+
 ## oracle-japan/cndjp2
 https://github.com/oracle-japan/cndjp2/pull/1  
-最近Kubernetesの勉強会に参加しているのだが、その資料のタイポのFix
+最近クラウドの勉強会に参加しているのだが、その資料のタイポのFix
 
 ## hnakamur/vim-go-tutorial-ja
 https://github.com/hnakamur/vim-go-tutorial-ja/pull/7  
@@ -40,7 +43,8 @@ https://github.com/hnakamur/vim-go-tutorial-ja/pull/12
 
 # My OSS
 
-今年は初めてOSSを公開した。
+今年は初めてOSSを公開した。今までGitHubは写経置き場のようになっていたので、ちょっと使いこなし始めた感。
+初めてまったく知らない人に自分のリポジトリにスターつけてもらった。超嬉しかった。まだひとつだけだけど、もっともらえるようにならないと。
 
 ## Testable
 
@@ -68,12 +72,14 @@ deeetさんが「[API Clientは最初に書くGolang パッケージとしても
 --- 
 
 # Dotfile
+なんだかんだちょいちょいいじっている。今年は当然Ruby周りの環境設定とかが増えた。
 
 https://github.com/budougumi0617/dotfiles
 
 大きめにいじったところと言えば`neobundle`から`dein.vim`に乗り換えた。また、上記で触れたとおり、`vim-go`を本格的に使い始めた。  
 https://github.com/budougumi0617/dotfiles/blob/master/home/.vimrc  
-`zsh`も`oh-my-zsh`任せだったところを`zplug`に乗り換えた。  
+
+`zsh`も`oh-my-zsh`でよしなにだったところを`zplug`に乗り換えてそれなりに取捨選択してみた。  
 https://github.com/budougumi0617/dotfiles/blob/master/home/.zshrc
 
 --- 
@@ -124,15 +130,15 @@ https://github.com/budougumi0617/gopl
 
 [プログラミング言語Go](http://amazon.jp/dp/4621300253)
 
-勉強会で終わらなかった練習問題を少しずつ解いている。あと５問くらい。  
+勉強会で終わらなかった練習問題を少しずつ解いている。あと５問くらい。今年こそ完結させるつもりだったがだめだった…  
 途切れ途切れでやっているし、大半は1.6ベースで書いているので、全部終わったら改めて1からやり直したい。  
-今やっとわかってきたこともあるし、何度でも読みたい良書。  
+プログラミング言語GoはツールとかWebプログラミングしようと当時あまり理解できなかったところ（忘れてしまったところ）を改めて理解している。連休とかで時間作ってあらためてじっくり読みたい。  
 
 ## ElixirTraining
 https://github.com/budougumi0617/ElixirTraining
 
 日曜にやっている[AOSN勉強会](https://aosn.ws/)の教材。自分にとって初めての関数型言語で学びが大きい。  
-もう少しで終わる。次の題材は選定中。自分としては`Haskell`と`Machine Learning With Go`を挙げている。
+もう少しで終わる。これが終わったあとの勉強会の次の題材は選定中。自分としては`Haskell`と`Machine Learning With Go`を挙げているのでどちらかになると嬉しいなあ
 
 ## gsp
 
@@ -142,21 +148,22 @@ https://github.com/budougumi0617/gsp
 
 [Goならわかるシステムプログラミング](https://amazon.jp/dp/4908686033)
 
-Goのリハビリも兼ねて。継続中。練習問題が前半の章にしかなかったので、写経しつつメモ足すって感じで進めようかな。
+Goのリハビリも兼ねて。継続中。練習問題が前半の章にしかなかったので、写経しつつメモ足すって感じで進めている。
 
 --- 
 
 # Activity
+2017年のコミット履歴。
 
-
-Publicなコミット
+## Publicなコミットのみ
 ![Public only](/2017/12/glass-all-2017.png)
 
 6月になってから毎日コミットするぞ！と決めて、一応毎日コミットできた。一部の日は旅先でスマホからREADME更新しただけとかもあるけど。。。  
-とは言え大半は写経なのでもう少し本当の意味での「プログラミング」のコミットをしないと。
+とは言え大半は写経のコミット。「毎日コミットしているって何作ってるんすか？」って聞かれてちょっと恥ずかしくなったのを覚えている。
+なのでもう少し本当の意味での「プログラミング」のコミットをしないと。
 
 
-PublicとPrivateも合わせたもの
+## PublicとPrivateも合わせたもの
 ![Public and Private](/2017/12/glass-only-public-2017.png)
 
 業務中のコミット量が全然少ないので来年はもっとコード書かないと会社員としてもエンジニアとしての日中の過ごし方としても少し危機感を感じている。。。
@@ -182,4 +189,5 @@ PublicとPrivateも合わせたもの
 - GoとGCPでWebアプリを作る
 - Kubernetesの理解を深める
 
-と言ったところ！Webアプリについては、そろそろちゃんとクラウド、コンテナについて勉強したいのと、やはり自分はGoが好きなので。
+と言ったところ！Webアプリについては、そろそろちゃんとクラウド、コンテナについて勉強したいのと、やはり自分はGoが好きなので。  
+来年はもっと草生やすぞ。
