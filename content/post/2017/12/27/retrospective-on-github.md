@@ -163,7 +163,7 @@ Goのリハビリと`vim-go`の運指を慣らすのも兼ねて。練習問題�
 https://github.com/budougumi0617/
 
 ## Publicなコミット =  1,051コミット
-![Public and Private](/2017/12/glass-only-public-2017.png)
+![Public only](/2017/12/glass-only-public-2017.png)
 
 6月になってから毎日コミットするぞ！と決めて、一応毎日コミットできた。一部の日は旅先でスマホからREADME更新しただけとかもあるけど。。。  
 とは言え大半は写経のコミット。「毎日コミットしているって何作ってるんすか？」って聞かれてちょっと恥ずかしくなったのを覚えている。
@@ -171,7 +171,7 @@ https://github.com/budougumi0617/
 
 
 ## Public + Privateなコミット =  1,801コミット
-![Public only](/2017/12/glass-all-2017.png)
+![Public and Private](/2017/12/glass-all-2017.png)
 
 業務中のコミット量が全然少ないので来年はもっとコード書かないと、組織に所属するエンジニアとして非常にまずい。
 
