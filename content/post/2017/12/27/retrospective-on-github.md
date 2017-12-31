@@ -11,6 +11,9 @@ author = "budougumi0617"
 今年を振り返るにあたって、まずGitHubの活動を振り返ってみた。  
 個々のリポジトリへの記載を一年の活動の振り返りに含めるのも何か違和感があったので、ひとつの記事としてまとめておく。
 
+https://github-profile-summary.com/user/budougumi0617
+![github-profile-summary](/2017/12/github-profile-summary.png)
+
 # コントリビュート
 第三者に向けていくつかプルリクエストを作成した。  
 だいたいタイポ警察しかしてないし、コードのPRはマージされていない。(タイポの修正だけとは言え`golang/dep`にマージされたのは興奮したけれど。）  
