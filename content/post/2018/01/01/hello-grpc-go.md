@@ -3,16 +3,18 @@ title= "[Go]gRPCのGo Quick Startをやってみた。"
 date= 2018-01-01T17:30:50+09:00
 draft = false
 slug = ""
-categories = ["Go"]
-tags = ["golang", "grpc]
+categories = ["Go","gRPC"]
+tags = ["golang", "grpc"]
 author = "budougumi0617"
 +++
 
-gRPCについて理解を始めるため、gRPCのクイックスタートをやったのでメモしておく
+gRPCについて理解を始めるため、gRPCのクイックスタートをやったのでメモしておく。
 
+
+**Go Quick Start**  
 https://grpc.io/docs/quickstart/go.html
 
-今回行ったのは、`Go`のクイックスタートだが、公式には以下の言語のクイックスタートが用意されている。
+ちなみに今回行ったのは、`Go`のクイックスタートだが、公式には以下の言語のクイックスタートが用意されている。
 
 - C++
 - Java
@@ -30,7 +32,8 @@ https://grpc.io/docs/quickstart/go.html
 - サンプルの内容は以下
     - 定義済みのプロトコルバッファーを呼ぶコードを動かす
     - プロトコルバッファーに定義を追加して再コンパイルしたAPIを実行する
-- `reflection.Register`しているところはServer Reflectionをしているところなのでとりあえず無視してよいみたい
+- `reflection.Register`しているところはとりあえず無視してよいみたい
+- Server Reflectionとはなんなのか？別途調べる。
 
 
 # What is gRPC?
@@ -80,14 +83,20 @@ $ go get -u github.com/golang/protobuf/protoc-gen-go
 `helloworld.proto`ファイルにプロトコルバッファーと呼ばれるgRPCでやりとりするデータが定義されている。`.proto`ファイルをプロトコルコンパイラー（`protc`）でコンパイルすることで各言語用のgRPCコードを自動生成できる。サンプルコードではすでにコンパイル済みの`helloworld.pb.go`ファイルが同梱されている。
 
 プロトコルバッファーの定義についてもっと知りたいときは以下を参照することで確認できる。
-[What is gRPC?](https://grpc.io/docs/#what-is-grpc)
-[gRPC Basics: Go.](https://grpc.io/docs/tutorials/basic/go.html)
+
+**What is gRPC?**  
+https://grpc.io/docs/#what-is-grpc
+
+**gRPC Basics: Go.**  
+https://grpc.io/docs/tutorials/basic/go.html
 
 サーバ側を起動しておいてクライアントコードを実行すると、レスポンスが受け取れることを確認できる。
 
 ```
 $ go run greeter_server/main.go
+
 -----------------
+
 $ go run greeter_client/main.go
 2017/12/31 14:11:52 Greeting: Hello world
 ```
@@ -184,7 +193,23 @@ https://github.com/grpc/grpc-go/blob/master/examples/helloworld/greeter_client/m
 
 
 # クイックスタートを終えて
-さっと用意して
+さっと用意して、プロトコルバッファーを自分でコンパイルして利用するところまで出来てよかった。次はBasic Tutorialwをやってみてもう少し具体的にgRPCについて理解する。
+
+**gRPC Basics: Go.**  
+https://grpc.io/docs/tutorials/basic/go.html
+
+また、Server reflectionがわからないままなので調べる。この辺を読めば良いらしい？
+
+**GRPC Server Reflection Protocol**  
+https://github.com/grpc/grpc/blob/master/doc/server-reflection.md
+
+**package reflection**  
+https://godoc.org/google.golang.org/grpc/reflection
+
+**gRPC Server Reflection Tutorial**  
+https://github.com/grpc/grpc-go/blob/master/Documentation/server-reflection-tutorial.md
+
+
 
 # 参考URL
 
@@ -200,7 +225,8 @@ https://www.school.ctc-g.co.jp/columns/nakai2/nakai224.html
 **Why do we need to register reflection service on gRPC server**  
 https://stackoverflow.com/questions/41424630/why-do-we-need-to-register-reflection-service-on-grpc-server
 
-Server Reflectionについては後日調べる。この辺を読めば良いらしい？
+**gRPC Basics - Go**  
+https://grpc.io/docs/tutorials/basic/go.html
 
 **GRPC Server Reflection Protocol**  
 https://github.com/grpc/grpc/blob/master/doc/server-reflection.md
