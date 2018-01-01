@@ -217,6 +217,7 @@ https://speakerdeck.com/vvakame/golang-dot-tokyo-number-11
 まずDatastore(GCP)から勉強しないといけないなーと思った。やっぱりGoやってるしGAE使ってみないとだ。
 
 # Goで地図サーバを構築した話(tsukumaru)
+https://speakerdeck.com/tsukumaru/godedi-tu-sabawogou-zhu-sitahua
 
 - OpenMapTilesが元データ。地図のタイルデータを入手できる
 	- https://openmaptiles.org/
