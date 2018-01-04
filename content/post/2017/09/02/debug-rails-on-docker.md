@@ -6,15 +6,16 @@ slug = ""
 categories = ["RubyOnRails", "Docker"]
 tags = ["RubyOnRails","Docker", "Debug"]
 author = "budougumi0617"
+aliases =  ["/post/2017/09/02/debug-rails-on-docker/"]
 +++
 
-Rails本の写経を`docer-compose`で行なったときのTips。
+Rails本の写経を`docker-compose`で行なったときのTips。
 
 # TL;DR
-`docke-compose`で作ったRubyOnRailsコンテナで`binding.pry`によるデバッグを行えるようにする。
+`docker-compose`で作ったRubyOnRailsコンテナで`binding.pry`によるデバッグを行えるようにする。
 
 # 前提
-`doker-compose`でRails、Spring用のコンテナなど、複数コンテナを起動する形のRails環境を構築した。基本構成は以下の記事に習っている。
+`docker-compose`でRails、Spring用のコンテナなど、複数コンテナを起動する形のRails環境を構築した。基本構成は以下の記事に習っている。
 
 [高速に開発できる Docker + Rails開発環境のテンプレートを作った](http://qiita.com/kawasin73/items/2253523be18e5afd994f)
 
