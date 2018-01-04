@@ -6,6 +6,7 @@ slug = ""
 categories = ["C-sharp", "dot-net"]
 tags = ["OpenOver", "DevOps", "VS2017"]
 author = "budougumi0617"
+aliases =  ["/post/2017/07/13/opencover-to-vs2017/"]
 +++
 
 # TL;DR

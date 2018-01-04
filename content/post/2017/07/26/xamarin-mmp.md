@@ -6,6 +6,7 @@ slug = ""
 categories = ["Xamarin.Mac", "c-sharp", "VisualStudio"]
 tags = ["xamarin", "mmp"]
 author = "budougumi0617"
+aliases = ["/post/2017/07/26/xamarin-mmp/"]
 +++
 
 # TL;DR

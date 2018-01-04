@@ -6,6 +6,7 @@ slug = ""
 categories = ["dot-net", "c-sharp", "DevOps"]
 tags = ["AppVeyor", "Codecov", "OpenCover", "XUnit"]
 author = "budougumi0617"
+aliases = ["/post/2017/07/25/ci-for-dotnet16/"]
 +++
 
 # TL;DR

@@ -6,6 +6,7 @@ slug = ""
 categories = ["dot-net", "c-sharp", "DevOps"]
 tags = ["Appveyor", "nuget.org", "devops"]
 author = "budougumi0617"
+aliases = ["/post/2017/10/13/publish-nupkg-by-appveyor/"]
 +++
 
 # TL;DR

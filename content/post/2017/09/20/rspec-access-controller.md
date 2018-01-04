@@ -6,6 +6,7 @@ slug = ""
 categories = ["RubyOnRails"]
 tags = ["RubyOnRails","Test", "RSpec"]
 author = "budougumi0617"
+aliases = ["/post/2017/09/20/rspec-access-controller/"]
 +++
 
 `C#`では対象インスタンスのメソッドの挙動を変えることは出来ないので、別の手段を探していたのだが、`ruby`では出来た。

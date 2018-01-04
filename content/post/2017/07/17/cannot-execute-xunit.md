@@ -6,6 +6,7 @@ slug = ""
 categories = ["C-Sharp", "dot-net"]
 tags = ["VS4Mac", "XUnit"]
 author = "budougumi0617"
+aliases = ["/post/2017/07/17/cannot-execute-xunit/"]
 +++
 
 # TL;DR

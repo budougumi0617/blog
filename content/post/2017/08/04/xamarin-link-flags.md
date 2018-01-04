@@ -6,6 +6,7 @@ slug = ""
 categories = ["Xamarin.Mac", "c-sharp", "VisualStudio"]
 tags = ["xamarin", "mmp","Visual Studio for Mac"]
 author = "budougumi0617"
+aliases = ["/post/2017/08/04/xamarin-link-flags/"]
 +++
 
 ネイティブライブラリの動的ロードを含む`Xamarin.Mac`アプリを作ろうとしたら、ビルドエラーに遭遇しました。

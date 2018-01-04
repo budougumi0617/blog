@@ -6,6 +6,7 @@ slug = ""
 categories = ["Go","Web","Review"]
 tags = ["golang", "book", "web"]
 author = "budougumi0617"
+aliases = ["/post/2017/10/12/go-web-programing/"]
 +++
 
 表題の本を読み終わった。
