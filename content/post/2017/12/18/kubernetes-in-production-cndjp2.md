@@ -23,7 +23,7 @@ author = "budougumi0617"
 |URL|https://cnd.connpass.com/event/73694/|
 |会場|日本オラクル青山センター|
 |日時|2017/12/18(月) 19:00 〜 22:00|
-|資料1|https://www.slideshare.net/charlier-shoe/kubernetes-in-cndjp2|
+|資料1|https://www.slideshare.net/charlier-shoe/kubernetes-in-cndjp2-85089458|
 |資料2|https://github.com/oracle-japan/cndjp2|
 |ハッシュタグ| [#cndjp2](https://twitter.com/search?q=%23cndjp2) |
 
@@ -298,3 +298,4 @@ https://kubernetes.io/docs/concepts/services-networking/ingress/
 
 **Ingress での HTTP 負荷分散の設定**  
 https://cloud.google.com/kubernetes-engine/docs/tutorials/http-balancer?hl=ja
+
