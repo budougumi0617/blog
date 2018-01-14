@@ -9,7 +9,7 @@ author = "budougumi0617"
 +++
 
 
-[前回](https://budougumi0617.github.io/2018/01/01/hello-grpc-go/)のgRPCのクイックスタートをやったときにサーバーリフレクションのことがよくわからなかった。サーバーリフレクションにもチュートリアルがあったのでやってみた。
+[前回](/2018/01/01/hello-grpc-go/)のgRPCのクイックスタートをやったときにサーバーリフレクションのことがよくわからなかった。サーバーリフレクションにもチュートリアルがあったのでやってみた。
 
 # TL;DR
 - サーバーリフレクションを使うと実行中のサーバからプロトコルバッファーの定義を取得したり、実行出来るようになる。
@@ -145,4 +145,5 @@ https://www.goheroe.org/2017/08/19/grpc-service-discovery-with-server-reflection
 
 
 # gRPC関連の記事
- - [[Go]gRPCのGo Quick Startをやってみた。](https://budougumi0617.github.io/2018/01/01/hello-grpc-go/)
+ - [[Go]gRPCのGo Quick Startをやってみた。](/2018/01/01/hello-grpc-go/)
+ - [[Go]gRPC Basics: GoからgRPCのストリーミングRPCを理解する](/2018/01/14/grpc-basics-go/)
