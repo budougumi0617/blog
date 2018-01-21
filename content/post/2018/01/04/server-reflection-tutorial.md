@@ -147,3 +147,4 @@ https://www.goheroe.org/2017/08/19/grpc-service-discovery-with-server-reflection
 # gRPC関連の記事
  - [[Go]gRPCのGo Quick Startをやってみた。](/2018/01/01/hello-grpc-go/)
  - [[Go]gRPC Basics: GoからgRPCのストリーミングRPCを理解する](/2018/01/14/grpc-basics-go/)
+ - [[Go]gomockを使ったgRPCのテスト](/2018/01/21/try-gomock-on-grpc-go/)
