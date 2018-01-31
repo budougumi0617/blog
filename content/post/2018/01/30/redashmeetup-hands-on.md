@@ -16,7 +16,6 @@ Redash Meetupに参加して、Redashについて学んできた。
 |URL|https://redash-meetup.connpass.com/event/75423/|
 |会場|株式会社ココラブル|
 |日時|2018/01/30(火) 19:00 〜 22:00|
-|Toggeter| https://togetter.com/li/1194466 |
 |ハッシュタグ| [#redashmeetup](https://twitter.com/search?q=%23redashmeetup) |
 
 
