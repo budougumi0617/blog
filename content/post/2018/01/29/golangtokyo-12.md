@@ -129,6 +129,8 @@ if err地獄について、自分はvimでgoを書くが、vim-goとsonictemplat
 - [fatih/vim-go](https://github.com/fatih/vim-go)
 
 ## kushiの紹介
+https://speakerdeck.com/cnosuke/golang-dot-tokyo-number-12-lt-kushi  
+[#golangtokyo のLTでkushiというのを作った話をしてきた](http://cnosuke.hatenablog.com/entry/2018/01/31/114657)  
 [cnosuke](https://twitter.com/cnosuke)
 
 
