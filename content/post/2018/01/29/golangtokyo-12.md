@@ -1,5 +1,6 @@
 +++
 title= "[Go]golang.tokyo #12 参加メモ #golangtokyo"
+aliases = ["/2018/01/29/golangtokyo-12/"]
 date= 2018-01-31T09:30:08+09:00
 draft = false
 slug = ""
