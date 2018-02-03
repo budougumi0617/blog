@@ -149,7 +149,7 @@ Macの場合は`brew install httpd`で`ab`コマンドが利用できるよう�
 - [Learn Kubernetes using Interactive Browser-Based Scenarios](https://www.katacoda.com/courses/kubernetes)
 
 # 関連
-- [Cloud Native Developers JP 第1回勉強会 参加メモ #cndjp1](https://budougumi0617.github.io/2017/11/23/cndjp1/)
-- [[k8s]Cloud Native Developers JP 第2回勉強会 参加メモ #cndjp2](https://budougumi0617.github.io/2017/12/18/kubernetes-in-production-cndjp2/)
+- [Cloud Native Developers JP 第1回勉強会 参加メモ #cndjp1](/2017/11/23/cndjp1/)
+- [[k8s]Cloud Native Developers JP 第2回勉強会 参加メモ #cndjp2](/2017/12/18/kubernetes-in-production-cndjp2/)
 
 
