@@ -340,3 +340,5 @@ protoファイルのひとつの定義からサーバー用、クライアント
  - [[Go]gRPCのGo Quick Startをやってみた。](/2018/01/01/hello-grpc-go/)
  - [[Go][gRPC]Server Reflection Tutorialをやってみた](/2018/01/04/server-reflection-tutorial/)
  - [[Go]gomockを使ったgRPCのテスト](/2018/01/21/try-gomock-on-grpc-go/)
+ - [[Go]gRPC GatewayでgRPCに対するREST APIを自動生成する](/2018/02/03/grpc-gateway-for-rest-api)
+

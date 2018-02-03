@@ -4,7 +4,7 @@ date= 2018-02-03T13:31:14+09:00
 draft = false
 slug = ""
 categories = ["report","k8s"]
-tags = ["k8s","chaoskube", "kafka"]
+tags = ["k8s","chaoskube", "kafka","cndjp"]
 author = "budougumi0617"
 +++
 
