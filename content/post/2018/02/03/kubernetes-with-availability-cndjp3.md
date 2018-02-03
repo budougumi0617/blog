@@ -25,7 +25,10 @@ author = "budougumi0617"
 |ハッシュタグ| [#cndjp3](https://twitter.com/search?q=%23cndjp3) |
 |資料|[Kubernetes × 可用性 -- cndjp第3回勉強会](https://www.slideshare.net/charlier-shoe/kubernetes-cndjp3/charlier-shoe/kubernetes-cndjp3)|
 
-
+# TL;DR
+- マイクロサービスの4層アーキテクチャごとの可用性
+- Kafkaを使ったチャットアプリサービスをk8sにデプロイ
+- chaoskubeを使ってカオステストを実施
 
 
 # マイクロサービス4層アーキテクチャ
