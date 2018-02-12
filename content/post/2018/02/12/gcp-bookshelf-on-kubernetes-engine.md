@@ -3,8 +3,8 @@ title= "[Go]Google Kubernetes Engineのチュートリアルをやるときに�
 date= 2018-02-12T08:04:35+09:00
 draft = false
 slug = ""
-categories = ["gcp"]
-tags = ["gke","k8s","gcp"]
+categories = ["gcp","go"]
+tags = ["gke","k8s","gcp","golang"]
 author = "budougumi0617"
 +++
 
