@@ -4,7 +4,7 @@ date= 2018-02-05T19:08:24+09:00
 draft = false
 slug = ""
 categories = ["report", "gcp"]
-tags = ["gcb", "gcr","gsr","gcpug"]
+tags = ["gcb", "gcr","gsr","gcpug","gcp"]
 author = "budougumi0617"
 +++
 
