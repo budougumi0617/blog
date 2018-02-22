@@ -3,7 +3,7 @@ title= "Go 1.10 Release Party in Tokyo参加メモ #go110party"
 date= 2018-02-22T13:48:52+09:00
 draft = false
 slug = ""
-categories = ["go"]
+categories = ["go","report"]
 tags = ["golang"]
 author = "budougumi0617"
 +++
