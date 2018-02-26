@@ -183,6 +183,9 @@ https://github.com/ktr0731/evans
 # Session7: Goでカウンタを作った話
 [@bokko](https://twitter.com/cubicdaiya)
 
+言及されていないが、内容的にこれの話  
+[pvpool〜メルカリの商品閲覧数カウントアップの裏側〜](http://tech.mercari.com/entry/2018/02/26/110237)
+
 - Goでカウンタを作った話。
 - 全ての商品に閲覧数をつけるとページビューはどうなるか。
   - 読み込み処理だったページビューが書き込み処理になる。瞬間に非同期処理で大変になる。
