@@ -50,7 +50,7 @@ author = "budougumi0617"
 https://kubernetes.io/docs/concepts/cluster-administration/networking/
 
 
-## Service Netwwork
+## Service Network
 複数Podに対するルーティングやロードバランシングを実現するのがService Network。
 KubernetesオブジェクトでいうとServiceオブジェクトが該当する。
 k8sのServiceはLabelに応じてルーティングするPodを識別するが、Nodeのiptables、kube-proxyによって成り立っている。
@@ -85,14 +85,14 @@ GCP, AWS, Azure, OpenStackで利用する際のYAMLの書き方は以下の公�
 
 [勉強会の資料(P46)](https://speakerdeck.com/hhiroshell/kubernetes-network-deep-dive/)には「Serviceオブジェクト以上のことはLBに設定することはできない（(OSIの？)L3-L4相当)と書いてあるが、k8sの公式を見るとSSLの設定やアクセスログの設定もできそう
 
-[SSL support on AWS](https://kubernetes.io/docs/concepts/services-networking/service/#ssl-support-on-aws)
+[SSL support on AWS](https://kubernetes.io/docs/concepts/services-networking/service/#ssl-support-on-aws)  
 [ELB Access Logs on AWS](https://kubernetes.io/docs/concepts/services-networking/service/#elb-access-logs-on-aws)
 
 ### Ingress(beta)を利用する
 IngressはL7 LoadBalancing を行なうリソース。SSL/TLS終端なども利用することができる。
 Ingressオブジェクトに構成情報を記載してIngress Controllerによってプロビジョニングを行う
 
-[Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/)
+[Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/)  
 [WHAT IS LAYER 7 LOAD BALANCING?](https://www.nginx.com/resources/glossary/layer-7-load-balancing/)
 
 
