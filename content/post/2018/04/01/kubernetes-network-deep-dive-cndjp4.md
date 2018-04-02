@@ -83,14 +83,22 @@ GCP, AWS, Azure, OpenStackで利用する際のYAMLの書き方は以下の公�
 
 [Service|LoadBalancer](https://kubernetes.io/docs/concepts/services-networking/service/#type-loadbalancer)
 
-[勉強会の資料(P46)](https://speakerdeck.com/hhiroshell/kubernetes-network-deep-dive/)には「Serviceオブジェクト以上のことはLBに設定することはできない（(OSIの？)L3-L4相当)と書いてあるが、k8sの公式を見るとSSLの設定やアクセスログの設定もできそう
-
+~~[勉強会の資料(P46)](https://speakerdeck.com/hhiroshell/kubernetes-network-deep-dive/)には「Serviceオブジェクト以上のことはLBに設定することはできない（(OSIの？)L3-L4相当)と書いてあるが、k8sの公式を見るとSSLの設定やアクセスログの設定もできそう。~~  
 [SSL support on AWS](https://kubernetes.io/docs/concepts/services-networking/service/#ssl-support-on-aws)  
 [ELB Access Logs on AWS](https://kubernetes.io/docs/concepts/services-networking/service/#elb-access-logs-on-aws)
 
+2018/04/02 21:39 Slackで@hhiroshellさんに質問して回答を頂いた。すぐ回答いただけて大変ありがたい。
+
+- TLS/SSlについて
+  - あくまでクラウドベンダーのLBサービスに機能を移譲した時に副次的な効果（ある意味副作用？）でSSL/TLSが着くだけで、ServiceオブジェクトとしてSSL/TLSの責務を持とうとしているわけではない。
+- アクセスログについて
+  - ロギングはルーティングの話とは直接関係ないので、Serivce(L3,L4)だからといってロギングが範囲外になるというわけではない。「IPヘッダやTCPヘッダ等をつかったルーティングまでしかできない」ことを指して「L3-L4相当」と言っている。
+
+
+
 ### Ingress(beta)を利用する
 IngressはL7 LoadBalancing を行なうリソース。SSL/TLS終端なども利用することができる。
-Ingressオブジェクトに構成情報を記載してIngress Controllerによってプロビジョニングを行う
+Ingressオブジェクトに構成情報を記載してIngress Controllerによってプロビジョニングを行う。
 
 [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/)  
 [WHAT IS LAYER 7 LOAD BALANCING?](https://www.nginx.com/resources/glossary/layer-7-load-balancing/)
