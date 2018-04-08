@@ -21,7 +21,7 @@ goでデバッグするときはdelveを使うことが多いと思う。
 
 
 ## 前提
-まずはvimを起動する。([`vim-go`も`delve`をサポート](https://github.com/fatih/vim-go/blob/master/CHANGELOG.md#117---march-27-2018)するようになりましたね。)
+まずはvimを起動する。([`vim-go`も`delve`をサポート](https://github.com/fatih/vim-go/blob/master/CHANGELOG.md#117---march-27-2018)するようになりましたね。)  
 …ではこの記事が閉じられそうなのでコマンドラインからDelveを使うことを前提とする。
 
 ## この記事を読んでもわからないこと
