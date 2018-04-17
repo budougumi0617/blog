@@ -160,7 +160,7 @@ https://anvaka.github.io/pm/#/?_k=cj0p80
 
 # GoらしいAPIを求める旅路
 [@lestrrat](https://twitter.com/lestrrat)  
-https://www.slideshare.net/lestrrat/goapi-go-conference-2018-spring?ref=https://gocon.connpass.com/event/82515/presentation/
+https://www.slideshare.net/lestrrat/goapi-go-conference-2018-spring
 
 [peco](https://github.com/peco/peco)や[Builders Con](https://builderscon.io/tokyo/2018)の牧さんの発表。
 
@@ -242,7 +242,7 @@ Golet (https://github.com/Code-Hex/golet)
 
 
 ちょうど`context.Context`を構造体に含めちゃいけない理由を会社の人と話していた。  
-その時は構造体のレシーバメソッドに呼び出し元から`context.Context`があったとき
+その時は構造体のレシーバメソッドに呼び出し元から`context.Context`があったとき、
 
 - 構造体に内包した`context.Context`
 - メソッドの引数で受け取った`context.Context`
