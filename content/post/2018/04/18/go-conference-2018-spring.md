@@ -16,7 +16,7 @@ https://gocon.connpass.com/event/82515/presentation/
 
 `runtime`のコードを見たり、API設計や公式の歩き方、gRPCマイクロサービスにおけるテストの話まで、非常に幅広い技術スタックの知見を得ることができた。
 また、学生エンジニア・新卒エンジニアの方々の熱意や技術力を目の当たりにすることも出来て、アラサーエンジニアとしては畏怖と尊敬を覚えた。  
-技術的にもパッション的にも(英語的にも…)、もっと技術を磨いていかないとと感じた一日になった。以下、発表メモと若干の覚え書き。
+技術的にもパッション的にも(英語的にも…)、もっとスキルを磨いていかないと感じた一日になった。以下、発表メモと若干の覚え書き。
 
 |||
 |---|---|
@@ -89,7 +89,7 @@ https://speakerdeck.com/ymmt2005/go-at-cybozu
 あまりメジャーではない（？）Monorepo構成をしていたり、積極的な技術チャレンジしていそうだった。
 
 # Testing with microservices in merpay
-株式会社メルカリ [kazegusuri](https://twitter.com/kazegusuri)
+株式会社メルカリ [@kazegusuri](https://twitter.com/kazegusuri)
 
 https://speakerdeck.com/kazegusuri/testing-with-microservices-in-merpay
 
@@ -282,7 +282,7 @@ https://github.com/dgraph-io/dgraph
 
 
 # LT1: Whitespace言語処理系をGoで実装してみた
-[snowcrush](https://twitter.com/snowcrush)
+[@snowcrush](https://twitter.com/snowcrush)  
 https://tanstaafl.0pt.jp/slides/whitespace.v2/#1
 
 - Whitespace言語をGoで実装した話。
