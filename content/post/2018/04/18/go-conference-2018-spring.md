@@ -14,6 +14,10 @@ author = "budougumi0617"
 **Go Conference 2018 Springイベント資料一覧**  
 https://gocon.connpass.com/event/82515/presentation/
 
+`runtime`のコードを見たり、API設計や公式の歩き方、gRPCマイクロサービスにおけるテストの話まで、非常に幅広い技術スタックの知見を得ることができた。
+また、学生エンジニア・新卒エンジニアの方々の熱意や技術力を目の当たりにすることも出来て、アラサーエンジニアとしては畏怖と尊敬を覚えた。  
+技術的にもパッション的にも(英語的にも…)、もっと技術を磨いていかないとと感じた一日になった。以下、発表メモと若干の覚え書き。
+
 |||
 |---|---|
 |URL|https://gocon.connpass.com/event/82515/|
@@ -46,7 +50,7 @@ GoのcontributorであるDave-sanのキーノート。
 
 mapの実装の話。基本的なHashMapのアルゴリズムから、C++, JavaのMapの実装との比較も解説されていた。
 
-- Goはhashmapの実装にinterface{}をつかっていない。
+- Goはhashmapの実装に`interface{}`をつかっていない。
 - コンパイルするとmap操作は`runtime.mapaccess1`といった関数に展開されている。
 - HashMapの実装は`src/runtime/hashmap.go`に全部入っている。
 - mapの実装はKey/Valueを`unsafe.Poointer`で持つ。
@@ -65,7 +69,7 @@ mapの実装の話。基本的なHashMapのアルゴリズムから、C++, Java�
 [codehex](https://twitter.com/codehex)さんが[ブログ](https://codehex.hateblo.jp/entry/2018/04/16/114616)に懇親会でDave-sanから聞いた情報も書いてくださっている。
 
 # Go at Cybozu
-サイボウズ株式会社 [@ymmt](https://twitter.com/ymmt2005)
+サイボウズ株式会社 [@ymmt](https://twitter.com/ymmt2005)  
 https://speakerdeck.com/ymmt2005/go-at-cybozu
 
 スポンサーセッション。  
@@ -124,15 +128,18 @@ https://github.com/mercari/go-grpc-interceptor
   - https://github.com/Shopify/toxiproxy
 - PostManでテストケースをGitHubで管理してQAテスト
 
+具体的なOSSなどの紹介もあり、マイクロサービスにおけるテストについてものすごい情報量だった。  
+そこまでテストできるのか！？というくらいのアプローチ、全部やるのか（やれるのか）は別として手札として取り込みたい。
+
 # How to write Go code
-[@kaneshin](https://twitter.com/kaneshin0120)
+[@kaneshin](https://twitter.com/kaneshin0120)  
 https://speakerdeck.com/kaneshin/how-to-write-go-code
 
 エウレカCTOのkaneshinさんの発表。  
 発表のほぼ大半は実際にライブサーフィン？ライブブラウジング？で公式めぐりをされていた。  
 Goはgodoc上でExampleがそのまま動かせたりするし、実コードにも補足コメントが色々書いてあって、
 本当に公式だけで大半の調査ができるところが魅力だと思う。  
-個人的にはおすすめはWikiの[CodeReviewComments](https://github.com/golang/go/wiki/CodeReviewComments)も定期的に読んでおきたい。
+たしか発表中には出てこなかったと思うが、Wikiの[CodeReviewComments](https://github.com/golang/go/wiki/CodeReviewComments)も定期的に読んでおきたい。
 
 - 愚者は経験に学び、賢者は歴史に学ぶ。
 - どの記事が新しいのか、ちゃんとしているのか、鮮度などがよくわからない状態Goについて調べるならばやはり公式が一番。
@@ -235,8 +242,12 @@ Golet (https://github.com/Code-Hex/golet)
 
 
 ちょうど`context.Context`を構造体に含めちゃいけない理由を会社の人と話していた。  
-その時は構造体のレシーバメソッドの呼び出し元から`context.Context`を受け取ったときに
-構造体に内包した`context.Context`と、引数で受け取った`context.Context`、どう従うのかが曖昧になってしまうからだと話になった。  
+その時は構造体のレシーバメソッドに呼び出し元から`context.Context`があったとき
+
+- 構造体に内包した`context.Context`
+- メソッドの引数で受け取った`context.Context`
+
+どちらにどう従うのかが曖昧になってしまうから構造体に内包するのは良くないのでは、だと話になった。  
 あと、構造体に含めるときは構造体オブジェクトと`context.Context`のライフサイクルが同じであることが前提なのも懸念事項にある？
 
 **Why context.Context not in structs ?**  
@@ -363,13 +374,13 @@ https://github.com/heptio/contour/blob/master/Dockerfile
 <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">heptio/contourのDockerfileがGoだ一番理想だと思う<a href="https://t.co/O1LemA30AZ">https://t.co/O1LemA30AZ</a> <a href="https://twitter.com/hashtag/gocon?src=hash&amp;ref_src=twsrc%5Etfw">#gocon</a></p>&mdash; Taichi Nakashima (@deeeet) <a href="https://twitter.com/deeeet/status/985421790372478976?ref_src=twsrc%5Etfw">2018年4月15日</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-今自分で作っている開発用のコンテナは変更のたびに毎回`docker build`するのがめんどくさくてソースコードマウントして`go run`で動かすように作っている。
+今自分で作っている開発用のコンテナは変更のたびに毎回`docker build`するのがめんどくさくて、
+ソースコードマウントして`go run`で動かすように作っている。（コンテナリビルドしなくてもリスタートで変更が反映できる）  
 本番用はちゃんとマルチステージで組まないと。
 
 
 # LT6: Replaced Backlog Git Server from Perl to Go
-[Yuichi Watanabe](https://twitter.com/vvatanabe_ja)
-
+[Yuichi Watanabe](https://twitter.com/vvatanabe_ja)  
 https://slides.com/vvatanabe/replaced-backlogs-git-server-from-perl-to-go
 
 
@@ -380,6 +391,8 @@ https://slides.com/vvatanabe/replaced-backlogs-git-server-from-perl-to-go
   - `git clone`、`git push`が2倍速くなった
   - アーキテクチャも変えているので一概には言えないが、golangいい感じ！
 
+タイムオーバーだったので、最後のほうはスライドから読み取ったもの。ぜひ考察お聞きしたかった。
 
-
+# 関連
+- [Go Conference 2017 Autumn参加メモ #gocon](/2017/11/09/gocon2017-autumn/)
 
