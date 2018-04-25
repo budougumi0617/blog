@@ -71,7 +71,7 @@ https://github.com/budougumi0617/msstore-go
 機能が足りないのはもちろんだが、テスト書いたり、共通化とか出来ていないので、1月中に完成させておきたい。  
 コピペの設定だがCircleCI2.0を使ってみた。
 
-deeetさんが「[API Clientは最初に書くGolang パッケージとしても良いと思う．](http://deeeet.com/writing/2016/11/01/go-api-client/)」と言っていたが、たしかに勉強になる。
+deeeetさんが「[API Clientは最初に書くGolang パッケージとしても良いと思う．](http://deeeet.com/writing/2016/11/01/go-api-client/)」と言っていたが、たしかに勉強になる。
 
 --- 
 
