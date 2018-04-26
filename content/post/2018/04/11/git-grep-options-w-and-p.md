@@ -95,7 +95,7 @@ backend/main.go:        fmt.Fprintf(w, "<html><body>hello</body></html>\n")
 
 
 # 終わりに
-@deeetさんのTweeetをみて調べてみたら今回の便利なオプションを見つけてしまった。
+@deeeetさんのTweeetをみて調べてみたら今回の便利なオプションを見つけてしまった。
 
 
 <blockquote class="twitter-tweet" data-partner="tweetdeck"><p lang="en" dir="ltr">Grepping with function context looks nice! / “Git 2.17 is now available | The GitHub Blog” <a href="https://t.co/OfE1RyJKNB">https://t.co/OfE1RyJKNB</a></p>&mdash; Taichi Nakashima (@deeeet) <a href="https://twitter.com/deeeet/status/982782674002571264?ref_src=twsrc%5Etfw">April 8, 2018</a></blockquote>
