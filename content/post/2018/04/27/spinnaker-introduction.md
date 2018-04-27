@@ -1,5 +1,5 @@
 +++
-title= "[発表資料]Spinnaker入門"
+title= "[発表資料]Spinnaker入門 #cndjp5"
 date= 2018-04-27T10:09:26+09:00
 draft = false
 slug = ""
@@ -8,7 +8,7 @@ tags = ["spinnaker","cndjp","k8s"]
 author = "budougumi0617"
 +++
 
-Cloud Native Developers JP 第5回勉強会(cndjp5)で発表した資料です。  
+Cloud Native Developers JP 第5回勉強会(cndjp5)の発表資料と資料中の参考リンクです。  
 https://cnd.connpass.com/event/84310/
 
 <script async class="speakerdeck-embed" data-id="3f26a8a1f1f44cb2ae26c2cda5978edd" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
