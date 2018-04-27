@@ -18,6 +18,7 @@ https://cnd.connpass.com/event/84310/
 **Spinnaker**  
 https://www.spinnaker.io
 
+
 SpinnakerはKubernetesなどに対応した継続的デリバリーツール。  
 Blue/Greenやカナリーリリースが簡単にできる
 
