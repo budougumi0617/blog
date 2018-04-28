@@ -13,8 +13,8 @@ GCPUGに行ってMercariのマイクロサービス環境、有識者方のGKE�
 |||
 |---|---|
 |URL|https://gcpug-tokyo.connpass.com/event/81224/|
-|会場|株式会社Gunosy(六本木ヒルズ森タワー25階)|
-|日時|2018/03/09(金)19:10 〜 22:00|
+|会場|六本木ヒルズ 森タワー 18F メルカリ|
+|日時|2018/04/26(木)19:00 〜 22:00|
 |資料|[Microservices on GKE at Mercari](https://speakerdeck.com/tcnksm/microservices-on-gke-at-mercari)|
 |ハッシュタグ|[#gcpug](https://twitter.com/hashtag/gcpug)|
 
