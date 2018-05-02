@@ -9,7 +9,7 @@ author = "budougumi0617"
 +++
 
 Cloud Native Developers JP(cndjp) 第5回勉強会に参加してきたので、自分メモ。  
-今回は有志によるCI/CDツールの紹介。自分は発表者としても参加させていただいた。
+今回は有志による一人10分のCI/CDツールの紹介。自分は発表者としても参加させていただいた。
 
 |||
 |---|---|
@@ -104,7 +104,7 @@ https://www.slideshare.net/cyberblackvoom/jenkins-x-on-gke-rancher20-on-oracle-c
   - http://jenkins-x.io/getting-started/install/
 - `jx create cluster gke`というようにコマンドを実行すると、あとは選択肢を選んでいくだけでJenkinsが構築できる
 - Rancher2.0 betaを使ってOracle Cloud上に構築したRancherからGKE + Jenkins Xクラスターへの接続も出来た
-  - ※ @cyberblack28-sanはRancherのほうからいらっしゃった方
+  - ※ @cyberblack28さんはRancherのほうからいらっしゃった方
 
 
 # GitLabによるComplete DevOpsの実現
@@ -147,7 +147,26 @@ https://speakerdeck.com/hhiroshell/skaffoldwoshi-tutemita
   - pushはGCR、deployはhelm、とか
 - `skafolld dev`をローカルで起動しておけばコンテナの依存ファイルの変更を検知してホットリロードされる
 
+
+# 会場アンケート
+会場のアンケートによると普通のJenkinsを使っているところが多いようだった。
+
+<blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">cndjp第5回で実施した、使っているCI/CDツール アンケートの集計結果です。ご査収ください。<a href="https://twitter.com/hashtag/cndjp5?src=hash&amp;ref_src=twsrc%5Etfw">#cndjp5</a> <a href="https://t.co/xOTZx5Patd">pic.twitter.com/xOTZx5Patd</a></p>&mdash; Hayakawa Hiroshi (@hhiroshell) <a href="https://twitter.com/hhiroshell/status/990967880220000256?ref_src=twsrc%5Etfw">2018年4月30日</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+Jenkinsも良いとは思うんだけど、(別のCIサービスを使っても結局"XXXXおじさん"に頼ることになるので、)Jenkinsおじさん問題より、オンプレCI環境のリソースの限界を感じる。  
+リース切れ待ちの放置PCとか大量にスレーブにしたりしてリソース確保しているのだろうか？（実体験）  
+TravisCIが少なかったのが意外だった。
+
+
 # 感想
+一日で9種類のCIサービスの概要を聞けるお得な勉強会だった。自分でちゃんとYAMLを書いて設定したことがあるのはCircleCIくらいだったので非常に勉強になった。  
+とくにJenkins XやMicroclimateなどの最新情報も聞けたので（自分は除いて）登壇者のみなさんの情報力に感謝するしかない。
+YAMLで設定を書くのはもはやデファクトのようだけど、記載内容も共通化されていくと引越しが簡単で嬉しい。  
+TeamCityやWindows系のCI(AppVeyor, VSTS(TFS))はなかった。あまりニーズがないのか、やはりWindowsでビルドするような案件はオンプレでCIしたいのか？  
+自分はVSTS, AppVeyor、TravisCI、CircleCIなどをよく使ったけど、いま個人で新しいリポジトリ作るときは基本CircleCIな気がする。  
+「デプロイ後ロールバックして前回デプロイに戻せるのか？」とか全部のツールに共通の質問とかしてみればよかった。  
+
 
 # 関連
 - [[発表資料]Spinnaker入門 #cndjp5](/2018/04/27/spinnaker-introduction/)
@@ -156,5 +175,38 @@ https://speakerdeck.com/hhiroshell/skaffoldwoshi-tutemita
 - [[k8s]Cloud Native Developers JP 第3回勉強会 #cndjp3 参加メモ](/2018/02/03/kubernetes-with-availability-cndjp3/)
 - [Kubernetes Network Deep Dive!（Istioもあるよ） cndjp第四回参加メモ #cndjp4](/2018/04/01/kubernetes-network-deep-dive-cndjp4/)
 
+# （余談）登壇に対するKPI
+今回、初めて社外発表した。「発表時間10分」というのは初めて社外発表する身としては非常にありがたい機会だった。  
+Spinnakerは前から調べようと思っていたが、使ったことがなかったので今回の勉強会をデッドライン駆動の条件として動かすところまで出来た。  
+使い込んでいたわけではないので、薄い内容になってしまったが、「動いているところを見たことある人」は0人だったので、それなりに情報提供は出来たかなと思う。
+
+## 良かったこと
+- 発表時間を守ることができた
+  - 正直一度も練習出来ないままぶっつけ本番だったので納まってよかった。
+- 一度ブログ記事にアウトプットした内容など、資料に落としやすかった
+  - 出し惜しみせずにブログにしていたので資料の構成作りなどラクにできた
+- 主催者のhhiroshellさんが大きな時計を設置してくださっていたので、時間確認しながら進めることができた
+- 事前入りして接続チェックすることができた
+  - 最初に用意されていたアダプタでは映らなかったのでちゃんと確認しておいてよかった。純正最強説。
+- 動くところを見せることができた
+  - デモ環境を用意するして大まかな機能の紹介をすることが出来た
 
 
+## だめだったところ
+- 一連の流れをデモすることは出来なかった
+  - コンテナビルドから始めたのでトリガー→承認までの流れをデモできなかった
+  - マニュアル開始で良かった
+- そもそも一度も発表練習しないで本番に臨んでしまった
+  - 言い訳をすると当日にデモ環境壊してしまって、練習するつもりだった時間にk8sクラスタ5回くらい作りなおしていた。。。
+- もうちょっとデモの時間多くしてもよかったかもしれない
+  - 調べれば出てくる文字情報より動くもの見せる時間多くしたほうがよかったかもしれない
+
+## 次回に向けて
+- 資料作成やデモ環境の作成はある程度諦めてしっかり発表練習の時間を作る
+- 発表前だからといって出し惜しみせずに調べたことは一度まとめてブログ化しておく
+- 資料作成はある程度は時間ベースで区切る
+  - キリがなくなるのでほどほどにする
+
+発表してみて、いろいろな方に声かけていただけたし、最後の会場アンケートで「Spinnkaer使ってみたいと思った」人が数名いらっしゃったので非常に良い経験になった。  
+5月も発表機会があるので引き続き登壇してみようと思う。  
+聞いてくださった皆様ありがとうございました。
