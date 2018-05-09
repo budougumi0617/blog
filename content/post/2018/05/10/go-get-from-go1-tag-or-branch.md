@@ -8,7 +8,7 @@ tags = ["golang", "goget"]
 author = "budougumi0617"
 +++
 
-gocon中の@ymotongpooさんのTweetが気になったので調べた。
+gocon中の[@ymotongpoo](https://twitter.com/ymotongpoo)さんのTweetが気になったので調べた。
 
 <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">前から結構言ってるんだけど、go getで最新取られたくない場合は go1 というタグを切れば良いです <a href="https://twitter.com/hashtag/gocon?src=hash&amp;ref_src=twsrc%5Etfw">#gocon</a></p>&mdash; Yoshifumi Yamaguchi 🇺🇸 (@ymotongpoo) <a href="https://twitter.com/ymotongpoo/status/985418278288764928?ref_src=twsrc%5Etfw">2018年4月15日</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -16,7 +16,7 @@ gocon中の@ymotongpooさんのTweetが気になったので調べた。
 
 # TL;DR
 - go 1.Xを使っているとき、`go get`で取得されるコードはまず`go1` branch or tagから取得される
-- branchにもtagにも`go1`が存在しなかったしなかったときに`master`のコードが取得される
+- branchにもtagにも`go1`が存在しなかったときに`master`のコードが取得される
 
 # 実際に仕様を見てみる
 
@@ -93,7 +93,7 @@ https://github.com/golang/go/blob/814c749c8fa815a8ddf8184bcac8990ef0dea006/src/c
 	},
 ```
 
-ちなみに`git show-ref`コマンドの出力はこんな感じ。
+ちなみに`git show-ref`コマンドの出力はこんな感じ。（自分は使ったことがなかった）
 
 ```bash
 $ git show-ref
@@ -118,5 +118,7 @@ vcs.tagSync(root, selectTag(vers, tags))
 ```
 
 # 終わりに
-コマンドの実装もコードで簡単に追えるのが`go`のいいところだなと改めて思った。
-`go2`が出たら思い出すと良いかも？
+コマンドの実装もコードで簡単に追えるのが`go`のいいところだなと改めて思った。  
+`go2`が出たら思い出すと良いかも？  
+[vcs.go](https://github.com/golang/go/blob/master/src/cmd/go/internal/get/vcs.go)の各VCS(Mercurial, Git, Subversion)の差分を隠蔽する構造も実装の参考になる。
+
