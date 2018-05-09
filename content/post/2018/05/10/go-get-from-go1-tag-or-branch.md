@@ -28,7 +28,7 @@ https://golang.org/cmd/go/#hdr-Download_and_install_packages_and_dependencies
 
 # 実際にコードを見てみる
 
-`go get`の実装コードを見ると、確かに`go1`を探しているコードがある。
+`go get`の実装コードを見てみる。何やら`tags`というスライスの中から`go1`を探しているコードがある。
 
 https://github.com/golang/go/blob/master/src/cmd/go/internal/get/get.go#L513-L528
 
@@ -51,7 +51,7 @@ func selectTag(goVersion string, tags []string) (match string) {
 }
 ```
 
-（現状go1.X系しか存在しないので、手抜き実装になっている。）
+（コメントの通り、現状go1.X系しか存在しないので、手抜き実装になっている。）
 
 上記引数の`tags`は`vcsCmd`オブジェクトの`tags`メソッドで生成される`string`スライスだ。
 https://github.com/golang/go/blob/814c749c8fa815a8ddf8184bcac8990ef0dea006/src/cmd/go/internal/get/get.go#L497-L498
@@ -93,7 +93,24 @@ https://github.com/golang/go/blob/814c749c8fa815a8ddf8184bcac8990ef0dea006/src/c
 	},
 ```
 
-ここまでの一連の流れで、`tag`、`branch` の一覧の中に`go1`が会った場合は、そこから`go get`される実装になっている。
+ちなみに`git show-ref`コマンドの出力はこんな感じ。
+
+```bash
+$ git show-ref
+814c749c8fa815a8ddf8184bcac8990ef0dea006 refs/heads/master
+814c749c8fa815a8ddf8184bcac8990ef0dea006 refs/remotes/origin/HEAD
+...
+814c749c8fa815a8ddf8184bcac8990ef0dea006 refs/remotes/origin/master
+...
+6174b5e21e73714c63061e66efdbe180e1c5491d refs/tags/go1
+2fffba7fe19690e038314d17a117d6b87979c89f refs/tags/go1.0.1
+cb6c6570b73a1c4d19cad94570ed277f7dae55ac refs/tags/go1.0.2
+30be9b4313622c2077539e68826194cb1028c691 refs/tags/go1.0.3
+...
+```
+
+ここまでの一連の流れで、`tag`、`branch` の一覧の中に`go1`があった場合は、そこから`go get`される実装になっていることがわかった。
+
 https://github.com/golang/go/blob/814c749c8fa815a8ddf8184bcac8990ef0dea006/src/cmd/go/internal/get/get.go#L506
 
 ```
