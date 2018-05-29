@@ -29,17 +29,33 @@ Debugger support! Add integrated support for the delve debugger. Use :GoInstallB
 **fatih/vim-go-tutorial**  
 https://github.com/fatih/vim-go-tutorial
 
+[@hnakamur2](https://twitter.com/hnakamur2)さんが日本語翻訳版も公開してくれている。
+
+**hnakamur/vim-go-tutorial-ja**  
+https://github.com/hnakamur/vim-go-tutorial-ja
+
 # TL;DR
 - `vim-go`のデバッグ機能をヘルプからまとめた
 
-![GoDebugPrint](/2018/05/go-debug-print.png)
 
-上記の通りなので、英語に抵抗がないならば、Vimを開いて`:h go-debug`とすれば良い。  
+ほぼヘルプのコマンドを動かした通りなので、英語に抵抗がないならば、Vimを開いて`:h go-debug`とすれば良い。  
 見つからない場合は`vim-go`が古い状態になっている。
 
 https://github.com/fatih/vim-go/blob/7ac1e62fa30d84946e93a3820bb6cf6a431186ed/doc/vim-go.txt#L1872
 
-なお、今回基本的なデバッグ用語(ブレークポイント、ステップインなど)の説明は省略する。
+なお、今回基本的なデバッグ用語(ブレークポイント、ステップインなど)の説明は省略する。  
+以下のgif動画は以下の操作を行った際の画面を記録したものである。
+
+- `Vim`を起動
+- デバッグモードを開始
+- ブレークポイントを設置
+- コンテニューでデバッグを開始
+- スタックを確認
+- ローカル変数配列を展開
+- 実行中の変数の中身をデバッグプリント
+- デバッグモードを終了
+
+![vim-debug-demo](/2018/05/delve.gif)
 
 # 事前準備
 
@@ -55,6 +71,8 @@ dein.vimでpluginをアップデートするときは`vim`を起動して以下�
 `delve`が動くことも確認しておこう。ターミナルで一通り動くことを確認しておいたほうが良い。  
 自分の場合、Macで使うとdelveの起動は出来てもデバッグの開始に失敗することがあった。
 
+
+- [[Go]MacのVSCodeでGoのデバッグを試すと"unexpected fault address..."エラーになる](/2017/12/24/activate-delve-on-mac/)
 
 # Vim上でのデバッグ
 今回のデバッグ対象のサンプルとして次のコードを利用した。
@@ -102,7 +120,7 @@ $ vim ch01/ex02/echo.go
 :GoDebugStart ./ch01/ex02 test test2
 ```
 
-デバッグ実行時にプログラムへ引数やフラグを渡すときはパッケージ名のあとに指定する。
+デバッグ実行時にプログラムへ引数やフラグを渡すときはパッケージ名のあとに指定する。  
 ブレークポイントを指定していた場合、そこでプログラムが止まった状態でデバッグモードに移行しているはずだ。
 
 ![GoDebugStart](/2018/05/go-debug-start.png)
@@ -150,9 +168,11 @@ $ vim ch01/ex02/echo.go
 
 # 終わりに
 以上で`Vim-go`と`delve`でデバッグする方法をまとめた。
-UIに関しては圧倒的にvim-goのほうがリッチだった気がする。ますますVimでGoを書くのが楽しくなった。
+UIに関しては`delve`をそのまま使うより、圧倒的にvim-goのほうがリッチだった気がする。
+ますますVimでGoを書くのが楽しくなった。
 
 # 関連
-- 
+- [[Go]MacのVSCodeでGoのデバッグを試すと"unexpected fault address..."エラーになる](/2017/12/24/activate-delve-on-mac/)
+- [Goのデバッガ(Delve)のいろいろな起動のしかた(引数を渡して起動、起動中のプロセスにアタッチして起動 etc...)](/2018/04/08/debug-by-delve/)
 
 
