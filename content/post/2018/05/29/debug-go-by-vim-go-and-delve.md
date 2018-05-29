@@ -10,10 +10,10 @@ author = "budougumi0617"
 
 VimでGoを使う人は大半の人が`vim-go`プラグインをインストールしているだろう。
 
-**fatih/vim-go**
+**fatih/vim-go**  
 https://github.com/fatih/vim-go
 
-今年の3月、ついに`vim-go`が`delve`をサポートした（他のVimプラグインを使えばすでにVimから使えたようだが）。
+今年の3月、ついに`vim-go`が`delve`をサポートした（他のVimプラグインを使えばすでにVimから使えたようだが）。  
 VimからGoのプログラムをデバッグする方法をまとめる。
 
 https://github.com/fatih/vim-go/blob/master/CHANGELOG.md#117---march-27-2018
@@ -32,7 +32,7 @@ https://github.com/fatih/vim-go-tutorial
 # TL;DR
 - `vim-go`のデバッグ機能をヘルプからまとめた
 
-上記の通りなので、英語に抵抗がないならば、Vimを開いて`:h go-debug`とすれば良い。
+上記の通りなので、英語に抵抗がないならば、Vimを開いて`:h go-debug`とすれば良い。  
 見つからない場合は`vim-go`が古い状態になっている。
 
 https://github.com/fatih/vim-go/blob/7ac1e62fa30d84946e93a3820bb6cf6a431186ed/doc/vim-go.txt#L1872
@@ -41,7 +41,7 @@ https://github.com/fatih/vim-go/blob/7ac1e62fa30d84946e93a3820bb6cf6a431186ed/do
 
 # 事前準備
 
-まずは最新版のvim-goに更新しておく。`vim-go`の`delve`周りに5月に一度更新が入っているので最新版を取得しておいたほうがよい。
+まずは最新版のvim-goに更新しておく。`vim-go`の`delve`周りに5月に一度更新が入っているので最新版を取得しておいたほうがよい。  
 dein.vimでpluginをアップデートするときは`vim`を起動して以下のコマンドを実行する。
 
 ```vim
@@ -50,7 +50,7 @@ dein.vimでpluginをアップデートするときは`vim`を起動して以下�
 
 `:h go-debug`と入力して`DEBUGGER`のヘルプが表示されたならば`vim-go`でデバッグが出来るようになっている。
 
-`delve`が動くことも確認しておこう。ターミナルで一通り動くことを確認しておいたほうが良い。
+`delve`が動くことも確認しておこう。ターミナルで一通り動くことを確認しておいたほうが良い。  
 自分の場合、Macで使うとdelveの起動は出来てもデバッグの開始に失敗することがあった。
 
 
@@ -85,3 +85,54 @@ func main() {
 $ cd $GOPATH/src/github.com/budougumi0617/gopl/
 $ vim ch01/ex02/echo.go
 ```
+# `:GoDebugStart` デバッグを開始する
+まず、デバッグモードの起動の仕方だ。
+デバッグを開始するときは以下のように`:GoDebugStart`を実行する。(testをデバッグする場合は`:GoDebugTest`)
+
+
+```
+:GoDebugStart [pkg] [program-args]
+```
+
+たとえば、今回の例の場合はデバッグ対象のパッケージがカレントディレクトリではないので、以下のようになる。
+
+```
+:GoDebugStart ./ch01/ex02 test test2
+```
+
+デバッグ実行時にプログラムへ引数やフラグを渡すときはパッケージ名のあとに指定する。
+ブレークポイントを指定していた場合、そこでプログラムが止まった状態でデバッグモードに移行しているはずだ。
+
+また、もしここでデバッグモードの起動に失敗する場合、`:messages`を実行することで起動時のログを確認することができる。
+
+
+# `:GoDebugBreakpoint` | ブレークポイントを設定する
+
+次に、ブレークポイントを設定する。なお、ブレークポイントの設置はデバッグモードに入る前に実施することも出来る。
+ブレークポイントを設定したい行の上にカーソルを移動して`:GoDebugBreakpoint`を実行するか、
+ブレークポイントを設定した`LINE_NUM`行目を引数にして`:GoDebugBreakpoint $LINE_NUM`と実行する。
+成功すると、左端に`>`とマーキングがされる。
+ブレークポイントを解除したい場合はやはりカーソルを該当行に置くか、引数で指定して`:GoDebugBreakpoint`を実行する。
+
+# デバッガで挙動を確認する
+デバッグモード起動後は一般的なデバッグのようにステップ実行することが出来る。それぞれのコマンドにはデフォルトでキーバインドも設定されている。
+
+|コマンド|キーバインド|説明|
+|---|---|---|
+|`:GoDebugContinue`|F5 | ブレークポイントまでプログラムを実行する|
+|`:GoDebugNext` | F10| ステップオーバー実行。プログラム未開始時は`:GoDebugContinue`相当|
+|`:GoDebugStep`|F11| ステップイン実行。プログラム未開始時は`:GoDebugContinue`相当|
+|`:GoDebugStepOut`|なし| ステップアウト実行|
+|`:GoDebugSet`|なし|`delve`がサポートしている一部のプリミティブ型に値をセットできる|
+|`:GoDebugPrint`|F6|引数に指定された変数もしくはカーソル下の変数の値を確認できる|
+
+
+
+
+
+# `:GoDebugStop` | デバッグを終了する 
+デバッグを終了する場合は`:GoDebugStop`を実行する。
+デバッグ用のウインドウやブレークポイント情報がすべて取り除かれ、通常表示のVimに戻るはずだ。
+
+
+
