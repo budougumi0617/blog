@@ -1,7 +1,7 @@
 +++
 title= "[Go]vim-goとDelveでVim上からGoのデバッグを行う #vim #golang"
 date= 2018-05-29T10:00:00+09:00
-draft = true
+draft = false
 slug = ""
 categories = ["go","vim"]
 tags = ["golang","vim","delve"]
@@ -26,11 +26,13 @@ Debugger support! Add integrated support for the delve debugger. Use :GoInstallB
 
 なお、`vim-go`はチュートリアルを読めば大半の機能を理解することが出来るが、最近追加された機能まではチュートリアルに載っていない。
 
-**fatih/vim-go-tutorial**
+**fatih/vim-go-tutorial**  
 https://github.com/fatih/vim-go-tutorial
 
 # TL;DR
 - `vim-go`のデバッグ機能をヘルプからまとめた
+
+![GoDebugPrint](/2018/05/go-debug-print.png)
 
 上記の通りなので、英語に抵抗がないならば、Vimを開いて`:h go-debug`とすれば良い。  
 見つからない場合は`vim-go`が古い状態になっている。
@@ -103,6 +105,7 @@ $ vim ch01/ex02/echo.go
 デバッグ実行時にプログラムへ引数やフラグを渡すときはパッケージ名のあとに指定する。
 ブレークポイントを指定していた場合、そこでプログラムが止まった状態でデバッグモードに移行しているはずだ。
 
+![GoDebugStart](/2018/05/go-debug-start.png)
 また、もしここでデバッグモードの起動に失敗する場合、`:messages`を実行することで起動時のログを確認することができる。
 
 
@@ -126,13 +129,30 @@ $ vim ch01/ex02/echo.go
 |`:GoDebugSet`|なし|`delve`がサポートしている一部のプリミティブ型に値をセットできる|
 |`:GoDebugPrint`|F6|引数に指定された変数もしくはカーソル下の変数の値を確認できる|
 
+デバッグ中は右下のウインドウでログや出力情報を確認することができる。
+
+![GoDebugPrint](/2018/05/go-debug-print.png)
+
+# 変数の情報を確認する
+左下のウインドウに変数情報が表示されている。配列情報はその変数にカーソルを合わせてエンターを押下すれば情報を展開することも出来る。
+
+# スタック情報を確認する
+左のウインドウはスタック情報であり、変数名と同様に、確認したいスタック名でエンターをクリックすれば、呼び出し元の情報を確認することも可能。
 
 
+# `:GoDebugRestart` | デバッグを再開始する
+ブレークポイントなどを不用意に通過してしまった場合はリスタートすることもできる。
 
 
-# `:GoDebugStop` | デバッグを終了する 
+# `:GoDebugStop` | デバッグを終了する
 デバッグを終了する場合は`:GoDebugStop`を実行する。
 デバッグ用のウインドウやブレークポイント情報がすべて取り除かれ、通常表示のVimに戻るはずだ。
 
+# 終わりに
+以上で`Vim-go`と`delve`でデバッグする方法をまとめた。
+UIに関しては圧倒的にvim-goのほうがリッチだった気がする。ますますVimでGoを書くのが楽しくなった。
+
+# 関連
+- 
 
 
