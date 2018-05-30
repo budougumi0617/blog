@@ -67,7 +67,7 @@ https://golang.org/doc/install
 - Vim
   - https://github.com/fatih/vim-go
 Emacs
-  - https://www.emacswiki.org/emacs/GoLangMode
+  - https://github.com/dominikh/go-mode.el
 - Goland
   - https://www.jetbrains.com/go/
 
