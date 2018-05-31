@@ -93,6 +93,8 @@ Emacs
   - https://go-beginners.connpass.com/
 - Women Who Go
   - https://womenwhogo-tokyo.connpass.com/
+- 横浜Go読書会
+  - https://yokohama-go-reading.connpass.com/
 - GoCon
   - https://gocon.connpass.com/
 - Akiba.go
