@@ -3,7 +3,7 @@ title= "コンテナ技術の学習するなら圧倒的にKatacodaがおすす�
 date= 2018-06-10T16:54:38+09:00
 draft = false
 slug = ""
-categories = ["kubenets", "docker"]
+categories = ["Kubernetes", "docker"]
 tags = ["k8s", "docker"]
 author = "budougumi0617"
 +++
