@@ -1,23 +1,22 @@
 +++
-title= "hal config canary google account addすると"Required 'compute.projects.get' permission for..."で403エラー #spinnaker #kayenta"
+title= "hal config canary google account addすると\"Required 'compute.projects.get' permission for...\"で403エラー #spinnaker #kayenta"
 date= 2018-06-13T09:13:51+09:00
 draft = false
 slug = ""
-categories = [""]
-tags = [""]
+categories = ["spinnaker", "kubernetes", "gcp"]
+tags = ["spinnaker","gcp","kayenta", "k8s"]
 author = "budougumi0617"
 +++
 
-SpinnakerはKubenetesクラスターへの継続的デリバリーを可能とするOSSだ。
+SpinnakerはKubenetesクラスターへの継続的デリバリーを可能とするOSSだ。  
 Kayenataを有効化することで、カナリーリリースの自動スコアリングも可能とする。
 
-**Introducing Kayenta: An open automated canary analysis tool from Google and Netflix**
+**Introducing Kayenta: An open automated canary analysis tool from Google and Netflix**  
 https://cloudplatform.googleblog.com/2018/04/introducing-Kayenta-an-open-automated-canary-analysis-tool-from-Google-and-Netflix.html
 
-しかし2018/06/13現在、少なくともv1.7.0ではCanary Analytics(Kayenta)はデフォルトでは無効化されている。
+しかし2018/06/13現在、少なくともv1.7.0ではCanary Analytics(Kayenta)はデフォルトで無効化されている。
 
 今回はSpinnakerのKayentaを有効化する途中、GCP用の設定をしようとして以下のエラーが出たときのメモ。
-https://www.spinnaker.io/setup/canary/
 
 ```bash
 budougumi0617@budougumi0617-halyard:~$ hal config canary google account add my-google-account \
@@ -59,12 +58,12 @@ Google Kubernetes Engine(GKE)上にv1.7.0のSpinnakerを一度起動している
 
 Spinnaker自体は以下のquickstart通りにhalyardインスタンスを構成する方法で起動した。
 
-**Try out Halyard on GKE**
+**Try out Halyard on GKE**  
 https://www.spinnaker.io/setup/quickstart/halyard-gke/
 
 Spinnakerを起動できたら、以下の手順に則ってKayentaの設定を有効化する。
 
-**Set up canary support**
+**Set up canary support**  
 https://www.spinnaker.io/setup/canary/
 
 しかし、Stack Driverなどのログ閲覧用のアカウントを作成する途中以下のようなエラーが出てしまった。
@@ -100,13 +99,13 @@ Problems in default.canary:
 
 
 # 使うService Account事前に`roles/compute.viewer`ロールを付与しておく
-エラーは(json-pathで参照している)Service Account(SA)に必要なパーミッションを付与していないのが原因だった。
+エラーは(`--json-path`オプションで参照している)Service Account(SA)に必要なパーミッションを付与していないのが原因だった。
 [Try out Halyard on GKE](https://www.spinnaker.io/setup/quickstart/halyard-gke/)の通りにHalyardサーバーを構成している場合、
-上記のコマンドでしていしているJSONのSAは`gcs-service-account`という名前になっているはずなので、それにIAMのロールを付与する。
+上記のコマンドで指定しているJSONのSAは`gcs-service-account`という名前になっているはずなので、それにIAMのロールを付与する。
 
 `compute.projects.get`パーミッションを持つ最小権限のロールを以下のページから探す。
 
-**Compute Engine IAM Roles**
+**Compute Engine IAM Roles**  
 https://cloud.google.com/compute/docs/access/iam
 
 そうすると、どうやら[roles/compute.viewer](https://cloud.google.com/compute/docs/access/iam#compute_viewer_role)が最小権限のロールなので、これを利用することにする。
@@ -143,8 +142,7 @@ budougumi0617@budougumi0617-halyard:~$ hal config canary google account add my-g
 ちなみに`my-google-account`というのはGCP上の設定とは関係ないので、Spinnaker上で自分が区別できる名前ならば何でも良い（はず）。
 
 # 終わりに
-自分はSREやインフラエンジニアでないので、クラウドサービスのIAMやKubernetesのRBACらへんをいまいちわかっていなかったが、
-GCPのIAMとService Accountの概念をすこしわかってきた気がする。
+自分はSREやインフラエンジニアでないので、クラウドサービスのIAMやKubernetesのRBACらへんをいまいちわかっていなかったが、GCPのIAMとService Accountの概念をすこしわかってきた気がする。  
 とはいえ、技術調査のときは使うService Accountに最初からフルコントロールをつけた状態でやったほうが無駄に消耗しなくてよさそうだ。
 
 
