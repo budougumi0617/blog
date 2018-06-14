@@ -24,7 +24,7 @@ https://www.spinnaker.io/ebook/#continuous-delivery-with-spinnaker
 - Spinnakerというツールを使うとどのように解決できるかを知ることができる
 
 # 本の概要
-Netflixは"[マイクロサービスアーキテクチャ](http://amazon.jp/dp/4873117607)"でもAWSなどと並んで言及されている、クラウドでのマイクロサービスアーキテクチャ開発で著名な会社だ。
+Netflixは"[マイクロサービスアーキテクチャ](http://amazon.jp/dp/4873117607)"でもAmazonなどと並んで言及されている、クラウドでマイクロサービスでサービスを展開している会社として有名だ。
 
 **Netflix Technology Blog**  
 https://medium.com/@NetflixTechBlog
