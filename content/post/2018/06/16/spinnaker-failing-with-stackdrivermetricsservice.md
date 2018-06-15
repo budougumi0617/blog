@@ -76,6 +76,7 @@ cat .hal/default/staging/dependencies/926556552-gcp.json
 ```
 
 上記のサービスアカウントにモニタリング周りのIAMロールを追加で付与することでエラーは解決した。
+
 - Stackdriver Profiler エージェント
 - モニタリング編集者
 - Stackdriver リソース メンテナンス時間枠の編集者
