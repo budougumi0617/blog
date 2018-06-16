@@ -150,4 +150,5 @@ budougumi0617@budougumi0617-halyard:~$ hal config canary google account add my-g
 - [Spinnakerの始め方いろいろ](/2018/04/22/how-to-start-spinnaker/)
 - [[発表資料]Spinnaker入門 #cndjp5](/2018/04/27/spinnaker-introduction/)
 - [GKEでSpinnakerを使ったKubernetesの継続的デリバリーを試してみた](/2018/04/24/spinnaker-with-google-kubernetes-engine/)
+- [[Spinnaker]GKE上でhal deploy applyするとkayenta failed http://localhost:8090/spectator/metrics with <urlopen error [Errno 111] Connection refused> #spinnaker #kayenta](/2018/06/16/spinnaker-failing-with-stackdrivermetricsservice/)
 
