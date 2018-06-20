@@ -91,7 +91,7 @@ cat .hal/default/staging/dependencies/926556552-gcp.json
 
 # 関連
 - [Continuous Delivery With Spinnakerでマイクロサービスの継続的デリバリーの課題と解決手法を学ぶ](/2018/06/14/review-continuous-delivery-with-spinnaker/)
-- [hal config canary google account addすると"Required 'compute.projects.get' permission for..."で403エラー #spinnaker #kayenta](/06/13/403-error-when-add-google-account-for-kayenta/)
-- [[発表資料]Spinnaker入門 #cndjp5](/04/27/spinnaker-introduction/)
+- [hal config canary google account addすると"Required 'compute.projects.get' permission for..."で403エラー #spinnaker #kayenta](/2018/06/13/403-error-when-add-google-account-for-kayenta/)
+- [[発表資料]Spinnaker入門 #cndjp5](/2018/04/27/spinnaker-introduction/)
 - [Spinnakerの始め方いろいろ](/2018/04/24/spinnaker-with-google-kubernetes-engine/)
 
