@@ -3,12 +3,25 @@ languageCode = "ja-jp"
 weight = 1
 title = "My External Storage"
 publishDir = "public"
-theme= "hugo-bootstrap-premium"
+theme= "hugo-octopress"
 hasCJKLanguage = true
 enableemoji = true
 paginate = 10
 paginatePath = "page"
 disqusShortname = "http-budougumi0617-github-io"
+
+# Code highlighting options
+
+# Highlight shortcode and code fences (```) will be treated similarly
+pygmentscodefences = true
+
+# Use CSS for highlighting
+pygmentsuseclasses = true
+
+# pygments options can be added here (and in the highlight shortcode in the markdown file)
+# Hugo supports these pygments options: style, encoding, noclasses, hl_lines, linenos
+# for example: pygmentsoptions = "linenos=true"
+pygmentsoptions = "style=true,hl_lines=true, noclasses=true,linenos=true"
 
 [permalinks]
     post = "/:year/:month/:day/:filename/"
@@ -27,40 +40,64 @@ disqusShortname = "http-budougumi0617-github-io"
 # All parameters below here are optional and can be mixed and matched.
 #
 
-# bootswatch theme name, unmark and select one: cerulean, cosmo, cyborg, darkly,
-# default, flatly, journal,  lumen, paper, readable, sandstone, simplex,
-# slate, spacelab, superhero, united, yeti.
-
-[params.theme]
-    name = "flatly"
-
 [params]
+    # If false, all of blog post will appear on front page (and in pagination)
+    truncate = true
+    # Switch to true to enable RSS icon link
+    rss = true
     BrandImage = "/logo.png"
     brand = "My External Storage"
     topline = "budougumi0617 の技術ブログです。"
     footline = "Copyright&copy; <a href='/2017/07/11/about-this-site/'>budougumi0617</a>"
     showRightSidebar = true
-    googleAnalytics = "UA-43042615-4"
+    #googleAnalytics = "UA-43042615-4"
     # sumomeid = ""
     highlight = "default"
-    twitter  = "budougumi0617"
-    linkedin = "yoichiro-shimizu-19579976"
-    github   = "budougumi0617"
+    twitter  = "https://twitter.com/budougumi0617"
+    linkedin = "https://www.linkedin.com/in/budougumi0617/"
+    github   = "https://github.com/budougumi0617"
     # customCSS = ["/css/.css"]
+    # If set to true, navigation menu links will open in a new window with the exception of links to root ("/")
+    # If this item does not exist or is set to false, then navigation menu links will open in the same window
+    navigationNewWindow = true
+    # Twitter card config
+    # Enable with this.
+    twitterCardEnabled = true
+    # Don't include the @.
+    # twitterCardSite =
+    twitterCardDomain = "budougumi0617.github.io"
+    # Don't include the @.
+    twitterCardAuthor = "budougumi0617"
+    generateTaxonomyList = true
+    sidebarRecentLimit = 5
+#    sidebarHeader = "This blog"
+
+#     # Sidebar text also supports markdown
+#     # New lines can be added with </br> or normal markdown (two spaces at the end of line or two new lines).
+#     # when adding two new lines, remember to remove the indentation otherwise the new line will be treated as a codeblock
+#     sidebarText = """Here's a [link to google](https://www.google.com)
+#     </br>
+#     Second line
+#     </br>
+#     Third line
+#     This line has two spaces in the end to create a new line using markdown
+#     Forth line
+#     """
+
+    # Sidebar menu - if true will add a sidebar menu between sidebar text and recent posts
+    sidebarMenuEnabled = true
+    sidebarMenuHeader = "Archives"
+
+    # 404.html header and text - both support markdown
+    notFoundHeader = "There's nothing here"
+
+    notFoundText = """Please either go back or use the navigation/sidebar menus.
+    """
 
 [[menu.main]]
-    name = "Home"
-    identifier = "home"
-    url = "/"
-    weight = -200
-    pre = "<i class='fa fa-home'></i>"
-
-[[menu.main]]
-    name = "Archives"
-    identifier = "archives"
-    url = "/post/"
-    weight = -180
-    pre = "<i class='fa fa-archive'></i>"
+  Name = "Home"
+  URL = "/"
+  weight = -200
 
 [[menu.main]]
     name = "About"
@@ -68,3 +105,20 @@ disqusShortname = "http-budougumi0617-github-io"
     url = "//2017/07/11/about-this-site/"
     weight = -100
     pre = "<i class='fa fa-info-circle'></i>"
+
+[[menu.main]]
+    name = "Archives"
+    identifier = "archives"
+    url = "/post/"
+    weight = -50
+    pre = "<i class='fa fa-archive'></i>"
+
+[[menu.sidebar]]
+  Name = "Tags"
+  URL = "/tags"
+  weight = 1
+
+[[menu.sidebar]]
+  Name = "Categories"
+  URL = "/categories"
+  weight = 1

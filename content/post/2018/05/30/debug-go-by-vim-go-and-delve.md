@@ -79,7 +79,7 @@ dein.vimでpluginをアップデートするときは`vim`を起動して以下�
 
 https://github.com/budougumi0617/gopl/blob/master/ch01/ex02/echo.go
 
-```
+```go
 package main
 
 import (
