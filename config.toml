@@ -50,7 +50,7 @@ pygmentsoptions = "style=true,hl_lines=true, noclasses=true,linenos=true"
     topline = "budougumi0617 の技術ブログです。"
     footline = "Copyright&copy; <a href='/2017/07/11/about-this-site/'>budougumi0617</a>"
     showRightSidebar = true
-    #googleAnalytics = "UA-43042615-4"
+    googleAnalytics = "UA-43042615-4"
     # sumomeid = ""
     highlight = "default"
     twitter  = "https://twitter.com/budougumi0617"
