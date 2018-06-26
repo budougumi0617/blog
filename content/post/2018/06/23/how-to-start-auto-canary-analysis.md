@@ -2,7 +2,7 @@
 title: "GKE上でStackdriverと連携したSpinnaker/Kayenta環境を構築する #spinnaker #kayenta"
 date: 2018-06-23T18:28:42+09:00
 draft: false
-toc: false
+toc: true
 categories:
 - spinnaker
 - kubernetes
@@ -14,6 +14,12 @@ tags:
 
 SpinnakerとKayentaを組み合わせ自動カナリー分析を行うための環境構築を行う。
 今回の構築ではGKE上にSpinnakerを構築し、Stackdriverから分析用のログを取得する。
+
+
+2018/06/27追記  
+なお利用するkubernetes(k8s)クラスターは`v1.10`系で構築し、ベータ版のモニタリングを有効にしておくこと。  
+
+- [SpinnakerでGKEの自動カナリー分析をするときはStackdriver k8s Monitoring V2 BETAを使う #spinnaker #kayenta](/2018/06/27/gke-must-use-beta-monitoring-for-kayenta)
 
 # TL;DR
 - "Try out Halyard on GKE"の通りにHalyardインスタンスを作成する
