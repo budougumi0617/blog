@@ -1,16 +1,12 @@
----
-title: "{{ replace .TranslationBaseName "-" " " | title }}"
-date: {{ .Date }}
-draft: true
-toc: false
-comments: false
-categories:
-- category1
-- category2
-tags:
-- tag1
-- tag2
----
-
++++
+title = "{{ replace .TranslationBaseName "-" " " | title }}"
+date = {{ .Date }}
+draft = false
+toc = true
+comments = true
+author = "budougumi0617"
+categories = [""]
+tags = ["", ""]
++++
 
 <!--more-->
