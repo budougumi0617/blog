@@ -1,5 +1,5 @@
 +++
-title= "このブログについて"
+title= "About me"
 date= 2017-07-11T10:06:36+09:00
 draft = false
 slug = ""
@@ -18,10 +18,14 @@ author = "budougumi0617"
 - [Twitter](https://twitter.com/budougumi0617)
 - [Qiita](http://qiita.com/budougumi0617)
 
-# CoreSkill
+# Skills
+- `Golang`
 - `C#`
 - `UWP`
 - .NET Standard
-- `Golang`
 
 `Ruby`や`Elixir`などもやってます。
+
+# Talks
+
+# Products
