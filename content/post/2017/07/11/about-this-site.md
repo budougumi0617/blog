@@ -27,5 +27,7 @@ author = "budougumi0617"
 `Ruby`や`Elixir`などもやってます。
 
 # Talks
+- now updating...
 
 # Products
+- now updating...
