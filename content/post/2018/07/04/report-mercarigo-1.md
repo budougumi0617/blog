@@ -142,4 +142,36 @@ GoにおけるWebAppのテストの実装パターンとテスタブルな設計
 - ServiceごとにMock定義を書くのはめんどくさいのでジェネレータも作った
   - https://github.com/Code-Hex/funcy-mock
 
+# Go言語による2年半の新規プロダクト開発とその総括
+[@cowsys](https://twitter.com/cowsys)
+
+https://speakerdeck.com/cowsys/goyan-yu-niyoru2nian-ban-falsexin-gui-hurotakutokai-fa-tosofalsezong-gua
+
+株式会社ソウゾウ時代に二年半メルカリアッテでGoの開発をして学んだこと。
+
+- メルカリアッテ二年半で2年半バックエンドエンジニアとしてGoを書いた
+  - それまではPHPerでGo未経験
+- 4つのポイントでGoに燃えた
+- simpleな言語仕様/思想で複雑なドメインを解決する
+  - 言語仕様が薄く、頭に入れておくべき情報がコンパクト
+  - interfaceや構造体埋め込みを利用した設計をしていれば、頭に入れておくべき情報もコンパクトで済む
+  - ”モダンな実装方式を理解”するのも薄くすんだので、ドメインや周辺アーキテクチャの理解に時間を当てられた
+  - 「愚直に書く」という積み重ねを着実にしていけばより複雑な問題も解決出来るようになる
+    - 実装方式が陳腐がしないため
+- コンピュータリソース・Go言語のツールキットを最大限活用した、実装能力のempowerment
+  - コンパイルやGoの各種ツール、IDEを活用して自分のアタマを本質的な問題解決にフォーカスしてアウトプットを最大化したい
+  - Golandを使って、「間違い」の混入、「思い出す」ための消費をより少なく出来ないか試している
+- High Perfomanceなプログラミング
+  - Dave Cheney-sanのトレーニングを受けて目覚めた。
+    - [High Performance Go](https://go-talks.appspot.com/github.com/davecheney/high-performance-go-workshop/high-performance-go-workshop.slide#1)
+  - ハードウェアの性能を最大限引き出すためのプログラミング
+  - "札束"的な解決に頼らずパフォーマンスを出すためのプログラミング
+- チーム開発におけるGo言語
+  - 取り巻く・利用する情報が多いほどチーム内でブレのない認識統一が出来るのは強力
+    - 型（コンパイル）による裏付け
+    - in/outが自明であること
+  - 消耗しなかった集中力/節約できた時間でよりプロダクト/teamとしてアウトプットが出せると感じた
+- 質疑応答
+  - （逆にGoで不満があるところは？）さすがに(`html/template`pkgを使って)Web ViewをGoで書くのは辛みを感じる
+
 
