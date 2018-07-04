@@ -1,18 +1,18 @@
 +++
 title = "mercari.go #1 参加メモ #mercarigo"
-date = 2018-07-04T21:40:48+09:00
+date = 2018-07-05T08:00:48+09:00
 draft = false
 toc = true
 comments = true
 author = "budougumi0617"
 categories = ["report","kubernetes", "go"]
-tags = ["k8s","golang"]
+tags = ["k8s","golang", "mercari", "gcp"]
 +++
 
 
 
 
-メルカリ内でGoがどのように使われているのかを聞くため[mercari.go #1](https://mercari.connpass.com/event/91306/)に参加してきた。
+メルカリ内でGoがどのように使われているのかを聞くため[mercari.go #1](https://mercari.connpass.com/event/91306/)に参加してきた。  
 詳しくは所感に書いたがいろいろな角度のGoの話を聞くことができてとても参加できてよかった。なお次回は8月を予定しているとのこと。
 
 <!--more-->
@@ -31,9 +31,10 @@ tags = ["k8s","golang"]
 |Togetter|https://togetter.com/li/1243367|
 
 # 所感
-今回は3人の方から以下の内容を聞くことができた。
-フルスクラッチで書かれているらしいGoのAPIゲートウェイのアーキテクチャ、テストのための実装の詳細、Go初心者から2年半Goの開発をして感じたことと、メルカリ内でのGoプロダクトについて異なるベクトルの話を3つも聞けて非常によかった。
-単純な実装に対する技術力だけではなく、プロダクトに対する課題解決の姿勢などにもレベルの高さを感じた。次も参加したい。
+今回は3人の方から以下の内容を聞くことができた。  
+フルスクラッチで書かれているらしいGoのAPIゲートウェイのアーキテクチャ、テストのための実装の詳細、
+Go初心者から2年半Goの開発をして感じたことと、メルカリ内でのGoプロダクトについて異なるベクトルの話を3つも聞けて非常によかった。  
+単純な実装に対する技術力だけではなく、プロダクトに対する課題解決の姿勢などにもレベルの高さを感じた。次も参加したい。  
 
 - MAX約56,000req/secをさばく内製API Gatewayのアーキテクチャ思想と実装、旧アーキテクチャからの移行方法について
   - メルカリMicroservices PlatformテームTech LeadのdeeeetさんによるAPIゲートウェイの解説
@@ -44,7 +45,7 @@ tags = ["k8s","golang"]
   - やはり設計初期段階からしっかりとテストを想定したデータ構造、依存関係の整理しておくことが大事
   - 御本人は既知のアプローチと謙遜していたが、Functionalテスト(APIレベル)まで想定した実践的なServer Mockの書き方はあまりなかったのでは
   - `interface`定義しすぎるとモック書くのが辛くなるところをコードジェネレータ書いて解決するところに技術力を感じた
-    - https://github.com/Code-Hex/funcy-mock
+     - https://github.com/Code-Hex/funcy-mock
   - 自分でもあとでSeverMockできるようにコード書いてみよう
 - Go未経験の状態から二年半メルカリアッテのサーバーサイドをGoで開発して学んだこと。
   - なぜGoがいいのか、エモい部分をしっかりと言語化されていた
@@ -74,7 +75,7 @@ APIゲートウェイ使って実現したい世界やサービスメッシュ�
   - 単一エンドポイントでのRouting
   - 認証、ロギング・モニタリングなどのMiddleware(共通処理)を一括で行う
   - Proxy, Facadeパターンを適用したモノリスからの段階的なマイクロサービス化への補助
-    - [Pattern: API Gateway / Backend for Front-End](http://microservices.io/patterns/apigateway.html)
+     - [Pattern: API Gateway / Backend for Front-End](http://microservices.io/patterns/apigateway.html)
 - 最大約56,000リクエスト/秒をさばくハイパフォーマンスが必要
 - 内製サービスとの連携、みんなが使える言語で拡張できることを考えGoで実装することに
 - 基本構成は前段にGoogle Load Bralancer(GLB)。API Gatewayの後ろにGKE上の各サービス
@@ -90,34 +91,37 @@ APIゲートウェイ使って実現したい世界やサービスメッシュ�
   - Coreパッケージを使った実装にはビジネスロジックは書かせないことで第二のモノリスになることを避ける
 - Middleware driven
   - 認証・ロギングなどの共通処理はMiddlewareパターンで実装されている
-    - [Writing middleware in #golang and how Go makes it so much fun.](https://medium.com/@matryer/writing-middleware-in-golang-and-how-go-makes-it-so-much-fun-4375c1246e81)
+     - [Writing middleware in #golang and how Go makes it so much fun.](https://medium.com/@matryer/writing-middleware-in-golang-and-how-go-makes-it-so-much-fun-4375c1246e81)
 - Protocol transformation
   - API定義は基本的にProtocol buffer
   - API gatewayでHTTPを受けて中のサービス間はgRPCで通信している（構想当時はgRPCの事例も少なかったので）
   - Developerは以下を行うことでエンドポイントを追加できる
-    - サービスのインターフェースをProtcol bufferで定義
-    - エンドポイントの定義をAPI Gatewayの実装に追加
+     - サービスのインターフェースをProtcol bufferで定義
+     - エンドポイントの定義をAPI Gatewayの実装に追加
   - コアパッケージはエンドポイント定義を基に`http.Handler`を生成する
   - gRPCのエラーコードの変換をしたり、Request HeaderをもとにJSONのリクエストを受け付けている
 - Request buffering
-  - `vulcand/oxy`を利用したrate limitなど標準pkgが提供していない便利機能を提供している
-    - https://github.com/vulcand/oxy
+  - `vulcand/oxy`をforkしたrate limitなど標準pkgが提供していない便利機能を提供している
+     - https://github.com/vulcand/oxy
   - GLBはリクエストバッファリングをしないのでAPI Gatewayでバッファリングをしている
   - メモリにリクエストを書き出して、溜まってきたらリクエストが溜まったらリクエストをバックエンドを送る
 - API GatewayへのMigration
   - APIのドメインはAWSのRoute53で管理されているので、Weighted Recordsで流量制御しながら1ヶ月かけて移行していった。
-    - https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-values-weighted.html#rrsets-values-weighted-weight
+     - https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-values-weighted.html#rrsets-values-weighted-weight
 - パフォーマンス
   - Datadogによる可視化、Datadog APMの分散トレーシングは行っている
   - ProfilingはStackdriver profilierも使っている
-    - https://cloud.google.com/profiler/
+     - https://cloud.google.com/profiler/
   - CPUレベルでどのファンクションにどれくらい時間が書かているか可視化できる。
   - パフォーマンスにもそこまで影響していない
   - Googleなどと同様に本番GatewayでProfilerを動かしている。
 - 質疑応答
-  - protoファイルは一つのリポジトリで全てのprotoファイルを管理してCIでクライアントコードなどが各リポジトリに配布される
-  - 画像などを含んだデカいリクエストのchunkはまだ実装していない
-  - URLパラメータを用いたリクエストなどは`metadata`経由でマッピングする予定
+  - protoファイルどう定義している？どうサービス間で互換性を保っている？
+     - protoファイルは一つのリポジトリで全てのprotoファイルを管理してCIでクライアントコードなどが各リポジトリに配布される
+  - gRPCでデカいコールのチャンクどうしている？
+     - 例えば画像などを含んだデカいリクエストのチャンクはまだ実装していない
+  - フォームやWebHookなどでURLパラメータにリクエスト内容が含まれているときどうgRPC用のリクエスト定義にマッピングしている？
+     - `metadata`経由でマッピングする予定
 
 
 # もう一度テストパターンを整理しよう
@@ -157,21 +161,22 @@ https://speakerdeck.com/cowsys/goyan-yu-niyoru2nian-ban-falsexin-gui-hurotakutok
   - interfaceや構造体埋め込みを利用した設計をしていれば、頭に入れておくべき情報もコンパクトで済む
   - ”モダンな実装方式を理解”するのも薄くすんだので、ドメインや周辺アーキテクチャの理解に時間を当てられた
   - 「愚直に書く」という積み重ねを着実にしていけばより複雑な問題も解決出来るようになる
-    - 実装方式が陳腐がしないため
+     - 実装方式が陳腐がしないため
 - コンピュータリソース・Go言語のツールキットを最大限活用した、実装能力のempowerment
   - コンパイルやGoの各種ツール、IDEを活用して自分のアタマを本質的な問題解決にフォーカスしてアウトプットを最大化したい
   - Golandを使って、「間違い」の混入、「思い出す」ための消費をより少なく出来ないか試している
 - High Perfomanceなプログラミング
   - Dave Cheney-sanのトレーニングを受けて目覚めた。
-    - [High Performance Go](https://go-talks.appspot.com/github.com/davecheney/high-performance-go-workshop/high-performance-go-workshop.slide#1)
+     - [High Performance Go](https://go-talks.appspot.com/github.com/davecheney/high-performance-go-workshop/high-performance-go-workshop.slide#1)
   - ハードウェアの性能を最大限引き出すためのプログラミング
   - "札束"的な解決に頼らずパフォーマンスを出すためのプログラミング
 - チーム開発におけるGo言語
   - 取り巻く・利用する情報が多いほどチーム内でブレのない認識統一が出来るのは強力
-    - 型（コンパイル）による裏付け
-    - in/outが自明であること
+     - 型（コンパイル）による裏付け
+     - in/outが自明であること
   - 消耗しなかった集中力/節約できた時間でよりプロダクト/teamとしてアウトプットが出せると感じた
 - 質疑応答
-  - （逆にGoで不満があるところは？）さすがに(`html/template`pkgを使って)Web ViewをGoで書くのは辛みを感じる
+  - 逆にGoで不満があるところは？
+     - さすがに(`html/template`pkgを使って)Web ViewをGoで書くのは辛みを感じる
 
 
