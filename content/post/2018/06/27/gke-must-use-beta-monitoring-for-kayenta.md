@@ -18,7 +18,17 @@ https://medium.com/netflix-techblog/automated-canary-analysis-at-netflix-with-ka
 この自動分析をGKEで試そうとしていたが、Kubenetes(k8s)コンテナー(Stackdriver)からメトリクスが取れていなかった。
 理由がわかったのでメモしておく。
 
+
 <!--more-->
+
+**2018/07/06追記**  
+なお、この記事はSpinnaker v1.8.0を利用したときの記事である。  
+すでにこの問題はPRで対応されており、tagを見る限り1.9.0では改善される見込みだ。
+
+- feat(stackdriver): Add support for legacy gke_container resource type.
+  - https://github.com/spinnaker/kayenta/pull/337
+
+コメントで教えていただきありがとうございました。
 
 # TL;DR
 - Spinnaker1.8.0がサポートしているメトリクスのResource Typeに`gke_container`は含まれていない
