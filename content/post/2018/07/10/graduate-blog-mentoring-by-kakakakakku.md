@@ -1,5 +1,5 @@
 +++
-title = "@kakakakakku さんのブログメンタリングを3ヶ月感受けて卒業した"
+title = "@kakakakakku さんのブログメンタリングを3ヶ月間受けて卒業した"
 date = 2018-07-10T08:50:47+09:00
 draft = false
 toc = true
