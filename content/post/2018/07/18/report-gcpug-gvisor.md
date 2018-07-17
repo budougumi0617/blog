@@ -1,20 +1,22 @@
 +++
-title = "GCPUG Tokyo gVisor Day July 2018 参加メモ"
-date = 2018-07-18T11:00:00+09:00
+title = "GCPUG Tokyo gVisor Day July 2018 参加メモ #gcpug #gvisor"
+date = 2018-07-18T08:30:00+09:00
 draft = false
 toc = true
 comments = true
 author = "budougumi0617"
-categories = [""]
-tags = ["", ""]
+categories = ["report", "gcp"]
+tags = ["gcpug","gcp", "gvisor"]
 +++
 
-
-GCPUGに参加してgVisorの話を聞いてきたので参加メモ。
-
-https://github.com/google/gvisor
+[GCPUG(Google Cloud Platform User Group)](https://gcpug.jp/)の勉強会に参加してきた。  
+先日OSSとして公開されて話題となっているgVisorの話を聞いてきたので参加メモ。
 
 <!--more-->
+
+- https://github.com/google/gvisor
+- コンテナの軽量さと、より安全な分離を実現する「gVisor」、Googleがオープンソースで公開
+  - https://www.publickey1.jp/blog/18/gvisorgoogle.html
 
 |||
 |---|---|
@@ -23,6 +25,31 @@ https://github.com/google/gvisor
 |日時|2018/07/12(木) 19:00 〜 21:30|
 |ハッシュタグ|[#gcpug](https://twitter.com/hashtag/gcpug)|
 
+
+# 所感
+本題のgVisorについてはもちろん、Linuxのセキュリティ機能の知識、企業が公開しているOSSからその企業の戦略を推測する新しい見方を知ることができた。
+
+最初の[@yuryu](https://twitter.com/yuryu)の発表では以下を聞くことができた。
+
+- 信頼性が低いアプリ・プロセスを実行するときに守るべきLinuxのセキュリティ
+- gVisorがどのようにしてセキュアなコンテナランタイムを実現しているか
+
+まさかPaaSの勉強会でLinuxのセキュリティ機能について教えてもらえると思っていなかった。  
+どんな点に気をつけなければいけないのか、を「非特権ユーザでサービス実行する」というところから丁寧に教えてもらえたのでその後の話の重要性もかなり噛み砕いて納得することができた。自分は雰囲気でLinuxを動かしている(本番はSREの方々がいい感じのAnsibleを流したり、AWSの設定をしてくれているし、ローカルで試すときはまずSELinux切る)ので、ちゃんと知っておかないといけないなと思った。  
+gVisor自体についても話を聞くのは初めてだった。正直「googleのすごい人たちがGoでLinux作り直しているのかな？」くらいの認識だったので、どんな思想で作られたOSSなのか知ることができて良かった。
+
+- 不特定多数の任意のアプリを安全に動かせるコンテナランタイムの実現
+  - google(GCP)はPaaSとして開発者すら意図してない挙動をする可能性があるアプリをホスティングしないといけない
+- Linuxの再実装をしたいわけではない(gVisorでシステムコール全てを再現するつもりはない)
+
+また、デモでは1月に話題になったメルトダウンを使ったコンテナからホストへのハックを実際に見せてもらい、gVisorがそれを防げることを確認できた。
+
+[@apstndb](https://twitter.com/apstndb)さんの発表ではgVisorがどのようにGCP内で使われているのか知ることができた。  
+gVisorの動作確認済み言語、アプリからGCPの動きを推測するのは「その発想はなかった！」という感じだった。  
+たしかにGCPや何らかのサービスに利用するために開発しているはずなので、gVisorの設計やサポートしている機能からgoogleの戦略を考えるのは非常に面白い話だった。
+
+
+以下自分用メモ。
 
 # gVisor 入門: サンドボックス化されたLinuxコンテナランタイム
 [@yuryu](https://twitter.com/yuryu)
@@ -131,7 +158,6 @@ https://github.com/google/gvisor#architecture
 - メモリ使用量15MB
 - 起動時間150ms
 - システムコールに若干のオーバーヘッド(コンテナよりおそい)
-
 - gVisorが向いていない用途
   - ホストと異なる種類のゲストOSを動作させたいとき
   - 完全に信頼されたバイナリ（だけを実行するなら普通のコンテナでよい）
@@ -139,21 +165,17 @@ https://github.com/google/gvisor#architecture
   - 完全なアプリケーションの互換性を期待する
 - Linuxの再実装をしたいわけではない
   - gVisorでシステムコール全てを再現するつもりはない
-
 - gVisorで動くアプリ
   - https://github.com/google/gvisor#what-works
   - golang, java, php, node, python etc...
-
-## gVisorはクラウドの裏方
-- GAEはgVisorで動作している
-
-## OSカーネル自体の研究開発に向いているかも？
-- gVisorにGoで変更を加えユーザーモードで実行する
-- gVisorで試してみてLinuxへ移植するとか
-- Cで実装された巨大なLinuxのコードよりはユーザーフレンドリーなはず？
-
-## gVisorは安全なサンドボックス内でコンテナを実行する新しい手法
-- 裏方の技術を知ることは正しい判断する上で大切
+- gVisorはクラウドの裏方
+  - GAEはgVisorで動作している
+- OSカーネル自体の研究開発に向いているかも？
+  - gVisorにGoで変更を加えユーザーモードで実行する
+  - gVisorで試してみてLinuxへ移植するとか
+  - Cで実装された巨大なLinuxのコードよりはユーザーフレンドリーなはず？
+- gVisorは安全なサンドボックス内でコンテナを実行する新しい手法
+  - 裏方の技術を知ることは正しい判断する上で大切
 
 ## gVisorを実行する時方法
 - https://github.com/google/gvisor#installation
@@ -226,4 +248,5 @@ https://github.com/google/gvisor#architecture
 
 
 # 関連
-
+- [GCPUG Tokyo Container Builder Day February 2018 #gcpug 参加メモ](/2018/02/05/gcpug-container-builder-day/)
+- [[k8s]GCPUG Tokyo Kubernetes Engine Day April 2018参加メモ #gcpug](/2018/04/28/gcpug-tokyo-kubernetes-engine-day-april-2018/)
