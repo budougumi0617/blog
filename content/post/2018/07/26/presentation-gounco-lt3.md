@@ -17,6 +17,7 @@ https://connpass.com/event/86508/
 
 |||
 |---|---|
+|イベント名|Go(Un)Conference（Goあんこ）LT大会 3kg|
 |URL|https://gounconference.connpass.com/event/92794/|
 |会場|株式会社アイスタイル 東京都港区赤坂1-12-32(アーク森ビル34F)|
 |日時|2018/07/26(木) 19:30 〜 22:00|
