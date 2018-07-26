@@ -14,9 +14,8 @@ Go(Un)Conference（Goあんこ）LT大会 3kgの発表資料と資料中の参�
 
 <!--more-->
 
-|||
-|---|---|
 |イベント名|Go(Un)Conference（Goあんこ）LT大会 3kg|
+|---|---|
 |URL|https://gounconference.connpass.com/event/92794/|
 |会場|株式会社アイスタイル 東京都港区赤坂1-12-32(アーク森ビル34F)|
 |日時|2018/07/26(木) 19:30 〜 22:00|
@@ -24,6 +23,8 @@ Go(Un)Conference（Goあんこ）LT大会 3kgの発表資料と資料中の参�
 
 
 ---
+
+- https://speakerdeck.com/budougumi0617/traps-and-explanations-in-go
 
 <script async class="speakerdeck-embed" data-id="3286d81766704757ac4e3ec18048752b" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
 
