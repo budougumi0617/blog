@@ -1,6 +1,6 @@
 +++
-title = "[発表資料]初級者向けGoの落とし穴と解説"
-date = 2018-07-26T10:00:00+09:00
+title = "[発表資料]初級者向けGoの落とし穴と解説 #gounco"
+date = 2018-07-26T08:00:00+09:00
 draft = false
 toc = true
 comments = true
@@ -9,8 +9,7 @@ categories = ["go", "presentation"]
 tags = ["golang"]
 +++
 
-Go(Un)Conference（Goあんこ）LT大会 3kgの発表資料と資料中の参考リンク、補足をまとめた。  
-https://connpass.com/event/86508/
+Go(Un)Conference（Goあんこ）LT大会 3kgの発表資料と資料中の参考リンク、補足をまとめた。
 
 
 <!--more-->
@@ -22,6 +21,11 @@ https://connpass.com/event/86508/
 |会場|株式会社アイスタイル 東京都港区赤坂1-12-32(アーク森ビル34F)|
 |日時|2018/07/26(木) 19:30 〜 22:00|
 |ハッシュタグ| [#gounco](https://twitter.com/hashtag/gounco)|
+
+
+---
+
+<script async class="speakerdeck-embed" data-id="3286d81766704757ac4e3ec18048752b" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
 
 # Gopherについて
 Goの新しいブランドロゴについては以下のブログで公開された。
