@@ -10,7 +10,7 @@ tags = ["gcp", "book"]
 +++
 
 [Google Cloud Platform エンタープライズ設計ガイド](http://amazon.jp/dp/4822257908)を読んだので読書メモ。
-実際にGAEやGKEにデプロイしたりしながら学びたい人は別の本を探すかjkGCP公式の[チュートリアル](https://cloud.google.com/docs/)や[Google Codelabs](https://codelabs.developers.google.com/)で勉強したほうが良いかも。
+実際にGAEやGKEにデプロイしたりしながら学びたい人は別の本を探すか、GCP公式の[チュートリアル](https://cloud.google.com/docs/)や[Google Codelabs](https://codelabs.developers.google.com/)で勉強したほうが良いかも。
 
 <!--more-->
 
