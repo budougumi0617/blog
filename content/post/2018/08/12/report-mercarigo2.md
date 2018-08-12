@@ -5,8 +5,8 @@ draft = false
 toc = true
 comments = true
 author = "budougumi0617"
-categories = ["report", "golang"]
-tags = ["go"]
+categories = ["report", "go"]
+tags = ["golang"]
 +++
 
 mercari.go #2に参加してきた。今回はGoの話だけでなく、GraphQLについても勉強することができた。  
