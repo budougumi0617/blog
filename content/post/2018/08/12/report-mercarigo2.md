@@ -9,7 +9,7 @@ categories = ["report", "golang"]
 tags = ["go"]
 +++
 
-mercari.go #2に参加してきた。今回はGoの話だけでなく、GraphQLについても勉強することができた。
+mercari.go #2に参加してきた。今回はGoの話だけでなく、GraphQLについても勉強することができた。  
 次回は9月開催にGopherCon2018の参加報告を予定しているとのこと。
 <!--more-->
 
@@ -26,15 +26,23 @@ mercari.go #2に参加してきた。今回はGoの話だけでなく、GraphQL�
 |Tweetまとめ|[mercari.go #2 ツイートまとめ](https://twitter.com/i/moments/1027880492157231105)|
 
 # 所感
+今回はQAやインフラよりの部分でGoがどのように使われているか、使うことができるかの紹介が多かった。  
+サービス自体のコードだけでなく、開発の効率化にもしっかりと開発工数をあけて問題解決に取り組んでいるのを聞くことができてさすがだなという感じだった。  
+インフラまわりのミドルウェアやツールでもGoの1バイナリになる成果物、高い平行性などの特徴を活かして課題解決を行なっているということだった。  
+開発中にある日常的な悩みをGoでどんどん解決できているのは羨ましい（と言っていないで自分もやらないといけない）。  
+また、GraphQLの発表もあり、実装で考慮すべき点など非常にわかりやすかった。  
+GraphQLを遊ぶには[GitHub API v4 API](https://developer.github.com/v4/explorer/)のExplorerがインタラクティブな補完・仕様の参照ができて良いらしい。これはGraphQLに限らずAPI仕様を公開するときはこのようなUXを提供できるとみんなに興味を持ってもらえるんだろうなと思った。  
+[How to GraphQL](https://www.howtographql.com/)は会社の先輩もわかりやすいと言っていたので機会があったら触ってみたいと思う。
+
+以下、メモ
+
 
 # メルカリにおける開発環境/QA環境と、そこで使われるGoのツールについて
 [@masudak](https://twitter.com/masudak)
 
-- Software Engineer in Test(SET)とは
+## Software Engineer in Test(SET)とは
   - テストが作りやすい環境を作る
   - 他社ではSDET, SWET, SETIなどの呼び方をしている
-- SETチームの設立背景と次世代のSETに向けて
-  - https://tech.mercari.com/entry/2018/06/14/190000
 
 ## SET設立の背景
 - SETチームの設立背景と次世代のSETに向けて
@@ -48,7 +56,6 @@ mercari.go #2に参加してきた。今回はGoの話だけでなく、GraphQL�
 - エンジニア/デザイナーがローカルに開発環境を構築して開発
 - QAエンジニアがマニュアルでテストしている
 - PMが確認してリリース
-
 - ローカル開発環境
   - Jenkinsで作ったDockerコンテナをレジストリにおいてある
   - `make init, make start`するとローカルでdocker composeが立つ。IPもふられる
@@ -82,7 +89,7 @@ mercariは2017年からマイクロサービス開発に移行を始めている
   - gRPCだとPostmanとかで簡単にデータを入れられない
   - gRPC-HTTP変換ツールを作った
   - GRPC server reflectionでいい感じにHTTPとgRPCを接続することができる
-    - https://github.com/grpc/grpc/blob/master/doc/server-reflection.md
+      - https://github.com/grpc/grpc/blob/master/doc/server-reflection.md
 
 PRから開発環境をつくる詳細はcrash.academyさんの動画でも聞くことができる
 
@@ -193,7 +200,6 @@ PRから開発環境をつくる詳細はcrash.academyさんの動画でも聞�
 - 2014年からすでにGoを使っている
 - 裏側のツールでGo(やNode.js)を使い始めていた
 - 1000万超えるプッシュ通知の高速実現とか
-
 - パフォーマンスやスケーラビリティからみたPHPとは
   - PHPも7になってだいぶ速くなった
   - ただ単体性能が向上しただけでシングルスレッドなどはそのまま。ウィークポイント
@@ -269,7 +275,7 @@ PRから開発環境をつくる詳細はcrash.academyさんの動画でも聞�
   -  API GatewayによるMicroservices化
       - https://go-talks.appspot.com/github.com/tcnksm/talks/2018/07/mercarigo/microservices-api-gateway.slide#1
 
-## その他
+# その他
 - 次回のmercari.goは9月を予定していて、GopherCon 2018の参加報告になる予定とのこと
 - また、10月にはmercari Tech Confも開催予定とのこと
   - https://techconf.mercari.com/2018/
