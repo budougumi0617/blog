@@ -187,6 +187,9 @@ PRから開発環境をつくる詳細はcrash.academyさんの動画でも聞�
 # Software Engineer, Infrastructure
 [@cubicdaiya](https://twitter.com/cubicdaiya)
 
+- Software Engineer, Infrastructure
+  - https://speakerdeck.com/cubicdaiya/software-engineer-infrastructure
+
 ## Software Engineer, Infrstructureとは
 - ソフトウェアエンジニアリングによってインフラの問題解決やミドルウェアの開発
 - SREとの違いは運用よりも開発の比重が多いロール
