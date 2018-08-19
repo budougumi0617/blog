@@ -1,5 +1,5 @@
 +++
-title = "Goのtestを理解する in 2018"
+title = "Goのtestを理解する in 2018 #go"
 date = 2018-08-19T12:14:01+09:00
 draft = false
 toc = true
@@ -370,6 +370,40 @@ ok  	github.com/budougumi0617/go-testing/t/parallel	0.011s
 
 - 通常ケースのテスト（エラーが出ないテスト）
 - ある特定のエラーがでたことを確認するテスト
+
+その場合はテストケース内でエラーの有無をフラグとして検証条件を増やす。
+
+```go
+  tests := []struct {
+      name      string
+      in        int
+      want      int
+      wantError bool
+      err       error
+  }{
+      {"Basic", 4, 4, false, nil},
+      {"HasError", -1, 0, true, errors.New("Negative value")},
+  }
+  for _, tt := range tests {
+      t.Run(tt.name, func(t *testing.T) {
+          pt := we.PositiveInt(tt.in)
+          got, err := pt.Value()
+          if !tt.wantError && err != nil {
+              t.Fatalf("want no err, but has error %#v", err)
+          }
+
+          if tt.wantError && !reflect.DeepEqual(err, tt.err) {
+              t.Fatalf("want %#v, but %#v", tt.err, err)
+          }
+
+          if !tt.wantError && got != tt.want {
+              t.Fatalf("want %q, but %q", tt.want, got)
+          }
+      })
+  }
+```
+
+エラーの有無だけではなく期待するエラーかも確認するのが望ましい。
 
 ## Errorfのテンプレート文字列
 
