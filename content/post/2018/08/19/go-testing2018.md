@@ -39,7 +39,18 @@ func TestSum(t *testing.T) {
 }
 ```
 
-構造体メソッドのテストを書くときは`TestSturct_Method`という命名するのが望ましい(`Examples`を書くときとフォーマットを合わせるため)
+構造体メソッドのテストを書くときは`TestSturct_Method`という命名するのが望ましい(`Examples`を書くときとフォーマットを合わせるため)。
+
+## テストデータを用意する
+
+テスト用のデータは`testdata`ディレクトリに配置する。  
+JSONやバイナリデータなどをテスト結果として用意するときは`.golden`拡張子で`testata`ディレクトリに入れておく。
+
+- https://golang.org/cmd/go/#hdr-Test_packages
+- Advanced Testing with Go
+  - https://speakerdeck.com/mitchellh/advanced-testing-with-go
+- Testing with golden files in Go
+  - https://medium.com/soon-london/testing-with-golden-files-in-go-7fccc71c43d3
 
 
 # テストを実行する
