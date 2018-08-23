@@ -9,7 +9,11 @@ categories = ["go"]
 tags = ["golang", "test", "coverage"]
 +++
 
-2018年夏(Go1.10)時点でGoのテスト方法をまとめる。
+2018年夏(Go1.10)時点でGoのテスト方法をまとめる。  
+この記事は以下のスライド資料の補足記事になる。
+
+- Tour of testing in 2018
+ - https://speakerdeck.com/budougumi0617/tour-of-testing-in-2018
 
 <!--more-->
 
