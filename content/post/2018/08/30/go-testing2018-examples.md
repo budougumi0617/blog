@@ -1,5 +1,5 @@
 +++
-title = "Goのtestingを理解する in 2018 - Examples編"
+title = "Goのtestingを理解する in 2018 - Examples編 #go"
 date = 2018-08-30T20:49:44+09:00
 draft = false
 toc = true
