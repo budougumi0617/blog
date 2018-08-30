@@ -177,7 +177,7 @@ https://github.com/google/gvisor#architecture
 - gVisorは安全なサンドボックス内でコンテナを実行する新しい手法
   - 裏方の技術を知ることは正しい判断する上で大切
 
-## gVisorを実行する時方法
+## gVisorを実行する方法
 - https://github.com/google/gvisor#installation
   - Dockerで動かしたいときは`docker run`に`--runtime=runsc`をつける
   - 最後にメルトダウンを悪用するDockerコンテナが、gVisor上ではCPU情報へアクセスできなくなるデモをされていた
