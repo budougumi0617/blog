@@ -195,7 +195,7 @@ https://github.com/google/gvisor#architecture
   - https://github.com/google/gvisor
 
 
-#	gVisor と GCP(仮) by apstndb
+#	gVisor と GCP
 [@apstndb](https://twitter.com/apstndb)
 
 - gVisorとGCP
