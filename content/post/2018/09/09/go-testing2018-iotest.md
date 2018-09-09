@@ -125,6 +125,7 @@ https://golang.org/pkg/testing/iotest/#HalfReader
 `OneByteReader`はその名の通り、常に1バイトしか読みこまない`io.Reader`を返す。
 
 - https://play.golang.org/p/b-GVUag2eSN
+
 ```go
 	orign := []byte("Hello\nbyte.Reader\n")
 	type want struct {
@@ -176,6 +177,7 @@ https://golang.org/pkg/testing/iotest/#HalfReader
 
 
 - https://play.golang.org/p/dnwZwG5NyzG
+
 ```go
 	orign := []byte("Hello\nbyte.Reader\n")
 	type want struct {
@@ -212,6 +214,7 @@ https://golang.org/pkg/testing/iotest/#HalfReader
 - https://github.com/golang/go/blob/50bd1c4d4eb4fac8ddeb5f063c099daccfb71b26/src/archive/tar/writer_test.go#L487
 
 - https://play.golang.org/p/GvFtBx2rPcu
+
 ```go
 	func TestTruncateWriter(t *testing.T) {
 	orign := []byte("Hello\nbyte.Reader\n")
