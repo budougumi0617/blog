@@ -150,4 +150,5 @@ $ godoc -http=:6060
 # 関連
 - [Goのtestを理解する in 2018 #go](/2018/08/19/go-testing2018)
 - [Goのtestingを理解する in 2018 - quickサブパッケージ編 #go](/2018/09/05/go-testing2018-quick)
+- [Goのtestingを理解する in 2018 - iotestサブパッケージ編 #go](/2018/09/09/go-testing2018-iotest/)
 

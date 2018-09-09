@@ -165,5 +165,5 @@ func main() {
 # 関連
 - [Goのtestを理解する in 2018 #go](/2018/08/19/go-testing2018)
 - [Goのtestingを理解する in 2018 - Examples編 #go](/2018/08/30/go-testing2018-examples/)
-
+- [Goのtestingを理解する in 2018 - iotestサブパッケージ編 #go](/2018/09/09/go-testing2018-iotest/)
 

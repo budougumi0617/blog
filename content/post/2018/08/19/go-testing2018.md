@@ -620,6 +620,7 @@ $ bash <(curl -s https://codecov.io/bash)
 # 関連
 - [Goのtestingを理解する in 2018 - Examples編 #go](/2018/08/30/go-testing2018-examples/)
 - [Goのtestingを理解する in 2018 - quickサブパッケージ編 #go](/2018/09/05/go-testing2018-quick)
+- [Goのtestingを理解する in 2018 - iotestサブパッケージ編 #go](/2018/09/09/go-testing2018-iotest/)
 
 TODO ベンチマーク、サブパッケージなどを別記事にまとめる。
 
