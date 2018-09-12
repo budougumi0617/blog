@@ -62,8 +62,8 @@ export default class Todo extends React.Component<Props> {
         {this.props.text}
       </li>
     );
-  };
-};
+  }
+}
 ```
 
 # ALEの設定を確認して、tsserverの設定をlinterから外す
