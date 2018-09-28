@@ -94,9 +94,9 @@ $ create-react-app tdt-react-jest-enzyme
 ```
 
 
-テーブル駆動テストを利用しない場合は、このまま`enzyme`をインストールすればよい。
-Jestについては`create-react-app`コマンドでプロジェクトを作成した時点でインストールされている。
-が、`create-react-app`の最新版（1.5.2）でも、プリインストールされているJestのバージョンは20.X系だった（`eject`するとわかる）。
+テーブル駆動テストを利用しない場合は、このまま`enzyme`をインストールすればよい。  
+Jestについては`create-react-app`コマンドでプロジェクトを作成した時点でインストールされている。  
+が、`create-react-app`の最新版（1.5.2）でも、プリインストールされているJestのバージョンは20.X系だった（`eject`するとわかる）。  
 
 
 ```
@@ -107,7 +107,6 @@ Jestでテーブル駆動をするために必要な`describe.each`は23.X系か
 
 - `describe.each(table)(name, fn, timeout)`
   - https://jestjs.io/docs/en/api#describeeachtable-name-fn-timeout
-
 - Jest Release Notes
   - https://github.com/facebook/jest/blob/master/CHANGELOG.md#2300
 
@@ -130,32 +129,29 @@ $ yarn add -D enzyme enzyme-adapter-react-16 react-test-renderer
 
 あとは`enzyme`を読み込む`setupTests.js`を作成する。
 
-```javascript
-src/setupTests.js
+```react
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
 configure({ adapter: new Adapter() });
 ```
 
-Jestが読み込むように`package.json`に以下の記述を追加する。
+Jestが読み込むように`package.json`へ`"setupTestFrameworkScriptFile`という設定を追加する。
 
 - Jest - setupTestFrameworkScriptFile [string]
   - https://jestjs.io/docs/en/configuration.html#setuptestframeworkscriptfile-string
 
 ```diff
-...
   "jest": {
-...
+   ...
       "mjs"
--    ]
-+    ],
-+    "setupTestFrameworkScriptFile": "<rootDir>/src/setupTests.js"
+    ],
+    "setupTestFrameworkScriptFile": "<rootDir>/src/setupTests.js"
   },
-...
 ```
 
-これでプロジェクトでテーブル駆動テストができる状態にできた。
+
+これでプロジェクトでテーブル駆動テストができる状態にできた。  
 あとは以下の命名規則に則ってテストファイルを作成して`yarn test`を実行すればテストが始まる。
 
 
@@ -167,7 +163,7 @@ Jestが読み込むように`package.json`に以下の記述を追加する。
 まず、テスト対象のコンポーネントを作成する。今回は`create-react-app`で出来た`src/App.js`を少し改良した。
 
 
-```javascript
+```react
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import logo from './logo.svg';
@@ -200,10 +196,10 @@ App.defaultProps = {
 export default App;
 ```
 
-無修正だと本当にImmutableなため、`Props`をもたせて文字列が変わるようにしてある。
+無修正だと本当にImmutableなため、`Props`をもたせて文字列が変わるようにしてある。  
 テストは以下の通り。`__tests__`ディレクトリに入れるほうが好きだが、今回は`src/App.test.js`ファイルがあるのでそれを修正した。
 
-```javascript
+```react
 import React from 'react';
 import { shallow  } from 'enzyme';
 
@@ -231,8 +227,8 @@ describe('App', () => {
 });
 ```
 
-Rubyを書いているひとならば、文法が似ているのではないだろうか？
-`cases`で作成したテストデータのテーブルの内容の数だけ、3回目の`describe`内が実行される。
+Rubyを書いているひとならば、`rspec`と文法が似ているのでは読みやすいのではないだろうか？  
+`cases`で作成したテストデータのテーブルの内容の数だけ、3回目の`describe`内が実行される。  
 これを`yarn test`で実行してみると、テストが2ケース実行されているのがわかる。
 
 ```bash
@@ -250,12 +246,12 @@ Time:        0.888s, estimated 1s
 Ran all test suites.
 ```
 
-Jestは`yarn test --watch`コマンドで実行するとファイル更新を検知して自動でテストを再実行してくれる。
-これでテーブル駆動テストをしながらテスト駆動開発をすることができる。
+Jestは`yarn test --watch`コマンドで実行するとファイル更新を検知して自動でテストを再実行してくれる。  
+これでテーブル駆動テストをしながらテスト駆動開発(TDD)をすることができる。
 
 # テストを書くときのTips
-enzymeはDOMコンポーネントにいろいろなアクセスをすることができる。メソッドも実行することができる。
-APIリファレンスはサンプルコードも多いので、一通り眺めるとだいたいやりかたが載っている。
+enzymeはDOMコンポーネントにいろいろなアクセスをすることができる。メソッドも実行することができる。  
+APIリファレンスはサンプルコードも多いので、一通り眺めるとだいたいやりかたが載っている。  
 Matcherの書き方も、JestのAPIリファレンスの情報量が多いので公式を見れば良い。
 
 - enzyme - API Reference
@@ -275,9 +271,9 @@ $ node --inspect-brk node_modules/.bin/jest --runInBand
 ```
 
 # 終わりに
-普段はGoを書いているので、Reactでもテーブル駆動テスト（TDT）が書きたかった。
-実際、Jestは`--watch`でホットリロードテストが書けるのでTDT+TDDでかなり実装が捗っている。
-また、今回は省略したが、Flowとの併用も可能だ（おそらくTypeScriptととも）。
+普段はGoを書いているので、Reactでもテーブル駆動テスト（TDT）が書きたかった。  
+実際、Jestは`--watch`でホットリロードテストが書けるのでTDT+TDDでかなり実装が捗っている。  
+また、今回は省略したが、Flowとの併用も可能だ（おそらくTypeScriptととも）。  
 Reduxなどに対するテストはまだ書いたことがないので、いずれやってみる。
 
 # 参考
