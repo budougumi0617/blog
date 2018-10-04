@@ -96,14 +96,25 @@ $ create-react-app tdt-react-jest-enzyme
 
 テーブル駆動テストを利用しない場合は、このまま`enzyme`をインストールすればよい。  
 Jestについては`create-react-app`コマンドでプロジェクトを作成した時点でインストールされている。  
-が、`create-react-app`の最新版（1.5.2）でも、プリインストールされているJestのバージョンは20.X系だった（`eject`するとわかる）。  
-
+~~が、`create-react-app`の最新版（1.5.2）でも、プリインストールされているJestのバージョンは20.X系だった（`eject`するとわかる）。~~  
 
 ```
 "jest": "20.0.4",
 ```
 
-Jestでテーブル駆動をするために必要な`describe.each`は23.X系からなので利用できない。
+~~Jestでテーブル駆動をするために必要な`describe.each`は23.X系からなので利用できない。~~
+
+----
+
+**2018/10/04追記**  
+`create-react-app`の2.X系がリリースされ、デフォルトのJestも23.X系になった。  
+これから`create-react-app`コマンドで新規に作るプロジェクトは`yarn eject`してJestをアップデートする必要はない。  
+ローカルにある`create-react-app`コマンドは`npm install -g create-react-app`で最新版に更新出来る。
+
+- Create React App 2.0: Babel 7, Sass, and More
+  - https://reactjs.org/blog/2018/10/01/create-react-app-v2.html
+
+----
 
 - `describe.each(table)(name, fn, timeout)`
   - https://jestjs.io/docs/en/api#describeeachtable-name-fn-timeout
