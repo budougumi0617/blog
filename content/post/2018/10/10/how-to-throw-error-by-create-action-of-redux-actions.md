@@ -21,7 +21,7 @@ redux-actionsを使うと、Flux Standard Action(FSA)に則った`Action`を簡�
 - FSAはActionの型を定義している。
   - https://github.com/redux-utilities/flux-standard-action#actions
 - `createAction(type, payloadCreator)`は通常自動的に`{type=FOO, payload=returnValue}`なオブジェクトを返す
-- `payloadCreater`が`Error`を返したときは自動的に`{type=FOO, payload = Error, error = true}`なオブジェクトを返す
+- `payloadCreater`が`Error`を返したときは自動的に`{type=FOO, payload=Error, error=true}`なオブジェクトを返す
   - https://github.com/redux-utilities/redux-actions/blob/51de3891278dc03713d917d636f1508c0c80d44f/src/createAction.js#L29-L31
 
 ```react
@@ -45,7 +45,7 @@ Flux Standard ActionはReact + Redux(Flux)で利用するActionの形を定め�
 - Actions | Flux Standard Action
   - https://github.com/redux-utilities/flux-standard-action#actions
 
-Flowtypeで定義すると、`Action`は以下のようなオブジェクトの型になる。
+Flowtypeの記法で型を書くと、`Action`は以下のような型になる。
 
 ```react
 export type ActionT<A: Action, P> = {|
@@ -94,7 +94,7 @@ export const readEvents: void => ReadEventsAction = createAction("READ_EVENTS", 
 );
 ```
 
-# createActionで{type=FOO, payload = Error, error = true}なオブジェクトを返す
+# createActionで{type=FOO, payload=Error, error=true}なオブジェクトを返す
 上記のサンプルコードのコメントに書いたが、内部でエラーが発生すれば自動的に`Action`のなかの`error`が`true`になる。  
 `reducer`の中で使える`handleAction`関数も用意されているので、`error = true`のときの処理を`throw`に書けばよい。
 
@@ -127,17 +127,16 @@ export default handleActions(
 ```
 
 # 最後に
-"いい感じに処理してくれる"のがここまでもろもろ処理してくれると思っていなかった。  
+"`redux-actions`を使えばいい感じに処理してくれる"のを期待して使ってみたが、ここまでもろもろ処理してくれると思っていなかった。  
 ずっと「`createAction`は`payload`の値は操作できるけど、`error`を`true`にするにはどうするんだろう？」とハマっていた。  
-ドキュメントのサンプルコードの部分だけ読んで他をちゃんと読んでなかったのと、コードを読んでみたらすぐわかった。  
-とは言えこう書いてあってもなんかピンと来ない気がする。
+ちゃんとドキュメントを読んでいなかったのが原因。とは言え、以下のように書いてあってもなんかピンと来ない気がする。
 
 - createAction(type, payloadCreator)
   - https://redux-actions.js.org/api/createaction#createactiontype-payloadcreator
 
 > NOTE: If payload is an instance of an Error object, payloadCreator will not be called.
 
-`createAction(type)`の説明から続いているのかな？
+`payloadCreator`を呼ばないと`payload`インスタンスはわからないと思うのだが...`createAction(type)`の説明から続いているのだろうか。
 
 - createAction(type)
   - https://redux-actions.js.org/api/createaction#createactiontype
