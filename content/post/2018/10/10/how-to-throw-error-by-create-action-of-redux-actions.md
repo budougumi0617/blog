@@ -38,6 +38,10 @@ export const readEvents = createAction("READ_EVENTS", () =>
 
 - https://github.com/budougumi0617/sandbox-react/tree/067c5d78f046eb7caa62e0f3f68f8a222ef2b261
 
+利用するredux-actionsのバージョンは2.6.1。各ライブラリのバージョンの詳細は以下のファイルを参照のこと。
+
+- https://github.com/budougumi0617/sandbox-react/blob/067c5d78f046eb7caa62e0f3f68f8a222ef2b261/package.json
+
 
 # FSA準拠のアクションを作る
 Flux Standard ActionはReact + Redux(Flux)で利用するActionの形を定めている。
