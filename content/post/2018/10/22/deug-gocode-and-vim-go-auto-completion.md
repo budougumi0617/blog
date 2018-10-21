@@ -16,7 +16,7 @@ tags = ["vim", "gocode", "vim-go", "golang"]
 <!--more-->
 
 # TL;DR
-- vim-goで自動補完がうんともすんとも言わなくなった
+- vim-goの自動補完に正しい候補がでなくなった
 - `gocode`を`gocode exit`したあと`gocode -debug -s`で再起動する
 - vimも再起動して適当なGoファイルをいじっていると、`gocode`のデバッグ出力が確認できる
 - 今回は`vimrc`ファイルに`let g:go_gocode_propose_source = 0`を加えることで解決した。
