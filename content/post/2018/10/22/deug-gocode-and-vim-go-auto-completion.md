@@ -1,6 +1,6 @@
 +++
 title = "vim-goの自動補完が効かないときの調べ方（gocode が Error parsing input file (outer block)） #vim #go"
-date = 2018-10-22T18:00:19+09:00
+date = 2018-10-22T21:00:19+09:00
 draft = false
 toc = true
 comments = true
@@ -41,8 +41,7 @@ https://github.com/mdempsky/gocode/tree/22f3bf7a9256a30885d7cd46da4657cc878f3f4f
 `gocode exit`してバックプロセスを再起動(vimでGo触ってると再度起動する)しても直らなかった。
 
 vim自体がロギングしているログは`messages`で確認することができるが、`messages`では`gocode`が出力しているログは確認できない。  
-なので、`gocode`をデバッグモードで起動して確認した。`gocode`は`gocode exit`で一度終了したあと、  
-`gocode -debug -s`と実行することでデバッグ出力をターミナルに出力する状態で起動できる。  
+なので、`gocode`をデバッグモードで起動して確認した。`gocode`は`gocode exit`で一度終了したあと、`gocode -debug -s`と実行することでデバッグ出力をターミナルに出力する状態で起動できる。  
 あとはこの状態でvimを操作するとgocodeからデバッグログが出力される。
 
 今回は以下のようなデバッグ出力が出力された。
@@ -75,5 +74,4 @@ let g:go_gocode_propose_source = 0
 おそらく`vim-go`側も対応入ると思うので、しばらくは`vim-go`と`gocode`をこまめに更新したほうが良いのかもしれない。  
 直すまで半日くらいVSCodeで作業していたのだが、VSCode(+vimプラグイン)でGo書くのもなかなか良かった。  
 けどやっぱりvimのほうがシンプルで好きだ。
-
 
