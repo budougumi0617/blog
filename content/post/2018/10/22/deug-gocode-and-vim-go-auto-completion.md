@@ -1,6 +1,6 @@
 +++
 title = "vim-goの自動補完が効かないときの調べ方（gocode が Error parsing input file (outer block)） #vim #go"
-date = 2018-10-22T18:40:19+09:00
+date = 2018-10-22T18:00:19+09:00
 draft = false
 toc = true
 comments = true
