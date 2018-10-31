@@ -84,6 +84,7 @@ tags = ["book"]
 
 **2018/10/31追記**  
 11/14にKindle版も販売されるようだ。
+
 - エンジニアの知的生産術 ―効率的に学び、整理し、アウトプットする WEB+DB PRESS plus Kindle版
   - https://amazon.jp/dp/B07JFRF6MW
 
