@@ -17,7 +17,7 @@ tags = ["book"]
 
 <!--more-->
 
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=github.io-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4774198765&linkId=b80dd2b3721d671492cdd78b3e9d4adc"></iframe>
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=github.io-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B07JFRF6MW&linkId=cb84938b97eba46213cf513af8d595e8"></iframe>
 
 # アウトプット（知的生産）するのは難しい
 私はプログラマー（Webエンジニア）であり、日々の業務の生産性はだいたいコーディング量やGitHubのPull Request数で測ることができる。  
@@ -80,11 +80,17 @@ tags = ["book"]
 - エンジニアの知的生産術
   - https://gihyo.jp/dp/ebook/2018/978-4-7741-9877-4
 
-基本的に電子書籍はKindleで読んでいるので、早く既刊もKindleで売って欲しい。（PDFだとKindleでメモやハイライトがつけられない）  
+~~基本的に電子書籍はKindleで読んでいるので、早く既刊もKindleで売って欲しい。（PDFだとKindleでメモやハイライトがつけられない）~~  
+
+**2018/10/31追記**  
+11/14にKindle版も販売されるようだ。
+- エンジニアの知的生産術 ―効率的に学び、整理し、アウトプットする WEB+DB PRESS plus Kindle版
+  - https://amazon.jp/dp/B07JFRF6MW
+
 
 - WEB+DB PRESS plusシリーズ，Kindleほかでの展開を開始――第一弾として『クラウドゲームをつくる技術』を9月20日にサイマル発売
   - https://gihyo.jp/news/nr/2018/09/1301
 
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=github.io-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4774198765&linkId=b80dd2b3721d671492cdd78b3e9d4adc"></iframe>
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=github.io-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B07JFRF6MW&linkId=cb84938b97eba46213cf513af8d595e8"></iframe>
 
 
