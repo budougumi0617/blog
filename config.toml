@@ -68,6 +68,7 @@ pygmentsoptions = "style=true,hl_lines=true, noclasses=true,linenos=true"
     twitterCardDomain = "budougumi0617.github.io"
     # Don't include the @.
     twitterCardAuthor = "budougumi0617"
+    twitterImage =  "static/twittercard.png"
     generateTaxonomyList = true
     sidebarRecentLimit = 5
 #    sidebarHeader = "This blog"
