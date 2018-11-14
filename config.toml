@@ -15,13 +15,15 @@ disqusShortname = "http-budougumi0617-github-io"
 # Highlight shortcode and code fences (```) will be treated similarly
 pygmentscodefences = true
 
+pygmentsStyle = "solarized-dark"
+
 # Use CSS for highlighting
-pygmentsuseclasses = true
+# pygmentsuseclasses = true
 
 # pygments options can be added here (and in the highlight shortcode in the markdown file)
 # Hugo supports these pygments options: style, encoding, noclasses, hl_lines, linenos
 # for example: pygmentsoptions = "linenos=true"
-pygmentsoptions = "style=true,hl_lines=true, noclasses=true,linenos=true"
+# pygmentsoptions = "linenos=true"
 
 [permalinks]
     post = "/:year/:month/:day/:filename/"
@@ -68,7 +70,6 @@ pygmentsoptions = "style=true,hl_lines=true, noclasses=true,linenos=true"
     twitterCardDomain = "budougumi0617.github.io"
     # Don't include the @.
     twitterCardAuthor = "budougumi0617"
-    twitterImage =  "static/twittercard.png"
     generateTaxonomyList = true
     sidebarRecentLimit = 5
 #    sidebarHeader = "This blog"
