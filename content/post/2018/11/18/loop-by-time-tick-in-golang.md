@@ -1,5 +1,5 @@
 +++
-title = "Loop by Time Tick in Golang"
+title = "[Go] n秒おきになにかするループをtime.Tickで書く #go"
 date = 2018-11-18T11:53:10+09:00
 draft = false
 toc = true
