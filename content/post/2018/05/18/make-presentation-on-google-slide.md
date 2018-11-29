@@ -107,4 +107,6 @@ https://blog.golang.org/go-brand
 **Go Slide Masters (Google Slides)**  
 https://golang.org/s/presentation-theme
 
+# 関連
+- [GoogleスライドやGoogleドキュメントのバージョン管理をする](/2018/11/28/version-control-google-file)
 
