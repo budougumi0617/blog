@@ -1,5 +1,5 @@
 +++
-title = "毎週ブログを書くということ #write-blog-every-week"
+title = "毎週ブログを書くということ #write_blog_every_week"
 date = 2018-12-02T12:14:05+09:00
 draft = false
 toc = true
