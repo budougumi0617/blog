@@ -34,6 +34,7 @@ author = "budougumi0617"
 - [Spinnakerを利用した自動カナリー分析](https://speakerdeck.com/budougumi0617/automated-canary-analysis-by-spinnaker-with-kayenta) - WEBエンジニア勉強会 #08
 - [Tour of testing in 2018](https://speakerdeck.com/budougumi0617/tour-of-testing-in-2018) - golang.tokyo #17
 - [go-cloudとWireを利用したDI](https://speakerdeck.com/budougumi0617/go-cloud-and-dependency-injection-by-wire) - Go(Un)Conference（Goあんこ）LT大会 4kg
+- [React+Redux 次の一歩](https://speakerdeck.com/budougumi0617/the-next-step-from-react-and-redux) - WEBエンジニア勉強会 #10
 
 # Products
 - Now updating...
