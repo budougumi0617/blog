@@ -36,5 +36,9 @@ author = "budougumi0617"
 - [go-cloudとWireを利用したDI](https://speakerdeck.com/budougumi0617/go-cloud-and-dependency-injection-by-wire) - Go(Un)Conference（Goあんこ）LT大会 4kg
 - [React+Redux 次の一歩](https://speakerdeck.com/budougumi0617/the-next-step-from-react-and-redux) - WEBエンジニア勉強会 #10
 
+# Article
+## 2018
+- [ゴーファーの書 6.go-cloudとWireコマンドの概要と活用方法](https://techbookfest.org/event/tbf05/circle/37230005) - 寄稿
+
 # Products
 - Now updating...
