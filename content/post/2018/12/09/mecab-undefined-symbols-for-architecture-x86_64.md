@@ -6,7 +6,7 @@ toc = true
 comments = true
 author = "budougumi0617"
 categories = ["go"]
-tags = ["", ""]
+tags = ["golang", "mecab"]
 +++
 他の方のリポジトリにビルドすると表題のエラーが出てしまった。
 `bluele/mecab-golang`をimportしている(CGOの設定が必要だった）のが原因だったのでメモしておく。
