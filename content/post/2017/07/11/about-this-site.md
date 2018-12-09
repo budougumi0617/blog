@@ -33,6 +33,12 @@ author = "budougumi0617"
 - [初級者向けGoの落とし穴と解説](https://speakerdeck.com/budougumi0617/traps-and-explanations-in-go) - Go(Un)Conference（Goあんこ）LT大会 3kg
 - [Spinnakerを利用した自動カナリー分析](https://speakerdeck.com/budougumi0617/automated-canary-analysis-by-spinnaker-with-kayenta) - WEBエンジニア勉強会 #08
 - [Tour of testing in 2018](https://speakerdeck.com/budougumi0617/tour-of-testing-in-2018) - golang.tokyo #17
+- [go-cloudとWireを利用したDI](https://speakerdeck.com/budougumi0617/go-cloud-and-dependency-injection-by-wire) - Go(Un)Conference（Goあんこ）LT大会 4kg
+- [React+Redux 次の一歩](https://speakerdeck.com/budougumi0617/the-next-step-from-react-and-redux) - WEBエンジニア勉強会 #10
+
+# Article
+## 2018
+- [ゴーファーの書 6.go-cloudとWireコマンドの概要と活用方法](https://techbookfest.org/event/tbf05/circle/37230005) - 寄稿
 
 # Products
 - Now updating...
