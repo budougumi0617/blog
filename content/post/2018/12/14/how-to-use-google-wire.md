@@ -1,5 +1,5 @@
 +++
-title = "[Go] google/wireを使ったDependency Injectionデザイン #go"
+title = "google/wireを使ったDIとDI関数のシグネチャについて #go"
 date = 2018-12-14T09:25:57+09:00
 draft = false
 toc = true
@@ -10,30 +10,31 @@ tags = ["golang", "wire"]
 +++
 
 
-これは[Go Advent Calendar 2018](https://qiita.com/advent-calendar/2018/go)の14日目の記事となる。
-この記事ではgoogleが提供するGoのDependency Injection(DI、依存性の注入)ツールであるWireで利用できる関数について紹介する。
+これは[Go Advent Calendar 2018](https://qiita.com/advent-calendar/2018/go)の14日目の記事となる。  
+この記事ではGoogleが提供するGoのDependency Injection(DI、依存性の注入)ツールであるWireを使ったDIの概要と、Wireで利用可能なDI関数の戻り値シグネチャのパターンを紹介する。
 
-- google/wire
+- github.com/google/wire
   - https://github.com/google/wire
-- Compile-time Dependency Injection With Go Cloud's Wire
+- Compile-time Dependency Injection With Go Cloud's Wire | The Go blog
   - https://blog.golang.org/wire
 
 <!--more-->
 
 # TL;DR
-- Wireコマンドはgoogle謹製のGoでDI（依存性の注入）を行なうツール
+- WireコマンドはGoogle謹製のGoでDI（依存性の注入）を行なうツール
   - https://github.com/google/wire
+  - 依存の注入・初期化、依存の注入・初期化を繰り返して多階層になるDIコードも自動生成できる
 - DIで利用できる関数の戻り値のパターンは4種類（引数は任意）
-  - func() DIObject
-  - func() (DIObject, error)
-  - func() (DIObject, func())
-  - func() (DIObject, func(), error)
+  - func() Object
+  - func() (Object, error)
+  - func() (Object, func())
+  - func() (Object, func(), error)
 - Wireを利用すると疎なpkg構成とDIコードの自動生成を享受できる
 
-# 前置き：Wireについて
-簡単に述べておくと、Wireはgoogleがgo-cloudのリポジトリを公開したときにそのリポジトリ内に同梱されていたDIツールだ。
+# Wireについて
+WireはGoogleが[go-cloud](https://github.com/google/go-cloud)のリポジトリを公開したときに同梱されていたDIツールだ。
 [2018年12月](https://github.com/google/go-cloud/pull/831)にWireだけ別のリポジトリに分離され、独立して管理されるようになった。
-次節から説明する`wire`pkgを使ったDIの組み合わせを定義して`go get`で入手できる`wire`コマンドを実行するとDIの初期化コードを自動生成できる。
+次節から説明する`wire`pkgを使ったDIパーツ・組み合わせの定義に対して`go get`で入手できる`wire`コマンドを実行するとDIの初期化コードを自動生成できる。
 
 ```bash
 $ go get github.com/google/wire/cmd/wire
@@ -45,7 +46,7 @@ usage: wire [gen|diff|show|check] [...]
 ## Wireを使ったDIパーツの定義
 Wireを使ったDIを利用するにはまず`wire.NewSet`を使ってDIのパーツ(Provider)を定義する必要がある。
 
-[Defining Providers | Wire User Guide](https://github.com/google/wire/blob/master/docs/guide.md#defining-providers)より
+（コードは[Defining Providers | Wire User Guide](https://github.com/google/wire/blob/master/docs/guide.md#defining-providers)より抜粋）
 
 ```go
 package foobarbaz
@@ -91,9 +92,9 @@ var SuperSet = wire.NewSet(ProvideFoo, ProvideBar, ProvideBaz)
 
 上記のサンプルコードの最後で定義しているのがWireの仕組み内でProviderと呼ばれるもので、このProviderを複数組み合わせることでDIの初期化をしていく。
 
-## Wireを使ってDIの宣言
+## Wireを使ったDIの宣言
 
-`wire.Build`を使ってDIで組み立てたいオブジェクトの構成要素を定義する。
+`wire.Build`を使って依存性を収入するオブジェクトの構成（Injector）を定義する。
 
 [Injectors | Wire User Guide](https://github.com/google/wire/blob/master/docs/guide.md#injectors)より
 
@@ -115,19 +116,19 @@ func initializeBaz(ctx context.Context) (foobarbaz.Baz, error) {
 }
 ```
 
-この例ではDI済みの`Baz`を生成する関数を定義している。
-前述の中で定義した`SuperSet`では`Baz`オブジェクトを生成するための`context.Context`が自前で用意できないため、引数から`context.Context`を与えている。
-なお、「このSetからXXXを生成するためには何を用意すればいいのか？」は`wire show`コマンドを使えば簡単に調べることができる。
+この例では`Baz`オブジェクトを生成する関数を定義している。
+前述の中で定義した`SuperSet`に含まれる`Baz`オブジェクトを生成する関数（`ProvideBar`）に必要な`context.Context`が`SuperSet`内の関数から用意できないため、`initializeBaz`の引数から`context.Context`を与えている。
+なお、「あるSetからXXXオブジェクトを生成するためにはどんなオブジェクトを用意すればいいのか？」は`wire show`コマンドを使えば簡単に調べることができる。
 
 ```bash
-wire show
+$ wire show
 "github.com/budougumi0617/foobarbaz".SuperSet
-Outputs given no inputs:
+Outputs given no inputs: # 特に用意せずにSuperSetから生成できるオブジェクト
         github.com/budougumi0617/foobarbaz.Bar
                 at /Users/budougumi0617/go/src/github.com/budougumi0617/foobarbaz/foobarbaz.go:24:6
         github.com/budougumi0617/foobarbaz.Foo
                 at /Users/budougumi0617/go/src/github.com/budougumi0617/foobarbaz/foobarbaz.go:15:6
-Outputs given context.Context:
+Outputs given context.Context: # context.Contextを与えれば生成できるオブジェクト
         github.com/budougumi0617/foobarbaz.Baz
                 at /Users/budougumi0617/go/src/github.com/budougumi0617/foobarbaz/foobarbaz.go:33:6
 ```
@@ -163,49 +164,46 @@ func initializeBaz(ctx context.Context) (foobarbaz.Baz, error) {
 こうして`wire gen`コマンドを使うと、DI済みのオブジェクトを作成するコードを自動生成してくれる。
 この`wire gen`を使ったDIのよいところは以下だと感じている。
 
-- `wire.Build`関数に順不同でProviderを突っ込んでおいてもwireが適切な順序でDIしてくれる
+- 必要な依存関係を含めておけばwireが適切な順序でオブジェクト生成、DIを繰り返すコードを自動生成してくれる
+  - 不足している場合は`wire gen`時に何が足りないかエラー出力してくれる
 - コード上の仕組みはシンプルなので後からでも導入できる。また逆に脱却も用意
-- 「ただ依存性を解決するだけ」という知的生産性の無いコードをwireに一存できる
+- 「ただオブジェクト間の依存性を解決するだけ」という人間が行なう必要が無いコードをWireに一存できる
 
-最後の利点については、例えばgo-cloudのサンプルコードを見るとその効果がわかりやすい。
-go-cloudのサンプルコードではGCPを利用したWebサービスのDIをwireのInjectorの仕組みを使って以下のように設定している。
-詳細は説明しないが、`Bucket`や`Cloud SQL`、`Stackdriver`の初期化をしたServerを構成するDIの定義だ。
+最後の利点については、例えば`go-cloud`のサンプルコードを見るとその効果がわかりやすい。
+`go-cloud`のサンプルコードではGCPを利用したWebサービスのDIをWireのInjectorの仕組みを使って以下のように設定している。
+詳細は説明しないが、`Bucket`や`Cloud SQL`、`Stackdriver`の依存性を注入したWebサーバーオブジェクト(`*application`）を生成するDIの定義だ。
 
 [/github.com/google/go-cloud/samples/guestbook/inject_gcp.go](https://github.com/google/go-cloud/blob/3c405e2532f18716f030e35b1e99c2dffcb92a6e/samples/guestbook/inject_gcp.go#L37-L50)
 
 ```go
 // setupGCP is a Wire injector function that sets up the application using GCP.
 func setupGCP(ctx context.Context, flags *cliFlags) (*application, func(), error) {
-	// This will be filled in by Wire with providers from the provider sets in
-	// wire.Build.
-	wire.Build(
-		gcpcloud.GCP,
-		cloudmysql.Open,
-		applicationSet,
-		gcpBucket,
-		gcpMOTDVar,
-		gcpSQLParams,
-	)
-	return nil, nil, nil
+    // This will be filled in by Wire with providers from the provider sets in
+    // wire.Build.
+    wire.Build(
+        gcpcloud.GCP,
+        cloudmysql.Open,
+        applicationSet,
+        gcpBucket,
+        gcpMOTDVar,
+        gcpSQLParams,
+    )
+    return nil, nil, nil
 }
 ```
 
-ここから`wire gen`を使って実際のDIコードを自動生成すると、70行近いDIコードが自動生成される（コードの掲載は省略する）。
-依存関係が変更、あるいは追加されるたびにこのような依存関係を自動で再生成してくれるのは非常にありがたい。
-（再生成前に`wire diff`コマンドを使って自動生成コードの差分を確認することも可能だ。）
+この`setupGCP`から`wire gen`コマンドを使って実際にビルドで利用するDIコードを自動生成すると、70行近いDIコードが自動生成される（コードの掲載は省略する）。
 
 [https://github.com/google/go-cloud/samples/guestbook/wire_gen.go#L105-L171](https://github.com/google/go-cloud/blob/3c405e2532f18716f030e35b1e99c2dffcb92a6e/samples/guestbook/wire_gen.go#L105-L171)
 
-Wireとはどんなものなのか？についての詳細は以下の記事を参考にしていただきたい。
+依存関係が変更あるいは追加されるたびにこのような依存関係を自動で再生成してくれるのは非常にありがたい。
+（再生成前に`wire diff`コマンドを使って自動生成コードの差分を確認することも可能だ。）
 
-- [[発表資料]go-cloudとWireを利用したDI #gounco #go](/2018/10/19/presentation-gounco-lt4/)
+# wireコマンドで利用できるDI関数の戻り値シグネチャ
+上記のようにDIを定義するWireだが、Provider（`wire.NewSet`）で利用できるDI定義の関数には条件がある。
+（依存するオブジェクトは生成する各々のオブジェクトで異なるので当然だが、）関数の引数には制限はないが、戻り値のシグネチャは４パターンしか認められていない。
 
-
-# wireコマンドで利用できるproviderの定義
-だいぶ前置きが長くなってしまったが、`wire.Set`で利用できるDI定義の関数には条件がある。
-（注入する依存オブジェクトは各々で異なるので当然だが、）関数の引数には制限はないが、戻り値は４パターンしか認められていない。
-
-## func() DIObject
+## func() Object
 １つ目は単純にDI済みのオブジェクトのみを返すパターンだ。
 
 例: [github.com/google/go-cloud/gcp/gcp.go#L79](https://github.com/google/go-cloud/blob/129201bb98c1758a383cd059f0b5fe8d7920c9fa/gcp/gcp.go#L79)
@@ -213,30 +211,25 @@ Wireとはどんなものなのか？についての詳細は以下の記事を�
 func CredentialsTokenSource(creds *google.Credentials) TokenSource
 ```
 
-## func() (DIObject, error)
-２つ目はDIに失敗したときに`error`を返す戻り値パターンだ。自動生成後のコード内で適切にエラーハンドリングするコードを生成してくれる。
+## func() (Object, error)
+２つ目はDIに失敗したときに`error`を返す戻り値パターンだ。`error`を返すDI関数が`wire.Build`に含まれている場合は、自動生成後のコード内で適切にエラーハンドリングするコードを生成してくれる。
 
 例: [github.com/google/go-cloud/gcp/gcp.go#L70](https://github.com/google/go-cloud/blob/129201bb98c1758a383cd059f0b5fe8d7920c9fa/gcp/gcp.go#L70)
 ```go
 func DefaultCredentials(ctx context.Context) (*google.Credentials, error)
 ```
 
-## func() (DIObject, func())
+## func() (Object, func())
 ３つ目は廃棄前に何らかのクリーンアップ処理が必要なDI済みのオブジェクトを生成する関数に対応するパターン。
 例えば`*sql.DB`オブジェクトを生成する関数を用意するとして、`db.close`をクリーンアップ関数として返しておく。
 そうすると、自動生成されたDIコードの中で`err != nil`だったとき適切にクリーンアップが行われる。
-前掲した`setupGCP`のようにInjectorの戻り値に`func()`があればDI中に返されたクリーンアップ関数をDI済みオブジェクトと一緒に受け取ることも可能だ。
-
-```go
-func setupGCP(ctx context.Context, flags *cliFlags) (*application, func(), error)
-```
 
 例: [https://github.com/google/go-cloud/samples/guestbook/main.go#L313](https://github.com/google/go-cloud/blob/129201bb98c1758a383cd059f0b5fe8d7920c9fa/samples/guestbook/main.go#L313)
 ```
 func appHealthChecks(db *sql.DB) ([]health.Checker, func())
 ```
 
-## func() (DIObject, func(), error)
+## func() (Object, func(), error)
 ４つ目は異常がなかったときはDIオブジェクトとクリーンアップ関数を返し、異常時は`error`を返すパターン。
 実際に定義する際は３つめのパターンよりこの宣言になることのほうが多いだろう。
 
@@ -245,9 +238,11 @@ func appHealthChecks(db *sql.DB) ([]health.Checker, func())
 func appHealthChecks(db *sql.DB) ([]health.Checker, func())
 ```
 
+どれも`XXX`構造体に対して`NewXXX`関数を定義するときに利用されるパターンだ。なので、既存コードの`New`関数を使って`wire.NewSet`を定義していけば既存のプロジェクトでもすぐに利用を開始できる。
+
 # 終わりに
 今回は`Wire`を使ったDIの利点と`Wire`で利用可能なDI関数の戻り値パターンを紹介した。
-プリミティブな値を含んだDIをするときは型エイリアスを適切に切っておく、などいくつかのプラクティスがあるのだが、それらはリポジトリのdocsを確認すればよい。
+プリミティブな値を引数・戻り値に含む関数を使ってDIをするときは型エイリアスを適切に切っておく、などいくつかのプラクティスがあるのだが、それらはWireのリポジトリのdocsを確認すればよい。
 
 - Best Practices
   - https://github.com/google/wire/blob/master/docs/best-practices.md
@@ -265,6 +260,8 @@ func appHealthChecks(db *sql.DB) ([]health.Checker, func())
 # 参考
 - google/wire
   - https://github.com/google/wire
+- google/go-cloud
+  - https://github.com/google/go-cloud
 - Compile-time Dependency Injection With Go Cloud's Wire
   - https://blog.golang.org/wire
 - freeeのマイクロサービス基盤とWire導入
@@ -273,14 +270,3 @@ func appHealthChecks(db *sql.DB) ([]health.Checker, func())
 # 関連
 - [[発表資料]go-cloudとWireを利用したDI #gounco #go](/2018/10/19/presentation-gounco-lt4/)
 
-
-
-------------------
-# memo
-ワイヤーがいいよ
-くわしくは以下のブログで
-ワイヤーに使える関数について
-三種類の形
-まとめ
-ワイヤーで利用できる関数についてまとめた。
-ワイヤーを使えば自然と疎なパッケージ構成を作ることもでき、テストもしやすい。また面倒なインジェクションのコードを自動生成することができる。
