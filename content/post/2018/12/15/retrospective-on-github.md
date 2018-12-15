@@ -154,6 +154,13 @@ https://github.com/budougumi0617/wem10-react-sample
 
 - [[発表資料] React+Redux 次の一歩 補足資料 #WEBエンジニア勉強会10](/2018/11/09/presentation-web-engineer-meetup-10)
 
+## caww
+https://github.com/budougumi0617/caww
+
+Wireを使ってGoのクリーンアーキテクチャを自分で設計してみようとしたリポジトリ。
+アドベントカレンダー用に用意しようとしたのだが、諸事情で頓挫した。これは他の人にも見つかってしまったリポジトリなので年明け早々にリベンジとしてちゃんと作り込みたい。
+
+
 # Activity
 2018年のコミット履歴。
 
