@@ -11,7 +11,6 @@ tags = ["golang"]
 
 golang.tokyo #20に参加してきたのでメモ。
 
-
 <!--more-->
 
 |イベント名|golang.tokyo #20 忘年LT大会！！|
@@ -20,8 +19,6 @@ golang.tokyo #20に参加してきたのでメモ。
 |会場|株式会社メルカリ 東京都港区六本木6-10-1(六本木ヒルズ森タワー18F)|
 |日時|2018/12/18(火) 19:30 〜 22:00|
 |ハッシュタグ|[#golangtokyo](https://twitter.com/hashtag/golangtokyo)|
-
-
 
 # Dive panic & type
 [@takochuu](https://twitter.com/takochuu)
@@ -71,6 +68,7 @@ by imoty
 
 # メジャーな Live Reloaderの違いをちゃんと調べて見た
 [@yudppp](https://twitter.com/yudppp)
+
 - https://speakerdeck.com/yudppp/compare-major-live-reloader-of-go
 - 開発中の.goファイルの変更に対してホットリロードをしてくれるライブラリはメジャーどころで３つ
   - https://github.com/codegangsta/gin
@@ -144,6 +142,7 @@ Go1.11からいろいろ増えているのは知らなかった。
 チャネル周りの実装を静的解析みたいなことをして正しく実装されているか（振る舞えるか）を検知できる手法らしい。
 
 実装はこれなので試してみる。
+
 - http://mrg.doc.ic.ac.uk/tools/#godel-checker
 - godel-checker
   - https://bitbucket.org/MobilityReadingGroup/godel-checker
@@ -161,7 +160,8 @@ Go1.11からいろいろ増えているのは知らなかった。
 
 VimでGo書くときのTipsを実行例付きで紹介されていた。
 VSCodeも似たようなことができるので、自分のエディタで出来ることを一度調べておくといいかもしれない。
-https://github.com/Microsoft/vscode-go#commands
+
+- https://github.com/Microsoft/vscode-go#commands
 
 ちなみにvim-goを使えばデバッグもできる。
 
@@ -169,6 +169,7 @@ https://github.com/Microsoft/vscode-go#commands
 
 # 業務でよく使っているライブラリ&ツール紹介
 [@qushot](https://twitter.com/qushot)
+
 - https://github.com/labstack/echo
   - 言わずと知れたWebフレームワーク
   - `HideBanner`オプションを使うと起動時のロゴ表示をオフにできるらしい。
@@ -214,6 +215,7 @@ GoConでも発表されている方がいたが、BCEという機能について
 
 # アーキテクチャについて思っていること
 [@sonatard](https://twitter.com/sonatard)
+
 - https://speakerdeck.com/sonatard/akitekutiyanituitesi-tuteirukoto
 - 依存していないとは？インポートしていないことなのか？直接関数を実行していないことなのか？
 - レイヤー図の矢印は何を示しているのか？（示していると認識しているのか？）
@@ -233,7 +235,7 @@ GoConでも発表されている方がいたが、BCEという機能について
 
 - https://speakerdeck.com/izumin5210/how-to-manage-tool-dependencies-in-go
 - 依存パッケージはバージョン管理できる。が、ツールのバージョン管理どうする？
-  - `golint`や`mockgen`みたいなコードジェネレータ周りはチームで統一されていないと挙動が変わる。
+  - `golint`や`mockgen`みたいなコードジェネレータ周りはチームで統一されていないと挙動が変わる
 - tools.goでやるのが今のところベターっぽい
   - https://github.com/golang/go/issues/25922#issuecomment-412992431
 - ただ毎回ビルドし直したりするのは辛い
@@ -260,6 +262,7 @@ GoConでも発表されている方がいたが、BCEという機能について
 
 # Exportされてないフィールドを書き換えるなよ！絶対だぞ！絶対！
 [@inukirom](https://twitter.com/inukirom)
+
 - https://speakerdeck.com/morikuni/golang-dot-tokyo-number-20
 - `unsafe.Pointer`経由でexportされていない値を変更する
 - https://github.com/morikuni/go-experiment/tree/master/overwrite
@@ -269,6 +272,7 @@ GoConでも発表されている方がいたが、BCEという機能について
 
 # Wire: コード生成によるDI
 [@_ishkawa](https://twitter.com/_ishkawa)
+
 - https://speakerdeck.com/ishkawa/introducing-wire-dependency-injection-by-code-generator
 - https://github.com/google/wire
   - Googleが作ったDependency Injection(DI)ツール
@@ -294,10 +298,10 @@ GoConでも発表されている方がいたが、BCEという機能について
 
 - https://speakerdeck.com/sachaos/reitoresingutogoroutine
 - https://github.com/sachaos/go-simple-raytracer
-- レイトレーシングをフルスクラッチをしてみた。
-- 標準pkgだけでごりごり書ける。
-  - vector周りは腕力で実装した。
-- GPUで並列計算するところをgoroutineで並行処理をしている。
+- レイトレーシングをフルスクラッチをしてみた
+- 標準pkgだけでごりごり書ける
+  - vector周りは腕力で実装した
+- GPUで並列計算するところをgoroutineで並行処理をしている
 - pprofでみるとgoroutine safeな`rand/math`のロック周りで速度がでなかったので別ライブラリを使った
   - https://github.com/mono0x/prand
 
@@ -306,6 +310,7 @@ GoConでも発表されている方がいたが、BCEという機能について
 
 # NodeJS → Go
 [@caust1c](https://twitter.com/caust1c)
+
 - https://slides.com/abraithwaite/js-go#/
 - Node.JsからGoへアーキテクチャのマイグレーションを行なった
 - マイグレーションにあたり、Node.jsとGoを同時稼働してリアルデータで検証をした
@@ -322,6 +327,12 @@ Twitterみたら昔読んですごい参考にした記事を書いた方だっ�
 20本の様々なLTを聞くことが出来てとても勉強になった。知らないライブラリや標準パッケージの中身も知ることが出来た。
 昨日の今日でしっかり読み解けてないものが多いので引き続き初耳のライブラリなどは確認していく。
 あとNature Remoが欲しくなった。
+
+- https://github.com/tenntenn/natureremo
+
+<blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">LTの切替くんはNature Remo APIをGoから叩いてます <a href="https://twitter.com/hashtag/golangtokyo?src=hash&amp;ref_src=twsrc%5Etfw">#golangtokyo</a></p>&mdash; tenntennʕ ◔ϖ◔ʔ ==Go＠Goが生きてる (@tenntenn) <a href="https://twitter.com/tenntenn/status/1074988877289377792?ref_src=twsrc%5Etfw">2018年12月18日</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 
 
 # 関連
