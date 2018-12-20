@@ -19,6 +19,7 @@ golang.tokyo #20に参加してきたのでメモ。
 |会場|株式会社メルカリ 東京都港区六本木6-10-1(六本木ヒルズ森タワー18F)|
 |日時|2018/12/18(火) 19:30 〜 22:00|
 |ハッシュタグ|[#golangtokyo](https://twitter.com/hashtag/golangtokyo)|
+|資料|https://golangtokyo.connpass.com/event/111077/presentation/|
 
 # Dive panic & type
 [@takochuu](https://twitter.com/takochuu)
@@ -114,6 +115,7 @@ Google Spreadsheetsでテストパラメータを管理できるのはQAの人�
 # いまさらdatabase/sql
 [@rock619](https://github.com/rock619)
 
+- https://speakerdeck.com/rock619/2018-12-18
 - `sql.DB`は毎回`Close()`する必要もない。`Ping()`などを適切に使う
   - https://golang.org/pkg/database/sql/#DB
 - 定義済みエラーのハンドリングも忘れずに
