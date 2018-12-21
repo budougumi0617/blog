@@ -63,7 +63,7 @@ https://github.com/golang/go/blob/814c749c8fa815a8ddf8184bcac8990ef0dea006/src/c
 
 https://github.com/golang/go/blob/814c749c8fa815a8ddf8184bcac8990ef0dea006/src/cmd/go/internal/get/vcs.go#L472-L486
 
-```
+```go
 // tags returns the list of available tags for the repo in dir.
 func (v *vcsCmd) tags(dir string) ([]string, error) {
 	var tags []string
@@ -113,7 +113,7 @@ cb6c6570b73a1c4d19cad94570ed277f7dae55ac refs/tags/go1.0.2
 
 https://github.com/golang/go/blob/814c749c8fa815a8ddf8184bcac8990ef0dea006/src/cmd/go/internal/get/get.go#L506
 
-```
+```go
 vcs.tagSync(root, selectTag(vers, tags))
 ```
 
