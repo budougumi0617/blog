@@ -8,7 +8,7 @@ tags = ["golang"]
 author = "budougumi0617"
 +++
 
-Vue.js/React/Go/Rails5.2のリアル★ShuuuMai #04の発表資料と資料中の参考リンク、補足をまとめた。
+[Vue.js/React/Go/Rails5.2のリアル★ShuuuMai #04](https://connpass.com/event/86508/)の発表資料と資料中の参考リンク、補足をまとめた。  
 https://connpass.com/event/86508/
 
 <script async class="speakerdeck-embed" data-id="e6fbf358f82c4894b0546f467abb2e9f" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
