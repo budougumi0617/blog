@@ -117,10 +117,10 @@ pygmentsStyle = "solarized-dark"
 
 [[menu.sidebar]]
   Name = "Tags"
-  URL = "/tags"
+  URL = "/tags/"
   weight = 1
 
 [[menu.sidebar]]
   Name = "Categories"
-  URL = "/categories"
+  URL = "/categories/"
   weight = 1
