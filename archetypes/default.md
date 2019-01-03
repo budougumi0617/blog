@@ -6,4 +6,5 @@ slug = ""
 categories = [""]
 tags = [""]
 author = "budougumi0617"
+twitterImage = "twittercard.png"
 +++
