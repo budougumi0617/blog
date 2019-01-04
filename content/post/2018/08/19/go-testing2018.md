@@ -7,6 +7,8 @@ comments = true
 author = "budougumi0617"
 categories = ["go"]
 tags = ["golang", "test", "coverage"]
+twitterImage = "logos/Go-Logo_Aqua.png"
+keywords = ["Go", "testing"]
 +++
 
 2018年夏(Go1.10)時点でGoのテスト方法をまとめる。  

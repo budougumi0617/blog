@@ -7,6 +7,8 @@ comments = true
 author = "budougumi0617"
 categories = ["go"]
 tags = ["golang", "wire"]
+twitterImage = "logos/Go-Logo_Aqua.png"
+keywords = ["Go", "wire", "dependency injection"]
 +++
 
 

@@ -7,6 +7,8 @@ comments = true
 author = "budougumi0617"
 categories = ["go"]
 tags = ["golang", "test", "examples"]
+twitterImage = "logos/Go-Logo_Aqua.png"
+keywords = ["Go", "testing"]
 +++
 
 この記事は以下の記事で触れなかったExamplesについてまとめる。
