@@ -8,6 +8,7 @@ author = "budougumi0617"
 categories = ["hugo", "blog"]
 tags = ["hugo", "twitter", "blog"]
 twitterImage = "logos/hugo-logo.png"
+keywords = ["hugo", "Twitter Card", "blog", "SEO"]
 +++
 
 
