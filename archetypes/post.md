@@ -2,9 +2,12 @@
 title= "{{ replace .TranslationBaseName "-" " " | title }}"
 date= {{ .Date }}
 draft = false
+toc = true
 slug = ""
+author = "budougumi0617"
 categories = [""]
 tags = [""]
-author = "budougumi0617"
 twitterImage = "twittercard.png"
 +++
+
+<!--more-->
