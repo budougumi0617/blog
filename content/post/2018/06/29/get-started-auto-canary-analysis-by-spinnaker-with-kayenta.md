@@ -7,6 +7,8 @@ comments = true
 author = "budougumi0617"
 categories = ["spinnaker", "gke", "kubernetes"]
 tags = ["spinnaker", "gke", "kayenta", "k8s", "gcp"]
+twitterImage = "logos/spinnaker.png"
+keywords = ["Spinnaker", "Continuous Delivery", "Kubernetes", "k8s"]
 +++
 Netflixが4月に発表した[Spinnaker](https://www.spinnaker.io/)と[Kayenta](https://github.com/spinnaker/kayenta)を使ったカナリーリリースの自動分析を試してみた。
 

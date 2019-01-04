@@ -6,6 +6,8 @@ slug = ""
 categories = ["spinnaker"]
 tags = ["spinnaker", "canary", "kayenta", "k8s"]
 author = "budougumi0617"
+twitterImage = "logos/spinnaker.png"
+keywords = ["Spinnaker", "Continuous Delivery", "Kubernetes", "k8s"]
 +++
 Spinnakerで自動リリース分析をするための環境構築をしている。
 

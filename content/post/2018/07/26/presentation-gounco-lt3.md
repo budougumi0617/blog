@@ -7,6 +7,8 @@ comments = true
 author = "budougumi0617"
 categories = ["go", "presentation"]
 tags = ["golang"]
+twitterImage = "logos/Go-Logo_Aqua.png"
+keywords = ["Go"]
 +++
 
 Go(Un)Conference（Goあんこ）LT大会 3kgの発表資料と資料中の参考リンク、補足をまとめた。
