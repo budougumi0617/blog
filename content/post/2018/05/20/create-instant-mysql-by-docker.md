@@ -6,6 +6,8 @@ slug = ""
 categories = ["sql","docker"]
 tags = ["mysql","docker","sql"]
 author = "budougumi0617"
+twitterImage = "logos/mysql.png"
+keywords = ["Docker", "MySQL", "Moby"]
 +++
 
 データベースの勉強をしている。  

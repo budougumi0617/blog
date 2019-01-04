@@ -6,6 +6,8 @@ slug = ""
 categories = ["Go","gRPC"]
 tags = ["golang", "grpc", "grpc-gateway"]
 author = "budougumi0617"
+twitterImage = "logos/grpc.png"
+keywords = ["Go", "gRPC", "gRPC Gateway"]
 +++
 
 gRPCで作ったAPIは通常REST APIからコールできない。  

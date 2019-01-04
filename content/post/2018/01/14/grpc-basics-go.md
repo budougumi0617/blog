@@ -6,6 +6,8 @@ slug = ""
 categories = ["Go","gRPC"]
 tags = ["golang", "grpc"]
 author = "budougumi0617"
+twitterImage = "logos/grpc.png"
+keywords = ["Go", "gRPC", "Streaming RPC", "Tutorial"]
 +++
 
 gRPC-goのクイックスタート、サーバーレリフレクションを試したので、次はgRPC Basics: Goをやってみた。クイックスタートを終えているので、そちらで学習できている部分（環境構築手順、基本的な概念）には触れない。

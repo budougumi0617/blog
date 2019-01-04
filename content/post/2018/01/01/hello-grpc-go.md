@@ -6,6 +6,8 @@ slug = ""
 categories = ["Go","gRPC"]
 tags = ["golang", "grpc"]
 author = "budougumi0617"
+twitterImage = "logos/grpc.png"
+keywords = ["Go", "gRPC", "Tutorial"]
 +++
 
 gRPCについて理解を始めるため、gRPCのクイックスタートをやったのでメモしておく。
