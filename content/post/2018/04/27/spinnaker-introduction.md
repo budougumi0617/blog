@@ -6,6 +6,8 @@ slug = ""
 categories = ["spinnaker", "presentation","kubernetes"]
 tags = ["spinnaker","cndjp","k8s"]
 author = "budougumi0617"
+twitterImage = "logos/spinnaker.png"
+keywords = ["Spinnaker", "Continuous Delivery", "Kubernetes", "k8s"]
 +++
 
 Cloud Native Developers JP 第5回勉強会(cndjp5)の発表資料と資料中の参考リンクです。  

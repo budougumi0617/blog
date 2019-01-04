@@ -6,6 +6,8 @@ slug = ""
 categories = ["Spinnaker"]
 tags = ["Spinnaker", "CD",]
 author = "budougumi0617"
+twitterImage = "logos/spinnaker.png"
+keywords = ["Spinnaker", "Continuous Delivery", "Kubernetes", "k8s"]
 +++
 
 

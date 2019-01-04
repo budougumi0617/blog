@@ -7,6 +7,8 @@ comments = true
 author = "budougumi0617"
 categories = ["presentation", "go"]
 tags = ["wire", "golang","go-cloud"]
+twitterImage = "logos/Go-Logo_Aqua.png"
+keywords = ["Go", "wire", "dependency injection"]
 +++
 
 Go(Un)Conference（Goあんこ）LT大会 4kgの発表資料と資料中の参考リンク、補足をまとめた。
