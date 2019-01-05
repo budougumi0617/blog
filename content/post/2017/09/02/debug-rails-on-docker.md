@@ -7,6 +7,8 @@ categories = ["RubyOnRails", "Docker"]
 tags = ["RubyOnRails","Docker", "Debug"]
 author = "budougumi0617"
 aliases =  ["/post/2017/09/02/debug-rails-on-docker/"]
+twitterImage = "logos/docker.png"
+keywords = ["Docker", "Moby", "Debug", "Ruby", "Ruby on Rails", "binding.pry"]
 +++
 
 Rails本の写経を`docker-compose`で行なったときのTips。
