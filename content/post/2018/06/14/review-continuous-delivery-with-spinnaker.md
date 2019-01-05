@@ -6,6 +6,8 @@ slug = ""
 categories = ["review", "spinnaker","kubernetes"]
 tags = ["spinnaker", "book", "microservices", "k8s"]
 author = "budougumi0617"
+twitterImage = "2018/06/spinnaker-ebook.png"
+keywords = ["Spinnaker", "Continuous Delivery", "Kubernetes", "k8s"]
 +++
 
 Netflixが公開している無料の電子書籍をざっと読んだので紹介。  

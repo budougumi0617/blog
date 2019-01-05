@@ -6,6 +6,8 @@ slug = ""
 categories = ["Spinnaker", "kubernetes"]
 tags = ["Spinnaker", "CD","k8s", "gke"]
 author = "budougumi0617"
+twitterImage = "logos/spinnaker.png"
+keywords = ["Spinnaker", "Continuous Delivery", "Kubernetes", "k8s", "GKE"]
 +++
 
 Google Kubernetes EngineとSpinakerを使ったkubernetesの継続的デリバリーを試してみた。
