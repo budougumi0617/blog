@@ -1,5 +1,5 @@
 +++
-title = "Hugoのブログ記事にTwitter Card(アイキャッチ画像)を設定する"
+title = "Hugoのブログ記事にTwitter Card(アイキャッチ画像)を設定する #hugo"
 date = 2019-01-04T11:36:40+09:00
 draft = false
 toc = true
