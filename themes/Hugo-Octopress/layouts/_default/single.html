@@ -8,6 +8,7 @@
         {{ .Scratch.Set "isHome" false }}
         {{ partial "post_header.html" . }}
 
+        {{ partial "addthis" . }}
         <div class="entry-content">
           <!-- insert table of contents if it is set either in the config file or in the frontmatter - frontmatter has priority -->
           {{ $.Scratch.Set "pagetoc" .TableOfContents }}
@@ -17,6 +18,8 @@
           {{ end }}
           {{ .Content }}
         </div>
+        {{ partial "addthis" . }}
+        {{ partial "addthis-script" . }}
         {{ partial "post_footer.html" . }}
       </article>
     </div>
