@@ -93,6 +93,10 @@ pygmentsStyle = "solarized-dark"
     notFoundText = """Please either go back or use the navigation/sidebar menus.
     """
 
+    # For Share button
+    # https://www.trhrkmk.com/posts/hugo-share-button-addthis/
+    addThis = "ra-5c31cf997a7af863"
+
 [[menu.main]]
   Name = "Home"
   URL = "/"
@@ -104,7 +108,6 @@ pygmentsStyle = "solarized-dark"
     url = "//2017/07/11/about-this-site/"
     weight = -100
     pre = "<i class='fa fa-info-circle'></i>"
-
 [[menu.main]]
     name = "Archives"
     identifier = "archives"
