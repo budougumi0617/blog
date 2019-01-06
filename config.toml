@@ -72,23 +72,20 @@ pygmentsStyle = "solarized-dark"
     twitterCardAuthor = "budougumi0617"
     generateTaxonomyList = true
     sidebarRecentLimit = 5
-#    sidebarHeader = "This blog"
+    sidebarHeader = "This blog"
 
-#     # Sidebar text also supports markdown
-#     # New lines can be added with </br> or normal markdown (two spaces at the end of line or two new lines).
-#     # when adding two new lines, remember to remove the indentation otherwise the new line will be treated as a codeblock
-#     sidebarText = """Here's a [link to google](https://www.google.com)
-#     </br>
-#     Second line
-#     </br>
-#     Third line
-#     This line has two spaces in the end to create a new line using markdown
-#     Forth line
-#     """
+    # Sidebar text also supports markdown
+    # New lines can be added with </br> or normal markdown (two spaces at the end of line or two new lines).
+    # when adding two new lines, remember to remove the indentation otherwise the new line will be treated as a codeblock
+    sidebarText = """budougumi0617 の技術ブログです。
+    </br>
+    主にGoについて書いています。
+    </br>
+    """
 
     # Sidebar menu - if true will add a sidebar menu between sidebar text and recent posts
     sidebarMenuEnabled = true
-    sidebarMenuHeader = "Archives"
+    sidebarMenuHeader = "Reccomend Categories"
 
     # 404.html header and text - both support markdown
     notFoundHeader = "There's nothing here"
@@ -116,11 +113,27 @@ pygmentsStyle = "solarized-dark"
     pre = "<i class='fa fa-archive'></i>"
 
 [[menu.sidebar]]
-  Name = "Tags"
-  URL = "/tags/"
+  Name = "その他のカテゴリー一覧"
+  URL = "/categories/"
   weight = 1
 
 [[menu.sidebar]]
-  Name = "Categories"
-  URL = "/categories/"
-  weight = 1
+  name = "Go"
+  url = "/categories/go/"
+  weight = -50
+
+[[menu.sidebar]]
+  name = "Spinnaker"
+  url = "/categories/spinnaker/"
+  weight = -40
+
+[[menu.sidebar]]
+  name = "発表資料"
+  url = "/categories/presentation/"
+  weight = -30
+
+[[menu.sidebar]]
+  name = "イベントレポート"
+  url = "/categories/report/"
+  weight = -20
+
