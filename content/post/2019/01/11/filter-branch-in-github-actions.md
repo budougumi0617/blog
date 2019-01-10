@@ -47,8 +47,8 @@ twitterImage = "logos/github.png"
 - GitHub Actions
   - https://github.com/features/actions/
 
-GitHub Actionsでは、一連の処理のまとまりをworkflow、各処理はActionsと定義している。各Actionsはそれぞれで「別の」コンテナを起動して実行される。コンセプトはGCPのCloud Buildに近い。
-workflowの定義は`/.github/main.workflow`ファイルをリポジトリに配置することで設定でき、GitHub上で該当ファイルを開くとGUIエディタからも編集できる。
+GitHub Actionsでは、一連の処理のまとまりをWorkflow、各処理はActionと定義している。各Actionはそれぞれで「別の」コンテナを起動して実行される。コンセプトはGCPのCloud Buildに近い。
+Workflowの定義は`/.github/main.workflow`ファイルをリポジトリに配置することで設定でき、GitHub上で該当ファイルを開くとGUIエディタからも編集できる。
 
 # やりたいこと
 CI/CDを設定していると、例えば、`master`ブランチが更新されたときだけ実行されるデプロイジョブなどを作っていないだろうか。
@@ -60,7 +60,7 @@ CircleCIでいうと、`branches only`相当の処理になる。
 これをGitHub Actionsでも設定できるのか調べた。
 
 # actions/bin/filterを使う
-実は公式ですでに用意されているActions用のコンテナがあるのでそれを使えば簡単に実現できた。
+実は公式ですでに用意されているAction用のコンテナがあるのでそれを使えば簡単に実現できた。
 
 - https://github.com/actions/bin/tree/master/filter
 
@@ -79,7 +79,7 @@ action "Filters for GitHub Actions" {
 ```
 
 なお、任意の`shell`コマンドを実行するActionはGUIエディタからすぐ選べないので、自分で`actions/bin/sh@master`を選んで定義する。
-workflow全体は以下のようになる。
+Workflow全体は以下のようになる。
 
 - https://github.com/budougumi0617/actions-filter-branch/blob/master/.github/main.workflow
 
@@ -103,7 +103,7 @@ action "Shell" {
 
 ![work flow](/2019/01/11-workflow.png)
 
-このworkflowはリポジトリにpushイベントが発生されるたびに実行される。
+このWorkflowはリポジトリにpushイベントが発生されるたびに実行される。
 
 - https://github.com/budougumi0617/actions-filter-branch/actions
 
@@ -113,7 +113,7 @@ action "Shell" {
 
 ![Succeeded](/2019/01/11-succeeded.png)
 
-`master`ブランチでないときは`Neutral`というstatusでWorkflowは最後まで実行されなかったので、意図通りブランチ名でActionsを制御できた。
+`master`ブランチでないときは`Neutral`というstatusでWorkflowは最後まで実行されなかったので、意図通りブランチ名でWorkflowを制御できた。
 
 - https://github.com/budougumi0617/actions-filter-branch/actions/workflow-runs/MDEwOkNoZWNrU3VpdGU0NzU1MDMxNg==
 
@@ -159,7 +159,7 @@ case "$GITHUB_REF" in
 esac
 ```
 
-`$GITHUB_REF`はActions実行毎に設定されている環境変数で、Actions実行時のブランチ名やタグ名が取得できる。
+`$GITHUB_REF`はWorkflow実行毎に設定されている環境変数で、Workflow実行時のブランチ名やタグ名が取得できる。
 
 - Environment variables | GitHub Actions
   - https://developer.github.com/actions/creating-github-actions/accessing-the-runtime-environment/#environment-variables
@@ -172,7 +172,7 @@ esac
 今回はTwitterで[@teitei_k](https://twitter.com/teitei_tk)さんと話題に上がったので他の確認よりまず先にやってみた。`$GITHUB_REF`が取れるところまでは知っていたので、スクリプトを自作しようと思ったがすでに公式で提供済みのものがあった。
 
 Beta版だからなのかそういう設計思想のなのか（おろらく後者だが）、GitHub ActionsではCircleCIなどほどとリッチなYAMLのような設定を書けない。
-ただ、複雑な設定を書き始めると属人化しはじめたりするし、YAML地獄になったりしがちだ。私がGoのシンプルなところが好きなせいなのもあるかもしれないが、ここのActionsとして小さく設定する今の塩梅が好きだ。実行ステータスを表示できるバッジなど早くほしいのと、publicリポジトリはまだpush通知をトリガーにしかできないので、PRのイベントにも対応されると嬉しい。
+ただ、複雑な設定を書き始めると属人化しはじめたりするし、YAML地獄になったりしがちだ。私がGoのシンプルなところが好きなせいなのもあるかもしれないが、このActionとして小さく設定する今の塩梅が好きだ。実行ステータスを表示できるバッジなどが早くほしいのと、publicリポジトリはまだpush通知をトリガーにしかできないので、PRのイベントにも対応されると嬉しい。
 
 
 # 参考
