@@ -6,6 +6,7 @@ slug = ""
 categories = ["go","vim"]
 tags = ["golang","vim","delve"]
 author = "budougumi0617"
+twitterImage = "logos/Go-Logo_Aqua.png"
 +++
 
 VimでGoを使う人は大半の人が`vim-go`プラグインをインストールしているだろう。
