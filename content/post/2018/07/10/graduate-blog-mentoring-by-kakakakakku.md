@@ -7,6 +7,7 @@ comments = true
 author = "budougumi0617"
 categories = ["poem"]
 tags = ["Retrospective", "Kakakakakku"]
+twitterImage = "twittercard.png"
 +++
 
 4月から6月の3ヶ月間カカカカック([@kakakakakku](https://twitter.com/kakakakakku))さんのブログメンタリングを受けていた。

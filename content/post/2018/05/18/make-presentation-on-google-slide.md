@@ -6,6 +6,7 @@ slug = ""
 categories = ["presentation"]
 tags = ["slide"]
 author = "budougumi0617"
+twitterImage = "logos/googleslide.png"
 +++
 
 Googleスライドで「背景を画像にしていい感じ」の資料を作る方法を調べた。
