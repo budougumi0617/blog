@@ -1,6 +1,6 @@
 +++
 title= "clasp/ESLint/Prettierを使ってGoogle Apps ScriptをTypeScriptで実装する #gas"
-date= 2019-01-15T07:57:55+09:00
+date= 2019-01-15T00:57:55+09:00
 draft = false
 toc = true
 slug = ""
@@ -14,11 +14,7 @@ twitterImage = "/2019/01/tslint-gas-prettier.png"
 
 claspというローカルでGoogle Apps Script(GAS)
 
-![VSCodeでの実装画面](/2019/01/15-vscode.png)
-![Web上での警告画面](/2019/01/15-warning.png)
-![Web上での認可画面](/2019/01/15-auth.png)
-![管理コンソール画面](/2019/01/15-manage-console.png)
-![実行結果](/2019/01/15-sheet-result.png)
+![VSCodeでの実装画面](/2019/01/16-vscode.png)
 
 <!--more-->
 
@@ -162,6 +158,7 @@ $ clasp pull
 
 ```javascript
 function main() {
+  // https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet
   const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
   const today = Utilities.formatDate(new Date(), "JST", "yyyy/MM/dd");
   const value = "Hello clasp";
@@ -171,6 +168,12 @@ function main() {
 }
 ```
 
+TypeScriptを使っているので関数定義などのヘルプも表示され、未定義変数などのエラーも表示されている。また、ファイル保存時に自動フォーマットも行われる。
+
+![VSCodeでの実装画面](/2019/01/16-vscode.png)
+
+コードを書いたらまず`clasp push`コマンドでGoogle Drive上にコードをプッシュしてみる。
+
 ```
 $ clasp push
 ? Manifest file has been updated. Do you want to push and overwrite? Yes
@@ -179,7 +182,7 @@ $ clasp push
 Pushed 2 files.
 ```
 
-pushが出来たらプロジェクトを開いて内容を確認しておく。
+pushが出来たら`clasp open`コマンドでプロジェクトを開いて内容を確認しておく。
 
 ```bash
 $ clasp open
@@ -188,10 +191,14 @@ Opening script: https://script.google.com/d/${.clasp.json内のscroptIdと同じ
 
 自動的にトランスポイルされた`Hello.gs`ファイルがプロジェクト内に配置されている。
 
+
+![Web上のgasファイル](/2019/01/16-gas-file.png)
+
 ```javascript
 var exports = exports || {};
 var module = module || { exports: exports };
 function main() {
+    // https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet
     var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
     var today = Utilities.formatDate(new Date(), "JST", "yyyy/MM/dd");
     var value = "Hello clasp";
@@ -202,9 +209,11 @@ function main() {
 
 Web上でスクリプトの実行を行おうとすると、許可を与える必要がある旨が表示されるので、案内に則って権限を付与する。
 
+![Web上での警告画面](/2019/01/16-warning.png)
 「詳細」をクリックした後の警告画面。
 
 スプレットシートへのアクセスを許可する。
+![Web上での認可画面](/2019/01/16-auth.png)
 
 私はプロジェクトのページから直接スプレットシートを開く方法を知らないので一度GASのプロジェクト管理コンソールを開く。
 
@@ -212,7 +221,10 @@ https://script.google.com/home/my
 
 ここで、該当プロジェクトの上にマウスオーバーすると、対応するスプレットシートへのリンクが表示されるのでクリックする。
 
+![管理コンソール画面](/2019/01/16-manage-console.png)
 ちゃんとGASで作った文字列が書き込まれていた。
+
+![実行結果](/2019/01/16-sheet-result.png)
 
 あとはローカルのプロジェクトをGitHubにコミットしておけばよい。
 権限が正しく設定されていれば問題ないとは思うのだが、私は心配性なのでscriptIdが含まれている`.clasp.json`はコミットしないようにしておいた。
