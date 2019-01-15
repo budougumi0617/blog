@@ -8,7 +8,7 @@ author = "budougumi0617"
 categories = ["gas", "typescript"]
 tags = ["gas", "typescript", "prettier", "tslint", "clasp"]
 keywords = ["Google Apps Script", "GAS", "TypeScript", "Prettier", "ESLint", "clasp"]
-twitterImage = "/2019/01/tslint-gas-prettier.png"
+twitterImage = "/logos/tsgas.png"
 +++
 
 
