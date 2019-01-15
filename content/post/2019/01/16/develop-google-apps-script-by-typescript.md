@@ -219,7 +219,7 @@ $ clasp open
 Opening script: https://script.google.com/d/${.clasp.json内のscroptIdと同じ文字列}/edit
 ```
 
-自動的にトランスポイルされた`Hello.gs`ファイルがプロジェクト内に配置されている。
+自動的にトランスパイルされた`Hello.gs`ファイルがプロジェクト内に配置されている。
 
 ```javascript
 var exports = exports || {};
