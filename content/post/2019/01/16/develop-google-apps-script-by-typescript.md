@@ -8,7 +8,7 @@ author = "budougumi0617"
 categories = ["gas", "typescript"]
 tags = ["gas", "typescript", "prettier", "tslint", "clasp"]
 keywords = ["Google Apps Script", "GAS", "TypeScript", "Prettier", "ESLint", "clasp"]
-twitterImage = "/logos/tsgas.png"
+twitterImage = "logos/tsgas.png"
 +++
 
 
