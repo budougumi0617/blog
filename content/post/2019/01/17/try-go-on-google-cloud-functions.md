@@ -63,7 +63,7 @@ func HelloGCSInfo(ctx context.Context, e GCSEvent) error {
 
 ---
 
-今回はリリース記事に記載されていたHTTP Functionsを少し改良した以下のソースコードを利用する。パッケージ名は`main`じゃなければ良い。
+今回はリリース記事に記載されていたHTTP Functionsを少し改良した以下のソースコードを利用する。**パッケージ名は`main`でなければ良い。**
 
 ```go
 package functions
