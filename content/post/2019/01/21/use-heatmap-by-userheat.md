@@ -1,6 +1,6 @@
 +++
-title= "HugoブログにUser Heatを設定してヒートマップ分析をする"
-date= 2019-01-21T00:21:39+09:00
+title= "HugoブログにUser Heatを設置してヒートマップ分析をする"
+date= 2019-01-21T06:21:39+09:00
 draft = false
 toc = true
 slug = ""
@@ -14,7 +14,11 @@ twitterImage = "2019/01/heatmap-title.png"
 User Heatという無料サービスを使ってブログのヒートマップを導入してみた。
 ヒートマップ分析を使うことで記事のどこに注目が集まっているかなどを分析することができる。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 168px; padding-bottom: 0;"><a href="http://userheat.com" data-iframely-url="//cdn.iframe.ly/api/iframe?url=https%3A%2F%2Fuserheat.com&amp;key=bc7b75ad5adf2dc500d4b0dee9f92949"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+- User Heat
+  - https://userheat.com
+
+![熟読エリア](/2019/01/21-heatmap.png)
+
 <!--more-->
 
 
@@ -77,7 +81,7 @@ Hugoで利用する場合はカスタムヘッダーのHTMLを用意して発行
 あとはブログを再生成して更新する。Chromeでブログを開き、Dev ToolsでHeaderを確認しながらスーパーリロードを繰り返し、上記のスクリプトが確認できれば設置が完了している。
 
 
-User HeatのWebページでも確認できる。設置が完了していれば解析が始まっている旨が表示される。注意書きの通り設置後200, 300PVが貯まるまで待つ。
+User HeatのWebページでも確認できる。設置が完了していれば解析が始まっている旨が表示される。注意書きの通り設置後100, 200PV程度PVが貯まるまで待つ。
 サイト全体のPV数ではなく、各ページごとのPV数なので私のようなサイトだと１週間くらいかかった気がする。
 
 - 解析結果の一覧
@@ -111,13 +115,13 @@ UserHeatは無料サービスなので、解析出来るページの長さに制
   - https://userheat.com/stage/help/#breakup
 
 
-# Google AnalyticsユーザーならばPage Analyticsで簡易分析も出来る。
-ここまでリッチな機能はないが、Google Analyticsを利用しているならばChrome拡張機能のPage Analyticsを利用することもできる。
+# [その他]Google AnalyticsユーザーならばPage Analyticsで簡易分析も出来る。
+User Heatまでリッチな機能はないが、Google Analyticsを利用しているならばChrome拡張機能のPage Analyticsを利用することもできる。
 
 
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 168px; padding-bottom: 0;"><a href="https://chrome.google.com/webstore/detail/page-analytics-by-google/fnbdnhhicmebfgdgglcdacdapkcihcoh" data-iframely-url="//cdn.iframe.ly/api/iframe?url=https%3A%2F%2Fchrome.google.com%2Fwebstore%2Fdetail%2Fpage-analytics-by-google%2Ffnbdnhhicmebfgdgglcdacdapkcihcoh&amp;key=bc7b75ad5adf2dc500d4b0dee9f92949"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
 
-利用は簡単で拡張機能インストール後、Chromeに紐付いているGoogle Analyitcsで解析しているサイトを開けば自動的にサイト内リンクが踏まれた回数などを表示してくれる。
+利用は簡単でChrome拡張機能をインストールするだけだ。Chromeにログイン中のアカウント紐付いているGoogle Analyitcsで解析しているサイトを開けば、自動的にサイト内リンクが踏まれた回数などを表示してくれる。
 
 ![Page Analytics](/2019/01/21-page-analytics.png)
 
