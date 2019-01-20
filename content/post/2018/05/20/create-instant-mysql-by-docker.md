@@ -41,7 +41,9 @@ Docker自体のインストールが完了したら`MySQL`のコンテナーを�
 以下のコマンドを実行すれば自動的にMySQL公式のコンテナーのダウンロードが開始され、内部で`MySQL`が稼働しているコンテナーが開始される。
 
 ```bash
-$ docker container run --rm -d -e MYSQL_ROOT_PASSWORD=mysql -p 43306:3306 --name mysql mysql:5.7
+$ docker container run --rm -d \
+  -e MYSQL_ROOT_PASSWORD=mysql \
+  -p 43306:3306 --name mysql mysql:5.7
 ```
 
 大雑把にいうと、ホストマシンの43336ポートからアクセス出来る使い捨てのMySQLを`mysql`という名前でデーモン起動している。
@@ -141,7 +143,10 @@ COMMIT;
 `docker`コマンドで行う場合は`-v`オプションで以下のように行う。このとき`init`ディレクトリのPATHは絶対PATHで指定する必要がある。
 
 ```bash
-$ docker container run --rm -d -v {$ABSOLUTE_PATH}/init:/docker-entrypoint-initdb.d -e MYSQL_ROOT_PASSWORD=mysql -p 43306:3306 --name mysql mysql:5.7
+$ docker container run --rm -d \
+  -v {$ABSOLUTE_PATH}/init:/docker-entrypoint-initdb.d \
+  -e MYSQL_ROOT_PASSWORD=mysql \
+  -p 43306:3306 --name mysql mysql:5.7
 ```
 
 こうして起動した`mysql`コンテナーは常に以下のようにデータが投入されている。
