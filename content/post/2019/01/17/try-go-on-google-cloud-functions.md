@@ -95,6 +95,7 @@ func F(w http.ResponseWriter, r *http.Request) {
 
 ```
 $ gcloud components update
+$ gcloud components install beta
 ```
 
 あとは、作成したローカルのGoの関数定義があるディレクトリで`gcloud functions deploy`コマンドを実行すれば良い。
