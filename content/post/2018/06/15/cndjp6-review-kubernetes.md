@@ -247,11 +247,3 @@ https://github.com/kubernetes/kubernetes/blob/242a97307b34076d5d8f5bbeb154fa4d97
   - Introducing Container Storage Interface (CSI) Alpha for Kubernetes
     - https://kubernetes.io/blog/2018/01/introducing-container-storage-interface/
 
-# 関連
-- [[発表資料]Spinnaker入門 #cndjp5](/2018/04/27/spinnaker-introduction/)
-- [Cloud Native Developers JP 第1回勉強会 参加メモ #cndjp1](/2017/11/23/cndjp1/)
-- [[k8s]Cloud Native Developers JP 第2回勉強会 参加メモ #cndjp2](/2017/12/18/kubernetes-in-production-cndjp2/)
-- [[k8s]Cloud Native Developers JP 第3回勉強会 #cndjp3 参加メモ](/2018/02/03/kubernetes-with-availability-cndjp3/)
-- [Kubernetes Network Deep Dive!（Istioもあるよ） cndjp第四回参加メモ #cndjp4](/2018/04/01/kubernetes-network-deep-dive-cndjp4/)
-- [[k8s]あつまれ！ CI/CDツール大集合！ - cndjp第5回 参加メモ #cndjp5](/2018/05/02/cndjp5-cicd-tools/)
-

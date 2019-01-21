@@ -204,7 +204,3 @@ https://github.com/timakin/ssm2env
 これは個人開発をするときにも非常に参考になるなと言う内容だった。本発表のお二人のお話を聞くと、シンプルに作ることを目指していてそれがGoを使う理由、Goが使われる理由にもなるんだろうなという気持ち。  
 そしてそれを後押しするGCPという巨人。途中でも書いたが自分の今年の目標はGCP/k8s/gRPCなのでのんびりせずに早くGCPにデプロイしないとという気持ちになった。次回（通常回？リリースパーティ？）も参加するぞ。
 
-### 関連記事
-- [[Go]golang.tokyo #11 参加メモ #golangtokyo](/2017/12/12/golangtokyo-11/)
-- [AWS Lambda Go早めぐり(LambdaContext, Logging, Error...)](/2018/01/17/hello-aws-lambda-go/)
-

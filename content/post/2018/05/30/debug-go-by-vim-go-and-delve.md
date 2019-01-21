@@ -172,7 +172,7 @@ $ vim ch01/ex02/echo.go
 UIに関しては`delve`をそのまま使うより、圧倒的にvim-goのほうがリッチだった気がする。
 ますますVimでGoを書くのが楽しくなった。
 
-# 関連
+# その他のDelveの記事
 - [[Go]MacのVSCodeでGoのデバッグを試すと"unexpected fault address..."エラーになる](/2017/12/24/activate-delve-on-mac/)
 - [Goのデバッガ(Delve)のいろいろな起動のしかた(引数を渡して起動、起動中のプロセスにアタッチして起動 etc...)](/2018/04/08/debug-by-delve/)
 

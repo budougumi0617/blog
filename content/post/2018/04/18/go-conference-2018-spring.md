@@ -393,6 +393,3 @@ https://slides.com/vvatanabe/replaced-backlogs-git-server-from-perl-to-go
 
 タイムオーバーだったので、最後のほうはスライドから読み取ったもの。ぜひ考察お聞きしたかった。
 
-# 関連
-- [Go Conference 2017 Autumn参加メモ #gocon](/2017/11/09/gocon2017-autumn/)
-

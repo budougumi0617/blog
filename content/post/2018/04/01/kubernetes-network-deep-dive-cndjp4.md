@@ -181,7 +181,3 @@ Istioはローカルで実行するには最低でも4GB以上のメモリを利
 - [Istio|Architecture](https://istio.io/docs/concepts/what-is-istio/overview.html#architecture)
 - [Linkerd](https://linkerd.io/)
 
-# 関連
-- [Cloud Native Developers JP 第1回勉強会 参加メモ #cndjp1](/2017/11/23/cndjp1/)
-- [[k8s]Cloud Native Developers JP 第2回勉強会 参加メモ #cndjp2](/2017/12/18/kubernetes-in-production-cndjp2/)
-- [[k8s]Cloud Native Developers JP 第3回勉強会 #cndjp3 参加メモ](/2018/02/03/kubernetes-with-availability-cndjp3/)
