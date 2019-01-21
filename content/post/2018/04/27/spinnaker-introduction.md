@@ -87,11 +87,3 @@ https://stackoverflow.com/questions/tagged/spinnaker
 Slackでエラーメッセージを検索するとだいたい出てくる。
 
 
-# 関連
-- [GKEでSpinnakerを使ったKubernetesの継続的デリバリーを試してみた](/2018/04/24/spinnaker-with-google-kubernetes-engine/)
-- [Spinnakerの始め方いろいろ](/2018/04/22/how-to-start-spinnaker/)
-- [Cloud Native Developers JP 第1回勉強会 参加メモ #cndjp1](/2017/11/23/cndjp1/)
-- [[k8s]Cloud Native Developers JP 第2回勉強会 参加メモ #cndjp2](/2017/12/18/kubernetes-in-production-cndjp2/)
-- [[k8s]Cloud Native Developers JP 第3回勉強会 #cndjp3 参加メモ](/2018/02/03/kubernetes-with-availability-cndjp3/)
-- [[k8s]Kubernetes Network Deep Dive!（Istioもあるよ） cndjp第四回参加メモ #cndjp4](/2018/04/01/kubernetes-network-deep-dive-cndjp4.md)
-

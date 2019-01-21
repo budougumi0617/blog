@@ -78,6 +78,3 @@ Hugoで生成したタグページの正式なURLは`${BASE_URL}/tags/index.html
 
 https://developers.google.com/web/tools/chrome-devtools/
 
-# 関連
-- [Hugoのブログ記事にTwitter Card(アイキャッチ画像)を設定する #hugo](2019/01/04/set-twitter-image-in-hugo-blog/)
-- [HugoでOGP(Facebook用のアイキャッチ画像)を設定する #hugo](/2019/01/05/set-ogp-in-hugo-blog/)
