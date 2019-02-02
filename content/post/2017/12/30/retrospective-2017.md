@@ -6,6 +6,7 @@ slug = ""
 categories = ["poem"]
 tags = ["Retrospective"]
 author = "budougumi0617"
+twitterImage = "twittercard.png"
 +++
 
 2017年を振り返ってみる。GitHubベースの振り返りは別記事にまとめた。
