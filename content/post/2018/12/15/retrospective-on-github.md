@@ -7,6 +7,7 @@ comments = true
 author = "budougumi0617"
 categories = ["poem"]
 tags = ["Retrospective", "github"]
+twitterImage = "twittercard.png"
 +++
 
 この記事は、[write-blog-every-week Advent Calendar 2018](https://adventar.org/calendars/2925)の15日目の記事。  
