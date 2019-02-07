@@ -1,5 +1,5 @@
 +++
-title= "[Go]スライス生成時(slice operator)に使える珍しい宣言方法"
+title= "[Go]スライス生成時(slice operator)に使える珍しい宣言方法 #golangjp"
 date= 2019-02-08T07:24:25+09:00
 draft = false
 toc = true
