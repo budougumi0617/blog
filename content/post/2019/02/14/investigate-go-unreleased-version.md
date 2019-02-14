@@ -18,9 +18,9 @@ twitterImage = "logos/Go-Logo_Aqua.png"
 <!--more-->
 
 # TL;DR
-- 現時点の仕様やリリースノートを確認したいときはtip.golang.orgを見る
+- 未リリース版の仕様やリリースノートを確認したいときはtip.golang.orgを見る
   - https://tip.golang.org/doc/go1.12
-- 現時点の挙動を確認したいときはDockerイメージを使うかコードをビルドする
+- 未リリース版の挙動を確認したいときはDockerイメージを使うかコードをビルドする
   - https://hub.docker.com/_/golang
 
 
