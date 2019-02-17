@@ -197,7 +197,7 @@ Go Modulesに関するTipsは以下の通り。
 - `go mod tidy`で`go.mod`から不要な依存関係を削除できる
   - 不用意な`go get`で依存関係が増えてしまうことがあるのでツールを`go get`したときはやったほうがよい
 
-2019/02/16追記 `tidy`は「タイディ」と読むとのこと。Perlでも使われる英単語で、「Tidy」という洗剤が由来のアメリカ文化がある英単語とのこと。
+2019/02/16追記 `tidy`は「タイディ」と読むとのこと（Perlでも使われている）。
 <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">ピピーッ、tidy タイディ警察です。dan the interruptされるぞ！</p>&mdash; songmu (@songmu) <a href="https://twitter.com/songmu/status/1096368547146559493?ref_src=twsrc%5Etfw">2019年2月15日</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
