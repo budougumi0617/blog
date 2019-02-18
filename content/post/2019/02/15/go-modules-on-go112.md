@@ -207,8 +207,7 @@ CIでの設定例は[ちまきん](https://twitter.com/__timakin__)さんや[だ
 - timakin/go-module | CircleCI Orbs Registory
   - https://circleci.com/orbs/registry/orb/timakin/go-module
 - GitHub Actions のワークフローで Go 1.11 Modules のキャッシュを扱う | This is my life.
-  - https://blog.duck8823.com/entry/2018/12/20/011632
-  - (2019/02/15現在ブログが見れないかもしれない…）
+  - https://duck8823.hatenablog.com/entry/2018/12/31/090732
 
 # Go 1.12の変更
 Go1.12のリリースノートに記載されているModules関連の変更を確認しておく。
