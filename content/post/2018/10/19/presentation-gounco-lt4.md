@@ -39,14 +39,17 @@ go-cloudはGoogleが公開したポータブルなクラウドアプリケーシ
 # Wire
 Wireコマンドはgo-cloudリポジトリに付属されているコマンドラインツール。
 
-
-https://github.com/google/go-cloud/tree/master/wire
+- https://github.com/google/wire
+- ~~https://github.com/google/go-cloud/tree/master/wire/~~
 
 インストールは以下の`PATH`で`go get`できる。
 
 ```bash
-$ go get github.com/google/go-cloud/wire/cmd/wire
+$ go get github.com/google/wire/cmd/wire
 ```
+
+**2019/03/01 修正**  
+Wireコマンドは2019/03/01現在`go-cloud`リポジトリから独立したリポジトリで開発されており、`go get`も上記のURLになっている。
 
 # サンプルコードについて
 発表中のサンプルコードはgo-cloudリポジトリに含まれているサンプルコードを基にしている。
