@@ -7,7 +7,7 @@ slug = ""
 author = "budougumi0617"
 categories = ["Go"]
 tags = ["Go", "sql", "db", "技術書典"]
-keywords = ["技術書典", "技術書典6", "Go", "golang", "db", "database/sql"]
+keywords = ["技術書典", "技術書典6", "Go", "golang", "db", "database/sql", "golang.tokyo"]
 twitterImage = "2019/04/11_bungo.png"
 +++
 
