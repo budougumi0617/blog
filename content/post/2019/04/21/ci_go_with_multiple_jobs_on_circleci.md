@@ -22,7 +22,7 @@ CicrcleCI2.1でGo Modulesを使いながらマルチJobを定義したWorkflow�
 - `save_cache`を使うとWorkflowを実行するたびにModuleをダウンロードせずに済む
 - `persist_to_workspace`を使うと各ジョブで毎回Moduleをダウンロードせずに済む
   - `attach_workspace`するときに`user:root`の設定が必要な場合がある
-- めんどくさいときは[@__timakin__](https://twitter.com/__timakin__)さんのCircleCI Orbを使えば簡単
+- めんどくさいときは[`@__timakin__`](https://twitter.com/__timakin__)さんのCircleCI Orbを使えば簡単
 
 - timakin/go-module | CircleCI Orb Registry
   - https://circleci.com/orbs/registry/orb/timakin/go-module
@@ -182,6 +182,18 @@ jobs:
 `setup`ジョブに`persist_to_workspace`を設定し、ジョブ間で共有したいデータの場所を設定しておく。`e2e`ジョブ(`lint`ジョブ)に`attach_workspace`を設定し、共有したいデータをマウントする場所を設定する。
 前述したとおり`$GOPATH`は`/go`なので、`/go`配下のデータを全て共有する。
 
+---
+
+**2019/04/22追記**  
+`go mod`のキャッシュだけを再利用するだけならば`restore_cache`だけすればよいという指摘を頂いた。たしかに…！
+<blockquote class="twitter-tweet" data-partner="tweetdeck"><p lang="ja" dir="ltr">これ setup で save_cache してるので他のジョブで restore_cache すれば go mod のキャッシュ使えるようになるはずなんだけどなー / 他2件のコメント <a href="https://t.co/XE6f6XeSy8">https://t.co/XE6f6XeSy8</a> “[Go] CicleCI2.1でgo modのデータを共有しながら複数ジョブを実行する - My External Storage” <a href="https://t.co/hLS0LBcQ3I">https://t.co/hLS0LBcQ3I</a></p>&mdash; とにかく明るいへっくす (@codehex) <a href="https://twitter.com/codehex/status/1120114987928711169?ref_src=twsrc%5Etfw">April 21, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+追記ここまで。
+
+---
+
+
 # attach_workspaceしようとするとError applying workspace layer for job ...: Error extracting tarball ...: exit status 2
 これでうまくいくかと思いきや、実際にCircleCIを実行してみると`attach_workspace`がうまくいかなかった。
 
@@ -289,7 +301,7 @@ workflows:
 
 # 終わりに
 publicなGitHubリポジトリにコードをプッシュしておけば、CircleCIなど多くのサービスを利用してOSS開発ができる。  
-積極的に利用していきたい。なお、「上記の設定をいろいろなリポジトリで毎回するのがめんどくさい」というような方には[@__timakin__](https://twitter.com/__timakin__)さんのCircleCI Orbを使えば簡単に設定できる。
+積極的に利用していきたい。なお、「上記の設定をいろいろなリポジトリで毎回するのがめんどくさい」というような方には[`@__timakin__`](https://twitter.com/__timakin__)さんのCircleCI Orbを使えば簡単に設定できる。
 
 - [timakin/go-module | CircleCI Orb Registry](https://circleci.com/orbs/registry/orb/timakin/go-module)
 
