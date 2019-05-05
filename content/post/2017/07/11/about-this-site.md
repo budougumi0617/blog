@@ -8,7 +8,7 @@ tags = ["other", "about"]
 author = "budougumi0617"
 +++
 
-`C#`とか`Golang`など、いろいろと手を出している筆者がハマったところを書いていきます。
+`C#`や`Go`など、いろいろと手を出している筆者がハマったところを書いていきます。
 今までは[Qiita](http://qiita.com/budougumi0617)に書いていましたが、個人ブログで書くことにしました。
 
 # About Me
@@ -19,7 +19,7 @@ author = "budougumi0617"
 - [Qiita](http://qiita.com/budougumi0617)
 
 # Skills
-- `Golang`
+- `Go`
 - `C#`
 - `UWP`
 - .NET Standard
