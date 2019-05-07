@@ -29,6 +29,7 @@ author = "budougumi0617"
 # Talks
 ## 2019
 - [golang.org/x/tools/go/analysisで静的解析ツールを自作する](https://speakerdeck.com/budougumi0617/how-to-create-the-static-analysis-tool-for-go) - Go(Un)Conference（Goあんこ）LT大会 5kg
+- [Go Modules in Go1.12](https://speakerdeck.com/budougumi0617/go-modules-in-go1-dot-12) - Go 1.12 Release Party in Tokyo w/ Fukuoka&Umeda
 
 ## 2018
 - [Go入門](https://speakerdeck.com/budougumi0617/introduction-go-20180530) - Vue.js/React/Go/Rails5.2のリアル★ShuuuMai #04
