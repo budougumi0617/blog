@@ -41,6 +41,9 @@ author = "budougumi0617"
 - [React+Redux 次の一歩](https://speakerdeck.com/budougumi0617/the-next-step-from-react-and-redux) - WEBエンジニア勉強会 #10
 
 # Article
+## 2019
+- [文Go 2. Goにおけるデータベース実践入門](https://techbookfest.org/event/tbf06/circle/63860004) - 寄稿
+
 ## 2018
 - [ゴーファーの書 6.go-cloudとWireコマンドの概要と活用方法](https://techbookfest.org/event/tbf05/circle/37230005) - 寄稿
 
