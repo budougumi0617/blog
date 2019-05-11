@@ -5,13 +5,15 @@ draft = false
 toc = true
 slug = ""
 author = "budougumi0617"
-categories = [""]
-tags = [""]
-keywords = [""]
-twitterImage = "twittercard.png"
+categories = ["aws"]
+tags = ["aws", "saa"]
+keywords = ["資格", "aws", "SAA", "ソリューションアーキテクトアソシエイト"]
+twitterImage = "logos/aws_saa.png"
 +++
 
 GWに勉強して、AWS ソリューションアーキテクト試験に合格したのでまとめる。
+
+![スコア](/2019/05/11_saa.png)
 
 <!--more-->
 
@@ -22,22 +24,21 @@ GWに勉強して、AWS ソリューションアーキテクト試験に合格�
   - [徹底攻略 AWS認定 ソリューションアーキテクト – アソシエイト教科書（通称黒本）](https://amzn.to/2VsilLL)
   - AWS公式の[オンライン模擬試験](https://aws.amazon.com/jp/certification/certification-prep/)
 - 試験に合格するだけならば、手を動かさなくても合格できる
-- 手を動かしてプロフェッショナルにも挑戦する
+- 今後は手を動かしてプロフェッショナルにも挑戦する
 
 # なぜ受けたのか
-一言でいうと、PaaSの基本的な知識がないと、アプリケーションエンジニアも最適なアプリ設計をすることができないと考えたからだ。
-私が所属するfreee株式会社ではほぼ全てのサービスがAWS上で稼働している。
-私はアプリケーションエンジニアで基本的にはSREのみなさんにおまかせ状態だ。
-だが、新規設計時の初期構想や大きめの機能追加時にはインフラ面も考慮した設計をする必要がある。
-また、私以外のチームメンバーがAWSのサービスを話題にしていても「どんな機能のサービスの話をしているのか」、「何を懸念してXXXについて話しているのか」よくわからないまま聞いていた。
-そんな状態ではいけないので、最低限の知識を得るところから始めることにした。
+一言でいうと、PaaSの基本的な知識がないと、アプリケーションエンジニアも最適なアプリ設計をすることができないと考えたからだ。  
+私が所属するfreee株式会社ではほぼ全てのサービスがAWS上で稼働している。私はアプリケーションエンジニアで基本的にはインフラ的な部分はSREのみなさんにおまかせ状態だ。  
+だが、新規設計時の初期構想や大きめの機能追加時にはインフラ面も考慮した設計をする必要がある。  
+また、私以外のチームメンバーがAWSのサービスを話題にしていても「どんな機能のサービスの話をしているのか」、「何を懸念してXXXについて話しているのか」よくわからないまま聞いていた。  
+そんな状態ではいけないので、最低限の知識を得るために資格勉強をしてみることにした。
 
 # AWS ソリューションアーキテクト アソシエイト試験について
 今更必要ないかもしれないが、試験の概要を書いておく。
 きちんと試験概要を全文読みたい場合は以下のリンクを読めば良い。
 
 - [AWS 認定ソリューションアーキテクト – アソシエイト][ssa_html]
-- [AWS 認定ソリューションアーキテクト - アソシエイト SAA-C01 試験ガイド v1.5][ssa_guide]
+- [AWS 認定ソリューションアーキテクト - アソシエイト SAA-C01 試験ガイド v1.5（注 PDF）][ssa_guide]
 
 AWSソリューションアーキテクトアソシエイト試験は、AWSのサービスを使って以下の能力を発揮できることを証明するための試験だ。
 
@@ -48,12 +49,13 @@ AWSソリューションアーキテクトアソシエイト試験は、AWSの�
 [ssa_guide]:https://d1.awsstatic.com/training-and-certification/docs-sa-assoc/AWS%20Certified%20Solutions%20Architect%20-%20Associate%20Exam%20Guide%20001%20v1.5%20JPN.pdf
 
 ## 試験方式
-試験はテストセンターなどのPCを使って受験する。自由記述はなく、選択問題をひたすら解く。
+2019/05/11現在のAWSソリューションアーキテクトアソシエイト試験は、テストセンターなどのPCを使って受験する。  
+自由記述問題はなく、一択回答か、複数回答の選択問題をひたすら解く。
 
 |項目|内容|
 |---|---|
 |問題数|65問|
-|問題形式|４択or複数選択(選択肢5択のなかから2つ選ぶ）|
+|問題形式|４択 or 複数選択(選択肢5択のなかから2つ選ぶ）|
 |試験時間|  130 分間|
 |試験結果のスコア範囲 | 100点 - 1,000点
 |最低合格スコア| 720点 |
@@ -69,17 +71,17 @@ AWSソリューションアーキテクトアソシエイト試験は、AWSの�
 |分野 5: オペレーショナルエクセレンスを備えたアーキテクチャを定義する | 6%|
 ||合計 100%|
 
-合格スコアは720点だが、最低スコアが100点なので7割弱(620点-900点)正解すれば十分だろう。
+合格スコアは720点だが、最低スコアが100点なので、7割弱正解すれば十分だろう。
 
 # どうやって勉強したか
-正直実際のサービスは動かさなかった。選択問題に実際の操作画面を知らないと答えられない問題はない。
+正直実際のサービスは動かさなかった。選択問題に実際の操作画面を知らないと答えられない問題はない。  
 各サービスの特性を覚えて、`AWS Well-Architected フレームワーク`に則って選択肢を選べば良い。
 
 ## AWS Well-Architected フレームワーク
-まず`AWS Well-Architected フレームワーク`を２回ほど読んで改めてクラウドで必要な考え方を学んだ。
-[マイクロサービスアーキテクチャ](https://amazon.jp/dp/4873117607)を読んだり、[ソフトウェア品質特性](https://ja.wikipedia.org/wiki/ISO/IEC_9126)を知っているならばすんなり入ってくるだろう。
+まず`AWS Well-Architected フレームワーク`を2回ほど読んで改めてクラウドで必要な考え方を学んだ。
+[マイクロサービスアーキテクチャ](https://amazon.jp/dp/4873117607)のような最近のクラウドネイティブな開発に関する本を読んだり、[ソフトウェア品質特性](https://ja.wikipedia.org/wiki/ISO/IEC_9126)を知っているならばすんなり入ってくるだろう。
 
-- [AWS Well-Architected フレームワーク 2018 年 6 月(PDFなので注意)][waf]
+- [AWS Well-Architected フレームワーク 2018 年 6 月(注 PDF)][waf]
 
 [waf]:https://d1.awsstatic.com/International/ja_JP/Whitepapers/AWS_Well-Architected_Framework_2018_JA_final.pdf
 
@@ -95,21 +97,23 @@ AWSソリューションアーキテクトアソシエイト試験は、AWSの�
 
 - [AWS 認定 - 試験対策 「ソリューションアーキテクト - アソシエイト」| AWS Innovate 2019][innovate]
 
+もう公開は終了しているが、観なくてもAWS Well-Architected フレームワークを読み込めば問題ないと思う。
+
 [innovate]:https://aws.amazon.com/jp/about-aws/events/aws-innovate/sessions/
 
-## 本を２冊読んだ
-「（AWSが考える）クラウドで実現する対障害性とは？」のような考えがわかればあとはそれを実現するためのどんなPaaS、IaaSが提供されているか知れば良い。
+## 本を2冊読んだ
+AWS Well-Architected フレームワークを読んで「（AWSが考える）クラウドで実現する対障害性とは？」といった思考方法がわかれば、あとはそれを実現するためのどんなPaaS、IaaSが提供されているか知れば良い。  
 AWSが提供するサービスは多岐に渡りすぎていて、全て覚えるのは無理だ。
-幸いAWSソリューションアーキテクトアソシエイトは対策本は何冊もあるので、それを使って試験範囲のサービス・機能に絞って勉強した。
+幸いAWSソリューションアーキテクトアソシエイトは対策本は何冊もあるので、それを使って試験範囲のサービス・機能に絞って勉強した。私が購入したのは次の2冊だ。
 
 
-一冊目の「AWS認定資格試験テキスト　AWS認定 ソリューションアーキテクト-アソシエイト」はおそらく一番最近出たの本だったので、購入した。
+1冊目の「AWS認定資格試験テキスト　AWS認定 ソリューションアーキテクト-アソシエイト」はおそらく一番最近出た資格本だったので、購入した。
 
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=github.io-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B07R1H87Y1&linkId=700d418bd1885752f0308769ed494739"></iframe>
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.amazon.co.jp/AWS%25E8%25AA%258D%25E5%25AE%259A%25E8%25B3%2587%25E6%25A0%25BC%25E8%25A9%25A6%25E9%25A8%2593%25E3%2583%2586%25E3%2582%25AD%25E3%2582%25B9%25E3%2583%2588-AWS%25E8%25AA%258D%25E5%25AE%259A-%25E3%2582%25BD%25E3%2583%25AA%25E3%2583%25A5%25E3%2583%25BC%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%25E3%2582%25A2%25E3%2583%25BC%25E3%2582%25AD%25E3%2583%2586%25E3%2582%25AF%25E3%2583%2588-%25E3%2582%25A2%25E3%2582%25BD%25E3%2582%25B7%25E3%2582%25A8%25E3%2582%25A4%25E3%2583%2588-%25E4%25BD%2590%25E3%2580%2585%25E6%259C%25A8-%25E6%258B%2593%25E9%2583%258E-ebook/dp/B07R1H87Y1" data-iframely-url="//cdn.iframe.ly/6QvztGS"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
 
-二冊目の「徹底攻略 AWS認定 ソリューションアーキテクト – アソシエイト教科書」は評判が良い通称黒本。
+2冊目の「徹底攻略 AWS認定 ソリューションアーキテクト – アソシエイト教科書」は評判が良い通称黒本。
 
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=github.io-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B07M7S9GDL&linkId=8166a7e16d3f94a569918026daae1e72"></iframe>
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.amazon.co.jp/%25E5%25BE%25B9%25E5%25BA%2595%25E6%2594%25BB%25E7%2595%25A5-AWS%25E8%25AA%258D%25E5%25AE%259A-%25E3%2582%25BD%25E3%2583%25AA%25E3%2583%25A5%25E3%2583%25BC%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%25E3%2582%25A2%25E3%2583%25BC%25E3%2582%25AD%25E3%2583%2586%25E3%2582%25AF%25E3%2583%2588-%25E3%2582%25A2%25E3%2582%25BD%25E3%2582%25B7%25E3%2582%25A8%25E3%2582%25A4%25E3%2583%2588%25E6%2595%2599%25E7%25A7%2591%25E6%259B%25B8-%25E5%25BE%25B9%25E5%25BA%2595%25E6%2594%25BB%25E7%2595%25A5%25E3%2582%25B7%25E3%2583%25AA%25E3%2583%25BC%25E3%2582%25BA-ebook/dp/B07M7S9GDL" data-iframely-url="//cdn.iframe.ly/9VcljXD"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
 
 どちらが良いというわけではないが、２つの本は構成が異なっているので関心事によって使い分けることができた。
 
@@ -142,3 +146,5 @@ AWSの模擬試験は正否の結果をわからないのでスクショを１�
 # 終わりに
 
 
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=github.io-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B07R1H87Y1&linkId=700d418bd1885752f0308769ed494739"></iframe>
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=github.io-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B07M7S9GDL&linkId=8166a7e16d3f94a569918026daae1e72"></iframe>
