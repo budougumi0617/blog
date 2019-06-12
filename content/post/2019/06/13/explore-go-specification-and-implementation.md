@@ -1,5 +1,5 @@
 +++
-title= "GoのLanguage Specificationの特定の仕様の関わる処理系の実装を探す #golang"
+title= "GoのLanguage Specificationの特定の仕様に関わる処理系の実装を探す #golang"
 date= 2019-06-13T08:10:59+09:00
 draft = false
 toc = true
