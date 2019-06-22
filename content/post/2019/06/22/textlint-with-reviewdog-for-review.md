@@ -1,13 +1,13 @@
 +++
-title= "CircleCI"
+title= "textlinti/reviewdogで文書校正エラーをGitHubのプルリクエストにコメントする 2019年6月版"
 date= 2019-06-22T11:03:47+09:00
 draft = false
 toc = true
 slug = ""
 author = "budougumi0617"
-categories = [""]
-tags = [""]
-keywords = [""]
+categories = ["ci", "review", "circleci"]
+tags = ["circleci", "reviedog", "textlint", "review"]
+keywords = ["技術書典", "CircleCI", "reviewdog", "textlint", "Re:VIEW"]
 twitterImage = "twittercard.png"
 +++
 
