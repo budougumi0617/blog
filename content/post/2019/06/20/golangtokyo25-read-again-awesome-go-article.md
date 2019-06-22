@@ -1,6 +1,6 @@
 +++
 title= "[発表資料] 今改めて読み直したい Go基礎情報 その1 #golangtokyo"
-date= 2019-06-19T23:02:01+09:00
+date= 2019-06-20T07:02:01+09:00
 draft = false
 toc = true
 slug = ""
@@ -8,11 +8,11 @@ author = "budougumi0617"
 categories = ["go", "presentation"]
 tags = ["golang"]
 keywords = ["Go", "golang"]
-twitterImage = "logos/Go-Logo_Aqua.png"
+twitterImage = "2019/06/0618.png"
 +++
 
 
-golang.tokyo #25で過去の優良情報を振り返る発表を行なった。
+golang.tokyo #25で過去の優良情報を振り返る発表を行なった。  
 この記事は発表で使った資料と口頭で話したことの要約をまとめておく。
 
 <!--more-->
