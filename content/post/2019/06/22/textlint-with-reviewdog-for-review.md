@@ -1,5 +1,5 @@
 +++
-title= "textlinti/reviewdogで文書校正エラーをGitHubのプルリクエストにコメントする 2019年6月版"
+title= "textlint/reviewdogで文書校正エラーをGitHubのプルリクエストにコメントする 2019年6月版"
 date= 2019-06-22T11:03:47+09:00
 draft = false
 toc = true
@@ -63,12 +63,17 @@ CI的な設定はせずにもろもろを手作業で行なっていたが、今
 - https://github.com/textlint/textlint/wiki/Collection-of-textlint-rule#rules-japanese
 
 今回はRe:VIEWで`textlint`を使うための`textlint-plugin-review`と技術書を書くための基本的なライブラリを使う。  
-用語の表記ゆれのチェックを行う`textlint-rule-prh`ライブラリは明示的にインストールしなくても使えるようだ（？）。
+~~用語の表記ゆれのチェックを行う`textlint-rule-prh`ライブラリは明示的にインストールしなくても使えるようだ（？）。~~
+
+**2019/06/23追記**
+`textlint-rule-prh`も明示的にインストールしておいたほうがよいと[@azu](https://twitter.com/azu_re)さんからご指摘いただいた。  
+現状は`textlint-rule-preset-ja-technical-writing`が内部で依存しているので暗黙的に利用できているだけとのこと。
 
 ```bash
 $ npm install --save-dev npm install textlint \
     textlint-rule-preset-ja-technical-writing \
-    textlint-plugin-review
+    textlint-plugin-review \
+    textlint-rule-prh
 ```
 
 次に設定ファイルを作成する。リポジトリルートに`.textlintrc`ファイルを以下のような内容で作成した。  
