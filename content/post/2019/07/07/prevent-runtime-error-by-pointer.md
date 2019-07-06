@@ -1,6 +1,6 @@
 +++
 title= "[Go]スライスを含んだ構造体でruntime errorを回避する #golang"
-date= 2019-07-06T23:36:50+09:00
+date= 2019-07-07T09:00:50+09:00
 draft = false
 toc = true
 slug = ""
@@ -8,7 +8,7 @@ author = "budougumi0617"
 categories = ["go"]
 tags = ["golang"]
 keywords = ["Go", "Golang"]
-twitterImage = "twittercard.png"
+twitterImage = "logos/Go-Logo_Aqua.png"
 +++
 
 <!--more-->
