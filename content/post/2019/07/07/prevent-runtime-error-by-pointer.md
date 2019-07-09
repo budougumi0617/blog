@@ -180,7 +180,10 @@ type fundamental struct {
 
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">実装まで見れてませんが、型が違えば型比較でEqualityの判定が終わるので平気なんですよね。なので比較するどちらかがcomparebleならruntime errorが出ないことは保証できます。<br>ただどう使われるかわからないライブラリ公開者は気をつけて実装したほうがいいという話です。<a href="https://t.co/5x924VN9aK">https://t.co/5x924VN9aK</a></p>&mdash; Yoichiro Shimizu (@budougumi0617) <a href="https://twitter.com/budougumi0617/status/1148715295772557313?ref_src=twsrc%5Etfw">July 9, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+- https://play.golang.org/p/Ygi0f5GQIV3
+
 ```go
+// https://play.golang.org/p/Ygi0f5GQIV3
 package main
 
 import (
