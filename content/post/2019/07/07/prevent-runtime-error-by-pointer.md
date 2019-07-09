@@ -173,3 +173,36 @@ type fundamental struct {
 ```
 
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/pkg/errors" data-iframely-url="//cdn.iframe.ly/awcJrVL"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+
+# 追記
+比較する2つのオブジェクトが違う型ならば`runtime error`が発生するnot comparableなフィールドを触る前に比較が終わるので`runtime error`は発生しない。
+なので、比較可能な具象型をどちらかに置いて比較演算子を書けば`runtime error`が出ないことは保証される（`interface == interface`と比較するケースはあまりないだろう）。
+
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">実装まで見れてませんが、型が違えば型比較でEqualityの判定が終わるので平気なんですよね。なので比較するどちらかがcomparebleならruntime errorが出ないことは保証できます。<br>ただどう使われるかわからないライブラリ公開者は気をつけて実装したほうがいいという話です。<a href="https://t.co/5x924VN9aK">https://t.co/5x924VN9aK</a></p>&mdash; Yoichiro Shimizu (@budougumi0617) <a href="https://twitter.com/budougumi0617/status/1148715295772557313?ref_src=twsrc%5Etfw">July 9, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+```go
+package main
+
+import (
+	"fmt"
+)
+
+type NotCompareble []string
+
+func main() {
+	var a interface{} = []string{
+		"go",
+		"slice",
+	}
+
+	var b interface{} = NotCompareble{
+		"go",
+		"slice",
+	}
+	// not runtime error, even if each type are not comparable, because a, b are different type.
+	if a != b {
+		fmt.Println("different object")
+	}
+}
+```
+
