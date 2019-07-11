@@ -70,7 +70,7 @@ CI的な設定はせずにもろもろを手作業で行なっていたが、今
 現状は`textlint-rule-preset-ja-technical-writing`が内部で依存しているので暗黙的に利用できているだけとのこと。
 
 ```bash
-$ npm install --save-dev npm install textlint \
+$ npm install --save-dev textlint \
     textlint-rule-preset-ja-technical-writing \
     textlint-plugin-review \
     textlint-rule-prh
