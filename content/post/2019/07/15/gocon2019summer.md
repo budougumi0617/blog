@@ -71,6 +71,8 @@ GitHubにサンプルコードを後日公開し、背景や意図を書くこ�
 
 <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=github.io-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4274064069&linkId=36ff223e5baa6f6bb2b90b57703a8b88"></iframe>
 
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=github.io-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B00LGJTXT8&linkId=6a073d547da667a6b27b8456a23bc7d3"></iframe>
+
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://booth.pm/ja/items/1045782" data-iframely-url="//cdn.iframe.ly/8L1q4X1"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
 
 <iframe src="https://hatenablog-parts.com/embed?url=https%3A%2F%2Fdevblog.thebase.in%2Fentry%2F2018%2F11%2F26%2F102401" style="border: 0; width: 100%; height: 190px;" allowfullscreen scrolling="no" allow="encrypted-media"></iframe>
@@ -152,6 +154,7 @@ Go三昧で福岡を過ごしたが、振り返ってみるとラーメンもモ
 - [Simplicity is Complicated](https://talks.golang.org/2015/simplicity-is-complicated.slide#1)
 - [pospomeのサーバサイドアーキテクチャ（PDF版）](https://booth.pm/ja/items/1045782)
 - [Clean Architecture 達人に学ぶソフトウェアの構造と設計](http://amazon.jp/dp/4048930656)
+- [APIデザインの極意 Java/NetBeansアーキテクト探究ノート](http://amazon.jp/dp/B00LGJTXT8)
 - [UNIXという考え方―その設計思想と哲学](http://amazon.jp/dp/4274064069)
 - [Goを運用アプリケーションに導入する際のレイヤ構造模索の旅路 | Go Conference 2018 Autumn 発表レポート](https://devblog.thebase.in/entry/2018/11/26/102401)
 - [福岡市長高島宗一郎 GO conference'19 summer in fukuokaに出席しました](https://youtu.be/NDbg3QffW4k)
