@@ -59,7 +59,7 @@ func foo(){
 - フィールド名を指定しない場合、すべてのフィールドの初期値を指定しないといけない
 - パッケージ外で非公開フィールドの値は指定できない
 
-https://play.golang.org/p/fql-HWgBMfC
+https://play.golang.org/p/WAynji8JGkt
 
 ```go
 -- go.mod --
@@ -84,11 +84,15 @@ import (
 
 func main() {
 	// mk := sub.MustKey{"hoge", "bar"} // ./main.go:9:28: too few values in sub.MustKey literal
+	// mk := sub.MustKey{"hoge", "bar", struct{}{}} // ./main.go:10:43: implicit assignment of unexported field '_hoge' in sub.MustKey literal
 	mk := sub.MustKey{}
 	fmt.Printf("%v\n", mk)
 }
 
 ```
+
+フィールド名を省略していると、非公開フィールド以外を埋めるだけでは値が少ないとエラーになり、
+非公開フィールドの初期化も行おうとすると暗黙的に非公開フィールドを初期化しようとしてエラーになる。
 
 # 非公開フィールドは`sturct{}`を使えばメモリサイズも増えない
 このような実装は公式パッケージ内でも行われている。
