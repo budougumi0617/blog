@@ -1,5 +1,5 @@
 +++
-title= "[dkl] Ddocker ContainerやKubernetes Podを選択してExecするツールを作った"
+title= "[dkl] 実行中のDocker ContainerやKubernetes Podを一覧して選択、Execするツールを作った"
 date= 2019-09-28T18:05:18+09:00
 draft = false
 toc = true
