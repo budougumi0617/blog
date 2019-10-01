@@ -1,5 +1,5 @@
 +++
-title= "[dkl] 実行中のDocker ContainerやKubernetes Podを一覧して選択、Execするツールを作った"
+title= "[dkl] 実行中のDocker ContainerやKubernetes Podを一覧して選択、アタッチするツールを作った"
 date= 2019-09-28T18:05:18+09:00
 draft = false
 toc = true
@@ -29,7 +29,7 @@ Usage of dkl:
 # TL;DR
 - Docker ContainerやKubenetes Podにログインするには、一度起動中のContainer（Pod）を一覧する必要がある
     - さらに名前をコピーして`docker(kubectl) exec`コマンドを実行する必要がある
-- `dtt`コマンドは1回のコマンドで一覧を表示、`exec`コマンドで選択したContainer（Pod）にログインする。
+- `dtt`コマンドは1回のコマンドで一覧を表示、`exec`コマンドで選択したContainer（Pod）にアタッチする。
     - Pythonで作られている。
 - Goで書き直したのが`dkl`コマンド
 - `promptui`を使ったので一覧からの選択部分はリッチ
@@ -40,7 +40,7 @@ Usage of dkl:
 
 # dklの概要
 Dockerコンテナにログインしたいとき、大抵は`docker ps`コマンドを実行し、コンテナの名前を確認し、`docker exec`コマンドを実行することになる。
-これは、Kubernetes上のPodにログインするときもほぼ同様の操作になる。
+これは、Kubernetes上のPodにアタッチするときもほぼ同様の操作になる。
 
 `dkl`コマンドは上記をラクするために同僚がPythonで作っていたツールをGoで書き直したものだ。
 
@@ -51,7 +51,7 @@ https://github.com/budougumi0617/dkl
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/budougumi0617/dkl" data-iframely-url="//cdn.iframe.ly/qGCYud2"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
 
 
-`dkl`コマンドを使うと、Dockerコンテナ（あるいはKubernetes Pod）一覧を表示し、選択したコンテナにログインすることができる。
+`dkl`コマンドを使うと、Dockerコンテナ（あるいはKubernetes Pod）一覧を表示し、選択したコンテナにアタッチすることができる。
 
 インストールには`Brew`を利用できる。
 
@@ -91,7 +91,7 @@ Image:          mysql:5.7
 ImageID:        sha256:98455b9624a96e32b353297bb312913b6bbd62ac195cea2c7dd477209ba572d6
 ```
 
-この中から選択したコンテナに`docker exec`コマンドを実行して、インタラクティブシェルを開始する。
+この中から選択したコンテナに`docker exec`コマンドを実行してコンテナへアタッチ、インタラクティブシェルを開始する。
 
 KubernetesのPodの場合は以下のような情報を表示する。
 
@@ -116,7 +116,7 @@ Namespacege:        default
 Status:             Running
 Age:                114h51m50.205832s
 ```
-こちらも同様に選択したPodに`kubectl exec`コマンドを実行する。
+こちらも同様に選択したPodに`kubectl exec`コマンドを実行してアタッチする。
 
 対象を選択する部分は`manifoldco/promptui`パッケージをそのまま利用しているので、絞り込み検索もできる。
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/manifoldco/promptui" data-iframely-url="//cdn.iframe.ly/nlTsYKh"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
@@ -142,7 +142,7 @@ Age:                114h51m50.205832s
 - 構造化が雑
 - testableではない
 - `Pod`の`Age`で表示している時間が分かりにくい（標準パッケージだと`time.Duration`をいい感じに表示できない）
-- 実行時に`exec`で呼び出す実行コマンドの指定に`ls -la`などが指定できない
+- 実行時にアタッチして呼び出す実行コマンドの指定に`ls -la`などが指定できない
 - ログインでは外部コマンドを実行しているので、`docker`、`kubectl`コマンドに依存している
 
 他にも作りたいOSSがあったり、来月は`Hacktoberfest`もあるのですぐにはできないが、引き続きカイゼンしていきたい。
