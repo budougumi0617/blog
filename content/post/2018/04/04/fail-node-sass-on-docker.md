@@ -64,8 +64,8 @@ https://stackoverflow.com/questions/49138931/node-docker-is-node-sass-not-findin
 **Docker ALPINE Linux throws node-sass missing binding error**  
 https://github.com/sass/node-sass/issues/2165#issuecomment-347043659
 
-プロジェクトディレクトリをまるごとマウントしていると、`node_volumes`ディレクトリまでマウントしてしまう。
-そのため、`node_volumes`だけはホストのディレクトリをマウントしないように指定しておく必要があった。
+プロジェクトディレクトリをまるごとマウントしていると、`node_modules`ディレクトリまでマウントしてしまう。
+そのため、`node_modules`だけはホストのディレクトリをマウントしないように指定しておく必要があった。
 その設定をしておけばわざわざ`npm rebuild`などしなくてもちゃんとLinux向けのバイナリだけが取得された状態で起動出来るようになった。
 
 `docker run`で実行するときは以下のような指定になる。
