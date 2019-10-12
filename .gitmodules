@@ -1,3 +1,6 @@
 [submodule "public"]
 	path = public
 	url = git@github.com:budougumi0617/budougumi0617.github.io.git
+[submodule "themes/Hugo-Octopress"]
+	path = themes/Hugo-Octopress
+	url = git@github.com:parsiya/Hugo-Octopress.git
