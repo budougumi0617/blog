@@ -1,5 +1,5 @@
 +++
-title= "[Go] レイヤードアーキテクチャで間違ったimportしているときに警告するlinterを作った"
+title= "[Go] レイヤードアーキテクチャの階層構造を守らないimportを警告するlinterを作った"
 date= 2019-10-18T14:36:56+09:00
 draft = false
 toc = true
@@ -12,7 +12,7 @@ twitterImage = "logos/Go-Logo_Aqua.png"
 +++
 
 Goでクリーンアーキテクチャ等のレイヤードアーキテクチャを実装するための静的解析ツールを作った。  
-「webhandler層からusecase層を使わずに直接domain層を使わないで」というような、やってほしくない`import`をエラーにできる。
+「`webhandler`パッケージから`usecase`パッケージを使わずに直接`domain`パッケージを使わないで！」というような、やってほしくない`import`をエラーにできる。
 
 - https://github.com/budougumi0617/layer
 
@@ -21,11 +21,12 @@ Goでクリーンアーキテクチャ等のレイヤードアーキテクチャ
 
 # TL;DR
 - クリーンアーキテクチャなどのレイヤードアーキテクチャでは、利用できるパッケージに制限がある
+  - レイヤー間の依存関係は一方向のみ
   - 同じ層、あるいは1つ下の層のパッケージしか利用してはいけない
   - https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html
 - Goは循環`import`ができないので、自然に単方向依存は満たしやすい
 - しかし、層を飛び越して、2つ下の層のパッケージを直接使うような実装は言語仕様で防げない
-- 今回作った静的解析ではそのような誤った`import`を静的解析で警告する
+- 今回作ったツールはそのような誤った`import`を静的解析で警告する
 - パッケージ間の層の関係は実行時にJSON配列で渡すことで利用者独自の階層構造を読み込めるようにした
 
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/budougumi0617/layer" data-iframely-url="//cdn.iframe.ly/5BGoxex"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
@@ -95,6 +96,13 @@ web/delete_handler.go:7:2: github.com/budougumi0617/clean_architecture/web must 
 そのため、独自の`UnmarshalJSON`を実装して構造体に詰めている。
 
 ```go
+// Layer expresses Layer architecture.
+type Layer struct {
+	Packages []string `json:"Packages"`
+	Inside   *Layer   `json:"Inside"`
+	Raw      []interface{}
+}
+
 // UnmarshalJSON unmarshals JSON data by custom logic.
 func (l *Layer) UnmarshalJSON(data []byte) error {
 	var raw []interface{}
