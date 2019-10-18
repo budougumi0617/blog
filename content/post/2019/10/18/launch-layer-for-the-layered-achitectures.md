@@ -190,6 +190,10 @@ Analyzer flags:
 一度慣れれば問題ない部分も多いので、次の作るときはもう少しは早く終わりそうだ。
 静的解析ツール作成はインフラの準備もいらないし、言語仕様（構造）の勉強にもなるし面白い。
 
+もし使ってくれる方がいらっしゃったらフィードバックをいただけると嬉しい（もし良いと思ったらStarももらえると幸い…！）。
+
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/budougumi0617/layer" data-iframely-url="//cdn.iframe.ly/5BGoxex"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+
 # 参考
 - https://github.com/budougumi0617/layer
 - [The Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
