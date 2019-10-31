@@ -618,6 +618,11 @@ $ bash <(curl -s https://codecov.io/bash)
 - Codecov Go Example
   - https://github.com/codecov/example-go
 
+# 2019/10追記
+この記事をまとめた際はGo1.10だった。Go1.11からGo1.13で追加・変更されたGoの仕様を以下にまとめた。
+
+- [Goのtestを理解する in 2019](/2019/10/30/go-testing2019/)
+
 
 # 関連
 - [Goのtestingを理解する in 2018 - Examples編 #go](/2018/08/30/go-testing2018-examples/)
