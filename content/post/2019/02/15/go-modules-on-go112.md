@@ -6,7 +6,7 @@ toc = true
 slug = ""
 author = "budougumi0617"
 categories = ["go"]
-tags = ["golang"]
+tags = ["golang", "modules"]
 keywords = ["Go1.12", "Go Modules", "Go", "vendoring"]
 twitterImage = "logos/Go-Logo_Aqua.png"
 +++
@@ -404,6 +404,12 @@ Modulesの利用に関してissueなどでtipsが見つかったときは、以�
 depのファイルなどからGo Modulesへの移行は簡単に行える。
 正直私はまだ`dep`を使っていたのだが、Go1.12を契機にそろそろModulesへの移行を始めようと思う（依存しているライブラリもちゃんと`go.mod`を配置していないと辛い模様）。
 ただ、まだ理解できていないこともあるのでGo1.13までにはちゃんと使えるようになっておきたい。
+
+# Go1.13以降のGo Modulesについて（2019/11/02追記）
+Go1.13からはGo Modulesに加えてプロキシのエコシステムが加わった。また、`$GO111MODULE=auto`の挙動も若干変わっている。  
+くわしくは[@ktr](https://twitter.com/ktr_0731)さんのブログ記事を読むといいだろう。
+
+<iframe src="https://hatenablog-parts.com/embed?url=https%3A%2F%2Fsyfm.hatenablog.com%2Fentry%2F2019%2F08%2F10%2F170730" style="border: 0; width: 100%; height: 190px;" allowfullscreen scrolling="no"></iframe>
 
 
 # 参考
