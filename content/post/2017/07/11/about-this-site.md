@@ -28,6 +28,10 @@ author = "budougumi0617"
 
 # Talks
 ## 2019
+- [なぜ私たちはGoを書くのか。今あらためて考えるGo言語の良さと実際](https://speakerdeck.com/budougumi0617/why-go-how-is-go) - 第138回RITS技術交流会
+- [google/wireを使った Goらしいアーキテクチャへの取り組み](https://speakerdeck.com/budougumi0617/gocon-fukuoka-2019-summer) - Go Conference '19 Summer in Fukuoka
+- [今改めて読み直したい Go基礎情報 その1](https://speakerdeck.com/budougumi0617/read-again-awesome-go-article) - golang.tokyo #25
+- [database/sql入門](https://speakerdeck.com/budougumi0617/introduction-database-sql) - Go Conference 2019 Spring
 - [golang.org/x/tools/go/analysisで静的解析ツールを自作する](https://speakerdeck.com/budougumi0617/how-to-create-the-static-analysis-tool-for-go) - Go(Un)Conference（Goあんこ）LT大会 5kg
 - [Go Modules in Go1.12](https://speakerdeck.com/budougumi0617/go-modules-in-go1-dot-12) - Go 1.12 Release Party in Tokyo w/ Fukuoka&Umeda
 
