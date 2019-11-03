@@ -8,7 +8,7 @@ author = "budougumi0617"
 categories = ["go", "github"]
 tags = ["golang", "github", "actions", "ci"]
 keywords = ["Go", "golang", "GitHub", "GitHub Actions", "Actions", "ビルドキャッシュ"]
-twitterImage = "logs/github.png"
+twitterImage = "logos/github.png"
 +++
 
 GitHub Actionsで待望のキャッシュ機能が使えるようになった。  
