@@ -161,12 +161,14 @@ Run go mod download
 
 # 終わりに
 今回は待望のGitHub Actionsのキャッシュ機能を試してみた。GitHub Actionsの感想でよく「キャッシュがちゃんとできればなあ」と言われていたので早くGAしてほしい。  
-GitHub Actions本体はちょっと前にメールでGAと着ていた気がするのだが、Webのヘルプページなどを見るとまだpublic beta状態のようだ。早く正式にならないかな？
+~~GitHub Actions本体はちょっと前にメールでGAと着ていた気がするのだが、Webのヘルプページなどを見るとまだpublic beta状態のようだ。早く正式にならないかな？~~
 
 - About GitHub Actions
   - https://help.github.com/en/github/automating-your-workflow-with-github-actions/about-github-actions
 
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">&quot;Announcing general availability for GitHub Actions and GitHub Package Registry&quot;ってメールは着ているんだけど、サイト上はBetaのままだな。料金どうなるんだろう？<a href="https://t.co/8HdOo3Ry3u">https://t.co/8HdOo3Ry3u</a></p>&mdash; Yoichiro Shimizu (@budougumi0617) <a href="https://twitter.com/budougumi0617/status/1190065567564042241?ref_src=twsrc%5Etfw">November 1, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+11/13にGAらしい！いまのところPublicリポジトリは無料だしPrivateリポジトリもそんなに高くなさそう。楽しみだ。
+
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">そのメールには11月13日にGA予定と書いてありましたね。料金はリンク先のPricingを見てね、というようなことが書いてあったような。<br>// 僕もGA楽しみにしてます！Self-Hosted Runnerも早く来てほしい。</p>&mdash; Yusuke KUOKA (@mumoshu) <a href="https://twitter.com/mumoshu/status/1190961371929661441?ref_src=twsrc%5Etfw">November 3, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 # 参考
 - https://github.com/actions/cache
