@@ -4,7 +4,8 @@ date= 2019-11-25T07:10:08+09:00
 draft = false
 toc = true
 slug = ""
-author = "budougumi0617" categories = ["review", "php"]
+author = "budougumi0617"
+categories = ["review", "php"]
 tags = ["php","book"]
 keywords = ["気づけばプロ並みPHP","書評","PHP"]
 twitterImage = "2019/11/25_pronami_php.png"
@@ -17,7 +18,7 @@ ECサイトの基本的な機能を実装しながら一通り読み終わった
 <!--more-->
 
 # 所感
-生のPHPとRDBMSを使ってWEBサイトを構築するのが本書だ。  
+純粋なPHPとRDBMSを使ってWEBサイトを構築するのが本書だ。  
 リクエストパラメータへのアクセス、セッション処理、リダイレクトなどひととおりのWEBサービスの処理と、データベースを使った永続化の実装ができる。  
 それぞれに関する機能や構文の解説も載っており、ほとんどプログラミング経験がない人でも、楽しくWEBサービスを構築しながら、PHPとWEBサービス作成時に必要な周辺技術の勉強ができるのではないだろうか。  
 だいぶ初歩的な内容だったり、フレームワークは使わず実装をするため、自分で環境構築などを工夫しながら最近のPHPの言語能力を知ることができた。
@@ -133,18 +134,13 @@ $ vendor/bin/phinx migrate
 初心者用の書籍なので冗長な処理などはあっても良いと思うが、完全に動かないところがあったり、気になったところがあったので書いておく。
 
 ## MySQL5.7を使っているとテーブルのロックが不十分で動かない
-MySQL5.7のコンテナを使ってDBを用意していたせいか、書籍に書いてあるとおりにRDBに対してロックを取得するとエラーが出た。
+「P261 7-5 もっと安全にしよう！」ではDB操作時にロックを取得するように変更を行なう。  
 
-https://dev.mysql.com/doc/refman/5.6/ja/lock-tables.html
-
-> ロックが必要なセッションは、必要なすべてのロックを 1 つの LOCK TABLES ステートメントで取得する必要があります。このように取得されたロックが保持されている間、このセッションは、ロックされたテーブルにのみアクセスできます。
-
-P262 章で行なう
-
-P262
-```php
+```sql
 $sql = 'LOCK TABLES dat_sales WRITE, dat_sales_product WRITE';
 ```
+
+しかし、MySQL5.7のコンテナを使ってDBを用意していたせいか、書籍に書いてあるとおりにRDBに対してロックを取得するとエラーが出た。
 
 ```php
 /app/shop/shop_form_done.php:89:
@@ -153,39 +149,23 @@ object(PDOException)[2]
   private 'string' (Exception) => string '' (length=0)
   protected 'code' => string 'HY000' (length=5)
   protected 'file' => string '/app/shop/shop_form_done.php' (length=28)
-  protected 'line' => int 38
-  private 'trace' (Exception) =>
-    array (size=1)
-      0 =>
-        array (size=6)
-          'file' => string '/app/shop/shop_form_done.php' (length=28)
-          'line' => int 38
-          'function' => string 'execute' (length=7)
-          'class' => string 'PDOStatement' (length=12)
-          'type' => string '->' (length=2)
-          'args' =>
-            array (size=1)
-              ...
-  private 'previous' (Exception) => null
-  public 'errorInfo' =>
-    array (size=3)
-      0 => string 'HY000' (length=5)
-      1 => int 1100
-      2 => string 'Table 'mst_product' was not locked with LOCK TABLES' (length=51)
-  public 'xdebug_message' => string '<tr><th align='left' bgcolor='#f57900' colspan="5"><span style='background-color: #cc0000; color: #fce94f; font-size: x-large;'>( ! )</span> PDOException: SQLSTATE[HY000]: General error: 1100 Table 'mst_product' was not locked with LOCK TABLES in /app/shop/shop_form_done.php on line <i>38</i></th></tr>
-<tr><th align='left' bgcolor='#e9b96e' colspan='5'>Call Stack</th></tr>
-<tr><th align='center' bgcolor='#eeeeec'>#</th><th align='left' bgcolor='#eeeeec'>Time</th><th align='left' bgcolor='#eeeeec'>Memory</th'... (length=1246)
+  ...
 ```
 
-```php
+これはロックするテーブルが不足しているためだった。MySQL5.7ではロック中READ操作のみのテーブルに対してもロック操作が必要だった。
+
+https://dev.mysql.com/doc/refman/5.6/ja/lock-tables.html
+
+> ロックが必要なセッションは、必要なすべてのロックを 1 つの LOCK TABLES ステートメントで取得する必要があります。このように取得されたロックが保持されている間、このセッションは、ロックされたテーブルにのみアクセスできます。
+
+エラー内容の通り、ロックのSQL文にテーブルを追加することで解決した。
+
+```sql
 $sql = 'LOCK TABLES dat_sales WRITE, dat_sales_product WRITE, mst_product READ';
 ```
 
 ## 例外をすべて握りつぶしている
 書籍中のサンプルコードの例外処理はすべて以下のような`try-catch`構文になっている。  
-例外でコードが動かなかったら、タイポしていないかよく確認しろというスタンスだ。  
-「このままではインターネット上に公開できません」とのただし書きも明記されているので、見た目にこだわらず`var_dump($e);`を仕込んでおいたほうが、何が問題だったのか原因究明が早くなると思う。
-
 
 ```php
 try {
@@ -195,6 +175,10 @@ try {
     exit();
 }
 ```
+
+例外でコードが動かなかったら、タイポしていないかよく確認しろというスタンスだ。  
+が、これでは上記のように書籍の通り書いていてエラーが発生したとき、途方にくれてしまうだろう。
+「このままではインターネット上に公開できません」とのただし書きも明記されているので、見た目にこだわらず`var_dump($e);`を仕込んでおいたほうが、何が問題だったのか原因究明が早くなると思う。
 
 # 今後どう活かすのか
 本書は初心者向きということでオブジェクト指向的な実装は一切行わない（少し関数化をするくらい）。  
