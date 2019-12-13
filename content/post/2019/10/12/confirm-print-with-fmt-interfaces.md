@@ -100,7 +100,7 @@ PASS
 
 具体的な詳細は@tenntennさんのQiitaの記事を見ればよいだろう。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://qiita.com/tenntenn/items/453a09c4c6d7f580d0ab" data-iframely-url="//cdn.iframe.ly/m4WA0zK"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://qiita.com/tenntenn/items/453a09c4c6d7f580d0ab" data-iframely-url="//cdn.iframe.ly/m4WA0zK?iframe=card-small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
 
 # Stringerインターフェースなどを実装した型をフィールドに持つ構造体の出力
 では、構造体のフィールドにこのように出力形式を変更している型を指定するとどのように出力されるのだろう？
