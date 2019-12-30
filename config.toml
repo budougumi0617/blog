@@ -116,7 +116,7 @@ pygmentsStyle = "solarized-dark"
     pre = "<i class='fa fa-archive'></i>"
 
 [[menu.sidebar]]
-  Name = "その他のカテゴリー一覧"
+  Name = "カテゴリー一覧"
   URL = "/categories/"
   weight = 1
 
@@ -126,9 +126,14 @@ pygmentsStyle = "solarized-dark"
   weight = -50
 
 [[menu.sidebar]]
-  name = "Spinnaker"
-  url = "/categories/spinnaker/"
+  name = "PHP"
+  url = "/categories/php/"
   weight = -40
+
+[[menu.sidebar]]
+  name = "Python"
+  url = "/categories/python/"
+  weight = -35
 
 [[menu.sidebar]]
   name = "発表資料"
