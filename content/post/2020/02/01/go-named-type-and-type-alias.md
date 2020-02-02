@@ -23,7 +23,7 @@ Goには既存の型に新しい名前をつける方法が2つある。
 
 # Tl;DR
 - Goには型に違う名前をつける方法がある。
-    - Named typeとTpye alias
+    - Named typeとType alias
 - Named typeを使うと完全に違う型として扱える
     - プリミティブな型に異なる型名をつけたり、メソッドを生やすこともできる
     - Value Object的な型を簡単に作ることができる
