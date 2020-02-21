@@ -112,7 +112,7 @@ GoDocにも「どの`context.Context`を使うかわからないとき、他の�
 
 > TODO returns a non-nil, empty Context. Code should use context.TODO when it's unclear which Context to use or it is not yet available (because the surrounding function has not yet been extended to accept a Context parameter).
 
-あとは少しずつ`context.Cntext`を引数にとるメソッドを増やしていけば良い。
+あとは少しずつ`context.Context`を引数にとるメソッドを増やしていけば良い。
 
 
 # 終わりに
