@@ -100,7 +100,8 @@ AWSソリューションアーキテクトアソシエイト試験は、AWSの�
 
 
 - [AWS Well-Architected フレームワーク 2018 年 6 月(注 PDF)][waf]
-[waf]:https://d1.awsstatic.com/International/ja_JP/Whitepapers/AWS_Well-Architected_Framework_2018_JA_final.pdf
+
+[waf]: https://d1.awsstatic.com/International/ja_JP/Whitepapers/AWS_Well-Architected_Framework_2018_JA_final.pdf
 
 短くはないが、このPDFを読めばクラウドでサービスを構築する際に必要かつ基本として考えなければならない５つの観点を知ることができる。
 
@@ -174,6 +175,9 @@ GW毎日勉強していたわけではないが、GWから始めて2週間ほど
 - [AWS 認定ソリューションアーキテクト - アソシエイト SAA-C01 試験ガイド v1.5（注 PDF）][ssa_guide]
 - [AWS Well-Architected フレームワーク 2018 年 6 月(注 PDF)][waf]
 - [AWS Black Belt Online Seminar](https://www.youtube.com/playlist?list=PLzWGOASvSx6FIwIC2X1nObr1KcMCBBlqY)
+
+{{< amazon category="amazon" key="aws-saa1" >}}
+{{< amazon category="amazon" key="aws-saa2" >}}
 
 <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=github.io-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B07R1H87Y1&linkId=700d418bd1885752f0308769ed494739"></iframe>
 <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=github.io-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B07M7S9GDL&linkId=8166a7e16d3f94a569918026daae1e72"></iframe>
