@@ -108,6 +108,7 @@ TrelloなどのWeb上のタスク管理ツールでもよかった（実際ま�
 実際にいくつか自分の生活にTipsを取り入れてみてたしかに自分の日々のアウトプットの精度が向上した。アウトプット力を向上させることでインプットの量を増やしたり、インプットしたことの定着力を上げられそうだ。
 80個のTips全てを実践することはないとは思うが、自分の生活に合いそうなものは他のTipsも取り入れてアウトプットの生産性を上げていきたい。
 
+{{< amazon category="amazon" key="output-guide" >}}
 
 
 <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=github.io-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B07FZWZPDS&linkId=5291ca5f13307ec3fe795ebfff271794"></iframe>

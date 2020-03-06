@@ -97,6 +97,9 @@ pygmentsStyle = "solarized-dark"
     # https://www.trhrkmk.com/posts/hugo-share-button-addthis/
     addThis = "ra-5c31cf997a7af863"
 
+    # Amazon
+    amazonJpAffiliate = "budougumi0617-22"
+
 [[menu.main]]
   Name = "Home"
   URL = "/"
