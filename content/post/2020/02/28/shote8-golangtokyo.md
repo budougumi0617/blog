@@ -13,10 +13,9 @@ twitterImage = "2020/02/28_shoten8.jpeg"
 
 技術書典8は中止になってしまいましたが、オンラインで開催される技術書典 応援祭に[golang.tokyo](https://golangtokyo.github.io/)も参加します。  
 私は、今回の新刊である「Gopherの休日2020冬」に「GoにおけるSOLID原則」という内容で寄稿しました。  
-また、その冒頭部分も公開します。気になる方はどうぞ次のリンク先よりサークルチェックをお願いします。
+また、その冒頭部分も公開します。気になる方はどうぞ次のリンク先よりご購入ください。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://techbookfest.org/event/tbf08/circle/5752290824683520" data-iframely-url="//cdn.iframe.ly/ZldmKm4"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
-
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://techbookfest.org/product/6332688805920768" data-iframely-url="//cdn.iframe.ly/9iNdWhK"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
 <!--more-->
 
 # golang.tokyo 技術書典 応援祭 新刊「Gopherの休日2020冬」について
@@ -221,6 +220,17 @@ func Hello(p Person) {
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">「<a href="https://twitter.com/hashtag/%E6%8A%80%E8%A1%93%E6%9B%B8%E5%85%B8?src=hash&amp;ref_src=twsrc%5Etfw">#技術書典</a> 応援祭」を3月7日から約1ヶ月間に渡って開催します！あり得ない短期間で工数をぶち込み、無理をおしてなんとか体制を整えました。すべては皆さんが一生懸命書いた技術書を、楽しみに待つ読者の元へ届けるためです。温かい気持ちで参加いただけたらうれしいです。<a href="https://t.co/yBgQxT97Q6">https://t.co/yBgQxT97Q6</a></p>&mdash; 技術書典公式アカウント (@techbookfest) <a href="https://twitter.com/techbookfest/status/1233246316584566784?ref_src=twsrc%5Etfw">February 28, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://blog.techbookfest.org/2020/02/28/cheering-tbf/index.html" data-iframely-url="//cdn.iframe.ly/JZFt5dJ?iframe=card-small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+
+## 2020/03/10 追記
+販売ページが公開されています。
+
+技術書典 応援祭（技術書典8）用に執筆された新刊です。
+
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://techbookfest.org/product/6332688805920768" data-iframely-url="//cdn.iframe.ly/9iNdWhK"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+
+技術書典7で頒布した既刊も販売しています。
+
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://techbookfest.org/product/5674890539565056" data-iframely-url="//cdn.iframe.ly/ZrsKs5f"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
 
 # 関連情報
 - [golang.tokyo](https://golangtokyo.github.io/)
