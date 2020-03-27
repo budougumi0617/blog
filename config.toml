@@ -149,6 +149,10 @@ pygmentsStyle = "solarized-dark"
   weight = -20
 
 [markup]
+  [markup.tableOfContents]
+    endLevel = 2
+    ordered = false
+    startLevel = 1
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
