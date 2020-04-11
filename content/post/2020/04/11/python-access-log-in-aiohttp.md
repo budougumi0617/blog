@@ -43,7 +43,7 @@ web.run_app(app, access_log_class=CustomAccessLogger)
 
 # 独自のアクセスログを出力したい
 Pythonのwebサーバでアクセスログを出力し、ログの中へリクエストヘッダーに含まれる`X-Request-ID`を出力しようと考えた。
-利用しているWAFの`aiohttp`のドキュメントをみると、アクセスログとカスタマイズの仕組みが標準でサポートされてたため試してみた。
+利用しているWAFの`aiohttp`のドキュメントをみると、アクセスログとカスタマイズの仕組みが標準でサポートされていたため試してみた。
 
 # AbstractAccessLoggerを実装した独自のAccessLoggerを用いる。
 `aiohttp`のアクセスログの仕組みは次のページに記載されている。
