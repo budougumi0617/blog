@@ -1,5 +1,5 @@
 +++
-title= "The Go Playgroundで画像を出力する"
+title= "The Go Playgroundの実行結果に画像を出力する"
 date= 2020-04-22T00:08:35+09:00
 draft = false
 toc = true
@@ -11,6 +11,9 @@ keywords = ["playground","Go","goalng","Go言語"]
 twitterImage = "logos/Go-Logo_Aqua.png"
 +++
 
+Go Playgroundのテンプレートを見ていたら画像を出力できることを発見した。
+
+![実行結果](/2020/04/22_playground.png)
 
 <!--more-->
 
@@ -38,7 +41,7 @@ The Go Playgroundはブラウザ上でGoのコードを実行できるオンラ�
 
 このテンプレートの中のひとつにPlayground上で画像を出力するサンプルコードがある。
 
-# The Go Playgroundで画像を出力する
+# The Go Playgroundで出力結果に画像を表示する。
 画像を描画するサンプルコードは次のとおり（コードは抜粋したコード）。
 
 - https://github.com/golang/playground/blob/master/examples/image.txt
