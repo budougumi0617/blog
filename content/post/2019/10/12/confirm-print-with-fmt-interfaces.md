@@ -106,7 +106,7 @@ PASS
 では、構造体のフィールドにこのように出力形式を変更している型を指定するとどのように出力されるのだろう？
 結論から言うと、型に実装した`Stringer`インターフェースの内容に沿った出力がされた。
 
-- https://play.golang.org/p/RdddeJVB7jb
+- https://play.golang.org/p/GRuqRLY8JZ9
 
 ```go
 package main
@@ -135,8 +135,8 @@ func TestRoot(t *testing.T) {
 	fmt.Println(root)
 	fmt.Printf("root = %+v\n", root)
 	fmt.Printf("root by %%s\t=\t%s\n", root)
-	fmt.Printf("root by %%v\t=\t%+v\n", root)
-	fmt.Printf("root by %%+v\t=\t%v\n", root)
+	fmt.Printf("root by %%v\t=\t%v\n", root)
+	fmt.Printf("root by %%+v\t=\t%+v\n", root)
 	fmt.Printf("root by %%#v\t=\t%#v\n", root)
 }
 ```
@@ -149,8 +149,8 @@ $ go test -v fmt_test.go
 {return from String()}
 root = {RootField:return from String()}
 root by %s	=	{return from String()}
-root by %v	=	{RootField:return from String()}
-root by %+v	=	{return from String()}
+root by %v	=	{return from String()}
+root by %+v	=	{RootField:return from String()}
 root by %#v	=	main.Root{RootField:return from GoString()}
 --- PASS: TestRoot (0.00s)
 PASS
@@ -161,7 +161,7 @@ PASS
 例えば、アプリケーションを作成するとき、パスワードなどの機密情報はそのままログ出力されてほしくない。
 
 
-- https://play.golang.org/p/zHvg22dxkX_N
+- https://play.golang.org/p/oDmOKOim5xl
 
 ```go
 package main
@@ -193,8 +193,8 @@ func TestPassword(t *testing.T) {
 	}
 	fmt.Println(cr)
 	fmt.Printf("cr by %%s\t=\t%s\n", cr)
-	fmt.Printf("cr by %%v\t=\t%+v\n", cr)
-	fmt.Printf("cr by %%+v\t=\t%v\n", cr)
+	fmt.Printf("cr by %%v\t=\t%v\n", cr)
+	fmt.Printf("cr by %%+v\t=\t%+v\n", cr)
 	fmt.Printf("cr by %%#v\t=\t%#v\n", cr)
 }
 ```
@@ -207,8 +207,8 @@ $ go test -v fmt_test.go
 === RUN   TestPassword
 {budougumi0617 XXXXet}
 cr by %s	=	{budougumi0617 XXXXet}
-cr by %v	=	{ID:budougumi0617 Password:XXXXet}
-cr by %+v	=	{budougumi0617 XXXXet}
+cr by %v	=	{budougumi0617 XXXXet}
+cr by %+v	=	{ID:budougumi0617 Password:XXXXet}
 cr by %#v	=	main.Credential{ID:"budougumi0617", Password:"secret"}
 --- PASS: TestPassword (0.00s)
 PASS
