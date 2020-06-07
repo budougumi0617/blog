@@ -1,6 +1,6 @@
 +++
-title= "次世代イメージcimg/goとcircleci/go orbsを使った2020年版GoのCircleCIの環境構築"
-date= 2020-06-07T07:15:58+09:00
+title= "[Go]次世代イメージcimg/goとcircleci/go orbsを使った2020年版CircleCIの環境構築"
+date= 2020-06-08T00:05:58+09:00
 draft = false
 toc = true
 slug = ""
@@ -22,8 +22,9 @@ twitterImage = "logos/Go-Logo_Aqua.png"
     - https://hub.docker.com/r/cimg/go
 - 直接使わなくても、Orbsが便利
     - https://circleci.com/orbs/registry/orb/circleci/go
+    - `go/mod-download-cached`でキャッシュとGo Modules周りがすぐ解決。
 - `go-junit-report`を`go get`しなくてもよい
-    - gotestsumコマンドがデフォルトインストールされている
+    - `gotestsum`コマンドがデフォルトインストールされている
 - `GOPATH`は変更されているので注意する
     - `/home/circleci/go`
 
@@ -167,18 +168,24 @@ jobs:
           path: /tmp/test-results
 ```
 
+YAML上の設定で変わった点は次のとおりだ。
+
+- OrbsでGo Modulesまわりが簡潔に宣言できる
+- コンテナに最初から入っている`gotestsum`でテスト結果のXMLを出力できる
+
 ## Go Modulesとcache周りの設定
-`circleci/go` orbsを使えばGo Modules周りの設定は一行で完了する。
+`circleci/go` orbsを使えばGo Modules周りの設定は一行で完了する。  
 このOrbsは`cimg/go`イメージをベースに作られている。
 
 - https://circleci.com/orbs/registry/orb/circleci/go
 
-`go/mod-download-cached`は次の処理を一括で行なうステップなので、これだけでCircleCIキャッシュのロード、`go mod download`、キャッシュの保存が完了する。
+`go/mod-download-cached`はOrbsに定義された次の処理を一括で行なうステップなので、これだけでCircleCIキャッシュのロード、`go mod download`、キャッシュの保存が完了する。
 
 - `go/load-cache`
 - `go/mod-download`
 - `go/save-cache`
 
+もちろん個別に利用することもできる。
 
 ## gotestsumを使ったテスト結果の集計
 
@@ -202,15 +209,17 @@ jobs:
 ```
 
 ## cimg/goのGOPATH
-`circleci/golang`という指定を`cimg/go`に変更するだけでも動くのだが、`GOPATH`は変わっているので注意すること。
+既存のYAMLに手を加えず、`circleci/golang`から`cimg/go`にひとまず移行したいときもあるかもしれない。  
+`circleci/golang`という指定を`cimg/go`に変更するだけでも動くのだが、`GOPATH`は変わっているので注意すること。  
 `cimg/go`イメージの`GOPATH`は`/home/circleci/go`になっている。
 
 # 終わりに
-結構難しいのかなと思って設定を始めたところそこまで時間がかならなかった。
+Orbsを使うことでだいぶYAMLがさっぱりした。
 最近は流行りもありGitHub Actionsを使いがちだったが、CircleCIのキャッチアップができてよかった。
 
 
 # 参考
+- https://github.com/budougumi0617/cimg_go
 - [Announcing our next-generation convenience images: smaller, faster, more deterministic | circleci Blog][announce]
 - [CircleCI’s next-gen Go convenience image has been released][release_cimg_go]
 - [cimg/go | Docker Hub][dockerhub]
