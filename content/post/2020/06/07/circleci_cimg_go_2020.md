@@ -1,6 +1,6 @@
 +++
-title= "[Go]次世代イメージcimg/goとcircleci/go orbsを使った2020年版CircleCIの環境構築"
-date= 2020-06-08T00:05:58+09:00
+title= "[Go]次世代イメージcimg/goとcircleci/go Orbsを使った2020年版CircleCIの環境構築"
+date= 2020-06-08T09:05:58+09:00
 draft = false
 toc = true
 slug = ""
@@ -168,6 +168,9 @@ jobs:
           path: /tmp/test-results
 ```
 
+CircleCIの実行結果は次の通り。
+- https://app.circleci.com/pipelines/github/budougumi0617/cimg_go/12/workflows/ededb9df-62e9-4186-bf90-26d6a772d117/jobs/12/steps
+
 YAML上の設定で変わった点は次のとおりだ。
 
 - OrbsでGo Modulesまわりが簡潔に宣言できる
@@ -208,6 +211,12 @@ YAML上の設定で変わった点は次のとおりだ。
 - run: gotestsum --junitfile ${TEST_RESULTS}/unit-tests.xml -- -p 6 -race -cover ./...
 ```
 
+ちゃんと設定できていると、ジョブ実行結果のテストタブでテスト結果が集計される。
+
+- https://app.circleci.com/pipelines/github/budougumi0617/cimg_go/4/workflows/eda37ff8-0026-4805-b5b0-e70b2eb5712e/jobs/4
+
+![テスト結果の集計](/2020/06/08_test_fail.png)
+
 ## cimg/goのGOPATH
 既存のYAMLに手を加えず、`circleci/golang`から`cimg/go`にひとまず移行したいときもあるかもしれない。  
 `circleci/golang`という指定を`cimg/go`に変更するだけでも動くのだが、`GOPATH`は変わっているので注意すること。  
@@ -220,6 +229,7 @@ Orbsを使うことでだいぶYAMLがさっぱりした。
 
 # 参考
 - https://github.com/budougumi0617/cimg_go
+  - https://app.circleci.com/pipelines/github/budougumi0617/cimg_go
 - [Announcing our next-generation convenience images: smaller, faster, more deterministic | circleci Blog][announce]
 - [CircleCI’s next-gen Go convenience image has been released][release_cimg_go]
 - [cimg/go | Docker Hub][dockerhub]
