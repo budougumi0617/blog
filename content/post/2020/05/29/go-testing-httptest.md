@@ -135,7 +135,7 @@ func TestClient(t *testing.T) {
   // ServeMuxオブジェクトなどを用意してルーティングしてもよい
   h := http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
     fmt.Fprintln(w, "Hello, client")
-  }
+  })
   // 別goroutine上でリッスンが開始される
   ts := httptest.NewServer(h)
   defer ts.Close()
@@ -157,9 +157,9 @@ func TestClient(t *testing.T) {
   if err != nil {
     t.Fatal(err)
   }
-  res.Body.Close()
+  resp.Body.Close()
   want := "Hello, client\n"
-  if got != want {
+  if string(got) != want {
       t.Errorf("want %q, but %q", want, got)
   }
 }
