@@ -1,5 +1,5 @@
 +++
-title= "[Vim] vim-goを使わず、LSPを使ってGoの開発環境を構築する"
+title= "vim-goを使わず、LSP（gopls）を使ってVimのGo開発環境を構築する"
 date= 2020-07-24T07:00:26+09:00
 draft = false
 toc = true
@@ -69,7 +69,7 @@ vim-goは少し前なら「vim-go入れればVimのGoの開発環境構築はお
 まずはプラグインの自動インストール・アップデートをするためにプラグインマネージャを導入する。
 なんとなく通ぶってdein.vimを使うことにした。
 
-dein.vimのインストール設定は[@gorilla][gorilla0513]さんの記事に記載されている設定をほぼそのまま使う。
+dein.vimのインストール設定は[@gorilla0513][gorilla0513]さんの記事に記載されている設定をほぼそのまま使う。
 
 [gorilla0513]: https://twitter.com/gorilla0513
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://knowledge.sakura.ad.jp/23248/" data-iframely-url="//cdn.iframe.ly/ilkLdx2"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
@@ -130,11 +130,12 @@ $ pip3 install --user neovim
 ```
 あとは`~/.vim/dein.toml`にプラグインの依存を書き始めることができる。依存プラグインはVim起動時に自動インストールされる。
 
-ただ、dein.vimを使っているが、がっつりdein.vimの使いかたを覚えるわけでもないので、vim-plugでもよかったかもしれない。
+ただ、dein.vimを使っているが、がっつりdein.vimの使いかたを覚えるわけでもないので、vim-plugでもよかったかもしれない。  
 ソフトウェアデザイン8月号のコラムによると、vim-plugのほうがお手軽のようだ。
 
 - https://github.com/junegunn/vim-plug
 
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=github.io-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B08CZ2C3NZ&linkId=80eaad639e2cdb692bb0e4147c511bec"></iframe>
 
 # LSPの設定
 何はさておきLSPの設定をする。
@@ -250,8 +251,20 @@ set completeopt+=menuone
 - 定義元へジャンプができる。
 - `package名.`などを入力IDEのような補完候補が表示さえる
 - `func`と入力してタブを押下するとスニペットが展開される。
+  - `vim-lsp-snippets`などを導入しているからできる
 - `&http.Client{}`と書いたあと`:LspCodeAction`で構造体のフィールドをゼロ値で初期化する
     - [[Go] gopls 0.4.3で構造体を初期化（"fillstruct"）しようとしても、"No code actions found"とだけ表示される](/2020/07/18/use_fillstruct_of_goplus_on_vim/)
+
+`Fill Struct`機能は2020年7月現在設定を有効にしないと動作しない。
+goplsで可能な操作、機能は次のドキュメントを見ると（メンテが完璧ではないため、）だいたい確認できる。
+
+- https://github.com/golang/tools/blob/master/gopls/doc/status.md
+- https://github.com/golang/tools/blob/master/gopls/doc/analyzers.md
+
+
+そして次のような機能は2020年7月現在LSPでは実現できないので、別のプラグインを使う。
+- `import`をよしなに解決する（`goimport`）
+- `:w`による自動ソースコード整形、およびそのエラー表示
 - Vim上からテストを実行する
 - Vim上からdelveを使ってデバッグを行う
 
@@ -269,7 +282,8 @@ set completeopt+=menuone
 repo = 'mattn/vim-goimports'
 ```
 
-## テストの実行
+## Vim上からテストを実行する
+
 2020年7月現在LSPからGoのテストは実行できない。
 そのため、次のプラグインを導入して、vimからテストを実行できるようにする。
 
@@ -290,7 +304,7 @@ nmap <silent> t<C-l> :TestLast<CR>
 nmap <silent> t<C-g> :TestVisit<CR>
 ```
 
-## Goのデバッグ
+## Vim上からdelveを使ってデバッグを行う
 Vimからデバッグを実行することもできる。デバッグにはGoのデファクトである`delve`を使う。
 Vim上からブレイクポイントなどを設置して、デバッグを開始できる
 先ほどの`vim-test`と連携させれば、デバッガを使ってテストを実行することもできる。
@@ -339,17 +353,19 @@ https://github.com/budougumi0617/dotfiles/blob/9551a0c32ed199b6d3c0f53a71dda4949
 https://github.com/budougumi0617/dotfiles/blob/9551a0c32ed199b6d3c0f53a71dda4949163beb2/home/.vim/dein.toml
 
 # 終わりに
-業務でPhpStrom、PyCharmを使うようになったので、Goの実装をするときもGoLandを使うことが多くなった。
+業務でPhpStrom、PyCharmを使うようになったので、Goの実装をするときもGoLandを使うことが多くなった。  
 ただ、最近leetcode（競プロ）をするようになって「ペライチコードならばやっぱりVimでいいよな」となったのと、メルカリさんのコーディングの実況を見て「ちゃんと設定しよう！」という気持ちになった。
 
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://mercari.connpass.com/event/181012/" data-iframely-url="//cdn.iframe.ly/KYi4RxB?iframe=card-small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
 
-vim-goやGoLandで多用する機能がLSPと各プラグインでほぼフォローできるということがわかったのも大きい。やっぱりVimで書いているときは楽しい。
+vim-goやGoLandで多用する機能がLSPと各プラグインでほぼフォローできるということがわかったのも大きい。やっぱりVimで書いているときは楽しい。  
 とはいえ思考のスピードでコーディングできるほどではないので、もっとVim理解しないといけない。
 
 # 参考
 - https://github.com/budougumi0617/dotfiles/blob/9551a0c32ed199b6d3c0f53a71dda4949163beb2/home/.vimrc
 - https://github.com/budougumi0617/dotfiles/blob/9551a0c32ed199b6d3c0f53a71dda4949163beb2/home/.vim/dein.toml
+- https://github.com/golang/tools/blob/master/gopls/doc/status.md
+- https://github.com/golang/tools/blob/master/gopls/doc/analyzers.md
 - https://knowledge.sakura.ad.jp/23248/
 - https://mattn.kaoriya.net/software/vim/20191231213507.htm
 - https://mattn.kaoriya.net/software/vim/20200106103137.htm
