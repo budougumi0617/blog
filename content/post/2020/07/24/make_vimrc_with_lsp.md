@@ -44,8 +44,8 @@ golang.org/x/tools/gopls 0.4.3
 ```
 
 ひとまず動かしてみたいならば、以下のファイルを利用すれば同様の環境が構築できる（一部pythonライブラリなどの依存解決が必要）。
-https://github.com/budougumi0617/dotfiles/blob/9551a0c32ed199b6d3c0f53a71dda4949163beb2/home/.vimrc
-https://github.com/budougumi0617/dotfiles/blob/9551a0c32ed199b6d3c0f53a71dda4949163beb2/home/.vim/dein.toml
+- https://github.com/budougumi0617/dotfiles/blob/e5c0dd1856b5aa5bc0154f24ed3e7a8d4c0ce133/home/.vimrc
+- https://github.com/budougumi0617/dotfiles/blob/e5c0dd1856b5aa5bc0154f24ed3e7a8d4c0ce133/home/.vim/dein.toml
 
 静的解析の結果を表示したり、
 ![静的解析結果を表示](/2020/07/24_show_warnings.png)
@@ -142,9 +142,6 @@ $ pip3 install --user neovim
 先ほどの設定ならば、`~/.vim/dein.toml`を読み込むようになっているのでTOMLファイルを作成し、次の依存を書く。
 
 ```toml
-[[plugins]]
-repo = 'prabirshrestha/async.vim'
-
 [[plugins]]
 repo = 'prabirshrestha/asyncomplete.vim'
 
@@ -349,8 +346,8 @@ Goに直接関係ないプラグイン関係だと、次のプラグインを導
 
 
 使っている設定の全容は次の通り。
-https://github.com/budougumi0617/dotfiles/blob/9551a0c32ed199b6d3c0f53a71dda4949163beb2/home/.vimrc
-https://github.com/budougumi0617/dotfiles/blob/9551a0c32ed199b6d3c0f53a71dda4949163beb2/home/.vim/dein.toml
+- https://github.com/budougumi0617/dotfiles/blob/e5c0dd1856b5aa5bc0154f24ed3e7a8d4c0ce133/home/.vimrc
+- https://github.com/budougumi0617/dotfiles/blob/e5c0dd1856b5aa5bc0154f24ed3e7a8d4c0ce133/home/.vim/dein.toml
 
 # 終わりに
 業務でPhpStrom、PyCharmを使うようになったので、Goの実装をするときもGoLandを使うことが多くなった。  
@@ -362,8 +359,8 @@ vim-goやGoLandで多用する機能がLSPと各プラグインでほぼフォ�
 とはいえ思考のスピードでコーディングできるほどではないので、もっとVim理解しないといけない。
 
 # 参考
-- https://github.com/budougumi0617/dotfiles/blob/9551a0c32ed199b6d3c0f53a71dda4949163beb2/home/.vimrc
-- https://github.com/budougumi0617/dotfiles/blob/9551a0c32ed199b6d3c0f53a71dda4949163beb2/home/.vim/dein.toml
+- https://github.com/budougumi0617/dotfiles/blob/e5c0dd1856b5aa5bc0154f24ed3e7a8d4c0ce133/home/.vimrc
+- https://github.com/budougumi0617/dotfiles/blob/e5c0dd1856b5aa5bc0154f24ed3e7a8d4c0ce133/home/.vim/dein.toml
 - https://github.com/golang/tools/blob/master/gopls/doc/status.md
 - https://github.com/golang/tools/blob/master/gopls/doc/analyzers.md
 - https://knowledge.sakura.ad.jp/23248/
