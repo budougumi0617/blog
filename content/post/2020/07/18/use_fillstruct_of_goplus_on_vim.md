@@ -14,6 +14,11 @@ twitterImage = "logos/Go-Logo_Aqua.png"
 gopls 0.4.3を使って構造体を初期化（`fillstruct`）しようとする（正確に言うとvim-lspで`:LspCodeAction`をする）と、`No code actions found`と表示されるだけで初期化ができなかった。  
 0.4.3でも構造体の初期化を行うためのメモ。
 
+- 2020/08/04追記
+  - gopls 0.4.4からfillstruct機能がデフォルト有効に戻ったようだ！
+  - https://github.com/golang/tools/releases/tag/gopls/v0.4.4
+
+> Fillstruct performance improvements. It is now enabled by default again. (@joshbaum)
 
 <!--more-->
 
