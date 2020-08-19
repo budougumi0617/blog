@@ -1,5 +1,5 @@
 +++
-title= "[Go] パフォーマンスが出ない正規表現パッケージの使い方をチェックするlinterを作った"
+title= "[Go] パフォーマンスが悪い正規表現パッケージの使い方をチェックするlinterを作った"
 date= 2020-08-20T00:47:56+09:00
 draft = false
 toc = true
@@ -18,16 +18,18 @@ twitterImage = "logos/Go-Logo_Aqua.png"
 <!--more-->
 
 # TL;DR
-- regexpパッケージのコンパイル処理はプロセス初期化時に一度だけ行うのが望ましい
+- regexpパッケージのコンパイル処理はプロセス初期化時などに一度だけ行うのが望ましい
     - https://golang.org/pkg/regexp
     - `regexp.MustCompile`など
 - これをチェックするlinterを作った
     - https://github.com/budougumi0617/regexponce
 - `gostaticanalysis/analysisutil`を使えばすぐできた
     - https://github.com/gostaticanalysis/analysisutil
-- SSAを利用したが難しい
+- SSAは難しいけどおもしろい！
 
-Goの正規表現を使いたいときは`regexp`パッケージを使う。
+# regexpパッケージをコンパイルを使うときのお作法
+
+Goの正規表現を使いたいときは`regexp`パッケージを使う。  
 このパッケージの使い方には注意すべき点がある。
 
 - https://golang.org/pkg/regexp/
@@ -70,19 +72,27 @@ func myHandler(w http.ResponseWriter, r *http.Request) {
 
 このようなことを静的解析で指摘する静的解析ツールを作った。
 
-と、言っても基のなるロジックは@tenntennさんのcalled linterを踏襲している。
-「明らかに一度しか実行されない関数」は正しい利用方法だが、検知できない。
-そのため誤検知してしまう部分にたいしてはコメントをつけることで無視する機能もつけた（流用させてもらった）。
+と、言っても大部分のロジックは[@tenntenn](https://twitter.com/tenntenn)さんのcalled linterを踏襲している。  
 
 - [特定の関数やメソッドの呼び出しを検知するLINTERを作った](https://tenntenn.dev/ja/posts/called/)
 - https://github.com/gostaticanalysis/called
 
-また、メインのロジックはanalysisyutilパッケージを使い、作り始めはskeletonコマンドでガッと作っている。便利。
+「明らかに一度しか実行されない関数」は正しい利用方法だが、検知できない。    
+そのため誤検知してしまう部分にたいしてはコメントをつけることで無視する機能もつけた（流用させてもらった）。
+
+```go
+func f() {
+	// lint:ignore regexponce allowed
+	validID = regexp.MustCompile(`^[a-z]+\[[0-9]+\]$`) // OK because add specified comment.
+}
+```
+
+メインのロジックはanalysisyutilパッケージを使い、作り始めはskeletonコマンドでガッと作っている。便利。
 
 - https://github.com/gostaticanalysis/skeleton
 - https://github.com/gostaticanalysis/analysisutil
 
-独自性というところだと、単純に`MuxtCompile`関数などをエラーとせずに次の例外を設けている。
+自分で頑張った独自性というところだと、単純にコード内に現れた`MuxtCompile`関数などをすべてエラーとせずに次の例外を設けている。
 
 - グローバルスコープ
 - `main`関数
@@ -92,13 +102,15 @@ func myHandler(w http.ResponseWriter, r *http.Request) {
 どれも起動時に一度しか実行されない部分なので、静的解析のエラーにはしない。
 
 # 難しかったところ
-標準pkgの関数だったので、最初は`go/importer.Default()`経由で`regexp.MustCompile`などの`*types.Func`オブエジェクトを取得していた。
-が、同じ関数のはずなのにコード中に現れる`regexp.MustCompile`とはマッチしないようだ。`pos`などの位置も全然違った。
+標準pkgの関数だったので、最初は`go/importer.Default()`経由で`regexp.MustCompile`などの`*types.Func`オブジェクトを取得していた。  
+が、同じ関数に対するオブジェクトはずなのにコード中に現れる`regexp.MustCompile`とはマッチしないようだ。`pos`などの位置も全然違った。  
 実装を優先したのでちゃんと原因は調べられていない…
 
 # 終わりに
 
-SSAはなかなか難しい（私がデータ構造をきちんと理解できていない）ので、こちらの本を参考に見様見真似で書いた感じ。
+SSAはなかなか難しい（私がデータ構造をきちんと理解できていない）ので、こちらの本を参考に見様見真似で書いた感じ。  
+もっと静的解析勉強して実装速度と実装できる手札を増やしていきたい。
+
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://booth.pm/ja/items/1319394" data-iframely-url="//cdn.iframe.ly/afhjP9B"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
 
 
