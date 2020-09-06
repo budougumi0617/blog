@@ -54,12 +54,34 @@ func Notify(c chan<- os.Signal, sig ...os.Signal)
 
 # チャネルの仕様の簡単な確認
 Goのチャネルにはバッファありチャネルとバッファなしチャネルが存在する。  
-バッファなしチャネルを介した場合、何もしないと送信側goroutine、受信側goroutineの間には*happens before*の関係が成り立つ。
+~~バッファなしチャネルを介した場合、何もしないと送信側goroutine、受信側goroutineの間には*happens before*の関係が成り立つ。~~
 
 - Happens Before | The Go Memory Model
     - https://golang.org/ref/mem#tmp_2
 
-これは受信側goroutineが受信を完了するまで、送信側goroutineが再度起動されないことを意味する。  
+~~これは受信側goroutineが受信を完了するまで、送信側goroutineが再度起動されないことを意味する。~~
+
+
+## 2020/09/06 20:12 追記
+*happens before*はあくまで変数の可視性の話なのでゴルーチンの動きを説明するものではない。と指摘していただきました。  
+チャネルの挙動を決めているのは言語仕様でした。
+
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">happens beforeですが、バッファなしチャネルの動きを説明するものではなく、変数への更新が別のゴールチーンから見えるか否かに影響を与えるものなので、ブログの説明が少し違っていると思います。</p>&mdash; Yoshiki Shibata/柴田芳樹 (@yoshiki_shibata) <a href="https://twitter.com/yoshiki_shibata/status/1302527258599370752?ref_src=twsrc%5Etfw">September 6, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+バッファなしチャネルを介した場合、送信は受信側が受信を開始するまで成功しない（処理が完了しない）。
+
+> If the capacity is zero or absent, the channel is unbuffered and communication succeeds only when both a sender and receiver are ready.
+
+- Channel types | The Go Programming Language Specification
+	- https://golang.org/ref/spec#Channel_types
+
+> A send on an unbuffered channel can proceed if a receiver is ready. 
+
+- Send statements | The Go Programming Language Specification
+	- https://golang.org/ref/spec#Send_statements
+
+（追記終わり。）
+
 言い換えると、受信が完了するまで送信側では送信が行われず処理を再開できない。
 
 ```go
@@ -120,5 +142,6 @@ https://github.com/golang/go/blob/a538b59fd2428ba4d13f296d7483febf2fc05f97/src/o
 # 参考
 - https://godoc.org/os/signal#Notify
 - [Happens Before | The Go Memory Model](https://golang.org/ref/mem#tmp_2)
+- [Channel types | The Go Programming Language Specification](https://golang.org/ref/spec#Channel_types)
 
 <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=github.io-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4621300253&linkId=b23c76a9208ccfad7862a4ffc8269211"></iframe>
