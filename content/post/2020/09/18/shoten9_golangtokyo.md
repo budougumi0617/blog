@@ -1,6 +1,6 @@
 +++
 title= " #golangtokyo 技術書典9の新刊に「LeetCodeでアルゴリズムとデータ構造エクササイズ」を寄稿しました #技術書典"
-date= 2020-09-18T08:42:25+09:00
+date= 2020-09-18T09:42:25+09:00
 draft = false
 toc = true
 slug = ""
@@ -50,12 +50,11 @@ LeetCodeとは競技プログラミングサービスです（日本だとAtCode
 
 
 また、もっと詳しくLeetCodeやデータ構造などを知りたい方は[Women Who Go Tokyo](https://twitter.com/wwg_tokyo)のGo祭2020をご購入ください。
-
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://techbookfest.org/product/5410766247165952" data-iframely-url="//cdn.iframe.ly/4tPj5NT"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
-
 [@ryokotmng](https://twitter.com/ryokotmng)さんがスクショやサンプルコード付きでLeetCodeの紹介やGoで実装するアルゴリズムなどを紹介してくれています。
 
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">技術書典共著させて頂きました！内容盛り沢山です！<br>私の担当は第4章の、「Goではじめる！アルゴリズムとデータ構造」です。有名なアルゴリズムを解説してLeetCodeの問題で演習するという構成で、環境構築なしで手を動かしながら入門できます💁‍♀️<br>9/12(土)10:00より販売開始予定！<a href="https://twitter.com/hashtag/%E6%8A%80%E8%A1%93%E6%9B%B8%E5%85%B8?src=hash&amp;ref_src=twsrc%5Etfw">#技術書典</a> <a href="https://twitter.com/hashtag/wwg_tokyo?src=hash&amp;ref_src=twsrc%5Etfw">#wwg_tokyo</a> <a href="https://t.co/v8sR9BspaH">https://t.co/v8sR9BspaH</a></p>&mdash; ryokotmng (@ryokotmng) <a href="https://twitter.com/ryokotmng/status/1303835720113504256?ref_src=twsrc%5Etfw">September 9, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://techbookfest.org/product/5410766247165952" data-iframely-url="//cdn.iframe.ly/4tPj5NT"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>  
+
+
 
 
 読書の秋のお供としてぜひどうぞ！
