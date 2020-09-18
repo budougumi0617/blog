@@ -41,6 +41,9 @@ author = "budougumi0617"
 他に趣味で`Java8`、`Elixir`なども少し触っていました。
 
 # Talks
+## 2020
+- [ゆるふわ分散トレースはじめました](https://speakerdeck.com/budougumi0617/start-casual-distributed-trace) - コネヒトマルシェオンライン「事業を支えるWeb開発」
+- [PHPでつくるインタプリタ入門 ](https://speakerdeck.com/budougumi0617/introduction-interpreter-by-php) - PHPerKaigi2020
 ## 2019
 - [なぜ私たちはGoを書くのか。今あらためて考えるGo言語の良さと実際](https://speakerdeck.com/budougumi0617/why-go-how-is-go) - 第138回RITS技術交流会
 - [google/wireを使った Goらしいアーキテクチャへの取り組み](https://speakerdeck.com/budougumi0617/gocon-fukuoka-2019-summer) - Go Conference '19 Summer in Fukuoka
@@ -59,12 +62,19 @@ author = "budougumi0617"
 - [React+Redux 次の一歩](https://speakerdeck.com/budougumi0617/the-next-step-from-react-and-redux) - WEBエンジニア勉強会 #10
 
 # Article
+## 2020
+- [Gopherの休日 2020夏 | LeetCodeでアルゴリズムとデータ構造エクササイズ](https://techbookfest.org/product/5139800384339968)
+  - [#golangtokyo 技術書典9の新刊に「LeetCodeでアルゴリズムとデータ構造エクササイズ」を寄稿しました #技術書典](/2020/09/18/shoten9_golangtokyo/)
+- [Gopherの休日 2020冬 | GoにおけるSOLIDの原則](https://techbookfest.org/product/6332688805920768)
+  - [[冒頭公開]技術書典 応援祭にgolang.tokyo新刊「Gopherの休日2020冬」で参加します #技術書典](/2020/02/28/shote8-golangtokyo/)
 ## 2019
+- [BASE Advent Calendar 2019 | Goでレイヤードアーキテクチャのボイラープレートコード自動生成ツールを作った話 | ](https://devblog.thebase.in/entry/2019/12/23/120000) - 寄稿
 - [Gopherの休日 2019秋 | 準標準パッケージ（golang.org/x）の早めぐり](https://techbookfest.org/event/tbf07/circle/5174941137764352) - 寄稿
   - [golang.tokyoの技術書典7新刊「Gopherの休日2019秋」に寄稿しました #技術書典](/2019/09/15/shoten7-golangtokyo/)
 - [文Go | 2. Goにおけるデータベース実践入門](https://techbookfest.org/event/tbf06/circle/63860004) - 寄稿
 
 ## 2018
+- [freee Developers Advent Calendar 2018 | Goでスタックトレースを構造化して取り扱う](https://developers.freee.co.jp/entry/2018/12/23/213000) - 寄稿
 - [ゴーファーの書 | 6.go-cloudとWireコマンドの概要と活用方法](https://techbookfest.org/event/tbf05/circle/37230005) - 寄稿
 
 # Products
@@ -75,6 +85,8 @@ author = "budougumi0617"
   - [実行中のDocker ContainerやKubernetes Podを一覧して選択、アタッチするツールを作った][dkl]
 - https://github.com/budougumi0617/layer
   - [[Go] レイヤードアーキテクチャの階層構造を守らないimportを警告するlinterを作った][layer]
+- https://github.com/budougumi0617/regexponce
+  - [[Go] パフォーマンスが悪い正規表現パッケージの使い方をチェックするlinterを作った](/2020/08/20/regexponce/)
 
 ## `C#`
 - https://github.com/budougumi0617/Testable
