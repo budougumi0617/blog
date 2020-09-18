@@ -124,6 +124,11 @@ pygmentsStyle = "solarized-dark"
   weight = 1
 
 [[menu.sidebar]]
+  name = "意外と知らないGoのTIPS"
+  url = "/tags/gotips/"
+  weight = -51
+
+[[menu.sidebar]]
   name = "Go"
   url = "/categories/go/"
   weight = -50
