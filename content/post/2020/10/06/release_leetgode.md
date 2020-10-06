@@ -64,8 +64,15 @@ OSS利用ユーザーは問題を解いたあとローカルからサーバへ�
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/budougumi0617/leetgode" data-iframely-url="//cdn.iframe.ly/oK5Ai7E"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
 
 # leetgodeの使い方
+`leetgode`は`go get`あるいはHomeBrewからインストールすることができる。
 
-`leetgode`は次のサブコマンドを用意した。（一部まだ未実装だが、）基本的にはRustのCLIと同じものだ。
+```bash
+$ go get -u https://github.com/budougumi0617/leetgode/cmd/leetgode
+# or
+$ brew install budougumi0617/tap/leetgode
+```
+
+`leetgode`には次のサブコマンドを用意した。（一部まだ未実装だが、）基本的にはRustのCLIと同じものだ。
 
 ```bash
 $ leetgode help
