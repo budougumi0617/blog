@@ -1,6 +1,6 @@
 +++
 title= "goreleaserとGitHub Actionsを使えばGoのCLIはgit tagをpushするだけでGitHubとHomeBrewに自動リリースできる"
-date= 2020-10-07T06:16:30+09:00
+date= 2020-10-07T12:16:30+09:00
 draft = false
 toc = true
 slug = ""
