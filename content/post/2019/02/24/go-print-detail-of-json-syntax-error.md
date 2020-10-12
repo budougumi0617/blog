@@ -6,7 +6,7 @@ toc = true
 slug = ""
 author = "budougumi0617"
 categories = ["go"]
-tags = ["go","json"]
+tags = ["go","gotips","json"]
 keywords = ["Go", "JSON", "Unmarshal"]
 twitterImage = "logos/Go-Logo_Aqua.png"
 +++

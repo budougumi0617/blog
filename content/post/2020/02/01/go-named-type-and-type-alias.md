@@ -6,7 +6,7 @@ toc = true
 slug = ""
 author = "budougumi0617"
 categories = ["Go"]
-tags = ["Go"]
+tags = ["gotips","golang"]
 keywords = ["Go", "Golang", "Go言語", "型エイリアス", "Named type"]
 twitterImage = "logos/Go-Logo_Aqua.png"
 +++

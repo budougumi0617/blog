@@ -6,7 +6,8 @@ toc = true
 comments = true
 author = "budougumi0617"
 categories = ["go"]
-tags = ["golang", "json"]
+tags = ["golang","gotips","json"]
+twitterImage = "logos/Go-Logo_Aqua.png"
 +++
 
 以下のようなJSONデータはGoではパースしずらい。

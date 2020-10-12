@@ -6,7 +6,8 @@ toc = true
 comments = true
 author = "budougumi0617"
 categories = ["go"]
-tags = ["golang", "build"]
+tags = ["golang", "build","gotips"]
+twitterImage = "logos/Go-Logo_Aqua.png"
 +++
 
 
