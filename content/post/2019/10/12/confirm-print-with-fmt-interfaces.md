@@ -6,9 +6,9 @@ toc = true
 slug = ""
 author = "budougumi0617"
 categories = ["Go"]
-tags = ["golang", "fmt", "Stringer", "GoStringer"]
+tags = ["golang","fmt","gotips", "Stringer", "GoStringer"]
 keywords = [""]
-twitterImage = "twittercard.png"
+twitterImage = "logos/Go-Logo_Aqua.png"
 +++
 
 `fmt`パッケージには`fmt.Printf`の出力を任意に変更できるインターフェースが定義されている。  

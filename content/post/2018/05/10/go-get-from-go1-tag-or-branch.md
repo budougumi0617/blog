@@ -4,8 +4,9 @@ date= 2018-05-10T09:00:17+09:00
 draft = false
 slug = ""
 categories = ["go"]
-tags = ["golang", "goget"]
+tags = ["golang", "goget","gotips"]
 author = "budougumi0617"
+twitterImage = "logos/Go-Logo_Aqua.png"
 +++
 
 gocon中の[@ymotongpoo](https://twitter.com/ymotongpoo)さんのTweetが気になったので調べた。

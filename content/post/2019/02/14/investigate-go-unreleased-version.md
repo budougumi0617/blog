@@ -6,7 +6,7 @@ toc = true
 slug = ""
 author = "budougumi0617"
 categories = ["go"]
-tags = ["go", "docker"]
+tags = ["go","gotips", "docker"]
 keywords = ["Go"]
 twitterImage = "logos/Go-Logo_Aqua.png"
 +++

@@ -6,7 +6,7 @@ toc = true
 comments = true
 author = "budougumi0617"
 categories = ["go", "presentation"]
-tags = ["golang"]
+tags = ["golang","gotips"]
 twitterImage = "logos/Go-Logo_Aqua.png"
 keywords = ["Go"]
 +++

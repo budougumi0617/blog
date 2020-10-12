@@ -6,7 +6,7 @@ toc = true
 slug = ""
 author = "budougumi0617"
 categories = ["go"]
-tags = ["golang","gotips","homebrew","cli"]
+tags = ["golang","homebrew","cli"]
 keywords = ["Go","homebrew","cli"]
 twitterImage = "logos/Go-Logo_Aqua.png"
 +++
