@@ -1,5 +1,5 @@
 +++
-title= "[Go] Named typeとType aliasを使い分ける"
+title= "[Go] Defined type（Named type）とType aliasを使い分ける"
 date= 2020-02-01T12:31:27+09:00
 draft = false
 toc = true
@@ -7,14 +7,15 @@ slug = ""
 author = "budougumi0617"
 categories = ["Go"]
 tags = ["gotips","golang"]
-keywords = ["Go", "Golang", "Go言語", "型エイリアス", "Named type"]
+keywords = ["Go", "Golang", "Go言語", "型エイリアス", "Named type","Defined type"]
 twitterImage = "logos/Go-Logo_Aqua.png"
 +++
 
 
 Goには既存の型に新しい名前をつける方法が2つある。
 
- - `type MyType int`と宣言するNamed type
+ - `type MyType int`と宣言するDefined type
+	 - 以前はNamed typeと言っていたが、Go1.11からDefined typeと呼ぶようになった
  - `type MyType = int`と宣言するType alias
 
 すでにいろいろ記事はあるものの、最近数回聞かれることがあったので改めてまとめておく。
@@ -23,21 +24,33 @@ Goには既存の型に新しい名前をつける方法が2つある。
 
 # Tl;DR
 - Goには型に違う名前をつける方法がある。
-    - Named typeとType alias
-- Named typeを使うと完全に違う型として扱える
+    - Defined typeとType alias
+- Defined typeを使うと完全に違う型として扱える
     - プリミティブな型に異なる型名をつけたり、メソッドを生やすこともできる
     - Value Object的な型を簡単に作ることができる
+	- Go1.10以前（書籍プログラミング言語Goなど）ではNamed typeと呼ばれている
 - Type aliasを使うと異なる名前だが同じ型として扱われる
     - リファクタリングをするときに使われる
     - 型付けを利用した使い分けをしたいならば向かない
-- 基本的にNamed Typeを使えばよい。
+- 基本的にDefined Typeを使えばよい。
 
 
 なお、この記事はGo1.13を使って検証している（正確に言うと、2020/02/01時点のGo Playgroundで検証している）。
 
 
-# Named type
-Named typeはGo1.0からある機能だ。（正確な導入時期は知らないが、基本構文でできるので最初からありそうだ）。
+## 2020/11/09更新
+Named typeと呼称して記事を書いていたが、Go1.11から該当言語仕様はDefined typeと呼ばれるようになった。
+- https://golang.org/ref/spec#Type_definitions
+
+> The new type is called a defined type. It is different from any other type, including the type it is created from.
+
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/golang/go/issues/23474" data-iframely-url="//cdn.iframe.ly/cYJBe7x"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+
+# Defined type
+Defined typeはGo1.0からある機能だ。（正確な導入時期は知らないが、基本構文でできるので最初からありそうだ）。  
+Go1.10まではNamed typeと呼ばれていたが、Go1.11から言語仕様上はDefined typeと呼ばれるようになった。
+
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/golang/go/issues/23474" data-iframely-url="//cdn.iframe.ly/cYJBe7x"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
 
 ある型の定義をそのまま利用して、まったく違う型として認識される新しい型を定義できる。
 
@@ -72,8 +85,8 @@ func main() {
 }
 ```
 
-Named typeはプリミティブな型に対しても利用することができる。  
-Named typeで宣言した新しい型と元になった型には互換性がないため、Value Object的に利用することができる。
+Defined typeはプリミティブな型に対しても利用することができる。  
+Defined typeで宣言した新しい型と元になった型には互換性がないため、Value Object的に利用することができる。
 
 以下の例では　ユーザー名とメールアドレスの文字列の取り扱いを間違えている。
 
@@ -98,7 +111,7 @@ func main() {
 }
 ```
 
-Named typeを使うことで、型チェックを利用して誤った使いかたを防ぐことができる。
+Defined typeを使うことで、型チェックを利用して誤った使いかたを防ぐことができる。
 
 - https://play.golang.org/p/1S7VT6lT69J
 
@@ -128,7 +141,7 @@ func main() {
 
 ```
 
-`type UserID int`、`type DocumentID int`のようにNamed typeを使っていけば、データベースまわりでIDの取り扱いをして間違えることもなくなる。  
+`type UserID int`、`type DocumentID int`のようにDefined typeを使っていけば、データベースまわりでIDの取り扱いをして間違えることもなくなる。  
 また、メソッドを追加することもできるので、バリデーションなども追加しておくこともできる。
 
 - https://play.golang.org/p/7e85wA1DPex
@@ -183,8 +196,8 @@ func main() {
 - キャストせずに同じ型として利用できる
 - エイリアスに新しいメソッドは定義できない。
 
-異なる型として利用できるようになる`Named type`と違い、型エイリアスを使った場合はまったく同じ型として利用できる。  
-そのため、Named Typeのような型チェックを期待してもそれは行われないので注意する。
+異なる型として利用できるようになる`Defined type`と違い、型エイリアスを使った場合はまったく同じ型として利用できる。  
+そのため、Defined typeのような型チェックを期待してもそれは行われないので注意する。
 
 - https://play.golang.org/p/VgpS3x89-bO
 
@@ -219,8 +232,15 @@ func main() {
 - [コンテキストの歴史にまつわるインタフェースの互換性と型エイリアス | Google App EngineでGoのバージョンアップを行う #golang #gae][qiita]
 
 #  終わりに
-Type aliasの説明は省略してしまったが、Named typeとType Aliasについてまとめた。  
-Goは型をうまく使うことで安全なコーディングをすることができる。Named typeを使えばたった一行で新しい型が宣言でき、IDや文字列などの取り間違いを防ぐことができる。
+Type aliasの説明は省略してしまったが、Defined typeとType Aliasについてまとめた。  
+Goは型をうまく使うことで安全なコーディングをすることができる。Defined typeを使えばたった一行で新しい型が宣言でき、IDや文字列などの取り間違いを防ぐことができる。
+
+
+## 2020/11/09追記
+ずっとNamed typeと読んでいたが、ずっと前からDefined typeという名前になっていた。
+[@yoshiki_shibata](https://twitter.com/yoshiki_shibata)さんに指摘していただいた。
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">今は言語仕様が変わったのでnamed typeではなく、defined typeです。</p>&mdash; Yoshiki Shibata/柴田芳樹 (@yoshiki_shibata) <a href="https://twitter.com/yoshiki_shibata/status/1325583386711224320?ref_src=twsrc%5Etfw">November 8, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 
 # 参考
 - [Changes to the language  | Go 1.9 Release Notes][release]
