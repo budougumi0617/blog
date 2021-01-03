@@ -54,7 +54,7 @@ PixelaのGo APIクライアントはいくつかあるのだが、いろいろ�
 
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/budougumi0617/pixela" data-iframely-url="//cdn.iframe.ly/lYXbTqm"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
 
-まだグラフを操作するメソッドしかないが、主に次の点がユニークなところ。
+まだグラフを操作するメソッドしかないが、主に次の点を満たしたくて自作した。
 
 - `context.Context`対応
 - 素直なメソッド呼び出し
@@ -66,16 +66,15 @@ PixelaのGo APIクライアントはいくつかあるのだが、いろいろ�
 また、APIクライアントライブラリの作成に合わせてTerraform Providerも更新した。
 https://github.com/budougumi0617/terraform-provider-pixela/releases/tag/v0.0.6
 
-
-
 # Acceptance Testという安心
-今回はズルして単体テストはほとんど書いていない。
+今回はズルして単体テストはほとんど書いていない。  
 実際のAPIを叩いてテストしているので「モックが古い仕様のままだった」みたいな不安はない。
 
 - https://github.com/budougumi0617/pixela/blob/master/e2e_test.go
 
 バリデーションなど、細かい実装を一切していないので、そういった実装書き始めるときは単体テストでよさそう。  
-Terraform Providerの方もAPIを直接叩くAcceptance Testを書いてあったのでデグレの心配なく更新できた。
+Terraform Providerの方もAPIを直接叩くAcceptance Testを書いてあったのでデグレの心配なく更新できた。  
+
 
 # 自動でリリースタグを作るようにしているのでリリースがとてもラク
 release-it npmを使って自動リリースする設定をしている。
@@ -98,7 +97,7 @@ APIクライアントライブラリ（バイナリ配布する予定がない�
 他方、個人的に個人開発しているときは「機能実装が終わった（キレイに実装できた）」というタイミングがピークだ。  
 なので、そのあとに「バージョン番号を思い出してインクリメントしたtagを切って…」なんてやる時間は面白くない。
 Terraform Providerのリリースになると[バイナリをzipにしたあと証明書で署名する][tp_release]必要もあり、絶対に手作業したくない。  
-だから最初に自動リリースやデプロイを整備しておくとその後の開発が非常にラクなのでオススメだ。
+だから最初に自動リリースやデプロイを整備しておくとモチベーションの高い状態をキープしたまま実装を続けられるのでよい。
 
 [tp_release]: https://www.terraform.io/docs/registry/providers/publishing.html#manually-preparing-a-release
 
