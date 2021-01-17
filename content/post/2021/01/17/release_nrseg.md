@@ -1,6 +1,6 @@
 +++
 title= "GoのアプリにNew Relic APMを導入する時とても便利なCLIを作った"
-date= 2021-01-16T00:36:33+09:00
+date= 2021-01-17T10:00:33+09:00
 draft = false
 toc = true
 slug = ""
