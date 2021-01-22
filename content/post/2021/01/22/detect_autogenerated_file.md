@@ -1,6 +1,6 @@
 +++
-title= "[Go] 自動生成コードを判別したい"
-date= 2021-01-22T01:05:25+09:00
+title= "[Go] ファイルが自動生成コードか判別したい"
+date= 2021-01-22T09:39:25+09:00
 draft = false
 toc = true
 slug = ""
@@ -27,7 +27,7 @@ Goのコードを静的解析するとき、自動生成コードをスキップ
 ```go
 var c = regexp.MustCompile("(?m)^// Code generated .* DO NOT EDIT\\.$")
 
-func process(filename string, src []byte) bool {
+func process(src []byte) bool {
   return c.Match(src)
 }
 ```
@@ -62,7 +62,7 @@ https://golang.org/cmd/go/#hdr-Generate_Go_files_by_processing_source
 ```go
 var c = regexp.MustCompile("(?m)^// Code generated .* DO NOT EDIT\\.$")
 
-func generated(filename string, src []byte) bool {
+func generated(src []byte) bool {
   return c.Match(src)
 }
 ```
@@ -78,6 +78,8 @@ https://github.com/google/re2/wiki/Syntax
 これがないと、複数行文字列の中から該当表現を検出できない。
 
 動作検証したテストコードは次のとおり。
+
+https://play.golang.org/p/GMXVIXrqnLU
 
 ```go
 package main
@@ -133,7 +135,7 @@ func SampleFunc(ctx context.Context) {
     t.Run(tt.name, func(t *testing.T) {
       t.Parallel()
 
-      if got := generated("", []byte(tt.src)); tt.want != got {
+      if got := generated([]byte(tt.src)); tt.want != got {
         t.Fatalf("want %v, got %v, source: \n%s", tt.want, got, tt.src)
       }
     })
@@ -142,14 +144,18 @@ func SampleFunc(ctx context.Context) {
 
 var c = regexp.MustCompile("(?m)^// Code generated .* DO NOT EDIT\\.$")
 
-func generated(filename string, src []byte) bool {
+func generated(src []byte) bool {
   return c.Match(src)
 }
 ```
 
 ファイルの途中にかかれていた場合も検出できている。
 
+# 終わりに
+厳密にやるならばASTを使って[`go/ast#File.Comments`](https://golang.org/pkg/go/ast/#File)をチェックしたほうが良さそうだが、このレベルで十分だろう。
+`(?m)`は知らない正規表現の記法だったのでそちらも学びになった。
+
 # 参考リンク
 - https://blog.golang.org/generate
-- https://play.golang.org/p/DMXBndx8f0k
+- https://play.golang.org/p/GMXVIXrqnLU
 - https://golang.org/cmd/go/#hdr-Generate_Go_files_by_processing_source
