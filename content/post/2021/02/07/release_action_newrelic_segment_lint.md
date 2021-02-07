@@ -1,5 +1,5 @@
 +++
-title= "[Go] PR内の関数でNew RelicのSegmentを忘れていたら怒るreviewdogのGitHub Actionsを作った。"
+title= "[Go] 新規追加した関数にNew RelicのSegmentを入れ忘れていたら警告するGitHub Actionsを作った"
 date= 2021-02-07T00:19:47+09:00
 draft = false
 toc = true
@@ -11,25 +11,25 @@ keywords = ["GitHub Actions","Go","linter","NewRelic"]
 twitterImage = "logos/newrelic.png"
 +++
 
-GoのアプリでPull Requset（PR）を作ったとき、New RelicのSegmentをいれてなかったら怒るreviewdogのGitHub Actionsを作った。
+Goのアプリで新規関数を含むPull Requset（PR）を作ったとき、New RelicのSegmentをいれてなかったら怒るreviewdogのGitHub Actionsを作った。
 
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/budougumi0617/action-newrelic-segment-lint" data-iframely-url="//cdn.iframe.ly/aLlaE2N"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
 
 <!--more-->
 
 # TL;DR
-- New RelicでGoのアプリケーションのSpanを取得するには、関数やメソッドごとにSegmentsを作成する
+- New RelicでGoのアプリケーションのSpanを取得するには、関数やメソッドごとにSegmentを作成する
 - Segmentを作っていなかったら怒るActionsを作った
     - https://github.com/budougumi0617/action-newrelic-segment-lint
-- 実際作った時にこまったことなど
+- 実際作った時にTipsなど
 
 ![実際のコメント](/2021/02/07_pr_comment.png)
 
-GitHub MarcketPlaceにも公開している。
+GitHub MarketPlaceにも公開している。
 
 https://github.com/marketplace/actions/action-newrelic-segment-lint
 
-# Spanを計測していない関数を追加するPull RequestはGitHub Checksで警告したい
+# Spanを計測していない関数を追加するPull Request（PR）はGitHub Checksで警告したい
 New RelicでGoのアプリケーションのSpanを取得するには、関数やメソッドごとにSegmentsを明示的に埋め込んでいく必要がある。
 
 ```go
@@ -49,7 +49,7 @@ func SampleHandler(w http.ResponseWriter, req *http.Request) {
 
 しかし、普段開発しているサービスが完全にコードフリーズされていることは少ないだろう。  
 我々は常にコードを変更したり、追加している。そのため、ある時点で存在するコードに対してだけでなく、**今後追加されていく関数やメソッドもSpanを計測しているか確認していく必要がある**。  
-そのため、GitHub Acrionsとreviewdogを使って「Pull Reqeustで追加された関数がSegmentを埋め込んでいなかったらエラーを返す」Actionを作成した。
+そのため、GitHub Acrionsとreviewdogを使って「PRで追加された関数がSegmentを埋め込んでいなかったらエラーを返す」Actionを作成した。
 
 このようなYAMLを`.github/workflow`ディレクトリ以下に配置しておくだけで利用ができる。
 
@@ -114,7 +114,7 @@ reviewdogが認識できる警告のフォーマットはREADMEの通り。
 ## GitHubにリリースされた圧縮ファイルを実行するワンライナー
 Actions内で[`github.com/budougumi0617/nrseg`のリリースされているTarファイル](https://github.com/budougumi0617/nrseg/releases)を解凍して実行ファイルを使いたいとする。  
 このような場合以下のような`cURL`コマンドを実行すると該当のTarファイルが取得できる。grepはUbuntuで実行可能なバイナリが入っている圧縮ファイル名前を確認すること。  
-あらかじめバイナリさえリリースしておけば、特定言語の実行環境コンテナを用意せずにActionsが書ける。
+Goのコマンドならバイナリさえリリースされていれば、特別なコンテナを用意せずにActionsが書ける。
 
 ```bash
 TEMP_PATH="$(mktemp -d)"
@@ -129,11 +129,12 @@ rm nrseg.tar.gz
 今回はじめてActionsを作ったが、reviewdogの周辺ツールがとてもリッチなのですぐ完了できた。  
 「静的解析ツールを作る -> reviewdogでactionsにする」を速く開発できればどんどん自動コードレビューを手厚くできそう。
 
-実際に警告する関数などはnrsegリポジトリに実装してあるのだが、だいぶ汚いコードになってしまったので直しておきたい。
+実際の関数の判定ロジックなどはnrsegリポジトリに実装してあるのだが、だいぶ汚いコードになってしまったので直しておきたい。
 
 # 参考
 - https://github.com/budougumi0617/action-newrelic-segment-lint
 - https://github.com/marketplace/actions/action-newrelic-segment-lint
+- [GoのアプリにNew Relic APMを導入する時とても便利なCLIを作った](/2021/01/17/release_nrseg/)
 - https://docs.newrelic.com/docs/agents/go-agent/instrumentation/instrument-go-segments
 - https://docs.github.com/ja/actions/managing-workflow-runs/enabling-debug-logging
 
