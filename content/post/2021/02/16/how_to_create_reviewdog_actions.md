@@ -20,9 +20,11 @@ reviewdogを使ったGitHub Actionsを作る過程をメモしておく。
 # TL;DR
 - template repositoryを使うと簡単にreviewdogのGitHub Actionsが作れる
     - https://github.com/reviewdog/action-template"
-- Goのlinterを作る場合は以下の2つのどちらかを使っていればreviewdog対応が簡単
+- Goの場合はDockerfileも不要なのでスクリプトを書くだけでActionsが作れる
+- Goのlinterを使う場合は以下の2つのどちらかを使っていればreviewdog対応が簡単
     - https://pkg.go.dev/golang.org/x/tools/go/analysis
     - https://pkg.go.dev/go/token#Position
+
 
 # 自作linter+reviewdogでGitHub Actionsを作りたい
 CIでlinterを実行し、問題があったときは非ゼロでExitするだけでもいいのだが、reviewdogを使えばPRにコメントを残したり、GitHub checksに対応することができる。  
@@ -58,7 +60,7 @@ golintのフォーマットは後述する方法で簡単に実装できる。
 お作法を守ったlinterを作っておけば、Actionsを作ること自体は簡単だ。
 
 
-## templateを利用する
+## template repositoryを利用する
 reviewdogのGitHub Actionsはtemplate repositoryが用意されているので、まずはこれを使ってrepositoryを初期化すればよい。
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/reviewdog/action-template" data-iframely-url="//cdn.iframe.ly/ykzZKkE"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
 
@@ -124,7 +126,7 @@ golang.org/x/tools/go/analysis pkgを利用して作成されたlinterはgolint�
 
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/golang/tools" data-iframely-url="//cdn.iframe.ly/T71XGV2"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
 
-以前作った自作ツールの結果を例にすると、とくに意識せずともファイル名と該当エラー行の行数情報などが出力される。
+以前作った自作ツールの結果を例にすると、とくに意識せずともファイル名と該当エラー行の行情報などが出力される。
 
 - [golang.org/x/tools/go/analysisでLinterツールを自作する #gounco #golang](/2019/02/01/how-to-use-analisys-package/)
 
@@ -155,7 +157,7 @@ fmt.Printf("%s:%d:%d: lint error message\n", p.Filename, p.Line, p.Column)
 # その他
 - https://github.com/reviewdog/action-template/tree/master/.github/workflows
 
-templateに入っているGitHub ActionsはGitHub Actions自体のメンテに便利なCI定義ばかりなのでぜひ使っておいたほうが良い。
+template repositoryに入っているGitHub ActionsはGitHub Actions自体のメンテに便利なCI定義ばかりなのでぜひ使っておいたほうが良い。
 
 - ラベルをつけてPRをマージすると自動で所定のセマンティックバージョンをインクリメントしたリリースをつくるrelease.yml
 - 依存ツールがバージョンアップされたことを検知し、GitHub Actions内のバージョン設定の更新PRを作成するdepup.yml
