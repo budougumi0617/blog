@@ -22,6 +22,7 @@ twitterImage = "logos/Go-Logo_Aqua.png"
 - `io#ReadAll`関数は`bytes#Buffer`型を利用せずにバッファ管理を行なっている
     - `b = append(b, 0)[:len(b)]`
 - `append`を使ったDRYなコード。`append`の性能向上や最適化の恩恵に預かれるすごいコード
+    - ただ自分で使う機会はあまりないかもしれない
 
 # Go1.16で追加された`io#ReadAll`
 先日リリースされたGo1.16では`io/ioutil#ReadAll`関数が`io#ReadAll`関数に書き直された。
@@ -106,6 +107,8 @@ func ReadAll(r Reader) ([]byte, error) {
 # 終わりに
 同様な状況を自分で実装するとき、大抵は`bytes#Buffer`型を利用しているか確保すべきバッファサイズが自明だろう。
 よってなかなか独自型でストリームデータを扱うことはないかもしれないが、なにかあったときはスッと実装したいイディオムだった。  
+
+というかGo1.16全然触れていないので早く触らなければ！
 
 ## 余談
 
