@@ -1,6 +1,6 @@
 +++
 title= "Amazon AlexaアプリでKindleを読み上げて積ん読を消化する（ながら読書をする）"
-date= 2021-03-08T09:02:33+09:00
+date= 2021-03-08T18:02:33+09:00
 draft = false
 toc = true
 slug = ""
@@ -97,7 +97,7 @@ Amazon Alaxaアプリを使うことで一番うれしいのは文字として�
 Alexaを使ってKindleを読み上げる方法を紹介した。  
 私の家はGoogle Homeで統一しているのでAlexaは今まで使っていなかったがこのためだけにAmazon Alexaアプリをインストールしてよかった。
 
-ちなみにAudibleも単純な朗読ではないコンテンツもあって一度聞いてみるとおもしろいかもしれない。
+ちなみにAudibleも単純な読み上げではないコンテンツもあって一度聞いてみるとおもしろいかもしれない。
 たとえば「嫌われる勇気」は”哲学者”と”青年”の対話形式の本なのだが、Audible版だとそれぞれ別の方が声優をしており、朗読としてもとてもよいコンテンツだった。
 
 <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=github.io-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B00DMXMWHG&linkId=883cb4afd4624b7b6d7f478f4f7da232"></iframe>
