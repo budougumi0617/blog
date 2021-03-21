@@ -1,6 +1,6 @@
 +++
 title= "[Go] go.uber.org/zapでNew Relic logs in contextをするためのライブラリを書き始めた"
-date= 2021-03-21T00:00:00+09:00
+date= 2021-03-21T10:30:00+09:00
 draft = false
 toc = true
 slug = ""
@@ -48,7 +48,7 @@ nrzapは`zap`でNew Relic Logs in contextをよしなにするための実装ラ
 
 ## GtNrMetadataFields
 2021/03/21現在nrzapは1つの機能しか提供していない。  
-`GtNrMetadataFields` 関数は`zap`loggerの`Info`メソッドや`Error`メソッドの引数に渡す`[]zap.Field`として分散トレースIDなどの情報を生成する。  
+`GtNrMetadataFields` 関数は分散トレースIDなどの情報を`zap`loggerの`Info`メソッドや`Error`メソッドの引数に渡す`[]zap.Field`として生成する。  
 単純な利用方法だとこのようになる。
 
 
