@@ -194,3 +194,5 @@ main.main()
 - https://golang.org/ref/mem
 - https://nipponkaigi.net/wiki/Re-order_buffer
 - https://nipponkaigi.net/wiki/Out-of-order_execution
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=github.io-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4621300253&linkId=99796994abe7cc79c1929dc3446c61b7"></iframe>
