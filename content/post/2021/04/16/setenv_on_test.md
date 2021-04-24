@@ -11,7 +11,7 @@ keywords = ["test","env","Go","golang"]
 twitterImage = "logos/Go-Logo_Aqua.png"
 +++
 
-Goで環境変数を使ってテストを行なうときに便利な関数を紹介する。
+Goで環境変数を使ってテストを行なうときに便利な関数を作ってみる。
 
 <!--more-->
 
