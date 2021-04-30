@@ -53,7 +53,7 @@ mrepo.EXPECT().Save(ctx, cmpmock.DiffEq(wantUser)).Return(nil)
 # Goのテストでモックを使う
 - https://github.com/golang/mock
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/golang/mock" data-iframely-url="//cdn.iframe.ly/RivSfnz"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/golang/mock" data-iframely-url="//cdn.iframe.ly/RivSfnz?iframe=card-small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
 
 Goでモックをテストに使いたいとき、デファクトスタンダードとして使われているのが`gomock`だろう。
 本記事は`gomock`用にカスタムマッチャーを作った話なのだが、`gomock`自体の説明は省略する。
@@ -63,7 +63,7 @@ https://pkg.go.dev/github.com/golang/mock@v1.5.0/gomock
 
 
 ## モックのメソッド引数に期待値を指定するとき諦めたくなる時がある
-`gomock`は柔軟に挙動を変えたり
+`gomock`は柔軟に挙動を変えたり呼び出し回数や呼び出し順まで検証することができる。  
 ただ、モックの引数にそこそこでかい構造体を指定したり、時刻情報を用いているとうまく期待値を設置できないときがないだろうか？
 そういうときは`gomock.Any()`関数を引数に指定したりして、モックの設定を妥協したりすることがあった。
 毎回`DoAndReturn`などで構造体をパースする処理をテストコードに書くのもめんどくさい。
