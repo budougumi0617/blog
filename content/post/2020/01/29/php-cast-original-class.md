@@ -40,9 +40,9 @@ $cast = fn($orig): CastObject => $orig;
 ```
 
 # 独自クラスへの型キャストがしたい。
-`php-go`というPHP製のGoインタプリタを作っている。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/budougumi0617/php-go" data-iframely-url="//cdn.iframe.ly/SfTZMuB"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+`php-go`というPHP製のGoインタプリタを作っている。
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/budougumi0617/php-go" data-iframely-url="//cdn.iframe.ly/SfTZMuB?iframe=card-small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
 
 インタプリタの実装をしていると、基となるインターフェイス（あるいは`array`）としてオブジェクトを受け取り、再帰的な実際の具象クラスの種類ごとに処理を切り替えるような実装を行なう。  
 そのような処理を再帰的に繰り返すため、少しでも意図しないロジックパスを通りそうになったら（期待する具象クラスではなかったら）即例外を発生させたい。  
