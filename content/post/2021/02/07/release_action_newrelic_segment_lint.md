@@ -13,7 +13,7 @@ twitterImage = "logos/newrelic.png"
 
 Goのアプリで新規関数を含むPull Requset（PR）を作ったとき、New RelicのSegmentをいれてなかったら怒るreviewdogのGitHub Actionsを作った。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/budougumi0617/action-newrelic-segment-lint" data-iframely-url="//cdn.iframe.ly/aLlaE2N"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/budougumi0617/action-newrelic-segment-lint" data-iframely-url="//cdn.iframe.ly/aLlaE2N?iframe=card-small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
 
 <!--more-->
 
@@ -45,7 +45,7 @@ func SampleHandler(w http.ResponseWriter, req *http.Request) {
 
 - [GoのアプリにNew Relic APMを導入する時とても便利なCLIを作った](/2021/01/17/release_nrseg/)
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/budougumi0617/nrseg" data-iframely-url="//cdn.iframe.ly/HrUY585"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/budougumi0617/nrseg" data-iframely-url="//cdn.iframe.ly/HrUY585?iframe=card-small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
 
 しかし、普段開発しているサービスが完全にコードフリーズされていることは少ないだろう。  
 我々は常にコードを変更したり、追加している。そのため、ある時点で存在するコードに対してだけでなく、**今後追加されていく関数やメソッドもSpanを計測しているか確認していく必要がある**。  
@@ -93,8 +93,7 @@ PRで該当箇所にコメントするにはreviewdogを利用している。
 reviewdogを使ったActionsはtemplateを使えばすぐ作れる。  
 バージョンアップをサポートするActionや、Action内で使うツールの更新を検知するActionなども一緒に定義されていてとても便利。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/reviewdog/action-template" data-iframely-url="//cdn.iframe.ly/ykzZKkE"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
-
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/reviewdog/action-template" data-iframely-url="//cdn.iframe.ly/ykzZKkE?iframe=card-small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
 
 ## reviewdogに自作ツールの結果を読み込ませる
 reviewdogが認識できる警告のフォーマットはREADMEの通り。
