@@ -15,7 +15,7 @@ twitterImage = "logos/newrelic.png"
 GoのWebアプリコードにNew Relic APMでSpan（Segment）を計測するコードを自動挿入するOSSを作った。  
 New RelicをGoのアプリケーションへ導入するときに利用をオススメする。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/budougumi0617/nrseg" data-iframely-url="//cdn.iframe.ly/HrUY585"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/budougumi0617/nrseg" data-iframely-url="//cdn.iframe.ly/HrUY585?iframe=card-small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
 
 <!--more-->
 
@@ -82,7 +82,7 @@ defer txn.StartSegment("mySegmentName").End()
 # nrseg
 上記の面倒くささを解消するためのコマンドラインツールがnrsegだ。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/budougumi0617/nrseg" data-iframely-url="//cdn.iframe.ly/HrUY585"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/budougumi0617/nrseg" data-iframely-url="//cdn.iframe.ly/HrUY585?iframe=card-small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
 
 Macの場合はBrewでインストールすることができる。
 
@@ -184,7 +184,7 @@ nrsegコマンドはディレクトリの下のすべてのGoコード[^testdata
 また、New Relicを使って今年のISUCONを出ることを想定して「（サブミット時に）挿入したコードをすべて削除する」サブコマンドなども用意したいと思う。
 引き続き機能強化していきたい。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/budougumi0617/nrseg" data-iframely-url="//cdn.iframe.ly/HrUY585"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/budougumi0617/nrseg" data-iframely-url="//cdn.iframe.ly/HrUY585?iframe=card-small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
 
 # 参考資料
 - https://github.com/budougumi0617/nrseg

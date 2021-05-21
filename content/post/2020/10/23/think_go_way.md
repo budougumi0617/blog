@@ -89,14 +89,14 @@ Goはソフトウェアエンジニアリングを行なうための言語であ
 ### たとえばAssertion
 たとえば私は`testify`（`assert.Equal`などが定義されている3rdパーティのライブラリ）を使わない。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/stretchr/testify" data-iframely-url="//cdn.iframe.ly/xdoita7"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/stretchr/testify" data-iframely-url="//cdn.iframe.ly/xdoita7?iframe=card-small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
 
 私は`testing`パッケージ以外のDSLを覚えるのが嫌いだからだ。
 そもそもなぜ標準パッケージで`assertXXX`関数が提供されていないかは書籍「プログラミング言語Go」の11.2.5節で述べられている。
 
 …ただ私は`gomock`（そこそこリッチなモックオブジェクトを作れるgoogleのライブラリ）は使っている。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/golang/mock" data-iframely-url="//cdn.iframe.ly/RivSfnz"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/golang/mock" data-iframely-url="//cdn.iframe.ly/RivSfnz?iframe=card-small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
 
 `gomock`も独自DSLのメソッドチェーンで呼び出し回数などを指定することができる。
 「さっきDSL覚えるの嫌って言っていたじゃん」と言われるとその通りである。

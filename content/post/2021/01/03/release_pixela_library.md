@@ -14,7 +14,7 @@ twitterImage = "twittercard.png"
 GoのPixela APIクライアントライブラリを作り始めた。  
 最低限自分が今必要なAPIはカバーできたのでpublicに公開した。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/budougumi0617/pixela" data-iframely-url="//cdn.iframe.ly/lYXbTqm"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/budougumi0617/pixela" data-iframely-url="//cdn.iframe.ly/lYXbTqm?iframe=card-small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
 
 <!--more-->
 
@@ -44,7 +44,7 @@ Pixelaは[@a-know](https://twitter.com/a_know)さんが提供しているWebサ�
 
 [TerraformでPixelaのグラフを宣言できるProviderを作った #pixela](/2020/12/11/terraform_provider_pixela/)
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/budougumi0617/terraform-provider-pixela" data-iframely-url="//cdn.iframe.ly/zjuslmC"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/budougumi0617/terraform-provider-pixela" data-iframely-url="//cdn.iframe.ly/zjuslmC?iframe=card-small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
 
 Terraform ProviderはGoで実装するのだが、この中でPixelaのAPIを叩くために3rdパーティのAPIクライアントを使っていた。  
 PixelaのGo APIクライアントはいくつかあるのだが、いろいろ思うところがあったので自作することにした。
@@ -52,7 +52,7 @@ PixelaのGo APIクライアントはいくつかあるのだが、いろいろ�
 # budougumi0617/pixela
 今回作ったPixela API実行用のAPIクライアントは次のとおり。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/budougumi0617/pixela" data-iframely-url="//cdn.iframe.ly/lYXbTqm"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/budougumi0617/terraform-provider-pixela" data-iframely-url="//cdn.iframe.ly/zjuslmC?iframe=card-small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
 
 まだグラフを操作するメソッドしかないが、主に次の点を満たしたくて自作した。
 
