@@ -1,6 +1,6 @@
 +++
 title= "GitHub API v3でPrivateリポジトリのPull Requestのdiffを取得する"
-date= 2021-05-31T01:05:50+09:00
+date= 2021-05-31T09:30:50+09:00
 draft = false
 toc = true
 slug = ""
@@ -21,8 +21,8 @@ GitHub API v3のPull RequestのJSONに含まれる`diff_url`は役に立たな�
 # TL;DR
 - GitHub API v3でPull Requestの情報をdiff情報を取得したい
 - `Get a pull request` APIのレスポンスの中にdiffのURLが存在する
-    - このURLはprivate repoの場合認証がとれず失敗する
-- Priavte repoの場合はAcceptヘッダーを付けて`Get a pull request` APIを実行する
+    - このURLはprivateリポジトリの場合認証がとれず失敗する
+- Acceptヘッダーを付けて`Get a pull request` APIを実行すればdiffを取得できる
     - https://docs.github.com/en/rest/overview/media-types#commits-commit-comparison-and-pull-requests
 
 
@@ -44,8 +44,7 @@ resp, err := hc.Do(req)
 ```
 
 
-> Pass the appropriate [media type](https://docs.github.com/rest/overview/media-types/#commits-commit-comparison-and-pull-requests) to fetch diff and patch formats.
-
+# Pull Requestのdiffを取得したい
 
 GitHub API v3を利用してPull Requestの情報を取得すると、次のようなJSONが取得できる。
 
@@ -86,8 +85,8 @@ index 0000000..9bfc74a
 ```
 
 
-これをgo-githubで実装すると以下のようになるだろう。
-private repositoryでも利用できるようにOAuth2で認証を付けておく。
+これを[go-github](https://github.com/google/go-github)で実装すると以下のようになるだろう。
+privateリポジトリでも利用できるようにOAuth2で認証を付けておく。
 
 ```go
 import (
@@ -107,18 +106,20 @@ durl := pr.GetDiffURL()
 resp, err := hc.Get(pr.GetDiffURL())
 ```
 
-しかし、OAuth2で認証を付け`Get a pull request`は成功するのにdiffファイルの取得で404になる現象が発生した。
+しかし、OAuth2で認証を付け`Get a pull request`は成功する状態でもdiffファイルの取得で404になる現象が発生した。
 
 
-# diff_urlはprivate repositoryでは使えない
-調査したところ、`diff_url`に含まれるURLはprivate repositoryでは利用できないようだった。
-ではどうすると言うかというとメディアタイプを指定することで`Get a pull request`のAPIエンドポイントからdiffファイルが取得できた…
+# diff_urlはprivateリポジトリでは使えない
+調査したところ、`diff_url`に含まれるURLはprivateリポジトリでは利用できないようだった。  
+ではどうすると言うかというとメディアタイプを指定することで`Get a pull request`のAPIエンドポイントからdiff情報が取得できた…
 
 
-実はこのことはAPI documentを読むとちゃんと記載があった。
+実はこのことはAPIドキュメントを読むとちゃんと記載があった。
 
 - Custom media types for pull requests
     - https://docs.github.com/en/rest/reference/pulls#custom-media-types-for-pull-request
+
+> Pass the appropriate [media type](https://docs.github.com/rest/overview/media-types/#commits-commit-comparison-and-pull-requests) to fetch diff and patch formats.
 
 改めてgo-githubで実装すると、diffを取得するコードは次のようになる。
 
@@ -139,10 +140,11 @@ resp, err := hc.Do(req)
 
 
 # 終わりに
-`diff_url`ってパラメータは何のためにあるんだという気持ちになった。OSSのリポジトリ（public repo）だと使えるけれど…  
+`diff_url`ってパラメータは何のためにあるんだという気持ちになった。OSSのリポジトリ（publicリポジトリ）だと使えるけれど…  
 そして今回もドキュメントはちゃんと読もうね&動作確認ちゃんとしようね案件だった。  
-JSONの構造だけみて油断してはいけない。また、public repoだけでテストしていたので認証周りのトラップに気づけなかった。使いたい環境でしっかりと動作確認すべきだった。
+JSONの構造だけみて油断してはいけない。また、publicリポジトリでテストしていたので認証周りのトラップに気づけなかった。使いたい環境でしっかりと動作確認すべきだった。
 
 # 参考
 - [Get a pull request | Pulls GitHub Docs](https://docs.github.com/en/rest/reference/pulls#get-a-pull-request)
 - [Using curl, how do I download a .diff file from a private repository on github](https://stackoverflow.com/questions/35471316/using-curl-how-do-i-download-a-diff-file-from-a-private-repository-on-github)
+- https://github.com/google/go-github
