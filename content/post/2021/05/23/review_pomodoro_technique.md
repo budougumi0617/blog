@@ -5,8 +5,8 @@ draft = false
 toc = true
 slug = ""
 author = "budougumi0617"
-categories = ["book"]
-tags = ["pomodoro","productivity"]
+categories = ["review"]
+tags = ["book","pomodoro","productivity"]
 keywords = ["ポモドーロ","pomodoro","生産性"]
 twitterImage = "2021/05/23_pomodoro.jpeg"
 +++
