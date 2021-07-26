@@ -1,5 +1,5 @@
 +++
-title= "Terraformでimportを使う理由とfor_eachをつかってリソース定義に実リソースをimportする方法"
+title= "Terraformでimportを使う理由とfor_eachをつかったリソース定義に実リソースをimportする方法"
 date= 2021-07-26T09:23:35+09:00
 draft = false
 toc = true

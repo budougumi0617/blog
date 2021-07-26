@@ -1,7 +1,7 @@
 +++
 title= "[書評] HARD THINGSを読んで他者との協調・組織運営について考えた"
-date= 2021-07-26T10:13:17+09:00
-draft = false
+date= 2021-07-27T10:13:17+09:00
+draft = true
 toc = true
 slug = ""
 author = "budougumi0617"
