@@ -1,6 +1,6 @@
 +++
-title= "Terraformでfor_eachをつかったリソース定義に実リソースをimportする"
-date= 2021-07-26T00:23:35+09:00
+title= "Terraformでimportを使う理由とfor_eachをつかってリソース定義に実リソースをimportする方法"
+date= 2021-07-26T09:23:35+09:00
 draft = false
 toc = true
 slug = ""
@@ -57,7 +57,7 @@ Terraformで新しいリソースを作るときに最速な方法はなんだ�
 - https://www.terraform.io/docs/language/meta-arguments/for_each.html
 - https://www.terraform.io/docs/language/functions/concat.html
 
-`for_each`と`concat`を組み合わせると可変超引数を使っているかの様に動的な数のリソースを宣言できる。
+`for_each`と`concat`を組み合わせると可変長引数を使っているかの様に動的な数のリソースを宣言できる。
 
 下の例は変数の値によって作成される数が変わるセキュリティーグループルールのリソース定義だ。
 
@@ -65,6 +65,11 @@ Terraformで新しいリソースを作るときに最速な方法はなんだ�
 - `additional_ids`変数に要素があれば、その要素を許可するセキュリティーグループIDとしてルールが生成される
 
 ```hcl
+variable "additional_ids" {
+  description = "環境によって追加でsshを許可したいセキュリティーグループのIDリスト"
+  type        = list(string)
+}
+
 # foo module内に定義されたリソースとする。
 resource "aws_security_group_rule" "dynamic_rules" {
   for_each = toset(concat([aws_security_group.default_group.id], var.additional_ids))
