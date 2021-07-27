@@ -8,7 +8,7 @@ author = "budougumi0617"
 categories = ["review"]
 tags = ["book"]
 keywords = ["HARD THINGS","ベン・ホロウィッツ","書評"]
-twitterImage = "/2021/07/27_hard_things.jpeg"
+twitterImage = "2021/07/27_hard_things.jpeg"
 +++
 
 HARD THINGSを読んだのでその感想をまとめておく。  
