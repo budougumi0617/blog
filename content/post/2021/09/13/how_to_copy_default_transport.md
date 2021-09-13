@@ -1,6 +1,6 @@
 +++
-title= "[Go] http.DefaultTransportから少しだけ設定を変えたhttp.Transportをつくる"
-date= 2021-09-13T00:07:13+09:00
+title= "[Go] 前方互換性を保ちながらhttp.DefaultTransportからチューニングしたhttp.Transportをつくる"
+date= 2021-09-13T10:00:13+09:00
 draft = false
 toc = true
 slug = ""
@@ -14,6 +14,7 @@ twitterImage = "logos/Go-Logo_Aqua.png"
 
 [@dice_zu](https://twitter.com/dice_zu)さんから`http.DefaultTransport`の正しい（？）コピーのやり方を教えてもらったのでメモしておく。  
 結論から言うと`http.DefaultTransport`変数にたいして`net/http#Transport.Clone`メソッドを使うと良い。
+これなら新しいGoのバージョンで`http.Transport`に新しいフィールドが追加されても問題ない。
 
 https://pkg.go.dev/net/http#Transport.Clone
 
@@ -32,7 +33,7 @@ https://pkg.go.dev/net/http#Transport.Clone
 
 サンプルコードは次の通り。
 
-https://play.golang.org/p/8MFrh4TMtqE
+https://play.golang.org/p/niRAgxrIv8V
 ```go
 package main
 
@@ -57,6 +58,7 @@ func defaultTransport() *http.Transport {
   if t, ok := dt.(*http.Transport); ok {
     return t.Clone()
   }
+  // 何らか悪されてていた時。
   return &http.Transport{
     Proxy: http.ProxyFromEnvironment,
     DialContext: (&net.Dialer{
@@ -90,6 +92,7 @@ Webアプリケーションのサーバを書いているときでも外部サ�
 
 ```go
 cli := &http.Client{
+    // Transport: 未初期化の場合はhttp.DefaultTransportが呼ばれる。
     Timeout:   3 * time.Second,
 }
 ```
@@ -111,6 +114,8 @@ transport := &http.Transport{
 しかし上記のような宣言では`MaxIdleConnsPerHost`フィールド以外のフィールドがゼロ値になってしまうため、よくない宣言だ。
 ではどのように`*http.Transport`オブジェクトを初期化すればよいのだろうか？一番イージーなのは`http.DefaultTransport`変数の宣言をコピペだろう。
 Go1.17時点の`http.DefaultTransport`変数の宣言は次のような設定値で初期化されている。
+
+https://github.com/golang/go/blob/go1.17.1/src/net/http/transport.go#L38-L54
 
 ```go
 transport  := &http.Transport{
