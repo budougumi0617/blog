@@ -44,13 +44,13 @@ Named typeと呼称して記事を書いていたが、Go1.11から該当言語�
 
 > The new type is called a defined type. It is different from any other type, including the type it is created from.
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/golang/go/issues/23474" data-iframely-url="//cdn.iframe.ly/cYJBe7x"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/golang/go/issues/23474" data-iframely-url="//cdn.iframe.ly/cYJBe7x?card=small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
 
 # Defined type
 Defined typeはGo1.0からある機能だ。（正確な導入時期は知らないが、基本構文でできるので最初からありそうだ）。  
 Go1.10まではNamed typeと呼ばれていたが、Go1.11から言語仕様上はDefined typeと呼ばれるようになった。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/golang/go/issues/23474" data-iframely-url="//cdn.iframe.ly/cYJBe7x"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/golang/go/issues/23474" data-iframely-url="//cdn.iframe.ly/cYJBe7x?card=small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
 
 ある型の定義をそのまま利用して、まったく違う型として認識される新しい型を定義できる。
 
