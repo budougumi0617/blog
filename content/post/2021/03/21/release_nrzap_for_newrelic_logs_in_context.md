@@ -12,7 +12,7 @@ twitterImage = "logos/newrelic.png"
 +++
 
 `uber-go/zap`を使いつつNew Relic Logs in contextを利用するためのライブラリを作り始めた。
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/budougumi0617/nrzap" data-iframely-url="//cdn.iframe.ly/2Ijbpvo"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/budougumi0617/nrzap" data-iframely-url="//cdn.iframe.ly/2Ijbpvo?card=small""></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
 
 <!--more-->
 
@@ -25,11 +25,11 @@ New Relic Oneを使っていると分散トレーシングを取得すること�
 
 GoでNew Relic Oneを利用する場合は `newrelic/go-agent/v3` を使ってもろもろを仕込む。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/newrelic/go-agent" data-iframely-url="//cdn.iframe.ly/MG601Cq"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/newrelic/go-agent" data-iframely-url="//cdn.iframe.ly/MG601Cq?card=small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
 
 `newrelic/go-agent/v3` に含まれているlogs in context用の実装は `logrus` logger向けの実装しかなく、私が普段使っている `zap` logger向けの実装が存在しなかった。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/uber-go/zap" data-iframely-url="//cdn.iframe.ly/n67ZiPe"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/uber-go/zap" data-iframely-url="//cdn.iframe.ly/n67ZiPe?card=small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
 
 そこで、せっかくなので自作してみようと考えた。
 
@@ -42,7 +42,7 @@ Webアプリケーションを実装している場合、これらの情報は`c
 `zap`logger自体は`context.Context`を扱うようなインターフェイスではないため、まずは`context.Context`から`[]zap.FIeld`として情報を取り出すヘルパー関数だけ作ることにした。
 
 # nrzap
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/budougumi0617/nrzap" data-iframely-url="//cdn.iframe.ly/2Ijbpvo"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/budougumi0617/nrzap" data-iframely-url="//cdn.iframe.ly/2Ijbpvo?card=small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
 
 nrzapは`zap`でNew Relic Logs in contextをよしなにするための実装ライブラリ（の予定）だ。
 
