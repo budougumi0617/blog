@@ -8,7 +8,7 @@ author = "budougumi0617"
 categories = ["review"]
 tags = ["book"]
 keywords = ["失敗の科学","ポストモーテム","ポストモータム"]
-twitterImage = "2021/09/30_black_box_thinking.jpeg"
+twitterImage = "2021/09/30_review_black_box_thinking.jpeg"
 +++
 
 失敗の科学を読んだ。  
