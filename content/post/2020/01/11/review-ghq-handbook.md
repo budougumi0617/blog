@@ -30,7 +30,7 @@ twitterImage = "2020/01/11_ghq-handbook.png"
 `ghq`コマンドというのは、GitHubなどのVCSサイトからのリポジトリの取得と、ローカルPC内のリポジトリ管理を劇的にラクにしてくれるツールだ。  
 私は、Go以外のリポジトリも全て`ghq`コマンドで管理している。いちいちディレクトリ構造を頭に浮かべながら`cd`コマンドで移動することはなくなった。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/motemen/ghq" data-iframely-url="//cdn.iframe.ly/kzGagrT"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/x-motemen/ghq" data-iframely-url="//cdn.iframe.ly/MssyxU4?card=small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
 
 `ghq`コマンドのv1.0.0バージョンリリースに合わせて、メンテナの[@songmu](https://twitter.com/songmu)さんが使い方をまとめてくださったのが本書だ。
 
