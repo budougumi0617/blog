@@ -1,6 +1,6 @@
 +++
 title= "AWS Athenaでドットが含まれたJSONキーをパースする"
-date= 2021-11-22T00:57:39+09:00
+date= 2021-11-23T00:57:39+09:00
 draft = false
 toc = true
 slug = ""
@@ -8,7 +8,7 @@ author = "budougumi0617"
 categories = ["aws"]
 tags = ["aws","athena","sql"]
 keywords = ["Athena","ドット","JSON","AWS"]
-twitterImage = "twittercard.png"
+twitterImage = "logos/aws.png"
 +++
 
 ググっても答えがほとんど見つからなかったのでメモしておく。
@@ -34,7 +34,7 @@ LIMIT 10;
 
 # AWS Athenaでは`json_extract`を使ってJSON文字列を構造化してパースできる
 アプリケーションログのJSONをS3に大量に保存している。
-普段はNew Relicでログを見ているのだが、昔のログデータについてはAthenaを経由してS3上でのログを確認したかった。
+普段はNew Relicでログを見ているのだが、New Relic上には1か月分のログしかないため昔のログデータについてはAthenaを経由してS3上でのログを確認したかった。
 
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://dev.classmethod.jp/articles/athena-json/" data-iframely-url="//cdn.iframe.ly/qbfaw5o"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
 
@@ -49,7 +49,7 @@ LIMIT 10;
 }
 ```
 
-`log`部分の文字列は次のようなJSON文字列になる
+`log`部分の文字列は次のようなJSON文字列になる。
 ```json
 
 {
@@ -72,8 +72,11 @@ LIMIT 10;
 このJSONの中身を使ってAthenaでクエリを書きたかった。
 
 # ネストしたJSONのキーは`json_extract(body, '$.http.request.method')`のようにアクセスする
-まずAthenaでS3上のログを検索するにはテーブル定義が必要だ。今回のアプリケーションログは次のようなテーブルを使って検索する。
+まずAthenaでS3上のログを検索するにはテーブル定義が必要だ。
 
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://docs.aws.amazon.com/athena/latest/ug/creating-tables.html" data-iframely-url="//cdn.iframe.ly/Vij1ANI"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+
+今回のアプリケーションログは次のようなテーブルを使って検索する。
 
 ## テーブル定義
 ```sql
@@ -91,7 +94,9 @@ LOCATION 's3://our-application-logs/ecs/my_app/';
 
 `log`キーの中身は動的に変わるしJSON文字列として保存されている。
 もっと`log`キー部分を構造化しようとしてもよいのだが、今回は検索クエリのほうでその中身をパースして利用する。
-上記のようなテーブルを定義すれば`log`テーブルへの操作はAthena任せにできる。
+上記のようなテーブル定義では`log`フィールドはただの文字列だ。しかし、AWS Athenaでは文字列内のJSONの構造を利用してクエリを書くができる。
+
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://docs.aws.amazon.com/athena/latest/ug/extracting-data-from-JSON.html" data-iframely-url="//cdn.iframe.ly/N0Xy4PR"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
 
 `log`フィールドは有効なJSON文字列なのでネストしたその中身も`json_extract`または`json_extract_scalar`でアクセスすることができる。
 
@@ -127,9 +132,16 @@ LIMIT 10;
 `span.id`などはSentryでも記録しているIDだったのでどうしても検索キーとして使いたい背景があった。
 だいぶ調べるのに時間がかかったが、目的のログ解析はできそうなのでよかった。
 
+## 余談
+ちなみに最近知ったのだがAWSリソースのドキュメントは全部無料のKindleになっている。Auroraとかハイライトつけて読めば理解できるかな？（ただしすごいボリューム）
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=github.io-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B08BF4RZV4&linkId=4b441411818d4610260e9481e04a97ce"></iframe>
 
 # 参考
-- JSON データ読み取りのベストプラクティス
-    - https://docs.aws.amazon.com/ja_jp/athena/latest/ug/parsing-JSON.html
+- Extracting Data from JSON
+  - https://docs.aws.amazon.com/athena/latest/ug/extracting-data-from-JSON.html
+- Best Practices for Reading JSON Data
+    - https://docs.aws.amazon.com/athena/latest/ug/parsing-JSON.html
 - Aws Athena - is it possible to query a JSON property that has dots in name
     - https://stackoverflow.com/questions/58137161/aws-athena-is-it-possible-to-query-a-json-property-that-has-dots-in-name
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=github.io-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=491031301X&linkId=6f1444c5de095d2d2832a6b258a3022d"></iframe>
