@@ -1,6 +1,6 @@
 +++
 title= "[書評] A Philosophy of Software Design を読んだ。複雑性を理解し、戦う術を身につけた"
-date= 2021-12-15T23:15:13+09:00
+date= 2021-12-17T11:00:13+09:00
 draft = false
 toc = true
 slug = ""
@@ -22,7 +22,29 @@ twitterImage = "2021/12/17_aposd.jpeg"
 <!--more-->
 
 # 所感
+本書はソフトウェアエンジニアが設計やコーディングを行なうときに何を考えるべきか教えてくれる本だ。
+発売から数年経ってから読んだ私が言える立場ではないが、今までの経験の中でモヤモヤしていたりはっきりと理由が言えなかった部分を一気に言語化してくれる本だった。
+
+「アジャイル」、「オブジェクト指向」、「DDD」などソフトウェア設計には「良い」と呼ばれるプラクティスやパターンが多く存在する。  
+また、「戦術的なエッセンスだけ取り入れてもよくない、戦略的なところから取りくまないといけない」なんてことを耳にすることもある。
+
+では戦略的なプラクティスに取り組めば必ず「良い」のか？必ずしも良いわけではない。  
+エンタープライズFizzBuzzというリポジトリがある。皆さんご存知のFizzBuzzをプロダクトコードで使うようなパターンやアーキテクチャを適用したコードだ。    
+
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition" data-iframely-url="//cdn.iframe.ly/ZobflD8?card=small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+
+これは「悪い」。「良い」はずの戦略的アプローチをいくつか適応しているはずなのに悪い。なぜか？まず言えるのは「もうちょっと簡単に書けるよね？」ということだろう。
+「覚えたデザインパターンを闇雲に適用するとよくないよ」や、「悪いほうが良い」も同様の話題だろう。
+
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://note.com/ruiu/n/n9948f0cc3ed3" data-iframely-url="//cdn.iframe.ly/aISOnzj"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+
+今まで「戦術的に考えるのではなく、まず戦略的なところから考える」としていたはずなのに、このような違和感に感じることがよくあった。
+本書を読んでわかったのはそこに「哲学」がなかったからだった。「戦略」と「哲学」を照らし合わせ選択できていなかった。あるいはモヤモヤの正体がそのギャップにあることを言語化できず、説明することができなかった。  
+本書ではソフトウェアシステムを設計し作る上で一番重要な要素を「複雑さ」と定義し、一貫して複雑さと戦う術、考え方を説いている。  
+今まで「なんとなくよいと書いてあったからやっておこう」「”臭い”がするから止めたほうがよい」のような直感から落とし込めていない選択をすることが何回もあった。
+本書を読むことで「この選択で複雑さを戦うことができるのか？」とより深く思考し伝えることができるようになった気がする。  
+今までの経験から選択を導けるようになり、より技術に対して深く洞察できるようになる素晴らしい本だった。もちろん紹介されているテクニックやレッドフラグ（危険の前兆）も素晴らしかった。
+とくにDeep Moduleの思想とコメントの書きかたは常に意識し身につけていきたい。
 
 # どんな本なのか
 https://www.amazon.co.jp/dp/B09B8LFKQL
@@ -33,7 +55,7 @@ Amazonの紹介文を引用する。
 
 要約すると
 
-本書は、ソフトウェア設計のテーマとして複雑なソフトウェアシステムをいかに分解するかということを取り上げており、
+本書は、ソフトウェア設計のテーマとして複雑なソフトウェアシステムをいかに分解するかということを取り上げている。
 大規模なソフトウェアシステムの複雑さを最小限に抑え、より早く、より安くソフトウェアを書くための哲学、テクニックがまとめられている。
 
 - 「複雑性の管理方法」の紹介
@@ -41,12 +63,12 @@ Amazonの紹介文を引用する。
 - ソフトウェア設計時に適用すべき設計原則のコレクション
 - 設計上の問題を特定するためのレッドフラッグ（赤信号）の紹介
 
-著者がGoogleで直接話した動画もある。
+著者がGoogleで話した動画もある。
 <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://www.youtube.com/embed/bmSAYlu0NcY?rel=0" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"></iframe></div>
 
-なお、本著は2021年7月に2nd editionが発売されている。  
+なお、本書は2021年7月に1章追加、1章修正された発売されている。  
 初版しか読んでいない人は新たな章が追加されているのでぜひ読んだほうが良い。  
-（未購入者も）差分をここから読むことができる。
+（未購入者も）初版と二版の差分を次のリンクから読むことができる。
 
 https://web.stanford.edu/~ouster/cgi-bin/book.php
 
@@ -69,8 +91,8 @@ https://web.stanford.edu/~ouster/cgi-bin/book.php
 また、コメントに対する意識の持ち方は非常に参考になった。  
 経験上コメントに力を入れるエンジニアは総じて優秀だったので自分も本著の書き方を意識してもっとコメントを書いていこうと思った。
 
-- 複雑さとは、ソフトウェアシステムの構造に関するもので、システムを理解し修正することを困難にするものである。
-    - **複雑かどうか？を決めるのは書き手ではなく読み手**
+- **複雑さとは、ソフトウェアシステムの構造に関するもので、システムを理解し修正することを困難にするものである。**
+    - 複雑かどうか？を決めるのは書き手ではなく読み手
 - 複雑さは大別して3種類ある
     - Change amplification
     - Cognitive load
