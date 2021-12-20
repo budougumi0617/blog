@@ -1,6 +1,6 @@
 +++
 title= "gomockで順序を無視してスライスの引数を検証する"
-date= 2021-12-20T00:30:49+09:00
+date= 2021-12-20T10:30:49+09:00
 draft = false
 toc = true
 slug = ""
@@ -25,12 +25,12 @@ twitterImage = "logos/Go-Logo_Aqua.png"
 - 余談:順不同でスライスを検証したくなるとき
 - 普段使っているライブラリのリリースと更新内容は目を通しておきましょう
 
-https://go.dev/play/p/k0b2-j_iAWF
+https://go.dev/play/p/hxwbM2S6vrR
 
 ```go
 func TestInAnyOrder(t *testing.T) {
     if match := gomock.InAnyOrder([]int{1, 2, 3}).Matches([]int{1, 3, 2}); !match {
-        t.Error("want true, but got false")
+        t.Error("want match, but not match")
     }
 }
 ```
