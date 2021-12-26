@@ -31,7 +31,7 @@ Goにはいくつかプログラムを終了させる手段が存在する。
     - `defer`宣言済みの関数は実行されない
 
 なお、すでにまとめている方のブログ記事も存在する。
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://sharpknock.com/posts/programming/golang-exit.html" data-iframely-url="//cdn.iframe.ly/NyGpegI"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://sharpknock.com/posts/programming/golang-exit.html" data-iframely-url="//cdn.iframe.ly/zH8IwZc?card=small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
 
 また、この記事の調査内容は2021年6月時点で最新のGo1.16時点の各仕様である。
 
