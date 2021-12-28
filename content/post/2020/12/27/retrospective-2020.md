@@ -33,7 +33,7 @@ twitterImage = "twittercard.png"
 
 [^kpi_issue]: 今twitterのフォロワー数がうまく取れていないので直さないと…
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/budougumi0617/blog-kpi-collector" data-iframely-url="//cdn.iframe.ly/13K41P4"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/budougumi0617/blog-kpi-collector" data-iframely-url="//cdn.iframe.ly/13K41P4?card=small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
 
 今年は以下のような数値だった（6月のtwitterフォロワー数は取得に失敗している）。
 
