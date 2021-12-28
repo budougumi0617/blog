@@ -237,7 +237,7 @@ ECS周辺くらいしか触っていなかったが、今年はRoute53やELB、K
 - [ghq handbook](https://leanpub.com/ghq-handbook)
   - [[書評] ghq handbookを読んでghqコマンドに再入門する](/2020/01/11/review-ghq-handbook/)
 
-  簡単な感想はブクログで書くことにした。
+簡単な感想はブクログで書くことにした。
 
 - [やり抜く人の９つの習慣　コロンビア大学の成功の科学](https://amzn.to/3mB85cX)
     - https://booklog.jp/users/budougumi/archives/1/B0732RRCWX

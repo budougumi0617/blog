@@ -1,6 +1,6 @@
 +++
 title= "2021年振り返り"
-date= 2021-12-28T09:23:52+09:00
+date= 2021-12-29T00:03:52+09:00
 draft = false
 toc = true
 slug = ""
@@ -20,7 +20,7 @@ twitterImage = "twittercard.png"
 # 主な出来事
 
 ## ブログなどのKPI
-昨年から毎週Twitterのフォロワー数とブログのスコアを集計している[^kpi_issue]。
+毎週Twitterのフォロワー数とブログのスコアを集計している[^kpi_issue]。
 
 [^kpi_issue]: twitterのフォロワー数はSocialDogで取るようになった。
 
@@ -74,31 +74,30 @@ Twitterのフォロワーが1,200人を超えた。
 来年こそは本戦に出場したい。
 
 ## 育児はたいへん
-去年産まれた双子は12月で1歳半になる。  
-今年は仕事以外に一人で外出したのは映画館に3回行ったのと床屋くらいだった。  
-まだ保育園に入っていないので、毎月の残業も10時間未満みたいな働き方をしているがなかなか辛かった。  
-最近まで夜もずっと夜泣きしていたので眠れない日々が続いた。
+去年産まれた双子は12月で1歳半になる。まだ保育園に行っていないのでずっと自宅で育児をしている。
+子供優先なので今年は仕事以外に一人で外出したのは映画館に3回行ったのと床屋くらいだった。  
+私は毎月の残業が10時間未満なのだが就業時間より家事や育児の拘束時間が長く、最近まで夜もずっと夜泣きしていたので眠れない日々が続いた。
 
 ![育児は大変](/2021/12/29_sleep.jpg)
 
 
 ## 引っ越しした（家を買った）
-以下の状況で1LDKに住み続けるのは辛かったし、そろそろローンを組まないと老後が大変そうなので家を買った。
-去年育児休暇を4か月していて額面年収が下がっていたのでローン審査はそれなりに大変だった。
-
 - 去年双子が産まれた
 - リモートワークが続いている
 - 2021年で35歳になる
 
-定期的に話題になるソフトウェアエンジニアの自宅購入記事は注文住宅だけれども私の場合は分譲住宅を買った。
-同じ条件（駅チカ駐車場付き2階建て5LDK）を注文住宅やマンションで買おうと思ったら億こえそうだったので分譲住宅以外は諦めた。
+上記の状況で1LDKに住み続ける（WFHする）のは辛かったし、そろそろローンを組まないと老後が大変そうなので家を買った。
+去年育児休暇を4か月していて額面年収が下がっていたのでローン審査はそれなりに大変だった。
+
+定期的に話題になるソフトウェアエンジニアの自宅購入記事は注文住宅がほとんどだけれども、私の場合は分譲住宅を買った。
+同じ条件（駅徒歩圏内駐車場付き5LDK）をマンションで探すと億超えるし育児に追われながら満足行く家の設計などできるわけなく、分譲住宅以外は諦めた。
 分譲住宅は分譲住宅で次のようなメリットがあった。
 
 - 複数住宅がまとめて設計されるので空間設計がされる
     - 隣家と密着してるとか日当たりが悪いとかない
     - 全部の分譲住宅がそうではないが…
 - 人生設計やフェーズが似ている人たちが集まる
-    - 小学生低学年未満の子供が多く、子供の交友関係的によさそう
+    - 小学生低学年未満の子供のいらっしゃる家庭が多くてよかった。
 
 引っ越す前はAmazonのダンボールでずっと働いていた。
 ![引越し前](/2021/12/before_desk.jpeg)
@@ -112,18 +111,23 @@ Twitterのフォロワーが1,200人を超えた。
 <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=github.io-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B071P6VTZL&linkId=576676cbb79765fcf3f95ed707889b2e"></iframe>
 <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=github.io-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B08XNFN1WM&linkId=6ff942e96139d8003170921b53a5d3e2"></iframe>
 
+## 執筆を依頼された
+ありがたいことに[C&R研究所](https://www.c-r.com/)様から執筆のお話をいただいたので執筆している。  
+本当は年内に初稿を提出したかったのだが公私に渡っていろいろあったのでほとんど書けなかった。来年の1Qはなんとしても初稿を書き終わる。
+
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">実は来年発売に向けて書籍執筆中です！！（発売日は調整中） <a href="https://t.co/r9nsPU5Ge8">https://t.co/r9nsPU5Ge8</a></p>&mdash; Yoichiro Shimizu (@budougumi0617) <a href="https://twitter.com/budougumi0617/status/1470011071633440768?ref_src=twsrc%5Etfw">December 12, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 ## その他のプライベート
 - リモートワーク
     - 相変わらずリモートワークだった。最近は週イチで出社していてだいぶ気分転換になる。
 - 酒
-    - 今年はビール2杯分くらいしか飲まなかった。ノンアルコールビールなども止めた。
+    - 今年はビール2杯分くらいしか飲まなかった。ノンアルコールビールも惰性で飲んでただけだったのでほぼやめた。
 - 英語
     - [[書評] A Philosophy of Software Design を読んだ。複雑性を理解し、戦う術を身につけた](/2021/12/17/review_aposd/)
     - 英語の技術書を一冊読み切ったのはだいぶ自信につながった
 - 読書
-    - Audibleをわざわざ買わなくてもKindleで読み上げればよい。ながら読みが捗る
+    - Audibleをわざわざ買わなくてもKindleで読み上げればよい。ながら読みがはかどった。
     - [Amazon AlexaアプリでKindleを読み上げて積ん読を消化する（ながら読書をする）](/2021/03/08/read_kindle_by_alexa/)
-
 
 # 今年触った技術
 ## Go
@@ -137,13 +141,15 @@ Go1.18についていけるかが最近の不安。
 SNS/SQS/Lambdaを使った非同期設計をやった。それなりに考えることがあり難しい。  
 御多分に漏れずリトライ処理で非冪等なAPIを複数回叩いてエラーを発生させたりした。
 
-## PHP
-あまり触れなかった。またチーム構成や走るプロジェクトの性質が変わるので来年はもうすこし触る予定。
+## PHP&Vue
+あまり触れなかったし、レビューも他人任せみたいな状態だったので変えていかないといけない。
+チーム構成や走るプロジェクトの性質が変わるので来年はがっつり触る予定。
 
 
 # 2020年のTryの振り返り
 - [2020年振り返り](/2020/12/27/retrospective-2020/)
 
+今年のKPTを考える前に去年のTryにちゃんと取り組めたか確認しておく。
 
 |評価|内容|詳細|
 |---|---|---|
@@ -155,7 +161,7 @@ SNS/SQS/Lambdaを使った非同期設計をやった。それなりに考える
 |○|英語と向き合う|APoSD読了
 |○|毎月の目標をこのTryから落とし込んで2021年で達成したことを忘れない|月間目標立てるときちゃんとすり合わせした|
 
-思ったよりプライベートの時間が復活しなかったのであまりはかどらなかった。
+子供が1歳すぎたらプライベートの時間が復活すると思っていたがそんなことはなかった。双子育児なめていた。
 
 # 2021年のまとめ（KPT）
 
@@ -164,61 +170,67 @@ SNS/SQS/Lambdaを使った非同期設計をやった。それなりに考える
 - 業務でデカいリリースに貢献できた
     - https://cp.thebase.in/basecard
 - ISUCONでそれなりの成果を出すことができた
-- 仕事しながら家の購入などを進めることができた。
+- 仕事しながら家の購入などを進めることができた
+- TiDBにいくつかPRを出すことができた
+    - 下期はほとんどOSS活動できていなかったので少し気晴らしになった
 
 ## Problem
-- OSSにPRが全然だせなかった
-- ブログのPVが下がり続けている
-- 積ん読が多い
-- 春以降今までの貯金でやり過ごしている感が出てきた
-    - 技術的にあまり成長していない感がある
-- データベースの話になると無力になる
+- 下期はプロセス改善などの中長期タスクに取り組めなかった
+- 実装が遅いせいでリスケが必要になることが何回かあった
+- データベースの学習など長期的な学習計画を履行できなかった
+- 読書があまりはかどらなかった
+    - 下期は技術書をほとんど読んでいなかった
 
 ## Try
-- 35歳エンジニア引退説への闘争（育児とキャリアの両立）
-    - 来年35歳なので（子供ができて、こうして意図せず引退していくのかと痛感している）
-    - 可処分時間での学習を諦めない
-- データベースの学習
-    - 後回しにしていたDB本を周回する
-- ひとつ突き詰めて実装してみる
-    - 動いて終わりではない何かを作ってみる
-    - なんらんかのパーサーかな？
+- 公私両立
+    - 保育園が始まるとまた生活習慣が変わってくるので。
+    - いろいろ事情があり送迎は誰がやるとかまだ決まっていないのでふわっと。
+- 出版!!!!!!
+    - 締切を守る
+- フロントエンドの技術習得
+    - だいぶ他人任せが多かったが、来年は手をちゃんとうごかす
+- チームの文化をつくる
+    - 来年はテックリードになるのでプロセス改善と文化醸成も頑張る
 - 毎月5冊本を読む
-    - booklogで管理
-- 個人AWS環境のECSでNew Relicを試す
-    - ふわっと触って理解した気分になっている技術が多いので、来年はo11yを突き詰める
+    - 継続目標
+- 英語の技術書を2か月に1冊読む
+    - オライリーのサブスクに申し込もうかなと思う
 - ISUCON予選突破
-    - 年単位で計画的に過去問などを解いていく
-- 英語と向き合う
-    - 今年こそA Philosophy of Software Designを読み切る
-- 毎月の目標をこのTryから落とし込んで2021年で達成したことを忘れない
-    - 途中で目標が変わることは問題ない
+    - 来年こそは
 
-# 2020年の記録
+手応えを感じた面もあるが総評的にはやらなければいけないことができていなかった。
+ちょっとぼやっとしている目標が多いが、年末年始でもう少し具体的にしておきたい。
+
+
+# 2021年の記録
 
 以下、勉強会や読書の記録。
 
 ## 参加した技術イベント
-- [Observability Japan Online #1](https://observability.connpass.com/event/168837/)
-    - [Observability Japan Online #1 に参加してo11y成熟モデルを学んだ #o11yjp](/2020/03/21/observability_japan_online/)
-- [(Online only) Go 1.15 Release Party in Japan](https://gocon.connpass.com/event/186317/)
-- [Go Conference '20 in Autumn SENDAI](https://sendai.gocon.jp/)
+- [第36回横浜Go読書会](https://yokohama-go-reading.connpass.com/event/206437/)
+    - [[Go] stringの比較でヌルポのpanicが発生する（こともある） #横浜Go読書会](/2021/03/31/go-string-null-pointer-panic/)
+- [第37回横浜Go読書会](https://yokohama-go-reading.connpass.com/event/208878/)
+- [第38回横浜Go読書会](https://yokohama-go-reading.connpass.com/event/212311/)
 
-その他オンラインイベントの録画を後追いで見たりはしている。
+Goのリリパも参加できなかったのが残念…
 
 ## 登壇したイベント
-- [PHPerKaigi2020](https://phperkaigi.jp/2020/)
-    - [[発表資料] PHPerKaigi2020 PHPでつくるインタプリタ入門 #phperkaigi](/2020/02/10/phperkaigi2020/)
-    - [PHPerKaigi2020に4名のメンバーが登壇・プラチナスポンサーとして協賛しました](https://devblog.thebase.in/entry/2020/02/17/155223)
-- [【BASE社合同勉強会】コネヒトマルシェオンライン「事業を支えるWeb開発](https://connehito.connpass.com/event/176890/)
-    - [[発表資料]ゆるふわ分散トレースはじめました #コネヒトマルシェ](/2020/06/04/connehito_marche/)
+- [New Relic User Group Vol.0](https://newrelic.com/jp/events/2021-09-15/nrug1)
+    - [New Relic User Group Vol.0で登壇しました #NRUG](/https://devblog.thebase.in/entry/nrug_vol0)
 
-登壇回数は2回、登壇時間の合計は40分だった。
+来年はもっと登壇したい。
 
-## 2020年に読んだ書籍
+## 2021年に読んだ書籍
 - https://booklog.jp/users/budougumi/stats
 
+圧倒的にA Philosophy of Software Designが良かった。俗に言う「臭い」を定性的に説明できるようになったと思う。  
+失敗の科学、1兆ドルコーチ、WHO YOU AREは「困難に立ち向かう気持ち」「困難と戦う術」が書いてありとてもモチベーションがあがった。  
+今年も「なんで今まで読まずに生きてきてしまったんだ…」と思える本ばかりでよかった。
 
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=github.io-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B09B8LFKQL&linkId=20b421e5f82a8f7c2cf1687e71de6687"></iframe>
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=github.io-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B07ZCY5BXF&linkId=acdc6a2dabbb2c3c406691a3aad357c0"></iframe>
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=github.io-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B01MU364ID&linkId=4c21e33f876f88552b5c87c9eb116f66"></iframe>
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=github.io-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B086KX8LHZ&linkId=0c3cd045443d8843cbebdb24212947aa"></iframe>
 
 - [どんな仕事も「25分+5分」で結果が出る　ポモドーロ・テクニック入門](https://amzn.to/3EuCGBy)
     - [[書評] ポモドーロ・テクニック入門を読んで正しくポモドーロをしようと反省した](/2021/05/23/review_pomodoro_technique/)
@@ -243,16 +255,24 @@ SNS/SQS/Lambdaを使った非同期設計をやった。それなりに考える
 - [A Philosophy of Software Design, 2nd Edition](https://amzn.to/3pruvlf)
     - [[書評] A Philosophy of Software Design を読んだ。複雑性を理解し、戦う術を身につけた](/2021/12/17/review_aposd/)
 
-簡単な感想はブクログで書くことにした。
+その他簡単な感想、感想なしの本。
+
 - [フィードバック入門 耳の痛いことを伝えて部下と職場を立て直す技術](https://amzn.to/3en9hyM)
-- https://booklog.jp/item/1/B06VVQ8V36
+    - https://booklog.jp/item/1/B06VVQ8V36
 - [直感力](https://amzn.to/30ZPJNX)
     - https://booklog.jp/users/budougumi/archives/1/B00DMXMWHG
 - [まんがで身につく 続ける技術](https://amzn.to/3EtBnTu)
     - https://booklog.jp/users/budougumi/archives/1/B01JADEHTW
 - [そろそろNotion](https://amzn.to/3qthoiL)
     - https://booklog.jp/users/budougumi/archives/1/B09JS3D9C6
-
+- [Webサービスチューニングコンテスト ISUCONのススメ](https://amzn.to/3quFv0P)
+- [論理的思考のコアスキル](https://amzn.to/3FFCfWD)
+- [達人に学ぶDB設計 徹底指南書](https://amzn.to/3EzbBgI)
+- [Amazon Web Services エンタープライズ基盤設計の基本](https://amzn.to/3z6yNln)
+- [ハイ・コンセプト「新しいこと」を考え出す人の時代―――富を約束する「６つの感性」の磨き方](https://amzn.to/3pwpsAg)
+- [１日ひとつだけ、強くなる。](https://amzn.to/3pzgVN5)
+- [新 コーチングが人を活かす](https://amzn.to/3EtxHkM)
+- [データマネジメントが30分でわかる本](https://amzn.to/3eu8MCW)
 
 # 関連
 - [2021年振り返り(GitHub編)](/2021/12/26/retrospective-on-github-2021/)
