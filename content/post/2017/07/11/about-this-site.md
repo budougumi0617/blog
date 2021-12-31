@@ -41,6 +41,9 @@ author = "budougumi0617"
 他に趣味で`Java8`、`Elixir`なども少し触っていました。
 
 # Talks
+## 2021
+- [Go WebアプリケーションでNew Relic APMをフル活用するためのOSS 3選](https://speakerdeck.com/budougumi0617/introduce-oss-for-newrelic) - New Relic User Group Vol.0
+  - https://devblog.thebase.in/entry/nrug_vol0
 ## 2020
 - [ゆるふわ分散トレースはじめました](https://speakerdeck.com/budougumi0617/start-casual-distributed-trace) - コネヒトマルシェオンライン「事業を支えるWeb開発」
 - [PHPでつくるインタプリタ入門 ](https://speakerdeck.com/budougumi0617/introduction-interpreter-by-php) - PHPerKaigi2020
@@ -62,7 +65,13 @@ author = "budougumi0617"
 - [React+Redux 次の一歩](https://speakerdeck.com/budougumi0617/the-next-step-from-react-and-redux) - WEBエンジニア勉強会 #10
 
 # Article
+## 2021
+- [BASE Advent Calendar 2021 | tblsとGitHub Actionsを使ってDBマイグレーションを含むPRには自動更新したER図を追加する - BASEプロダクトチームブログ](https://devblog.thebase.in/entry/auto_generated_er_graph_by_tbls_and_github_actions) - 寄稿
+- [New Relic OneでDevOpsのキーメトリクス デプロイ頻度をグラフ化する - BASEプロダクトチームブログ](https://devblog.thebase.in/entry/devops_key_metrics_on_newrelic) - 寄稿
+- [New Relic User Group Vol.0で登壇しました #NRUG - BASEプロダクトチームブログ](https://devblog.thebase.in/entry/nrug_vol0) - 寄稿
+- [ISUCON 11予選に BASE から4チームが参加しました - BASEプロダクトチームブログ](https://devblog.thebase.in/entry/isucon11) - 寄稿
 ## 2020
+- [BASE Advent Calendar 2020 | 私がGoのソースコードを読むときのTips](https://devblog.thebase.in/entry/go-code-reading) - 寄稿
 - [Gopherの休日 2020夏 | LeetCodeでアルゴリズムとデータ構造エクササイズ](https://techbookfest.org/product/5139800384339968)
   - [#golangtokyo 技術書典9の新刊に「LeetCodeでアルゴリズムとデータ構造エクササイズ」を寄稿しました #技術書典](/2020/09/18/shoten9_golangtokyo/)
 - [Gopherの休日 2020冬 | GoにおけるSOLIDの原則](https://techbookfest.org/product/6332688805920768)
@@ -87,7 +96,14 @@ author = "budougumi0617"
   - [[Go] レイヤードアーキテクチャの階層構造を守らないimportを警告するlinterを作った][layer]
 - https://github.com/budougumi0617/regexponce
   - [[Go] パフォーマンスが悪い正規表現パッケージの使い方をチェックするlinterを作った](/2020/08/20/regexponce/)
-
+- https://github.com/budougumi0617/nrseg
+  - [GoのアプリにNew Relic APMを導入する時とても便利なCLIを作った](/2021/01/17/release_nrseg/)
+- https://github.com/budougumi0617/action-newrelic-segment-lint
+  - [[Go] 新規追加した関数にNew RelicのSegmentを入れ忘れていたら警告するGitHub Actionsを作った](/2021/02/07/release_action_newrelic_segment_lint/)
+- https://github.com/budougumi0617/cmpmock
+  - [gomockでモックメソッドの引数をいい感じに設定できるcmpmockを作った](/2021/04/25/reelase_cmpmock/)
+- https://github.com/budougumi0617/nrzap
+  - [[Go] go.uber.org/zapでNew Relic logs in contextをするためのライブラリを書き始めた](/2021/03/21/release_nrzap_for_newrelic_logs_in_context/)
 ## `C#`
 - https://github.com/budougumi0617/Testable
   - Privateメソッドなどのテストを簡単にするためのライブラリ。
@@ -95,6 +111,9 @@ author = "budougumi0617"
 ## Other
 - https://github.com/budougumi0617/blog-kpi-collector
   - [GoogleスプレットシートでWebサイトのKPIを集計するためのOSSを作った #blog #gas][blog-kpi-collector]
+- https://github.com/budougumi0617/action-pr-size-checker
+  - [テストコードなどは除外してからPRのサイズを警告するActionsを作った](/2021/05/07/reelase_action-pr-size-checker/)
+
 
 [dkl]: /2019/09/28/release-dkl/
 [layer]: /2019/10/18/launch-layer-for-the-layered-achitectures/
