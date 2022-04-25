@@ -1,6 +1,6 @@
 +++
 title= "Go Conferrence 2022 Springで登壇した #gocon"
-date= 2022-04-24T22:20:55+09:00
+date= 2022-04-25T17:00:55+09:00
 draft = false
 toc = true
 slug = ""
@@ -29,8 +29,31 @@ Paper Callで募集要項（CFP）が公開され、プロポーザルを審査�
 
 - https://www.papercall.io/gocon-2022-spring
 
-## 発表資料
-当日に使った発表資料はこちら。
+# 発表資料
+当日に使った発表資料はこちら。  
+https://speakerdeck.com/budougumi0617/gocon2022spring
+
+<script async class="speakerdeck-embed" data-id="5ce760a80d224a869ecb6b8c73959a94" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
+
+## 資料内のリンク
+- P7: Google Testing Blog: Just Say No to More End-to-End Tests
+    - https://testing.googleblog.com/2015/04/just-say-no-to-more-end-to-end-tests.html
+- P7: Using Models to Help Plan Tests in Agile Projects | Agile Testing Quadrants | InformIT
+    - https://www.informit.com/articles/article.aspx?p=2253544&ranMID=24808
+- P16 Repositoryによる抽象化の理想と現実
+    - https://speakerdeck.com/sonatard/ideal-and-reality-of-abstraction-by-repository
+- P26: マイクロサービスの開発とテストファースト／テスト駆動開発 【Mercari Gears Lecture Series】
+    - https://engineering.mercari.com/blog/entry/gears-microservices/
+- P33: Go Fridayこぼれ話：非公開（unexported）な機能を使ったテスト
+    - https://engineering.mercari.com/blog/entry/2018-08-08-080000/ 
+- P33: Go言語でのテストの並列化 〜t.Parallel()メソッドを理解する〜
+    - https://engineering.mercari.com/blog/entry/how_to_use_t_parallel/
+- OSS
+    - https://github.com/golang/mock
+    - https://github.com/budougumi0617/cmpmock
+    - https://github.com/DATA-DOG/go-sqlmock
+    - https://github.com/google/go-cmp
+    - https://github.com/k1LoW/octocov
 
 # 話した内容について
 
