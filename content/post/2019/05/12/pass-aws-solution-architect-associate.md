@@ -52,7 +52,7 @@ GWに勉強して、AWS ソリューションアーキテクト試験に合格�
 
 - [AWS 認定ソリューションアーキテクト - アソシエイト SAA-C01 試験ガイド v1.5（注 PDF）][ssa_guide]
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://aws.amazon.com/jp/certification/certified-solutions-architect-associate/" data-iframely-url="//cdn.iframe.ly/rg094Fb"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://aws.amazon.com/jp/certification/certified-solutions-architect-associate/" data-iframely-url="//iframely.net/rg094Fb?card=small"></a></div></div><script async src="//iframely.net/embed.js" charset="utf-8"></script>
 
 AWSソリューションアーキテクトアソシエイト試験は、AWSのサービスを使って以下の能力を発揮できることを証明するための試験だ。
 
@@ -95,7 +95,8 @@ AWSソリューションアーキテクトアソシエイト試験は、AWSの�
 
 ## AWS Well-Architected フレームワーク
 `AWS Well-Architected フレームワーク`は、アーキテクトがアプリケーション向けに実装可能な、安全で高いパフォーマンス、障害耐性を備え、効率的なインフラストラクチャを構築するのをサポートする目的で開発されたフレームワークだ。
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://aws.amazon.com/jp/architecture/well-architected/" data-iframely-url="//cdn.iframe.ly/l4N3lkC"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://aws.amazon.com/jp/architecture/well-architected/" data-iframely-url="//iframely.net/l4N3lkC?card=small"></a></div></div><script async src="//iframely.net/embed.js" charset="utf-8"></script>
+
 [マイクロサービスアーキテクチャ](https://amazon.jp/dp/4873117607)のような最近のクラウドネイティブな開発に関する本を読んだり、[ソフトウェア品質特性](https://ja.wikipedia.org/wiki/ISO/IEC_9126)を知っているならばすんなり入ってくるだろう。
 
 
@@ -128,11 +129,12 @@ AWSが提供するサービスは多岐に渡りすぎていて、全て覚え�
 
 1冊目の「AWS認定資格試験テキスト　AWS認定 ソリューションアーキテクト-アソシエイト」はおそらく一番最近出た資格本だったので、購入した。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.amazon.co.jp/AWS%25E8%25AA%258D%25E5%25AE%259A%25E8%25B3%2587%25E6%25A0%25BC%25E8%25A9%25A6%25E9%25A8%2593%25E3%2583%2586%25E3%2582%25AD%25E3%2582%25B9%25E3%2583%2588-AWS%25E8%25AA%258D%25E5%25AE%259A-%25E3%2582%25BD%25E3%2583%25AA%25E3%2583%25A5%25E3%2583%25BC%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%25E3%2582%25A2%25E3%2583%25BC%25E3%2582%25AD%25E3%2583%2586%25E3%2582%25AF%25E3%2583%2588-%25E3%2582%25A2%25E3%2582%25BD%25E3%2582%25B7%25E3%2582%25A8%25E3%2582%25A4%25E3%2583%2588-%25E4%25BD%2590%25E3%2580%2585%25E6%259C%25A8-%25E6%258B%2593%25E9%2583%258E-ebook/dp/B07R1H87Y1" data-iframely-url="//cdn.iframe.ly/6QvztGS"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.amazon.co.jp/dp/B08MVXRFFN" data-iframely-url="//iframely.net/NoD2DtM?card=small"></a></div></div><script async src="//iframely.net/embed.js" charset="utf-8"></script>
 
 2冊目の「徹底攻略 AWS認定 ソリューションアーキテクト – アソシエイト教科書」は評判が良い通称黒本。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.amazon.co.jp/%25E5%25BE%25B9%25E5%25BA%2595%25E6%2594%25BB%25E7%2595%25A5-AWS%25E8%25AA%258D%25E5%25AE%259A-%25E3%2582%25BD%25E3%2583%25AA%25E3%2583%25A5%25E3%2583%25BC%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%25E3%2582%25A2%25E3%2583%25BC%25E3%2582%25AD%25E3%2583%2586%25E3%2582%25AF%25E3%2583%2588-%25E3%2582%25A2%25E3%2582%25BD%25E3%2582%25B7%25E3%2582%25A8%25E3%2582%25A4%25E3%2583%2588%25E6%2595%2599%25E7%25A7%2591%25E6%259B%25B8-%25E5%25BE%25B9%25E5%25BA%2595%25E6%2594%25BB%25E7%2595%25A5%25E3%2582%25B7%25E3%2583%25AA%25E3%2583%25BC%25E3%2582%25BA-ebook/dp/B07M7S9GDL" data-iframely-url="//cdn.iframe.ly/9VcljXD"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.amazon.co.jp/dp/B07M7S9GDL" data-iframely-url="//iframely.net/ecNfHWh?card=small"></a></div></div><script async src="//iframely.net/embed.js" charset="utf-8"></script>
+
 
 どちらが良いというわけではないが、２つの本は章の構成が異なっているので関心事によって使い分けることができた。
 
@@ -176,5 +178,5 @@ GW毎日勉強していたわけではないが、GWから始めて2週間ほど
 - [AWS Well-Architected フレームワーク 2018 年 6 月(注 PDF)][waf]
 - [AWS Black Belt Online Seminar](https://www.youtube.com/playlist?list=PLzWGOASvSx6FIwIC2X1nObr1KcMCBBlqY)
 
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=github.io-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B07R1H87Y1&linkId=700d418bd1885752f0308769ed494739"></iframe>
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=github.io-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B08MVXRFFN&linkId=62a89eca149c55fa6feb910a058abb67"></iframe>
 <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=github.io-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B07M7S9GDL&linkId=8166a7e16d3f94a569918026daae1e72"></iframe>
