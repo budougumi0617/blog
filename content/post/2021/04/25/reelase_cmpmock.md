@@ -68,7 +68,7 @@ https://pkg.go.dev/github.com/golang/mock@v1.5.0/gomock
 そういうときは`gomock.Any()`関数を引数に指定したりして、モックの設定を妥協したりすることがあった。
 毎回`DoAndReturn`などで構造体をパースする処理をテストコードに書くのもめんどくさい。
 
-- [[Go][gomcok]引数によって挙動を変えるモックメソッドを定義する #golangjp](/2019/03/10/define-gomock-method-by-doandreturn/) 
+- [[Go][gomock]引数によって挙動を変えるモックメソッドを定義する #golangjp](/2019/03/10/define-gomock-method-by-doandreturn/) 
 
 また、指定できていたとしても期待値と異なる値がモックメソッドに指定されたとき「どこか期待と異なるのか」が非常にわかりにくい。
 

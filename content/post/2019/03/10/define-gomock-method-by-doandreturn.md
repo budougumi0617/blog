@@ -1,5 +1,5 @@
 +++
-title= "[Go][gomcok]引数によって挙動を変えるモックメソッドを定義する #golangjp"
+title= "[Go][gomock]引数によって挙動を変えるモックメソッドを定義する #golangjp"
 date= 2019-03-10T12:53:08+09:00
 draft = false
 toc = true
