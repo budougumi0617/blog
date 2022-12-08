@@ -25,8 +25,9 @@ author = "budougumi0617"
 - `Go`
 - AWS
   - [15日間勉強してAWS ソリューションアーキテクト アソシエイト試験に合格した](/2019/05/12/pass-aws-solution-architect-associate/)
-- `PHP`（学習中）
-- `Python`（学習中）
+- `PHP`
+- `Python`
+- `Vue.js`
 
 ## Past Skills
 現業では触っていませんが、以前は以下の技術も使っていました。
@@ -65,6 +66,9 @@ author = "budougumi0617"
 - [React+Redux 次の一歩](https://speakerdeck.com/budougumi0617/the-next-step-from-react-and-redux) - WEBエンジニア勉強会 #10
 
 # Article
+## 2022
+- [詳解Go言語Webアプリケーション開発](https://www.c-r.com/book/detail/1462)
+  - [「詳解Go言語Webアプリケーション開発」という本を発売しました](/2022/07/22/release_go_web_application_book/)
 ## 2021
 - [BASE Advent Calendar 2021 | tblsとGitHub Actionsを使ってDBマイグレーションを含むPRには自動更新したER図を追加する - BASEプロダクトチームブログ](https://devblog.thebase.in/entry/auto_generated_er_graph_by_tbls_and_github_actions) - 寄稿
 - [New Relic OneでDevOpsのキーメトリクス デプロイ頻度をグラフ化する - BASEプロダクトチームブログ](https://devblog.thebase.in/entry/devops_key_metrics_on_newrelic) - 寄稿
