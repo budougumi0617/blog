@@ -28,25 +28,7 @@ Goの書籍の執筆依頼を受けていて、今年の夏に無事発売する
 出版から半年経ったのでひとつだけ弁明しておくと、ハンズオンが始まる後半の原稿はスケジュールの都合上レビューアにレビューしてもらうことができなかった。なので後半のタイポや記述のミスについて、レビューア陣は一切関係ない。  
 正誤表も後半部分への指摘が多く、レビューが如何に大事が身にしみた。
 
-## ブログなどのKPI
-毎週Twitterのフォロワー数とブログのスコアを集計している[^kpi_issue]。
-
-[^kpi_issue]: twitterのフォロワー数はSocialDogで取るようになった。
-
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/budougumi0617/blog-kpi-collector" data-iframely-url="//iframely.net/13K41P4?card=small"></a></div></div><script async src="//iframely.net/embed.js"></script>
-
-今年は以下のような数値だった。
-
-|集計日|Twitter フォロワー数|ブログの週間PV|ブログの累計はてブ数|
-|---|---|---|---|
-|2021/12/26|1204|2577|2910
-|2022/03/27|1230|2197|2929
-|2022/06/26|1287|2722|2936
-|2022/09/25|1494|2567|3087
-|2022/12/25|1540|2440|3094
-
-Twitterのフォロワーが1,500人を超えた。  
-書籍を出版したことでフォロワーが結構増えた。Twitterは今年買収などでいろいろあったけれどあまり別のプラットフォームに移動することは考えていない。
+また、書き足りないトピックについて補遺的にZenn bookを公開しようと思っていたけれど全然その時間をとれなかった。
 
 ### ブログ
 2022年はブログを8記事執筆した。  
@@ -56,15 +38,15 @@ Twitterのフォロワーが1,500人を超えた。
 
 
 ### 寄稿
-会社のブログには6記事ほど執筆・コメントを寄稿した。
+会社のブログには6記事ほど執筆・コメントを寄稿した。  
+「ブログとしてのコンテンツ」というよりはイベント登壇報告ばかりだったけれど、イベント登壇のほうがカロリーは高いので良しとしている。
 
-<div style="left: 0; width: 100%; height: 190px; position: relative;"><iframe src="https://hatenablog-parts.com/embed?url=https%3A%2F%2Fdevblog.thebase.in%2Fentry%2Fgocon2022s" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no"></iframe></div>
-<div style="left: 0; width: 100%; height: 190px; position: relative;"><iframe src="https://hatenablog-parts.com/embed?url=https%3A%2F%2Fdevblog.thebase.in%2Fentry%2F2022%2F04%2F25%2F180000" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no"></iframe></div>
-<div style="left: 0; width: 100%; height: 190px; position: relative;"><iframe src="https://hatenablog-parts.com/embed?url=https%3A%2F%2Fdevblog.thebase.in%2Fentry%2Fgocon2022_4sponsor" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no"></iframe></div>
-<div style="left: 0; width: 100%; height: 190px; position: relative;"><iframe src="https://hatenablog-parts.com/embed?url=https%3A%2F%2Fdevblog.thebase.in%2Fentry%2Fhow-to-decide-technology-selection-for-startup" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no"></iframe></div>
-<div style="left: 0; width: 100%; height: 190px; position: relative;"><iframe src="https://hatenablog-parts.com/embed?url=https%3A%2F%2Fdevblog.thebase.in%2Fentry%2Fisucon12q" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no"></iframe></div>
-<div style="left: 0; width: 100%; height: 190px; position: relative;"><iframe src="https://hatenablog-parts.com/embed?url=https%3A%2F%2Fdevblog.thebase.in%2Fentry%2Fgo_tech_meetup" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no"></iframe></div>
-
+- [Go Conference 2022 Spring Onlineにシルバースポンサーで協賛・2名登壇します](https://devblog.thebase.in/entry/gocon2022s)
+- [New Relic One のCircleCI Integrationでデプロイ頻度やジョブの状態を計測する](https://devblog.thebase.in/entry/2022/04/25/180000)
+- [＼非公式／ Go Conference 2022 Spring スポンサー企業4社 アフタートークに2名登壇しました](https://devblog.thebase.in/entry/gocon2022_4sponsor)
+- [「新規事業プロダクト開発時の技術選定どうやった？」にBASE BANKチームが登壇しました](https://devblog.thebase.in/entry/how-to-decide-technology-selection-for-startup)
+- [ISUCON 12予選に8名（6チーム）が参加しました](https://devblog.thebase.in/entry/isucon12q)
+- [「Tech Meetup 〜Goで作る決済サービス〜」にBASE BANK Sectionのメンバーが登壇しました](https://devblog.thebase.in/entry/go_tech_meetup)
 
 ## 登壇
 昨年は育児の都合で登壇を控えていたけれど、今年の前半は頑張ることにした。  
@@ -89,13 +71,13 @@ https://techplay.jp/event/860202
 <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.1972%;"><iframe src="https://speakerdeck.com/player/3f8a3677da664fe9b0d76ef1b62be0fe" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no"></iframe></div>
 
 なぜ自分たちはこの技術を使うのか？という点を改めて考えられたのはよかった。  
-またプロダクト志向であるためには技術志向でなければいけないなと思考を整理できたのはよかった。[^product]
-
-[^product]: プロダクト志向であり続けるには技術に囚われてはいけないが、技術を探求できていないと手持ちの手札に思考が限定されてしまう
+またプロダクト志向であるためには技術志向でなければいけないなと思考を整理できたのはよかった。  
+プロダクト志向であり続けるには技術に囚われてはいけないが、技術を探求できていないと手持ちの手札に思考が限定されてしまう。  
+盲目的にRDBMSを選択してしまうとか、非同期処理を書くのにメッセージキューを絡めたアーキテクチャを選択肢に入れられないとか。実際自分の中ではNewSQL、Kafka、データ基盤的なところに全然知見がないのでテックリードなりアーキテクト的なロールで成果を出し続けるためには引き続き研鑽が必要だなと感じている。
 
 ## OSS活動
 OSSとは言えないが書籍のサンプルコードリポジトリを公開した。90star以上もらえており、Amazonレビューなどと同じくらい嬉しい。
-discussionsを使って問い合わせを受けたり、リポジトリに正誤表を公開している。普段使っているツールなので私的には非常にやりやすい。
+書籍はGitHub Discussionsを使って問い合わせを受けたり、リポジトリに正誤表を公開している。普段使っているツールなので私的には非常にやりやすい。
 
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/budougumi0617/go_todo_app" data-iframely-url="//iframely.net/bYCjhBW?card=small"></a></div></div><script async src="//iframely.net/embed.js"></script>
 
@@ -108,35 +90,65 @@ ISUCON10やISUCON11と異なる構成にテンパってほとんど何もでき�
 
 ## 続・双子育児はたいへん
 保育園が始まればある程度育児に関する時間が少なくなると思っていたのだが、それは誤りだった。  
-保育園の送迎や寝かしつけなどもやるので、8時間労働と家事を両立しようとすると朝6時半くらいに起きて27時くらいに寝る生活がずっと続いている。  
+保育園の送迎や寝かしつけなどもやるので、8時間労働と育児家事を両立しようとすると朝6時半くらいに起きて27時くらいに寝る生活がずっと続いている。  
+登園からなかなかしんどくてまあ幼児二人を自転車なり車に乗せるためにはなんかいろいろ格闘するし時間どおり登園できない。
+「もう有給とってこのまま車で海とか行くかな」みたいな気持ちに週イチくらいでなっている。
+私は裁量労働制だから気持ちを切り替えれば始業できるが、これで9時出社厳守みたいな職業だったら完全に病んでいると思う。
 執筆もしている時期は完全に生命が削られているなって感じだった。  
-2人いるので、保育園から病気をもらってくる頻度も病欠する日数も多く、コロナももらってきてしまった。
+2人いるので、保育園から病気をもらってくる頻度も病欠する日数も多く、コロナももらってきてしまった。  
+あまり子育てで何がいい悪いとか言わないけけれど、ネントレだけはまじでやったほうがいいと思う[^nentre]。夜中1,2時間時間ができるだけで負荷が全然違う。  
+
+あと「プレイマットがあるから無理か？」と思っていたけれど12月から[ルンバ](https://www.irobot-jp.com/product/j7/)のサブスクを導入してみて非常によい。
+なんだかんだ準備がいろいろあるんだけど[^j7pre]、これで朝の掃除から少し開放された感がある。  
+ただプレイマットの上の髪の毛はぜんぜんとれないので結局コロコロしてるんだけどもっと最新機種使えば解決するのかな？生活の効率化はもっとやっていきたい。
+
+[^nentre]: 子供が一人で寝られるようにするねんねトレーニング。
+[^j7pre]: 登園前に子供が遊んでいたおもちゃを全部片付けて、ドアを全部あけたり照明を全部つけたり
 
 ## 車を買った
-ずっとレンタカーで済ませていたが、年初にミニバンを買った。  
+ずっとレンタカーで済ませていたが、年初にミニバン（在庫処分のステップワゴン）を買った。[わくわくゲート](https://driver-web.jp/articles/detail/39386)めちゃくちゃ便利なんだけどなんで新型にはないんだろう。
 車の中でおむつ交換したり軽食を食べさせたりもするので、幼児二人いたらミニバンじゃなかったらしんどかったと思う。  
 いまでは保育園の送迎に使ったり、（休日は自分の時間がないので）さっと始業前にビールを買いに行ったり、その日の思いつきで海を見に行ったりかなり行動が広がった。  
-レンタカーが予約できず日程を調整したりすることもあったので、「雑に車に乗る」っていう行動は自家用車でないとできないかなとも思った。
+レンタカーが予約できず日程を調整したりすることもあったし、「今日は雨だから車で室内プレイランド行こうか」みたいな「雑に車で出かける」っていう行動は自家用車でないとできないかなと買ってから改めて思った。  
+
+## タスク管理とか
+1年間くらいNotionでタスク管理、個人週報などをやってきたんだけれど、12月くらいにTickTickとObsidian（というかMarkdown）に移行した。
+プレインテキスト派だったのでMarkdownにほぼ全部集約できて嬉しい。
+
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://ticktick.com" data-iframely-url="//iframely.net/P8nMqyu?card=small"></a></div></div><script async src="//iframely.net/embed.js"></script>
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://obsidian.md/" data-iframely-url="//iframely.net/mp0aWa6?card=small"></a></div></div><script async src="//iframely.net/embed.js"></script>
+
+Notion自体は好きなんだけれど、1行タスクだけでDBのレコードがガンガン増えていくのが肌にあわなかった。
+また、時間報的なのを日報Markdownに書いていたり、ナレッジもMarkdwonに書いていたのでタスク管理だけをNotionでするのに冗長さを感じていた。
+TickTickは複数デバイス対応でスケジュールタスクだったり習慣化も管理できたりリッチなtodoistという感じのツール。レポートをMarkdownでエクスポートできるので、それを最後日報Markdownに貼り付ける感じの運用ができたのでハマった。
+MarkdownファイルはObisidian経由で編集している。private repositoryで管理していたので、デバイス間同期的なのをあきらめていたのだけど、[Self-hosted LiveSync](https://github.com/vrtmrz/obsidian-livesync)プラグインを使うとそれも解決してiPhoneからも同期操作できるようになった。
 
 ## その他のプライベート
 - リモートワーク
-    - 相変わらずリモートワークだった。最近は隔週出社したりしている。
-    - 通勤時間相当の時間で家事をしているのでリモートワークは引き続き継続できるといいなあ。
+    - 相変わらずリモートワークだった。最近は隔週出社したりしている
+    - 通勤時間相当の時間で家事をしているのでリモートワークは引き続き継続できるといいなあ
 - 酒
-    - だいぶ落ち着いてきたので週末は1日1本飲んでいる。
+    - だいぶ落ち着いてきたので週末は1日1本飲んでいる
     - うちゅうビールが買える近所のお店を見つけたのと、家の近くのイオンリカールがクラフトビールを大量に置くようになったので捗っている
 - 英語
     - 毎日10分読書をしていたが、執筆で生命が削られているときにやめてしまって習慣化も終わった
-    - オライリーのサブスクをまだ契約しているのでちゃんと有効活用したい。
+    - オライリーのサブスクをまだ契約しているのでちゃんと有効活用したい
 - 読書
-    - あいかわらずKindle読み上げで読書時間を稼いでいるので、図やコードの入る技術書が積ん読になっている。
+    - あいかわらずKindle読み上げで読書時間を稼いでいるので、図やコードの入る技術書が積ん読になっている
+    - 同様の理由でオライリー本の進捗がまったくない。KindleでePub読めるようになったし改善していきたい。
 - ガンダム
     - どこかで作りたいなと思ってガンプラ買い始めたんだけど品薄すぎてびっくりしている
-    - 逃げれば1つ、進めば2つ。水星の魔女おもしろい。
+    - 逃げれば1つ、進めば2つ。水星の魔女おもしろい
+- Apple
+    - 個人PCを5,6年ぶりくらいに新調した。MBA M2にしたんだけれどキーボードの質感など非常によい。
+    - Paidy使って買ったんだけれど体験がすごかった。これはみんなBNPLやりたくなるのもわかるって感じだった。
+
 # 今年触った技術
+採用なり1on1をするようになってあまり手を動かす時間がなかった。
+
 ## Go
 New RelicのGo SDKでできないことをラッパーを書いていろいろ対応していた。
-具体的には`COMMIT`の実行時間やMySQLのクエリ情報など。
+具体的には社内共通ライブラリで`COMMIT`の実行時間やMySQLのクエリ情報など取れるようにしている。
 
 ## Vue2
 そこそこの規模の機能開発を一人でやったり、マイグレーションを担当したりしてけっこう触った。  
@@ -158,31 +170,51 @@ New RelicのGo SDKでできないことをラッパーを書いていろいろ�
 |✗|ISUCON予選突破|
 |✗|デイキャンプにいく|なかなか幼児二人は難しい
 
-子供が1歳すぎたらプライベートの時間が復活すると思っていたがそんなことはなかった。双子育児を舐めていた。
+子供が1歳すぎたらプライベートの時間が復活すると思っていたがそんなことはなかった。育児って厳しい。
 
-# 2021年のまとめ（KPT）
+# 2022年のまとめ（KPT）
 
 ## Keep
--
+- 無事に書籍を出版できた
+- 採用に関して結構コミットできた
+- 1年間育児家事と仕事を両立した
 
 ## Problem
-- 下期はプロセス改善などの中長期タスクに取り組めなかった
-- 実装が遅いせいでリスケが必要になることが何回かあった
-- データベースの学習など長期的な学習計画を履行できなかった
-- 読書があまりはかどらなかった
-    - 下期は技術書をほとんど読んでいなかった
-- 執筆のレビューが間に合わなかった
+- 出版できたがタイポなどが多かった
+- 手を動かす時間が少なくなってしまった
+- 積ん読が増加傾向にある
 
 ## Try
-- hoge
-    - goo
+- 個人活動時間を作る
+- 
+
 
 # 2022年の記録
 
-以下、勉強会や読書の記録。
+以下、もろもろの記録。
+
+## ブログなどのKPI
+毎週Twitterのフォロワー数とブログのスコアを集計している[^kpi_issue]。
+
+[^kpi_issue]: twitterのフォロワー数はSocialDogで取るようになった。
+
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/budougumi0617/blog-kpi-collector" data-iframely-url="//iframely.net/13K41P4?card=small"></a></div></div><script async src="//iframely.net/embed.js"></script>
+
+今年は以下のような数値だった。
+
+|集計日|Twitter フォロワー数|ブログの週間PV|ブログの累計はてブ数|
+|---|---|---|---|
+|2021/12/26|1204|2577|2910
+|2022/03/27|1230|2197|2929
+|2022/06/26|1287|2722|2936
+|2022/09/25|1494|2567|3087
+|2022/12/25|1540|2440|3094
+
+Twitterのフォロワーが1,500人を超えた。  
+書籍を出版したことでフォロワーが結構増えた。Twitterは今年買収などでいろいろあったけれどあまり別のプラットフォームに移動することは考えていない。
 
 ## 参加した技術イベント
-今年は自分が登壇していないイベントには参加できていない
+今年は自分が登壇していないイベントには参加できていない。
 
 ## 登壇したイベント
 如何に時間をつくるかが問題だったけれど登壇してよかった。
@@ -197,8 +229,8 @@ New RelicのGo SDKでできないことをラッパーを書いていろいろ�
 ## 2022年に読んだ書籍
 - https://booklog.jp/users/budougumi/stats
 
-41冊読み終わった。感想を記載済みなのは以下の書籍。
-チームトポロジーなども読了しているのだけど感想をかけていない。
+41冊読み終わった。「エクストリームプログラミング」や「良い戦略、悪い戦略」のような未読の名著を読んだけどやはり良いものはよかった。  
+前述したとおりオライリー本を買っただけで全然読めていないのでちゃんと消化したい。
 
 - [ユニコーン企業のひみつ ―Spotifyで学んだソフトウェアづくりと働き方](https://amzn.to/3WSqLal)
     - [[書評]ユニコーン企業のひみつ](2022/01/07/review_competing_with_unicorns/)
@@ -216,12 +248,45 @@ New RelicのGo SDKでできないことをラッパーを書いていろいろ�
     - [booklogの感想メモ](https://booklog.jp/users/budougumi/archives/1/462108786X)
 - [ライト、ついてますか 問題発見の人間学](https://amzn.to/3Gr6yDk)
     - [booklogの感想メモ](https://booklog.jp/users/budougumi/archives/1/B09BDWRCXN)
-- プロを目指す人のためのTypeScript入門 安全なコードの書き方から高度な型の使い方まで](https://amzn.to/3Q0z4Pr)
+- [プロを目指す人のためのTypeScript入門 安全なコードの書き方から高度な型の使い方まで](https://amzn.to/3Q0z4Pr)
     - [booklogの感想メモ](https://booklog.jp/users/budougumi/archives/1/B09Y527YPV)
 - [「読む」だけで終わりにしない読書術 1万冊を読んでわかった本当に人生を変える方法](https://amzn.to/3WAg3pr)
     - [booklogの感想メモ](https://booklog.jp/users/budougumi/archives/1/B09MCXV7XB)
 - [ジェームズ・クリアー式 複利で伸びる1つの習慣](https://amzn.to/3G4fH3e)
     - [booklogの感想メモ](https://booklog.jp/users/budougumi/archives/1/B07YY2WV6K)
+- [EMPOWERED 普通のチームが並外れた製品を生み出すプロダクトリーダーシップ](https://amzn.to/3GxmxzV)
+- [小さなチーム、大きな仕事　働き方の新しいスタンダード](https://amzn.to/3VBr6NM)
+- [国際エグゼクティブコーチが教える 人、組織が劇的に変わる ポジティブフィードバック](https://amzn.to/3Z3Apck)
+- [「Why型思考」が仕事を変える 鋭いアウトプットを出せる人の「頭の使い方」](https://amzn.to/3Cgfh8N)
+- [楽々ERDレッスン](https://amzn.to/3jM7sBe)
+- [教養としての決済](https://amzn.to/3VHd7Wx)
+- [Fearless Change アジャイルに効く アイデアを組織に広めるための48のパターン](https://amzn.to/3QlcocV)
+- [もしアドラーが上司だったら](https://amzn.to/3WSSB6s)
+- [Obsidianノート術: ライフログや個人のノートはMarkdownでローカルに保存](https://amzn.to/3vrG8er)
+- [ＯＯＤＡ　ＬＯＯＰ（ウーダループ）―次世代の最強組織に進化する意思決定スキル](https://amzn.to/3CaYIes)
+- [リーダーの作法 ―ささいなことをていねいに](https://amzn.to/3i54DLi)
+- [みんなでアジャイル ―変化に対応できる顧客中心組織のつくりかた](https://amzn.to/3vqWzaS)
+- [達人が教えるWebパフォーマンスチューニング　〜ISUCONから学ぶ高速化の実践](https://amzn.to/3WDYKUl)
+- [マッキンゼーで叩き込まれた 超速フレームワーク―――仕事のスピードと質を上げる最強ツール](https://amzn.to/3WS50Yo)
+- [エクストリームプログラミング](https://amzn.to/3GrR015)
+- [問いかける技術 ― 確かな人間関係と優れた組織をつくる](https://amzn.to/3jJG5I4)
+- [良い戦略、悪い戦略](https://amzn.to/3WE5IbV)
+- [情報をまとめて・並べるだけ！超シンプルな「手帳」兼「アイデア帳」運用術: 文章を書き、考える人のためのObsidian活用術 情報整理大全](https://amzn.to/3VwWvRj)
+- [知的トレーニングの技術〔完全独習版〕](https://amzn.to/3IbLyli)
+- [Docs for Developers: An Engineer’s Field Guide to Technical Writing](https://amzn.to/3jx6Cby)
+- [チーズはどこへ消えた？](https://amzn.to/3vNomCF)
+
+## 個人ブログ
+全然かけなかった。時間がないのもそうだけれどあまり手を動かさなくなったっていうのもあるかもしれない。
+
+- [[書評]ユニコーン企業のひみつ](2022/01/07/review_competing_with_unicorns/)
+- [[Notion] Mac Appでフォントのサイズが大きくならない](/2022/01/30/notion_size_up_font_on_mac_app/)
+- [[書評] NO RULES 世界一「自由」な会社、NETFLIX | コントロールではなくコンテキストを](/2022/02/16/review_netflix_no_rules/)
+- [[書評]THE CULTURE CODE 最強チームをつくる方法 | 何が良いチームをつくるのか？](/2022/02/27/review_culture_code/)
+- [[New Relic] FACET CASE句を使って外部サービスのエンドポイントのレスポンスタイムを集計する](/2022/03/22/newrelic_make_external_api_by_facet_case_capture/)
+- [Go Conferrence 2022 Springで登壇した #gocon](/2022/04/25/gocon2022spring/)
+- [「詳解Go言語Webアプリケーション開発」という本を発売しました](/2022/07/22/release_go_web_application_book/)
+- [GitHub CLIを使って任意の条件のissueを一括closeする（一括操作する）](/2022/09/20/closed-stale-github-issue-by-manual/)
 
 # 関連
 - [2021年振り返り](/2021/12/26/retrospective-2021/)
