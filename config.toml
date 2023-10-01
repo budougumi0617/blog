@@ -79,7 +79,8 @@ pygmentsStyle = "solarized-dark"
     # when adding two new lines, remember to remove the indentation otherwise the new line will be treated as a codeblock
     sidebarText = """budougumi0617 の技術ブログです。
     </br>
-    主にGoについて書いています。
+    主にGoについて書いています。</br>
+    このブログはAmazonアソシエイト・プログラムを利用しています。
     </br>
     """
 

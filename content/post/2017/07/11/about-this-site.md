@@ -14,7 +14,7 @@ author = "budougumi0617"
 # About Me
 - Yoichiro Shimizu
 - 1986/06/17
-- ソフトウェアエンジニア@六本木一丁目
+- ソフトウェアエンジニア
 - [GitHub](https://github.com/budougumi0617)
 - [Twitter](https://twitter.com/budougumi0617)
 - [Qiita](http://qiita.com/budougumi0617)
@@ -28,6 +28,7 @@ author = "budougumi0617"
 - `PHP`
 - `Python`
 - `Vue.js`
+- `React.js`
 
 ## Past Skills
 現業では触っていませんが、以前は以下の技術も使っていました。
@@ -38,10 +39,35 @@ author = "budougumi0617"
 - `Ruby`
 - `UWP`
 - .NET Standard
+- `PHP`
+- `Python`
 
 他に趣味で`Java8`、`Elixir`なども少し触っていました。
 
+# Books
+
+## 2022
+
+- [詳解Go言語 Web アプリケーション開発](https://www.c-r.com/book/detail/1462)
+  - [「詳解 Go 言語 Web アプリケーション開発」という本を発売しました](/2022/07/22/release_go_web_application_book/)
+
 # Talks
+
+## 2023
+
+- [今日から始める Go](https://speakerdeck.com/budougumi0617/starting-go-from-today)
+  - [2023/06/15 Go 言語／最新情報・活用事例セミナー](https://tech-street.connpass.com/event/283689/)
+
+## 2022
+
+- [testing パッケージを使った Web アプリケーションテスト 単体テストから E2E テストまで](https://speakerdeck.com/budougumi0617/gocon2022spring)
+  - [Go Conference 2022 Spring](https://gocon.jp/2022spring/sessions/a10-s/)
+  - [Go Conferrence 2022 Spring で登壇した](/2022/04/25/gocon2022spring/)
+- [New Relic を使った Observability の実現方法と活用例](https://speakerdeck.com/budougumi0617/gocon-2022-spring-after-talk)
+  - [＼非公式／ Go Conference 2022 Spring スポンサー企業 4 社 アフタートーク](https://andpad.connpass.com/event/243953/)
+- [BASE BANK チームの技術選定と歴史 ](https://speakerdeck.com/budougumi0617/how-to-decide-technology-selection-for-startup)
+  - [新規事業プロダクト開発時の技術選定どうやった？-カケハシ ×LINE×BASE の開発者が振り返る技術選定プロセスと内省-](https://techplay.jp/event/860202)
+
 ## 2021
 - [Go WebアプリケーションでNew Relic APMをフル活用するためのOSS 3選](https://speakerdeck.com/budougumi0617/introduce-oss-for-newrelic) - New Relic User Group Vol.0
   - https://devblog.thebase.in/entry/nrug_vol0
