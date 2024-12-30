@@ -13,7 +13,7 @@ twitterImage = "2022/02/27_review_culture_code.jpeg"
 
 チームの文化を作るために必要なことはなにか知るためにTHE CULTURE CODEを読んだ。
 
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=github.io-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B07L2HDSHH&linkId=81b8f21164b37ef370f5235422f6fd83"></iframe>
+- [THE CULTURE CODE 最強チームをつくる方法](https://amzn.to/41TRusZ)
 
 <!--more-->
 
@@ -45,7 +45,7 @@ Amazonの商品ページの紹介文より引用。
 最近NetflixのNO RULESを読んでとても共感しぜひ参考にしていきたいと思った。そのNO RULESの中で紹介されていたので手にとった。
 
 - [[書評] NO RULES 世界一「自由」な会社、NETFLIX | コントロールではなくコンテキストを](/2022/02/16/review_netflix_no_rules/)
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=github.io-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B08LDBNG74&linkId=45fb973f95ba712b5a349227f9d07d3e"></iframe>
+- [NO RULES(ノー・ルールズ) 世界一「自由」な会社、NETFLIX](https://amzn.to/3C1gZ0O)
 
 # 読んでわかったこと
 
@@ -87,8 +87,7 @@ Amazonの商品ページの紹介文より引用。
 また、チームリーダーは状況的謙虚さを常に示し続ける必要がある。状況的謙虚さは権威関係によってコミュニケーションが阻害されてしまうことを防ぐ方法だ。
 
 - [[書評] 恐れのない組織 「心理的安全性」が学習・イノベーション・成長をもたらす](/2021/10/31/review_the_fearless_organization/)
-
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=github.io-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B08R8KBZKZ&linkId=689a2623d85db27d33c3fccbab15bd7e"></iframe>
+- [恐れのない組織――「心理的安全性」が学習・イノベーション・成長をもたらす](https://amzn.to/4gFxHlB)
 
 1. 私自身が、「正しい答えを持っているわけではないこと」をメンバーに自己吐露すること、
 2. だからこそ、「私自身も、アンテナ高く、状況から学んでいく必要があること」をメンバーに自己開示すること
@@ -97,7 +96,7 @@ Amazonの商品ページの紹介文より引用。
 
 
 - [[書評] 失敗の科学 失敗から学習する組織、学習できない組織](https://budougumi0617.github.io/2021/09/30/review_black_box_thinking/)
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=github.io-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B01MU364ID&linkId=2b4851bb23aa381b1c2a37036f1d34f2"></iframe>
+- [失敗の科学](https://amzn.to/40bwmgG)
 
 > 「リーダーとして、もっとチームに対して責任を持たなければならない。ここでの問題は、人間は権威に弱いということだ。上官から何かを命令されると、ほとんど本能的に従ってしまう。たとえその命令が間違っていたとしても。つまり、**誰かが誰かに命令するという意思決定法は、とても危険**だということだ。2,463
 > 
@@ -124,8 +123,7 @@ NetflixのNO RULESでは「***会社が君らを雇っているのは、意見�
 「文化はルールで表現されるものではない。自分たちの行動でしか自分たちの文化を示せない。」ということはWHO YOU AREでも触れられていた。
 
 - [[書評] WHO YOU AREを読んだ。文化とはルールではない。行動だ。](/2021/11/28/review_who_you_are/)
-
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=github.io-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B086KX8LHZ&linkId=6febd2c5ed0efdd3c33afa36c7df391d"></iframe>
+- [Who You Are（フーユーアー）君の真の言葉と行動こそが困難を生き抜くチームをつくる](https://amzn.to/4fGxo8R)
 
 NO RULESも根幹は「優秀で自立的なメンバーの集団ならば価値観の共有さえできればルールで縛る必要はない」という主旨だった。リーダーは常にビジョンや価値観を発信し続け、自らそれを行動で示さないといけない。
 
@@ -135,11 +133,11 @@ NO RULESも根幹は「優秀で自立的なメンバーの集団ならば価値
 今まで読んできた本とconnect the dotsしてきたのもよかった。ただ読んだ本の参考文献をたどって次の書籍を選んでいるところもあり、やや「確証バイアス」に陥っている可能性もある。今まで読んだチームマネジメント系の書籍とはまったく関係なさそうな本を選んでもいいのかもしれない。  
 ただ、こういう本を読んでいることを公表していると、業務中に「あ、今本に書いてあったあのテクニック使ったな」って思われちゃうのはしょうがないか（まあ公表していなくてもわかる人にはわかるし）。
 
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=github.io-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B07L2HDSHH&linkId=81b8f21164b37ef370f5235422f6fd83"></iframe>
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=github.io-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B08LDBNG74&linkId=45fb973f95ba712b5a349227f9d07d3e"></iframe>
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=github.io-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B086KX8LHZ&linkId=6febd2c5ed0efdd3c33afa36c7df391d"></iframe>
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=github.io-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B01MU364ID&linkId=2b4851bb23aa381b1c2a37036f1d34f2"></iframe>
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=github.io-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B08R8KBZKZ&linkId=689a2623d85db27d33c3fccbab15bd7e"></iframe>
+- [THE CULTURE CODE 最強チームをつくる方法](https://amzn.to/41TRusZ)
+- [Who You Are（フーユーアー）君の真の言葉と行動こそが困難を生き抜くチームをつくる](https://amzn.to/4fGxo8R)
+- [NO RULES(ノー・ルールズ) 世界一「自由」な会社、NETFLIX](https://amzn.to/3C1gZ0O)
+- [失敗の科学](https://amzn.to/40bwmgG)
+- [恐れのない組織――「心理的安全性」が学習・イノベーション・成長をもたらす](https://amzn.to/4gFxHlB)
 
 # 参考
 - [[書評] 失敗の科学 失敗から学習する組織、学習できない組織](https://budougumi0617.github.io/2021/09/30/review_black_box_thinking/)
