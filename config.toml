@@ -3,11 +3,9 @@ languageCode = "ja-jp"
 weight = 1
 title = "My External Storage"
 publishDir = "public"
-theme= "hugo-octopress"
+theme = "hugo-octopress"
 hasCJKLanguage = true
 enableemoji = true
-paginate = 10
-paginatePath = "page"
 disqusShortname = "http-budougumi0617-github-io"
 
 # Code highlighting options
@@ -26,139 +24,143 @@ pygmentsStyle = "solarized-dark"
 # pygmentsoptions = "linenos=true"
 
 [permalinks]
-    post = "/:year/:month/:day/:filename/"
-    code = "/:filename/"
+post = "/:year/:month/:day/:filename/"
+code = "/:filename/"
 
 [taxonomies]
-    tag = "tags"
-    topic = "topics"
-    category = "categories"
+tag = "tags"
+topic = "topics"
+category = "categories"
 
 [author]
-    name = "budougumi0617"
-    email = "budougumi[at]gmail.com"
+name = "budougumi0617"
+email = "budougumi[at]gmail.com"
 
 #
 # All parameters below here are optional and can be mixed and matched.
 #
 
 [params]
-    # If false, all of blog post will appear on front page (and in pagination)
-    truncate = true
-    # Switch to true to enable RSS icon link
-    rss = true
-    BrandImage = "/logo.png"
-    brand = "My External Storage"
-    topline = "budougumi0617 の技術ブログです。"
-    footline = "Copyright&copy; <a href='/2017/07/11/about-this-site/'>budougumi0617</a>"
-    showRightSidebar = true
-    googleAnalytics = "UA-43042615-4"
-    # sumomeid = ""
-    highlight = "default"
-    twitter  = "https://twitter.com/budougumi0617"
-    linkedin = "https://www.linkedin.com/in/budougumi0617/"
-    github   = "https://github.com/budougumi0617"
-    # customCSS = ["/css/.css"]
-    # If set to true, navigation menu links will open in a new window with the exception of links to root ("/")
-    # If this item does not exist or is set to false, then navigation menu links will open in the same window
-    navigationNewWindow = true
-    # Twitter card config
-    # Enable with this.
-    twitterCardEnabled = true
-    # Don't include the @.
-    twitterCardSite = "budougumi0617"
-    twitterCardDomain = "budougumi0617.github.io"
-    # Don't include the @.
-    twitterCardAuthor = "budougumi0617"
-    generateTaxonomyList = true
-    sidebarRecentLimit = 5
-    sidebarHeader = "This blog"
+# If false, all of blog post will appear on front page (and in pagination)
+truncate = true
+# Switch to true to enable RSS icon link
+rss = true
+BrandImage = "/logo.png"
+brand = "My External Storage"
+topline = "budougumi0617 の技術ブログです。"
+footline = "Copyright&copy; <a href='/2017/07/11/about-this-site/'>budougumi0617</a>"
+showRightSidebar = true
+googleAnalytics = "UA-43042615-4"
+# sumomeid = ""
+highlight = "default"
+twitter = "https://twitter.com/budougumi0617"
+linkedin = "https://www.linkedin.com/in/budougumi0617/"
+github = "https://github.com/budougumi0617"
+# customCSS = ["/css/.css"]
+# If set to true, navigation menu links will open in a new window with the exception of links to root ("/")
+# If this item does not exist or is set to false, then navigation menu links will open in the same window
+navigationNewWindow = true
+# Twitter card config
+# Enable with this.
+twitterCardEnabled = true
+# Don't include the @.
+twitterCardSite = "budougumi0617"
+twitterCardDomain = "budougumi0617.github.io"
+# Don't include the @.
+twitterCardAuthor = "budougumi0617"
+generateTaxonomyList = true
+sidebarRecentLimit = 5
+sidebarHeader = "This blog"
 
-    # Sidebar text also supports markdown
-    # New lines can be added with </br> or normal markdown (two spaces at the end of line or two new lines).
-    # when adding two new lines, remember to remove the indentation otherwise the new line will be treated as a codeblock
-    sidebarText = """budougumi0617 の技術ブログです。
+# Sidebar text also supports markdown
+# New lines can be added with </br> or normal markdown (two spaces at the end of line or two new lines).
+# when adding two new lines, remember to remove the indentation otherwise the new line will be treated as a codeblock
+sidebarText = """budougumi0617 の技術ブログです。
     </br>
     主にGoについて書いています。</br>
     このブログはAmazonアソシエイト・プログラムを利用しています。
     </br>
     """
 
-    # Sidebar menu - if true will add a sidebar menu between sidebar text and recent posts
-    sidebarMenuEnabled = true
-    sidebarMenuHeader = "Reccomend Categories"
+# Sidebar menu - if true will add a sidebar menu between sidebar text and recent posts
+sidebarMenuEnabled = true
+sidebarMenuHeader = "Reccomend Categories"
 
-    # 404.html header and text - both support markdown
-    notFoundHeader = "There's nothing here"
+# 404.html header and text - both support markdown
+notFoundHeader = "There's nothing here"
 
-    notFoundText = """Please either go back or use the navigation/sidebar menus.
+notFoundText = """Please either go back or use the navigation/sidebar menus.
     """
 
-    # For Share button
-    # https://www.trhrkmk.com/posts/hugo-share-button-addthis/
-    addThis = "ra-5c31cf997a7af863"
+# For Share button
+# https://www.trhrkmk.com/posts/hugo-share-button-addthis/
+addThis = "ra-5c31cf997a7af863"
 
-    # Amazon
-    amazonJpAffiliate = "budougumi0617-22"
-
-[[menu.main]]
-  Name = "Home"
-  URL = "/"
-  weight = -200
+# Amazon
+amazonJpAffiliate = "budougumi0617-22"
 
 [[menu.main]]
-    name = "About"
-    identifier = ""
-    url = "//2017/07/11/about-this-site/"
-    weight = -100
-    pre = "<i class='fa fa-info-circle'></i>"
+Name = "Home"
+URL = "/"
+weight = -200
+
 [[menu.main]]
-    name = "Archives"
-    identifier = "archives"
-    url = "/post/"
-    weight = -50
-    pre = "<i class='fa fa-archive'></i>"
+name = "About"
+identifier = ""
+url = "//2017/07/11/about-this-site/"
+weight = -100
+pre = "<i class='fa fa-info-circle'></i>"
+[[menu.main]]
+name = "Archives"
+identifier = "archives"
+url = "/post/"
+weight = -50
+pre = "<i class='fa fa-archive'></i>"
 
 [[menu.sidebar]]
-  Name = "カテゴリー一覧"
-  URL = "/categories/"
-  weight = 1
+Name = "カテゴリー一覧"
+URL = "/categories/"
+weight = 1
 
 [[menu.sidebar]]
-  name = "意外と知らないGoのTIPS"
-  url = "/tags/gotips/"
-  weight = -51
+name = "意外と知らないGoのTIPS"
+url = "/tags/gotips/"
+weight = -51
 
 [[menu.sidebar]]
-  name = "Go"
-  url = "/categories/go/"
-  weight = -50
+name = "Go"
+url = "/categories/go/"
+weight = -50
 
 [[menu.sidebar]]
-  name = "PHP"
-  url = "/categories/php/"
-  weight = -40
+name = "PHP"
+url = "/categories/php/"
+weight = -40
 
 [[menu.sidebar]]
-  name = "Python"
-  url = "/categories/python/"
-  weight = -35
+name = "Python"
+url = "/categories/python/"
+weight = -35
 
 [[menu.sidebar]]
-  name = "発表資料"
-  url = "/categories/presentation/"
-  weight = -30
+name = "発表資料"
+url = "/categories/presentation/"
+weight = -30
 
 [[menu.sidebar]]
-  name = "イベントレポート"
-  url = "/categories/report/"
-  weight = -20
+name = "イベントレポート"
+url = "/categories/report/"
+weight = -20
 
 [markup]
-  [markup.tableOfContents]
-    endLevel = 2
-    ordered = false
-    startLevel = 1
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
+[markup.tableOfContents]
+endLevel = 2
+ordered = false
+startLevel = 1
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true
+
+[pagination]
+pagerSize = 10
+path = "page"
