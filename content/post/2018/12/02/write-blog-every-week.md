@@ -5,7 +5,7 @@ draft = false
 toc = true
 comments = true
 author = "budougumi0617"
-categories = ["poem"]
+categories = ["esssay"]
 tags = ["blog"]
 +++
 この記事は、[write-blog-every-week Advent Calendar 2018](https://adventar.org/calendars/2925)の2日目の記事。

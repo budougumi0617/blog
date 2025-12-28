@@ -5,7 +5,7 @@ draft = false
 toc = true
 comments = true
 author = "budougumi0617"
-categories = ["poem"]
+categories = ["esssay"]
 tags = ["Retrospective"]
 twitterImage = "twittercard.png"
 +++

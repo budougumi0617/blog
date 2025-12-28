@@ -3,7 +3,7 @@ title= "2017年振り返り(GitHub編)"
 date= 2017-12-27T09:41:01+09:00
 draft = false
 slug = ""
-categories = ["poem"]
+categories = ["esssay"]
 tags = ["Retrospective"]
 author = "budougumi0617"
 +++
