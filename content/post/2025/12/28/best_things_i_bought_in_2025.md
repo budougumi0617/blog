@@ -11,6 +11,8 @@ keywords = [""]
 twitterImage = "twittercard.png"
 +++
 
+年末なので今年買ったものいろいろメモ。
+
 <!--more-->
 
 # ガジェット
@@ -19,7 +21,7 @@ twitterImage = "twittercard.png"
 
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.lg.com/jp/monitors/21-9-ultra-wide-monitors/40wp95c-w/" data-iframely-url="https://iframely.net/tQmcn2KK?card=small&theme=dark"></a></div></div><script async src="https://iframely.net/embed.js"></script>
 
-約40インチの5K2Kのウルトラワイドモニター。  
+今年買って一番生産性に寄与しているのは間違いなくコイツ。約40インチの5K2Kのウルトラワイドモニター。  
 エディタでコード見ながらターミナルで複数エージェント実行したりすることが多くなったので、ディスプレイの広さは前より重要になった感。
 
 - 会社の4Kディスプレイを使ったあとに自宅のフルHDのディスプレイを使うとあまりに狭すぎた
@@ -32,8 +34,8 @@ twitterImage = "twittercard.png"
 
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://support.apple.com/ja-jp/121456" data-iframely-url="https://iframely.net/a34HqkNa?theme=dark"></a></div></div><script async src="https://iframely.net/embed.js"></script>
 
-iPad Airがあったけれど、全然使っていなかったので下取りに出してiPad Miniを書い直した。
-もう一世代前のiPad Miniもあるので、子ども(双子)が勉強の時とかお出かけのときとかに使っている。
+iPad Airがあったけれど、全然使っていなかったので下取りに出してiPad Miniを書い直した。  
+もう一世代前のiPad Miniもあるので、子ども(双子)が勉強の時とかお出かけのときとかに1台ずつ使っている。
 
 ## nwm DOTS
 
@@ -58,17 +60,40 @@ iPad Airがあったけれど、全然使っていなかったので下取りに
 完全に今更なんだけど、一時期Amazonでめちゃくちゃ安い値段で売っていたのでとりあえず買ってみて使ってみたらめちゃくちゃよかった。  
 NuphyやKeychron系を結構つかっていたので、Lofree系(ChocV2系)のキースイッチを買うのは初めてだったんだけど、コトコト感がとても良い。
 
+## Keychron Low Profile Silent Switch
+
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://superkopek.jp/products/keychron-lp-silentswitch" data-iframely-url="https://iframely.net/WTMSUHfr?theme=dark"></a></div></div><script async src="https://iframely.net/embed.js"></script>
+
+会社ではずっとNuphy Air60 V2を使っている。  
+CowberryなりWisteriaキースイッチを使っていたんだけれど、まあまあ打鍵音がでかいので静音スイッチにした。  
+ほとんど音がしないし、打鍵感もほぼ赤軸なので換装してよかった。NuphyのキーボードがKaih系が使えたらLofree Voidとかにしても良かったんだけれど…。
+
+## Orho47t
+
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://booth.pm/ja/items/6790883" data-iframely-url="https://iframely.net/wNuw7f5h?card=small&theme=dark"></a></div></div><script async src="https://iframely.net/embed.js"></script>
+
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">. <a href="https://twitter.com/Takamaru_FPV?ref_src=twsrc%5Etfw">@Takamaru_FPV</a> さんの <a href="https://twitter.com/hashtag/ortho47t?src=hash&amp;ref_src=twsrc%5Etfw">#ortho47t</a> がキター！<br>コンパクトでいい感じ。久しぶりに60%未満なのでキーマップ悩む… <a href="https://t.co/306eF42IgM">pic.twitter.com/306eF42IgM</a></p>&mdash; Yoichiro Shimizu (@budougumi0617) <a href="https://twitter.com/budougumi0617/status/1961726568813986249?ref_src=twsrc%5Etfw">August 30, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+Specterスイッチを使えるキーボードがなかったので買ったのがOrtho47t。  
+7sProMaxをコンテキストスイッチなしで使えていたのであまり考えずに買ってみたもののやはりオーソ配列×40%をいきなり使うのは難しかったので修行中。  
+とはいえめちゃくちゃいい。ハンダ済なのがありがたすぎる…。
+
+- 有線キーボード
+  - バッテリーなどの考える必要がない
+- 組み立て済
+  - ハンダせずすぐに使える
+- 頑張らなくても買える
+  - N時に争奪戦に参加する、みたいなのしなくても買えるのがとても有り難い
+
 ## Lofree Flow lite
 
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.amazon.co.jp/Flow-Lite-84%E3%82%AD%E3%83%BC%E3%83%AD%E3%83%BC%E3%83%97%E3%83%AD%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%83%A1%E3%82%AB%E3%83%8B%E3%82%AB%E3%83%AB%E3%82%AD%E3%83%BC%E3%83%9C%E3%83%BC%E3%83%89%E3%80%8175%EF%BC%85%E3%82%B9%E3%83%AF%E3%83%83%E3%83%97%E5%8F%AF%E8%83%BD%E3%81%AA%E5%85%85%E9%9B%BB%E5%BC%8F%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%AD%E3%83%BC%E3%83%9C%E3%83%BC%E3%83%892-4G%E7%84%A1%E7%B7%9A%E6%8E%A5%E7%B6%9A%E3%80%81Bluetooth%E6%8E%A5%E7%B6%9A%E3%80%81Windows%E3%80%81Mac%E3%81%AE%E6%9C%89%E7%B7%9A%E6%8E%A5%E7%B6%9A-%E3%82%B9%E3%83%9A%E3%82%AF%E3%82%BF%E3%83%BC%E3%83%AA%E3%83%8B%E3%82%A2%E3%82%AD%E3%83%BC%E3%82%B9%E3%82%A4%E3%83%83%E3%83%81%EF%BC%88%E3%82%AA%E3%83%95%E3%83%9B%E3%83%AF%E3%82%A4%E3%83%88%EF%BC%89%E8%8B%B1%E8%AF%AD%E9%85%8D%E5%88%97/dp/B0DP2W7BRF" data-iframely-url="https://iframely.net/1z3FruJf?card=small&theme=dark"></a></div></div><script async src="https://iframely.net/embed.js"></script>
 
-あまりにSpecterスイッチが良かったのと、今年になってキーマップ変更ツールがやっとmacOSに対応したので買いました。
-セールで買うと1.4万円くらいで買えちゃう。コスパがおかしい。
-今年は自宅作業するときはずっと7sProMax+Nuphy Night Breezeを使っていたのですが、キンキンする感じのタイピング音が気になっていたので、これを買ってからは家でもずっとFlow Liteです。
+あまりにSpecterスイッチが良かったのと、今年になってキーマップ変更ツールがやっとmacOSに対応したので買った。  
+セールで買うと1.4万円くらいで買えちゃう。コスパがおかしい。  
+今年は自宅作業するときはずっと7sProMax+Nuphy Night Breezeを使っていたけれど、キンキンする感じのタイピング音が気になっていたので、これを買ってからは家でもずっとFlow Lite。
 
 Flow Liteが好きというよりSpecterスイッチが好きって感じなので、[InSixty](https://keeb-on.com/products/insixty?variant=41838122664030)とか買ったら乗り換えちゃうかもしれない…（高い）。
-
-まあ、その前に1月にはCornixが届くんですが。これも楽しみ。
 
 ## GATERON ツインズスイッチプーラー
 
@@ -92,6 +117,7 @@ Flow Liteが好きというよりSpecterスイッチが好きって感じなの�
 - [Gadget Clamp](https://preducts.jp/products/gadget-clamp)
   - CalDigit TS4を固定している。全然動かなくなってよい。
 - [Magnet Gadget Arm](https://preducts.jp/products/db-magnet-gadget-arm)
+  - 本当はiPad Miniを接続する用なんだけど子どもが使っているので活用できていない…
 - [System Tray for DASHBOARD](https://preducts.jp/products/db-system-tray)
 - [System Tray Saucer for DASHBOARD](https://preducts.jp/products/db-system-tray-saucer)
 
@@ -101,7 +127,7 @@ System Tray Saucerはとりあえずつけておいたほうがいい感じ。
 
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.amazon.co.jp/%E3%82%A8%E3%83%AB%E3%82%B4%E3%83%88%E3%83%AD%E3%83%B3-%E3%83%87%E3%82%B9%E3%82%AF%E3%83%A2%E3%83%8B%E3%82%BF%E3%83%BC%E3%82%A2%E3%83%BC%E3%83%A0-%E3%83%9E%E3%83%83%E3%83%88%E3%83%96%E3%83%A9%E3%83%83%E3%82%AF-9-1-19-1kg-45-475-224/dp/B08RD4FJ3Q" data-iframely-url="https://iframely.net/nqm7lPlQ?card=small&theme=dark"></a></div></div><script async src="https://iframely.net/embed.js"></script>
 
-AmazonブランドのジェネリックLXモニターアームでは40インチディスプレイの重さに耐えられなかったので新調。
+AmazonブランドのジェネリックLXモニターアームでは40インチディスプレイの重さに耐えられなかったので新調。  
 スタンディングデスクしても全然揺れないし、強い。
 
 # その他
@@ -119,14 +145,14 @@ AmazonブランドのジェネリックLXモニターアームでは40インチ�
 
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">LAMY safari JETSTREAM INSIDE、噂通りとてもよい <a href="https://t.co/ikzt2ewwyP">pic.twitter.com/ikzt2ewwyP</a></p>&mdash; Yoichiro Shimizu (@budougumi0617) <a href="https://twitter.com/budougumi0617/status/1890695000796561784?ref_src=twsrc%5Etfw">February 15, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-もともとジェットストリームが好きだったので、ちょっと良いボールペンを買った。
-出始めは転売されていたけれど今は定価で買えると思う。書き心地はとてもよい。
+もともとジェットストリームが好きだったので、ちょっと良いボールペンを買った。  
+出始めは転売価格ばっかりだったけれど今は定価で買えると思う。書き心地がとてもよい。
 
 ## HARIO 浸漬式ドリッパー スイッチ360
 
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.amazon.co.jp/HARIO-%E3%83%8F%E3%83%AA%E3%82%AA-%E6%B5%B8%E6%BC%AC%E5%BC%8F%E3%83%89%E3%83%AA%E3%83%83%E3%83%91%E3%83%BC-%E5%87%BA%E6%9D%A5%E4%B8%8A%E3%81%8C%E3%82%8A%E9%87%8F360ml-SSD%E3%83%BC360%E3%83%BCB/dp/B09JL4R6SX" data-iframely-url="https://iframely.net/D8N07C7Q?card=small&theme=dark"></a></div></div><script async src="https://iframely.net/embed.js"></script>
 
-毎朝コーヒーを淹れているので。ハイブリッドメソッドもできる。
+毎朝コーヒーを淹れているので。ハイブリッドメソッドもできる。  
 温度管理までできていないけれど、味は安定した気がする！
 
 ## SLAM DUNK 1 (Kindle)
@@ -135,6 +161,21 @@ AmazonブランドのジェネリックLXモニターアームでは40インチ�
 
 漫画は物理本で買わないことにしているのでKindleで読めるようになってめちゃくちゃ嬉しい!!!  
 最近はジャンプコミックス系もKindleで半額セールするようになったので、昔集められなかった漫画をよく買っている。
+
+## LUCIDO 薬用パーフェクトスキンクリームEX
+
+<https://www.lucido.jp/special/all-in-one/>
+
+冬になると頬が赤くなっていたり粉ふいていたのでみっともないかなと思ってスキンケア始めてみた。  
+高くないしたしかに肌触り良くなった気がするので買ってよかった。
+
+## アクリルフィギュアケース
+
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.amazon.co.jp/COOLTAKU-%E3%83%95%E3%82%A3%E3%82%AE%E3%83%A5%E3%82%A2%E3%82%B1%E3%83%BC%E3%82%B9-%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%B1%E3%83%BC%E3%82%B9-%E3%83%87%E3%82%A3%E3%82%B9%E3%83%97%E3%83%AC%E3%82%A4%E3%82%B1%E3%83%BC%E3%82%B9-%E5%B9%8525%C3%97%E5%A5%A5%E8%A1%8C25%C3%97%E9%AB%98%E3%81%9525cm/dp/B0CHBNC5D5" data-iframely-url="https://iframely.net/S7hdXrZP?card=small&theme=dark"></a></div></div><script async src="https://iframely.net/embed.js"></script>
+
+レゴのミレニアム・ファルコンを買って（子どもが）組み立てたので飾りたかったのだけどレゴにホコリがついたら絶対めんどくさいだろうな…と思い購入。  
+安価だしいろいろサイズが選べて良い。
+ガンプラ飾ってもいいんだけれど、今年は一つも組み立てられなかった…。
 
 # サブスク
 
@@ -153,38 +194,30 @@ Skillsとかいろいろ増えてちょっとむずかしくなった感はあ�
 
 ## ChatGPT Plus
 
-PlusでもPRレビューしたりもできるしコスパはかなり良いと思う。
-ただ、CLIではやっぱりclaude codeを使うのが多いのでどちらに寄せるか悩みがち…。
+o1出始めのころに勉強のために1ヶ月だけProにしたけれど、結局Plusで使っている。PlusでもPRレビューしたりもできるしコスパはかなり良いと思う。
+ただ、CLIではやっぱりclaude codeを使うのが多いのでお小遣い少ない民なのでどちらに寄せるか悩みがち…。
+
+## Online Learning and Training
+
+オライリーの読み放題。今年も契約継続した。会社の人にも勧めている。  
+最近異様に日本語版の追加も速いのでありがたい。最近は発売数日後に登録されていたりする。  
+とはいえPDFリーダーで読みたいような本は別途買っているのでちょっと冗長な出費ではある。  
+ちなみにオライリー本以外にもManningの本や日本語の出版社だと翔泳社の本も読めたりする。
 
 # ちょっと合わなかったもの
-
-## Orho47t
-
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://booth.pm/ja/items/6790883" data-iframely-url="https://iframely.net/wNuw7f5h?card=small&theme=dark"></a></div></div><script async src="https://iframely.net/embed.js"></script>
-
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">. <a href="https://twitter.com/Takamaru_FPV?ref_src=twsrc%5Etfw">@Takamaru_FPV</a> さんの <a href="https://twitter.com/hashtag/ortho47t?src=hash&amp;ref_src=twsrc%5Etfw">#ortho47t</a> がキター！<br>コンパクトでいい感じ。久しぶりに60%未満なのでキーマップ悩む… <a href="https://t.co/306eF42IgM">pic.twitter.com/306eF42IgM</a></p>&mdash; Yoichiro Shimizu (@budougumi0617) <a href="https://twitter.com/budougumi0617/status/1961726568813986249?ref_src=twsrc%5Etfw">August 30, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-Specterスイッチを使えるキーボードがなかったので買ったのがOrtho47t。
-7sProMaxをコンテキストスイッチなしで使えていたのであまり考えずに買ってみたもののやはりオーソ配列×40%をいきなり使うのは難しかった…。  
-ただ私に合わなかっただけでキーボードとしてはめちゃくちゃ良いです。
-- 有線キーボード
-  - バッテリーなどの考える必要がない
-- 組み立て済
-  - ハンダせずすぐに使える
-- 頑張らなくても買える
-  - N時に争奪戦に参加する、みたいなのしなくても買えるのがとても有り難い
 
 ## Apple Pencil Pro
 
 iPad Miniを買ったときに一緒に買った。子どもがお絵かきしたり、文字を書く系のアプリで使うかなと思って買ったんだけれど結局ほとんど使わず…。
-最近また使おうと思ったら放置しすぎたせいか過放電で充電不可能になっていた…。
-修理しに行かないといけない…。
+最近また使おうと思ったら放置しすぎたせいか過放電で充電不可能になっていた…。修理しに行かないといけない。
 
 # 終わりに
 
-なんだかんだ散財していた…。
-今年はNape ProとCornixも買ったんだけれどまだ届いていない。楽しみ。
+あまり散財していないと思ったけれど、春夏あたりにディスプレイとPREDUCTSを揃えていたのでそこそこ使っていた。  
+あとNape ProとCornixも買ったんだけれどまだ届いていない。楽しみ。  
+来年はランドセルとかピアノ、家の5年点検みたいな話があるので自分はちょっと我慢の予定（多分）。
 
 # 関連
 
-- [2023年の買ってよかったもの](/2023/12/31/best_things_i_bought_in_2023)
 - [2024年の買ってよかったもの](/2024/12/30/best_things_i_bought_in_2024)
+- [2023年の買ってよかったもの](/2023/12/31/best_things_i_bought_in_2023)
